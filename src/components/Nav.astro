@@ -1,0 +1,31 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const links = [
+  { href: '/', label: 'الرئيسية' },
+  { href: '/مدونة', label: 'المدونة' },
+  { href: '/مصطلحات', label: 'مصطلحات' },
+  { href: '/مصادر', label: 'مصادر' },
+];
+
+const normalize = (p: string) =>
+  p === '/' ? '/' : decodeURIComponent(p).replace(/\/+$/, '');
+const current = normalize(currentPath);
+---
+
+<nav class="site-nav">
+  <a class="brand" href="/">معراب</a>
+  <ul>
+    {links.map((l) => (
+      <li>
+        <a href={l.href} aria-current={normalize(l.href) === current ? 'page' : undefined}>
+          {l.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

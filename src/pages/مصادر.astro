@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SourcePlaceholder from '../components/SourcePlaceholder.astro';
+import raw from '../data/sources.json';
+
+interface Source {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+}
+
+const sources = raw as Source[];
+const hostOf = (url: string) => new URL(url).hostname;
+---
+
+<BaseLayout title="مصادر">
+  <header>
+    <h1>مصادر</h1>
+    <p>جهات ومنشورات ألهمت بعض هذا العمل — مع الشكر لمن صكّ المصطلح قبلنا.</p>
+  </header>
+  <div class="source-grid">
+    {sources.map((source) => (
+      <article class="source-card">
+        <div class="source-pic">
+          {source.image ? (
+            <img src={source.image} alt={source.name} />
+          ) : (
+            <SourcePlaceholder />
+          )}
+        </div>
+        <div class="source-text">
+          <h2 class="source-name">{source.name}</h2>
+          <p class="source-desc">{source.description}</p>
+          <p class="source-link">
+            <a href={source.url} target="_blank" rel="noopener">{hostOf(source.url)}</a>
+          </p>
+        </div>
+      </article>
+    ))}
+  </div>
+</BaseLayout>

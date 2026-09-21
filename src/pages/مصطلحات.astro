@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import glossary from '../data/glossary.json';
+
+const arabicLetters = [...'أبتثجحخدذرزسشصضطظعغفقكلمنهوي'];
+const latinLetters = [...'abcdefghijklmnopqrstuvwxyz'];
+
+const normalize = (ch: string) => (/^[أإآا]$/.test(ch) ? 'أ' : ch);
+const letterOf = (term: string) => normalize(term.trim()[0].toLowerCase());
+const entriesFor = (letter: string) =>
+  glossary.filter((e) => letterOf(e.term) === letter);
+---
+
+<BaseLayout title="مصطلحات">
+  <header>
+    <h1>مصطلحات</h1>
+    <p>
+      معجمٌ واحدٌ لواحد: كل مصطلح بمقابله وشرحه ومصدره — من الألف إلى الياء، ثم من a إلى z.
+    </p>
+  </header>
+
+  <!-- <h2>أ — ي</h2>
+  <div class="glossary-grid">
+    {arabicLetters.map((letter) => {
+      const entries = entriesFor(letter);
+      return (
+        <section class="letter-box">
+          <h3>{letter}</h3>
+          {entries.length ? (
+            <table>
+              <thead>
+                <tr><th>المصطلح</th><th>المقابل</th><th>الشرح</th><th>المصدر</th></tr>
+              </thead>
+              <tbody>
+                {entries.map((e) => (
+                  <tr>
+                    <td style="text-align: center;">{e.term}</td>
+                    <td><strong>{e.translation}</strong></td>
+                    <td>{e.explanation}</td>
+                    <td>{e.source}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p class="letter-empty">لا مداخل بعد</p>
+          )}
+        </section>
+      );
+    })}
+  </div> -->
+
+  <h2>a — z</h2>
+  <div dir="ltr" class="glossary-grid">
+    {latinLetters.map((letter) => {
+      const entries = entriesFor(letter);
+      return (
+        <section class="letter-box">
+          <h3>{letter}</h3>
+          {entries.length ? (
+            <table>
+              <thead>
+                <tr><th>المصطلح</th><th>المقابل</th><th>الشرح</th><th>المصدر</th></tr>
+              </thead>
+              <tbody>
+                {entries.map((e) => (
+                  <tr>
+                    <td style="text-align: center;">{e.term}</td>
+                    <td><strong>{e.translation}</strong></td>
+                    <td>{e.explanation}</td>
+                    <td>{e.source}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p class="letter-empty">لا مداخل بعد</p>
+          )}
+        </section>
+      );
+    })}
+  </div>
+</BaseLayout>

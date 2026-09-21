@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+const tocItems = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const fmt = new Intl.DateTimeFormat('ar', { dateStyle: 'long' });
+---
+
+<BaseLayout title={post.data.title}>
+  <div class:list={['with-aside', { 'no-aside': !post.data.toc }]}>
+    <article>
+      <header>
+        <div class="title-row">
+          <time>{fmt.format(post.data.date)}</time>
+          <h1>{post.data.title}</h1>
+          <p class="tag-list">
+            {post.data.tags.map((t) => (
+              <a class="tag" href={`/م/${t}`}>{t}</a>
+            ))}
+          </p>
+        </div>
+      </header>
+      <div class="post-body">
+        <Content />
+      </div>
+    </article>
+    {post.data.toc && (
+      <aside class="aside-box toc">
+        <h2 class="aside-title">محتويات</h2>
+        <ul>
+          {tocItems.map((h) => (
+            <li class={h.depth === 3 ? 'toc-h3' : ''}>
+              <a href={`#${h.slug}`}>{h.text}</a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )}
+  </div>
+</BaseLayout>

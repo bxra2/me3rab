@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const fmt = new Intl.DateTimeFormat('ar', { dateStyle: 'long' });
+---
+
+<article class="entry">
+  <div class="title-row">
+    <time>{fmt.format(post.data.date)}</time>
+    <h2 class="entry-title">
+      <a href={`/مدونة/${post.id}`}>{post.data.title}</a>
+    </h2>
+    <p class="tag-list">
+      {post.data.tags.map((t) => (
+        <a class="tag" href={`/م/${t}`}>{t}</a>
+      ))}
+    </p>
+  </div>
+</article>

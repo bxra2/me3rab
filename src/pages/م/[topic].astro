@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogEntry from '../../components/BlogEntry.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const tags = new Set<string>();
+  for (const post of posts) {
+    for (const tag of post.data.tags) tags.add(tag);
+  }
+  return [...tags].map((topic) => ({
+    params: { topic },
+    props: {
+      topic,
+      posts: posts
+        .filter((p) => p.data.tags.includes(topic))
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { topic, posts } = Astro.props;
+---
+
+<BaseLayout title={`موضوع: ${topic}`}>
+  <header>
+    <h1>موضوع: {topic}</h1>
+    <p>{posts.length} مقالة تحمل هذا الوسم · <a href="/مدونة">كل المواضيع</a></p>
+  </header>
+  <div class="entries">
+    {posts.map((post) => (
+      <BlogEntry post={post} />
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,62 @@
+[
+    {
+        "term": "bug",
+        "translation": "علة",
+        "explanation": "خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "byte",
+        "translation": "أثمون",
+        "explanation": "خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "commit",
+        "translation": "إيداع",
+        "explanation": "تثبيت تغييرات في مستودع التحكم بالإصدارات؛ على وزن إيداع الوديعة في الذمة.",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "compile",
+        "translation": "تصريف",
+        "explanation": "تحويل الشيفرة المصدرية إلى وحدة قابلة للتنفيذ؛ على وزن تصريف الأفعال.",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "transliteration",
+        "translation": "",
+        "explanation": "",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "routine",
+        "translation": "",
+        "explanation": "",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "character",
+        "translation": "",
+        "explanation": "",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "protocol",
+        "translation": "",
+        "explanation": "",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "tag",
+        "translation": "",
+        "explanation": "",
+        "source": "مثال تجريبي — يمكن حذفه"
+    },
+    {
+        "term": "prompt",
+        "translation": "",
+        "explanation": "",
+        "source": "مثال تجريبي — يمكن حذفه"
+    }
+]
