@@ -8,8 +8,8 @@ body {
   --color-secondary: var(--stripe-color2);
   --color-rule: color-mix(in srgb, var(--color-ink) 35%, transparent);
 
-  --font-body: "Amiri", system-ui, sans-serif;
-  --font-heading: Georgia, "Times New Roman", "Amiri", "Noto Serif", serif;
+  --font-body: "NT panorama naskh", system-ui, sans-serif;
+  --font-heading: Georgia, "Times New Roman", "NT panorama naskh", "Noto Serif", serif;
   --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
 
   --text-s: 0.875rem;
