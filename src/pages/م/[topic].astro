@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogEntry from '../../components/BlogEntry.astro';
+import { toArabicDigits } from '../../utils/arabicDigits';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -26,7 +27,7 @@ const { topic, posts } = Astro.props;
 <BaseLayout title={`موضوع: ${topic}`}>
   <header>
     <h1>موضوع: {topic}</h1>
-    <p>{posts.length} مقالة تحمل هذا الوسم · <a href="/مدونة">كل المواضيع</a></p>
+    <p>{toArabicDigits(String(posts.length))} مقالة تحمل هذا الوسم · <a href="/مدونة">كل المواضيع</a></p>
   </header>
   <div class="entries">
     {posts.map((post) => (

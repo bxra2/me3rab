@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogEntry from '../components/BlogEntry.astro';
+import Kashida from '../components/Kashida.astro';
+import { toArabicDigits } from '../utils/arabicDigits';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -23,7 +25,9 @@ const topics = [...counts.entries()].sort(
     <section>
       <header>
         <h1>المدونة</h1>
-        <p>مقالات كثيفة على طريقة الدفاتر: سطور مسطّرة وكلام محكم.</p>
+        <p class="lede">
+          مقالات كثيفة على طريقة الدفاتر: سطور مسطّرة وكلام محكم.
+        </p>
       </header>
       <div class="entries">
         {posts.map((post) => (
@@ -38,11 +42,12 @@ const topics = [...counts.entries()].sort(
           {topics.map(([tag, count]) => (
             <tr>
               <td><a href={`/م/${tag}`}>{tag}</a></td>
-              <td>{count}</td>
+              <td>{toArabicDigits(String(count))}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </aside>
   </div>
+  <Kashida selector=".lede" />
 </BaseLayout>

@@ -1,0 +1,33 @@
+---
+interface Props {
+  selector: string;
+}
+
+const { selector } = Astro.props;
+---
+
+<script is:inline src="/raqim-kashida.js"></script>
+<script is:inline define:vars={{ selector }}>
+  (() => {
+    const targets = [...document.querySelectorAll(selector)].filter(
+      (el) => el.children.length === 0 && el.textContent.trim() !== '',
+    );
+    if (typeof RaqimKashida === 'undefined' || targets.length === 0) return;
+
+    let instances = [];
+    const apply = () => {
+      instances = targets.map((el) =>
+        RaqimKashida.justifyKashida(el, { set: 'arabic-naskh', maxPerPoint: 4 }),
+      );
+    };
+    (document.fonts?.ready ?? Promise.resolve()).then(apply);
+
+    let timer;
+    window.addEventListener('resize', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        for (const instance of instances) instance.refresh();
+      }, 150);
+    });
+  })();
+</script>

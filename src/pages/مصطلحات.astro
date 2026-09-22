@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import glossary from '../data/glossary.json';
+import { toArabicDigits } from '../utils/arabicDigits';
 
 const arabicLetters = [...'أبتثجحخدذرزسشصضطظعغفقكلمنهوي'];
 const latinLetters = [...'abcdefghijklmnopqrstuvwxyz'];
@@ -34,10 +35,10 @@ const entriesFor = (letter: string) =>
               <tbody>
                 {entries.map((e) => (
                   <tr>
-                    <td style="text-align: center;">{e.term}</td>
-                    <td><strong>{e.translation}</strong></td>
-                    <td>{e.explanation}</td>
-                    <td>{e.source}</td>
+                    <td style="text-align: center;">{toArabicDigits(e.term)}</td>
+                    <td><strong>{toArabicDigits(e.translation)}</strong></td>
+                    <td>{toArabicDigits(e.explanation)}</td>
+                    <td>{toArabicDigits(e.source)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -65,10 +66,10 @@ const entriesFor = (letter: string) =>
               <tbody>
                 {entries.map((e) => (
                   <tr>
-                    <td style="text-align: center;">{e.term}</td>
-                    <td><strong>{e.translation}</strong></td>
-                    <td>{e.explanation}</td>
-                    <td>{e.source}</td>
+                    <td style="text-align: center;"><strong>{toArabicDigits(e.term)}</strong></td>
+                    <td><strong>{toArabicDigits(e.translation)}</strong></td>
+                    <td>{toArabicDigits(e.explanation)}</td>
+                    <td>{toArabicDigits(e.source)}</td>
                   </tr>
                 ))}
               </tbody>

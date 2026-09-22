@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SourcePlaceholder from '../components/SourcePlaceholder.astro';
 import raw from '../data/sources.json';
+import { toArabicDigits } from '../utils/arabicDigits';
 
 interface Source {
   name: string;
@@ -30,8 +31,8 @@ const hostOf = (url: string) => new URL(url).hostname;
           )}
         </div>
         <div class="source-text">
-          <h2 class="source-name">{source.name}</h2>
-          <p class="source-desc">{source.description}</p>
+          <h2 class="source-name">{toArabicDigits(source.name)}</h2>
+          <p class="source-desc">{toArabicDigits(source.description)}</p>
           <p class="source-link">
             <a href={source.url} target="_blank" rel="noopener">{hostOf(source.url)}</a>
           </p>
