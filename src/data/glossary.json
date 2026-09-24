@@ -1,62 +1,260 @@
 [
     {
-        "term": "bug",
+        "term": "Bug",
         "translation": "علة",
         "explanation": "خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": [],
+        "status": "agreed",
+        "alternatives": [
+            {
+                "translation": "خطأ",
+                "note": "شائعة لكنها تتصادم مع error وتمسح التمييز بين المفهومين."
+            },
+            {
+                "translation": "حشرة",
+                "note": "ترجمة حرفية للفظ الأصل؛ لا تصلح للميدان."
+            }
+        ],
+        "derivations": [
+            { "form": "عِلّة", "gloss": "الاسم: الخلل نفسه" },
+            { "form": "عَليل", "gloss": "صفة: شيفرة فيها عِلّة" }
+        ]
     },
     {
-        "term": "byte",
+        "term": "Byte",
         "translation": "أثمون",
-        "explanation": "خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "explanation": "وحدة معلومات من ثماني بتّات؛ صِيغ «أثمون» على وزن أُفعول من الثَّمانية.",
+        "source": [
+            {
+                "name": "ويكيبديا",
+                "link": "https://ar.wikipedia.org/wiki/%D8%A3%D8%AB%D9%85%D9%88%D9%86"
+            }
+        ],
+        "status": "coined",
+        "alternatives": [
+            {
+                "translation": "بايت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ],
+        "derivations": [{ "form": "أُثمون", "gloss": "الاسم: وحدة المعلومات" }]
     },
     {
-        "term": "commit",
+        "term": "Commit",
         "translation": "إيداع",
         "explanation": "تثبيت تغييرات في مستودع التحكم بالإصدارات؛ على وزن إيداع الوديعة في الذمة.",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": [],
+        "status": "coined",
+        "alternatives": [
+            {
+                "translation": "تسليم",
+                "note": "تستعمل في بعض الواجهات لكنها تتصادم مع deliver."
+            }
+        ],
+        "derivations": [
+            { "form": "يُودِع", "gloss": "الفعل: يثبّت التغييرات" },
+            { "form": "إيداع", "gloss": "الاسم: عملية التثبيت" },
+            { "form": "مُودَع", "gloss": "اسم المفعول: ما ثبت في المستودع" }
+        ]
     },
     {
-        "term": "compile",
+        "term": "Compile",
         "translation": "تصريف",
         "explanation": "تحويل الشيفرة المصدرية إلى وحدة قابلة للتنفيذ؛ على وزن تصريف الأفعال.",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": [],
+        "status": "proposed",
+        "alternatives": [
+            {
+                "translation": "تجميع",
+                "note": "الشائعة في الاستعمال لكنها لا تُشتق منها أفعال ومشتقات بسهولة."
+            }
+        ],
+        "derivations": [
+            { "form": "يُصرِّف", "gloss": "الفعل: يحوّل المصدر إلى تنفيذي" },
+            {
+                "form": "مُصرِّف",
+                "gloss": "اسم الفاعل: البرنامج الذي يُصرِّف (compiler)"
+            },
+            { "form": "مُصرَّف", "gloss": "اسم المفعول: ما نتج عن التصريف" }
+        ]
     },
     {
-        "term": "transliteration",
-        "translation": "",
+        "term": "Transliteration",
+        "translation": "نقحرة",
         "explanation": "",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": [
+            {
+                "name": "ويكيبديا",
+                "link": "https://ar.wikipedia.org/wiki/%D9%86%D9%82%D8%AD%D8%B1%D8%A9"
+            }
+        ]
     },
     {
-        "term": "routine",
+        "term": "Routine",
         "translation": "",
         "explanation": "",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": []
     },
     {
-        "term": "character",
+        "term": "Archive",
         "translation": "",
         "explanation": "",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": []
     },
     {
-        "term": "protocol",
-        "translation": "",
+        "term": "Character",
+        "translation": "مِحرف",
         "explanation": "",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": []
     },
     {
-        "term": "tag",
+        "term": "Protocol",
         "translation": "",
         "explanation": "",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": []
     },
     {
-        "term": "prompt",
+        "term": "Tag",
         "translation": "",
         "explanation": "",
-        "source": "مثال تجريبي — يمكن حذفه"
+        "source": []
+    },
+    {
+        "term": "Prompt",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Vulnerability",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Pixel",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Glyph",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Parameter",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Parse",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Placebo",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Framework",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Subtitles",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Trainee",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Gadget",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Tweak",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Middleware",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Firmware",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Backpropagation",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Deadlock",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Idempotence",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Serialization",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Sharding",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Deadlock",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Asynchronous",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Boilerplate",
+        "translation": "",
+        "explanation": "",
+        "source": []
+    },
+    {
+        "term": "Polymorphism",
+        "translation": "",
+        "explanation": "",
+        "source": []
     }
 ]
