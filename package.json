@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check": "node scripts/check-glossary.mjs"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.19",
     "astro": "^5.0.0",
     "rehype-slug": "^5.0.0"
   }
