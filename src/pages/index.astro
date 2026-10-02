@@ -1,16 +1,54 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
 ---
 
-<BaseLayout title='الرئيسية'>
-    <header>
+<BaseLayout title="الرئيسية">
+  <div class="with-aside">
+    <section>
+      <header>
         <h1>معراب</h1>
         <p>
-            مشروع لتعريب المصطلح التقني: مقابلٌ واحد لكل مصطلح، بشرحٍ ومصدر، على
-            ورق مطبعة.
+          مشروع لتعريب المصطلح التقني: مقابلٌ واحد لكل مصطلح، بشرحٍ ومصدر، على
+          ورق مطبعة.
         </p>
         <p>
-            <a href='/مدونة'>المدونة</a> · <a href='/مصطلحات'>مصطلحات</a>
+          <a href="/مدونة">المدونة</a> · <a href="/مصطلحات">مصطلحات</a>
         </p>
-    </header>
+      </header>
+    </section>
+    <aside class="aside-box">
+      <h2 class="aside-title">روابط</h2>
+      <ul class="link-list">
+        <li>
+          <a href={site.github} target="_blank" rel="noopener">
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="8 6 3 12 8 18" />
+              <line x1="21" y1="6" x2="13" y2="18" />
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${site.email}`}>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" />
+              <polyline points="2,4 12,13 22,4" />
+            </svg>
+            البريد
+          </a>
+        </li>
+        <li>
+          <a href={site.feed}>
+            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="6" cy="18" r="2" fill="currentColor" stroke="none" />
+              <path d="M4 11a9 9 0 0 1 9 9" />
+              <path d="M4 4a16 16 0 0 1 16 16" />
+            </svg>
+            RSS
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
 </BaseLayout>
