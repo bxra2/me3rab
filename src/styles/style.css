@@ -457,3 +457,256 @@ header .title-row {
 @media (max-width: 50rem) {
   .source-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+#term-search {
+  margin-block-end: var(--space-l);
+}
+
+.term-stats {
+  font-size: var(--text-s);
+  opacity: 0.8;
+}
+.term-stats strong {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.term-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.term-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: var(--space-s);
+  align-items: baseline;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-rule);
+  background: transparent;
+  padding: var(--space-xxs) 0 var(--space-xs);
+  text-align: start;
+}
+
+.term-rows li:last-child .term-row { border-bottom: none; }
+
+.term-row:hover {
+  background: transparent;
+  color: var(--color-secondary);
+}
+
+.term-row-translation { font-weight: 700; }
+
+.badge {
+  border: 1px solid var(--color-ink);
+  font-size: var(--text-s);
+  padding-inline: var(--space-s);
+  white-space: nowrap;
+}
+
+.badge-proposed { border-style: dashed; }
+
+.badge-coined {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.badge-agreed {
+  background: var(--color-ink);
+  color: var(--bg-color);
+}
+
+.badge-abandoned { opacity: 0.55; }
+
+.no-results {
+  border: 2px dashed var(--color-ink);
+  padding: var(--space-m);
+  text-align: center;
+  margin: var(--space-l) 0 0;
+}
+
+.term-dialog {
+  border: 2px solid var(--color-ink);
+  background: var(--bg-color);
+  color: var(--color-ink);
+  padding: var(--space-l);
+  inline-size: min(34rem, calc(100% - 2 * var(--space-m)));
+  margin: auto;
+}
+
+.term-dialog::backdrop {
+  background: rgb(58 55 51 / 0.45);
+}
+
+.term-dialog .dialog-body h2 { margin-block-start: 0; }
+
+.dialog-close {
+  position: absolute;
+  inset-block-start: var(--space-s);
+  inset-inline-end: var(--space-s);
+  padding: 0 var(--space-s);
+}
+
+.dialog-source {
+  font-size: var(--text-s);
+  opacity: 0.75;
+}
+
+.relation-list {
+  display: grid;
+  gap: var(--space-s);
+}
+
+.relation-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-s);
+  margin: 0;
+}
+
+.relation-type { align-self: center; }
+
+.relation-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.relation-chip {
+  border: 1px solid var(--color-ink);
+  background: transparent;
+  color: var(--color-ink);
+  padding: 0 var(--space-s);
+  font-size: var(--text-s);
+}
+
+.relation-chip:hover {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.relation-note {
+  font-size: var(--text-s);
+  opacity: 0.75;
+}
+
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list li { margin-block-end: var(--space-s); }
+
+.link-list a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.link-list a:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.link-icon {
+  flex: none;
+  inline-size: 1.4rem;
+  block-size: 1.4rem;
+}
+
+.sidenote-ref { font-size: 0.7em; }
+
+@media (max-width: 74.99rem) {
+  .sidenote {
+    display: block;
+    border: 1px solid var(--color-rule);
+    padding: var(--space-xs) var(--space-s);
+    margin: var(--space-s) 0;
+    font-size: var(--text-s);
+  }
+}
+
+@media (min-width: 75rem) {
+  .has-sidenotes .post-body { padding-inline-end: 14rem; }
+
+  .sidenote {
+    float: inline-end;
+    clear: inline-end;
+    inline-size: 12rem;
+    margin-inline-end: -13.5rem;
+    margin-block-start: var(--space-xxs);
+    font-size: var(--text-s);
+    line-height: 1.5;
+  }
+}
+
+.sidenote-num { font-weight: 700; }
+
+@media print {
+  body {
+    --bg-color: #fff;
+    --color-ink: #000;
+    --stripe-width: 0;
+    min-height: auto;
+    padding: 0;
+    font-size: 11pt;
+    border-image-source: none;
+    border-style: none;
+  }
+
+  .paperOverlay,
+  .site-nav,
+  .aside-box,
+  #term-search,
+  .no-results,
+  .dialog-close {
+    display: none;
+  }
+
+  .with-aside { display: block; }
+
+  .has-sidenotes .post-body { padding-inline-end: 0; }
+
+  .sidenote {
+    float: none;
+    display: block;
+    border: 1px solid #000;
+    padding: 2pt 6pt;
+    margin: 6pt 0;
+    font-size: 9pt;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  a[href^='http']::after {
+    content: ' <' attr(href) '>';
+    font-size: 9pt;
+  }
+
+  tr,
+  .entry,
+  .letter-box,
+  .source-card,
+  .term-row {
+    break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+}
+
+@page {
+  margin: 2cm;
+}
