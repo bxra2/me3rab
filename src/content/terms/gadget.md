@@ -1,0 +1,12 @@
+---
+term: Gadget
+translation: أويلة
+status: proposed
+source:
+  - name: ويكيبديا
+    link: https://ar.wikipedia.org/wiki/أويلة
+alternatives:
+  - translation: أداة
+    note: ترجمة عامة تصطدم مع مصطلحات أخرى تترجم بنفس الكلمة مثل tool
+derivations: []
+---
