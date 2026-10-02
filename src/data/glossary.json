@@ -93,19 +93,61 @@
         "term": "Routine",
         "translation": "",
         "explanation": "",
-        "source": []
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "الدأب"
+            },
+            {
+                "translation": "الديدن"
+            }
+        ]
     },
     {
         "term": "Archive",
         "translation": "",
         "explanation": "",
-        "source": []
+        "alternatives": [
+            {
+                "translation": "أرشيف",
+                "note": ""
+            },
+            {
+                "translation": "ربيدة",
+                "note": ""
+            }
+        ],
+        "source": [
+            {
+                "name": "ويكيبديا",
+                "link": "https://ar.wikipedia.org/wiki/أرشيف"
+            }
+        ]
     },
     {
         "term": "Character",
         "translation": "مِحرف",
         "explanation": "",
-        "source": []
+        "source": [
+            {
+                "name": "عربآيز",
+                "link": "https://www.arabeyes.org/techdict:Character"
+            },
+            {
+                "name": "أرب تيرم",
+                "link": "https://arabterm.org/index.php?id=40&L=1&tx_3m5techdict_pi1[id]=61245"
+            }
+        ],
+        "alternatives": [
+            {
+                "translation": "رمز",
+                "note": "رمز كلمة شائعة جدا تستخدم للدلالة على مظلة من المصطلحات وليست دقيقة بالقدر الكافي هنا"
+            },
+            {
+                "translation": "حرف",
+                "note": "ترجمة تفتقر إلى الدقة لأن الحرف هو نوع واحد من المحارف مثل , ب, ش أما المحارف فتشمل A, 7, ؟, <مسافة> , ب, 😀"
+            }
+        ]
     },
     {
         "term": "Protocol",
@@ -129,7 +171,13 @@
         "term": "Vulnerability",
         "translation": "",
         "explanation": "",
-        "source": []
+        "source": [],
+        "derivations": [
+            {
+                "form": "فُلنرابل",
+                "gloss": "الصفة (vulnerable): المعرَّض للخطر"
+            }
+        ]
     },
     {
         "term": "Pixel",
@@ -234,12 +282,6 @@
         "source": []
     },
     {
-        "term": "Deadlock",
-        "translation": "",
-        "explanation": "",
-        "source": []
-    },
-    {
         "term": "Asynchronous",
         "translation": "",
         "explanation": "",
@@ -256,5 +298,1629 @@
         "translation": "",
         "explanation": "",
         "source": []
+    },
+    {
+        "term": "Accuracy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أكيورسي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Aeronautic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إيرونوتك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Anomaly",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أنومالي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Applet",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أبليت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Apprentice",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أبرنتس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Archipelago",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أرخبيل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Armor",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "آرمور",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Automate",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أوتوميت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Average",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أفريج",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Bay",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "باي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Bit",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بتّ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Bookmark",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بوكمارك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Brand",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "براند",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Burnout",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "برن أوت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "CAPTCHA",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كابتشا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Cape",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كيب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Chart",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تشارت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Cheetah",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "شيتا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Club",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كلاب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Comma",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كوما",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Compress file",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كمبريس فايل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Core",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كور",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Coworking space",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كووركينغ سبيس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Cove",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كوف",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Creole",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كريول",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Cringe",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كرينج",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Crowdfunding",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كراود فاندينغ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Crowdsourcing",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كراود سورسينغ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Device",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ديفايس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Diagram",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "دياغرام",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            },
+            {
+                "translation": "مِبيان",
+                "note": ""
+            },
+            {
+                "translation": "بَيَال",
+                "note": ""
+            },
+            {
+                "translation": "مُخَطط",
+                "note": ""
+            }
+        ]
+    },
+    {
+        "term": "Disclaimer",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "دسكلايمر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Drone",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "درون",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Dumbbell",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "دمبل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Dynamic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "داينمك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Dyslexia",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ديسلكسيا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Empathy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إمباثي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Emoji",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إيموجي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Entropy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إنتروبيا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Epistemology",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إبستيمولوجيا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Feedback",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "فيدباك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Gatekeeping",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "غيت كيبينغ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Geobragging",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "غيوبراغينغ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Genre",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "جانر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Geopolitical",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "جيوبوليتيكال",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Graph",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "غراف",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Gulf",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "غَلف",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Hardware",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "هاردوير",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Hash tag",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "هاشتاغ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Icon",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أيقونة",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Idiom",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إيديوم",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Illustration",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إليستريشن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Indexing",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إنديكسينغ",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Infographic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إنفوغرافيك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Internship",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إنترنشيب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Isthmus",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "إثمس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Jaguar",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "جاغوار",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Kettlebell",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كيتل بيل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Kinetic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كينيتك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "LASER",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ليزر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Language Model",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "موديل لغوي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Leopard",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ليوبارد",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Liberalism",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ليبراليزم",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Ligature",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ليغاتشر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Mace",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ميس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Maintain",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "مينتن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Map",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ماب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Matriarchy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ماترياركي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Mechanic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ميكانيك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Metal",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ميتال",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Mineral",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "مينرال",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Nitrogen",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "نيتروجين",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Nomenclature",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "نومنكلاتشر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Noob",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "نوب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Ontology",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أنطولوجيا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Outsource",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "أوت سورس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Packet",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "باكيت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Paradox",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بارادوكس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Patriarchy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "باترياركي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Peninsula",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بينينسولا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Peripheral",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بيريفيرال",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Pidgin",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بيدجين",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Plain text",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بلين تكست",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Plastic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بلاستك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Plot",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بلوت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Podcast",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بودكاست",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Portfolio",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بورتفوليو",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Pragmatic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "براغماتك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Pragmatics",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "براغماتكس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Precision",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بريشن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Profile",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بروفايل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Proxy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بروكسي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Psychedelic",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سايكدلك",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Qubit",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "كيوبت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Radicalism",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "راديكاليزم",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Rasterize",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "راسترايز",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Recursion",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ريكيرشن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Refute",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ريفوت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Remote controller",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ريموت كنترول",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Render",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "رندر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Representation",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ربرزنتيشن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Retro",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ريترو",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "SCUBA",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سكوبا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Schema",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سكيما",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Screenshot",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سكرينشوت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Shield",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "شيلد",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Software",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سوفتوير",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Slop",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سلوب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Splice",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سبلايس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Strategy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ستراتيجي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Strait",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ستريت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Studio",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ستوديو",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Surreal",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سُريال",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Swap",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سواب",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "System of lakes",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "سيستم أوف ليكس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Table",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تيبل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Tactics",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تاكتيكس",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Tensor",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تنسور",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Theology",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ثيولوجيا",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Therapy",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ثيرابي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Therapist",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ثيرابست",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Thread",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ثريد",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Tiger",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تايغر",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Toggle",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "توغل",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Token",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "توكن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Torrent",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تورنت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Toxins",
+        "translation": "ذيفان",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "توكسنز",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Trend",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ترند",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Truncate",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ترونكيت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Typography",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "تايبوغرافي",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Vintage",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "فينتج",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Visualization",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "فيجوالايزيشن",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Widget",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "ودجت",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Proton",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": []
+    },
+    {
+        "term": "Neutron",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": []
+    },
+    {
+        "term": "Electron",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": []
+    },
+    {
+        "term": "Blackmail",
+        "translation": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": []
     }
 ]
