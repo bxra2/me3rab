@@ -1,6 +1,7 @@
 ---
 term: Trend
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

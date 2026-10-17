@@ -1,6 +1,7 @@
 ---
 term: Geobragging
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Creole
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

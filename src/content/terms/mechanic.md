@@ -1,6 +1,7 @@
 ---
 term: Mechanic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

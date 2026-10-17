@@ -1,6 +1,7 @@
 ---
 term: Genre
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

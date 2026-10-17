@@ -1,6 +1,7 @@
 ---
 term: Geopolitical
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

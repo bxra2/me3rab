@@ -1,6 +1,7 @@
 ---
 term: Device
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

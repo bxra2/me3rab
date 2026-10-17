@@ -1,6 +1,7 @@
 ---
 term: Overwrite
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

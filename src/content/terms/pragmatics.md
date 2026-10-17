@@ -1,6 +1,7 @@
 ---
 term: Pragmatics
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

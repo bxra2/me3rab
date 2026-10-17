@@ -1,6 +1,7 @@
 ---
 term: Patriarchy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

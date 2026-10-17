@@ -1,6 +1,7 @@
 ---
 term: Leopard
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

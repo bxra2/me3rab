@@ -1,6 +1,7 @@
 ---
 term: Visualization
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

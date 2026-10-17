@@ -1,6 +1,7 @@
 ---
 term: Character
 translation: مِحرف
+explanation: ''
 status: proposed
 source:
   - name: عربآيز

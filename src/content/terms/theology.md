@@ -1,6 +1,7 @@
 ---
 term: Theology
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

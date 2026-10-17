@@ -1,6 +1,7 @@
 ---
 term: Coworking space
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

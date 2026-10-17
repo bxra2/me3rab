@@ -1,6 +1,7 @@
 ---
 term: Studio
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

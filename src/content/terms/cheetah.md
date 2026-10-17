@@ -1,6 +1,7 @@
 ---
 term: Cheetah
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

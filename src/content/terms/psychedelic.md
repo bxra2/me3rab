@@ -1,6 +1,7 @@
 ---
 term: Psychedelic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

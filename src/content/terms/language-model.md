@@ -1,6 +1,7 @@
 ---
 term: Language Model
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

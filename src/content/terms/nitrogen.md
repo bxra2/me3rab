@@ -1,6 +1,7 @@
 ---
 term: Nitrogen
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

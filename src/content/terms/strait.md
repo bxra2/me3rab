@@ -1,6 +1,7 @@
 ---
 term: Strait
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

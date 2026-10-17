@@ -1,6 +1,7 @@
 ---
 term: Vintage
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

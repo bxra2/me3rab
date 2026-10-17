@@ -1,6 +1,7 @@
 ---
 term: Infographic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

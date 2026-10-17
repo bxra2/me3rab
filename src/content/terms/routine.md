@@ -1,6 +1,7 @@
 ---
 term: Routine
-translation: ''
+translation: وِظاب
+explanation: ''
 status: proposed
 source: []
 alternatives:

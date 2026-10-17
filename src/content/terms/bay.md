@@ -1,6 +1,7 @@
 ---
 term: Bay
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

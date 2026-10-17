@@ -1,6 +1,7 @@
 ---
 term: Kinetic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

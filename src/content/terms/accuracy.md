@@ -1,14 +1,13 @@
 ---
 term: Accuracy
-translation: مصوبة
+translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:
   - translation: أكيورسي
     note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
   - translation: مصوبة
-    note: ـ
-  - translation: دقة
-    note: ـ
+    note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
 derivations: []
 ---

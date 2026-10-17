@@ -1,6 +1,7 @@
 ---
 term: Compress file
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

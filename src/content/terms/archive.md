@@ -1,6 +1,7 @@
 ---
 term: Archive
 translation: ''
+explanation: ''
 status: proposed
 source:
   - name: ويكيبديا

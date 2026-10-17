@@ -1,6 +1,7 @@
 ---
 term: Dyslexia
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

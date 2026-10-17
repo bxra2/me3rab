@@ -1,6 +1,7 @@
 ---
 term: Aeronautic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

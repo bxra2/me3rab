@@ -1,6 +1,7 @@
 ---
 term: Transliteration
 translation: نقحرة
+explanation: ''
 status: proposed
 source:
   - name: ويكيبديا

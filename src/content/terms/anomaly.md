@@ -1,6 +1,7 @@
 ---
 term: Anomaly
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

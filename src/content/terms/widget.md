@@ -1,6 +1,7 @@
 ---
 term: Widget
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

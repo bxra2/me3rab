@@ -1,6 +1,7 @@
 ---
 term: Remote controller
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Dynamic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

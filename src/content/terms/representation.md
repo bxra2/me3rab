@@ -1,6 +1,7 @@
 ---
 term: Representation
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

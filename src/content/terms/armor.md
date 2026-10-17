@@ -1,6 +1,7 @@
 ---
 term: Armor
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: SCUBA
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

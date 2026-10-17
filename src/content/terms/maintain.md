@@ -1,6 +1,7 @@
 ---
 term: Maintain
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

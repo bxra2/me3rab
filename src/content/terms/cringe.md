@@ -1,6 +1,7 @@
 ---
 term: Cringe
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

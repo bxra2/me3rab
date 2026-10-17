@@ -1,6 +1,7 @@
 ---
 term: Gadget
 translation: أويلة
+explanation: ''
 status: proposed
 source:
   - name: ويكيبديا

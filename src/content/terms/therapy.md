@@ -1,6 +1,7 @@
 ---
 term: Therapy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Cape
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

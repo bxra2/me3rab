@@ -1,6 +1,7 @@
 ---
 term: Rasterize
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

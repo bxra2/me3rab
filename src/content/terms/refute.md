@@ -1,6 +1,7 @@
 ---
 term: Refute
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

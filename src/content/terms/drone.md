@@ -1,6 +1,7 @@
 ---
 term: Drone
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

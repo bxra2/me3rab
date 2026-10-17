@@ -1,6 +1,7 @@
 ---
 term: Peninsula
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

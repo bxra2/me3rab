@@ -1,6 +1,7 @@
 ---
 term: Icon
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

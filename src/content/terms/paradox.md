@@ -1,6 +1,7 @@
 ---
 term: Paradox
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

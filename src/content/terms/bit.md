@@ -1,6 +1,7 @@
 ---
 term: Bit
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

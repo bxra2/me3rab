@@ -1,6 +1,7 @@
 ---
 term: Tactics
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

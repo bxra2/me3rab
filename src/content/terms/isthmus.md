@@ -1,6 +1,7 @@
 ---
 term: Isthmus
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Outsource
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

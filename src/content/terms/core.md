@@ -1,6 +1,7 @@
 ---
 term: Core
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

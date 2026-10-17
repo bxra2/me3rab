@@ -1,6 +1,7 @@
 ---
 term: Noob
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

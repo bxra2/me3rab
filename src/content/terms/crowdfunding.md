@@ -1,6 +1,7 @@
 ---
 term: Crowdfunding
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

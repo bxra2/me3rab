@@ -1,6 +1,7 @@
 ---
 term: Plain text
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

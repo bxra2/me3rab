@@ -1,6 +1,7 @@
 ---
 term: Jaguar
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

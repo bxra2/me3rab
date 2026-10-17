@@ -1,6 +1,7 @@
 ---
 term: Diagram
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

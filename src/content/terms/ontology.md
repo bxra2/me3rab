@@ -1,6 +1,7 @@
 ---
 term: Ontology
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

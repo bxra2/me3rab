@@ -1,6 +1,7 @@
 ---
 term: Middleware
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives: []

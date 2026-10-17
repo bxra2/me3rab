@@ -1,6 +1,7 @@
 ---
 term: Pidgin
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

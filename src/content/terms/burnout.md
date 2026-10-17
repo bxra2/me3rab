@@ -1,6 +1,7 @@
 ---
 term: Burnout
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

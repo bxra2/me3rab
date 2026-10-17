@@ -1,6 +1,7 @@
 ---
 term: Slop
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

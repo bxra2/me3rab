@@ -1,6 +1,7 @@
 ---
 term: Matriarchy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

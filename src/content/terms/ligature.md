@@ -1,6 +1,7 @@
 ---
 term: Ligature
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

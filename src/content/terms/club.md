@@ -1,6 +1,7 @@
 ---
 term: Club
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

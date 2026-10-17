@@ -1,6 +1,7 @@
 ---
 term: Strategy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

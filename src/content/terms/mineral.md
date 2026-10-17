@@ -1,6 +1,7 @@
 ---
 term: Mineral
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

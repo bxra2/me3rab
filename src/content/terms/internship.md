@@ -1,6 +1,7 @@
 ---
 term: Internship
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

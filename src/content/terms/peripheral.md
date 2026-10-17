@@ -1,6 +1,7 @@
 ---
 term: Peripheral
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

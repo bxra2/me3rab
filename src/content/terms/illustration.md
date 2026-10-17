@@ -1,6 +1,7 @@
 ---
 term: Illustration
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

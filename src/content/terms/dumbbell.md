@@ -1,6 +1,7 @@
 ---
 term: Dumbbell
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

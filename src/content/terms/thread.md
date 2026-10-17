@@ -1,6 +1,7 @@
 ---
 term: Thread
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

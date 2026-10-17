@@ -1,6 +1,7 @@
 ---
 term: Tiger
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

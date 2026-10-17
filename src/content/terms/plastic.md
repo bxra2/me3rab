@@ -1,6 +1,7 @@
 ---
 term: Plastic
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

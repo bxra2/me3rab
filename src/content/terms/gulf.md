@@ -1,6 +1,7 @@
 ---
 term: Gulf
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

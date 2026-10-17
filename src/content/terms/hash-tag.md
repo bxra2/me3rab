@@ -1,6 +1,7 @@
 ---
 term: Hash tag
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

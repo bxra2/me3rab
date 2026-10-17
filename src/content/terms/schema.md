@@ -1,6 +1,7 @@
 ---
 term: Schema
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Map
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

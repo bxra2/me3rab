@@ -1,6 +1,7 @@
 ---
 term: Therapist
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

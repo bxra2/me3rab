@@ -1,6 +1,7 @@
 ---
 term: Applet
 translation: بُريمج
+explanation: ''
 status: proposed
 source: []
 alternatives:

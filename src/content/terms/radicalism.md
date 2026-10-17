@@ -1,6 +1,7 @@
 ---
 term: Radicalism
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

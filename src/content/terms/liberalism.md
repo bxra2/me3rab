@@ -1,6 +1,7 @@
 ---
 term: Liberalism
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

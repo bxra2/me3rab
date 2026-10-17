@@ -1,6 +1,7 @@
 ---
 term: Table
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

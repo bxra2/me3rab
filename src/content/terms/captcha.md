@@ -1,6 +1,7 @@
 ---
 term: CAPTCHA
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

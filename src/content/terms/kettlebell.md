@@ -1,6 +1,7 @@
 ---
 term: Kettlebell
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

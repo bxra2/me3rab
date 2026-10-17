@@ -1,6 +1,7 @@
 ---
 term: Qubit
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

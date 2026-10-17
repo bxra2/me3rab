@@ -1,6 +1,7 @@
 ---
 term: Feedback
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

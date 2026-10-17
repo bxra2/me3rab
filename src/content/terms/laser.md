@@ -1,6 +1,7 @@
 ---
 term: LASER
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

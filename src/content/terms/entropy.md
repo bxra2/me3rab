@@ -1,6 +1,7 @@
 ---
 term: Entropy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Gatekeeping
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

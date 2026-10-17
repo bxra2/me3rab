@@ -1,6 +1,7 @@
 ---
 term: Crowdsourcing
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Software
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Brand
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

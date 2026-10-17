@@ -1,6 +1,7 @@
 ---
 term: Tensor
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

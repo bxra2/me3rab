@@ -1,6 +1,7 @@
 ---
 term: Disclaimer
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

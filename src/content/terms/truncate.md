@@ -1,6 +1,7 @@
 ---
 term: Truncate
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

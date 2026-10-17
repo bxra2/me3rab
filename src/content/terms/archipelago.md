@@ -1,6 +1,7 @@
 ---
 term: Archipelago
-translation: ''
+translation: أرخبيل
+explanation: ''
 status: proposed
 source: []
 alternatives:

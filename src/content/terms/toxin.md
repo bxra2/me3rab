@@ -1,6 +1,7 @@
 ---
 term: Toxin
 translation: ذيفان
+explanation: ''
 status: proposed
 source: []
 alternatives:

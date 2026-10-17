@@ -1,6 +1,7 @@
 ---
 term: Token
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

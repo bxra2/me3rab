@@ -1,6 +1,7 @@
 ---
 term: Average
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

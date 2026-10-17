@@ -1,6 +1,7 @@
 ---
 term: Plot
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

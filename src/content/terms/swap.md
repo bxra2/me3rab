@@ -1,6 +1,7 @@
 ---
 term: Swap
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

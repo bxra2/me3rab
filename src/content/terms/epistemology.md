@@ -1,6 +1,7 @@
 ---
 term: Epistemology
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

@@ -1,6 +1,7 @@
 ---
 term: Apprentice
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

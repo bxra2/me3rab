@@ -1,6 +1,7 @@
 ---
 term: Sharding
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives: []

@@ -1,6 +1,7 @@
 ---
 term: Metal
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

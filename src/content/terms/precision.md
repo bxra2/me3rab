@@ -1,6 +1,7 @@
 ---
 term: Precision
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

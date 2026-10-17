@@ -1,6 +1,7 @@
 ---
 term: Typography
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

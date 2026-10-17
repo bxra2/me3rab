@@ -1,6 +1,7 @@
 ---
 term: Idiom
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

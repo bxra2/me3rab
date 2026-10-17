@@ -1,6 +1,7 @@
 ---
 term: Portfolio
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

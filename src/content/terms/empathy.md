@@ -1,6 +1,7 @@
 ---
 term: Empathy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

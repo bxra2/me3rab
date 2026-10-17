@@ -1,6 +1,7 @@
 ---
 term: Automate
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

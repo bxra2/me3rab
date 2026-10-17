@@ -1,6 +1,7 @@
 ---
 term: Emoji
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

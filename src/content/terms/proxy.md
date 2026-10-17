@@ -1,6 +1,7 @@
 ---
 term: Proxy
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

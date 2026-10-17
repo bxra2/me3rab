@@ -1,6 +1,7 @@
 ---
 term: Screenshot
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

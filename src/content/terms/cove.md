@@ -1,6 +1,7 @@
 ---
 term: Cove
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

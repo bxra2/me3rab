@@ -1,6 +1,7 @@
 ---
 term: Podcast
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

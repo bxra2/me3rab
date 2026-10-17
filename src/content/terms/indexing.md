@@ -1,6 +1,7 @@
 ---
 term: Indexing
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

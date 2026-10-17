@@ -1,6 +1,7 @@
 ---
 term: Nomenclature
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

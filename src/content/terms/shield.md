@@ -1,6 +1,7 @@
 ---
 term: Shield
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

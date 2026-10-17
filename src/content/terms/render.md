@@ -1,6 +1,7 @@
 ---
 term: Render
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:

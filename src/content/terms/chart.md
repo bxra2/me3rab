@@ -1,6 +1,7 @@
 ---
 term: Chart
 translation: ''
+explanation: ''
 status: proposed
 source: []
 alternatives:
