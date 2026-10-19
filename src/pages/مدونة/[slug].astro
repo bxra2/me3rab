@@ -16,10 +16,11 @@ const { post } = Astro.props;
 const { Content, headings } = await render(post);
 const tocItems = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const fmt = new Intl.DateTimeFormat('ar-EG', { dateStyle: 'long' });
+const hasSidenotes = post.body.includes('^[');
 ---
 
 <BaseLayout title={post.data.title}>
-  <div class="with-aside">
+  <div class:list={['with-aside', { 'has-sidenotes': hasSidenotes }]}>
     <article>
       <header>
         <div class="title-row">

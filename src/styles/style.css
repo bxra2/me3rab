@@ -462,11 +462,36 @@ header .title-row {
   margin-block-end: var(--space-l);
 }
 
-.term-stats {
-  font-size: var(--text-s);
-  opacity: 0.8;
+.term-intro {
+  display: flex;
+  flex-wrap: wrap;          /* drops under the text on narrow screens */
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
 }
-.term-stats strong {
+.term-intro p {
+  margin: 0;
+}
+.term-stats {
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  margin: 20px;
+  line-height: 1.2;
+  width: auto;
+}
+.term-stats th,
+.term-stats td {
+  border: 1px solid var(--border, #ccc);
+  padding: 0.25rem 0.55rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.term-stats thead th {
+  background: var(--surface, #72706b);
+  color: #f2ecdd;
+  font-weight: 500;
+}
+.term-stats td {
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
@@ -499,6 +524,14 @@ header .title-row {
 
 .term-row-translation { font-weight: 700; }
 
+.term-stats input[type="radio"] {
+  display: block;
+  margin: 0 auto;
+  width: 0.9rem;
+  height: 0.9rem;
+  accent-color: #5c4630;
+  cursor: pointer;
+}
 .badge {
   border: 1px solid var(--color-ink);
   font-size: var(--text-s);

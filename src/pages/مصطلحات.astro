@@ -1,84 +1,384 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import glossary from '../data/glossary.json';
-import { toArabicDigits } from '../utils/arabicDigits';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content'
+import relations from '../data/relations.json'
+import { toArabicDigits } from '../utils/arabicDigits'
+import { TermStatus, statusBadgeClass } from '../data/statuses'
+import type { TermStatusKey } from '../data/statuses'
+import { TermView } from '../utils/interfaces'
 
-const arabicLetters = [...'أبتثجحخدذرزسشصضطظعغفقكلمنهوي'];
-const latinLetters = [...'abcdefghijklmnopqrstuvwxyz'];
+const rawEntries = await getCollection('terms')
+const currentTermStatus = 'all'
 
-const normalize = (ch: string) => (/^[أإآا]$/.test(ch) ? 'أ' : ch);
-const letterOf = (term: string) => normalize(term.trim()[0].toLowerCase());
+const entries: TermView[] = rawEntries
+    .map((entry) => ({
+        term: entry.data.term,
+        translation: entry.data.translation,
+        explanation: entry.data.explanation,
+        source: entry.data.source,
+        status: entry.data.status as TermStatusKey,
+        alternatives: entry.data.alternatives,
+        derivations: entry.data.derivations,
+    }))
+    .sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }))
+
+const statusCounts = Object.fromEntries(
+    (Object.keys(TermStatus) as TermStatusKey[]).map((status) => [
+        status,
+        entries.filter((e) => e.status === status).length,
+    ])
+) as Record<TermStatusKey, number>
+
+const stats = {
+    total: entries.length,
+    translated: entries.filter((e) => Boolean(e.translation?.trim())).length,
+    finished: statusCounts.agreed,
+}
+
+const statRows = [
+    { label: 'المجموع', value: stats.total, filter: 'all' },
+    { label: 'مترجَم', value: stats.translated, filter: 'translated' },
+    { label: 'مُنجَز', value: stats.finished, filter: 'done' },
+    {
+        label: TermStatus.proposed,
+        value: statusCounts.proposed,
+        filter: 'proposed',
+    },
+    { label: TermStatus.coined, value: statusCounts.coined, filter: 'coined' },
+    { label: TermStatus.agreed, value: statusCounts.agreed, filter: 'agreed' },
+    {
+      label: TermStatus.abandoned, value: statusCounts.abandoned, filter: 'abandoned',
+    },
+]
+
+const latinLetters = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+const letterOf = (term: string) => term.trim()[0].toUpperCase()
 const entriesFor = (letter: string) =>
-  glossary.filter((e) => letterOf(e.term) === letter);
+    entries.filter((e) => letterOf(e.term) === letter)
 ---
 
-<BaseLayout title="مصطلحات">
-  <header>
-    <h1>مصطلحات</h1>
-    <p>
-      معجمٌ واحدٌ لواحد: كل مصطلح بمقابله وشرحه ومصدره — من الألف إلى الياء، ثم من a إلى z.
+<BaseLayout title='مصطلحات'>
+    <header>
+        <h1>مصطلحات</h1>
+        <div class='term-intro'>
+            <p>
+                معجمٌ واحدٌ لواحد: انقر أي مدخل لفتح بطاقته — مقابلٌ وبدائل
+                واشتقاق ومصدر.
+            </p>
+
+            <table class='term-stats'>
+                <thead>
+                    <tr>
+                        {
+                            statRows.map(({ label }) => (
+                                <th scope='col'>{label}</th>
+                            ))
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {
+                            statRows.map(({ value }) => (
+                                <td>{toArabicDigits(String(value))}</td>
+                            ))
+                        }
+                    </tr>
+                    <tr>
+                        {
+                            statRows.map(({ filter, label }, i) => (
+                                <td>
+                                    <input
+                                        type='radio'
+                                        name='term-filter'
+                                        value={filter}
+                                        id={`term-filter-${i}`}
+                                        aria-label={label}
+                                        checked={
+                                            filter === currentTermStatus &&
+                                            i === 0
+                                        }
+                                    />
+                                </td>
+                            ))
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+
+    <input
+        id='term-search'
+        dir='auto'
+        type='search'
+        placeholder='ابحث في المصطلحات…'
+        aria-label='البحث في المصطلحات'
+    />
+
+    <h2>a — z</h2>
+    <div dir='ltr' class='glossary-grid'>
+        {
+            latinLetters.map((letter) => {
+                const letterEntries = entriesFor(letter)
+                return (
+                    <section class='letter-box' data-letter={letter}>
+                        <h3>{letter}</h3>
+                        {letterEntries.length ? (
+                            <ul class='term-rows'>
+                                {letterEntries.map((e) => (
+                                    <li>
+                                        <button
+                                            class='term-row'
+                                            data-term={e.term}
+                                        >
+                                            <span class='term-row-term'>
+                                                {toArabicDigits(e.term)}
+                                            </span>
+                                            <span class='term-row-translation'>
+                                                {e.translation
+                                                    ? toArabicDigits(
+                                                          e.translation
+                                                      )
+                                                    : '—'}
+                                            </span>
+                                            <span
+                                                class:list={[
+                                                    'badge',
+                                                    statusBadgeClass[e.status],
+                                                ]}
+                                            >
+                                                {TermStatus[e.status]}
+                                            </span>
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p class='letter-empty'>لا مداخل بعد</p>
+                        )}
+                    </section>
+                )
+            })
+        }
+    </div>
+
+    <p class='no-results' hidden>لا نتائج تطابق بحثك.</p>
+
+    <dialog id='term-dialog' class='term-dialog'>
+        <button class='dialog-close' type='button' aria-label='إغلاق'>✕</button>
+        <div class='dialog-body'></div>
+    </dialog>
+
+    <script
+        is:inline
+        type='application/json'
+        id='term-data'
+        set:html={JSON.stringify(entries)}
+    />
+    <script
+        is:inline
+        type='application/json'
+        id='relation-data'
+        set:html={JSON.stringify(relations)}
+    />
+    <script
+        is:inline
+        type='application/json'
+        id='status-data'
+        set:html={JSON.stringify({
+            labels: TermStatus,
+            classes: statusBadgeClass,
+        })}
+    />
+
+    <script>
+        const search = document.getElementById(
+            'term-search'
+        ) as HTMLInputElement
+        const dialog = document.getElementById(
+            'term-dialog'
+        ) as HTMLDialogElement
+        const body = dialog.querySelector('.dialog-body') as HTMLElement
+        const noResults = document.querySelector('.no-results') as HTMLElement
+        const boxes = [...document.querySelectorAll('.letter-box')]
+        const entries = JSON.parse(
+            document.getElementById('term-data')?.textContent ?? '[]'
+        ) as {
+            term: string
+            translation: string
+            explanation: string
+            source: { name: string; link: string }[]
+            status?: string
+            alternatives?: { translation: string; note: string }[]
+            derivations?: { form: string; gloss: string }[]
+        }[]
+        const { labels, classes } = JSON.parse(
+            document.getElementById('status-data')?.textContent ?? '{}'
+        ) as { labels: Record<string, string>; classes: Record<string, string> }
+        const relations = JSON.parse(
+            document.getElementById('relation-data')?.textContent ?? '[]'
+        ) as { type: string; terms: string[]; note: string }[]
+
+        const relationTypeLabels: Record<string, string> = {
+            family: 'عائلة',
+            contrast: 'تمييز',
+            pipeline: 'سلسلة',
+        }
+
+        const relationsFor = (term: string) =>
+            relations.filter((r) => r.terms.includes(term))
+
+        const entryOf = (term: string | undefined) =>
+            entries.find((e) => e.term === term)
+        const matches = (e: (typeof entries)[number], q: string) =>
+            [
+                e.term,
+                e.translation,
+                e.explanation,
+                ...(Array.isArray(e.source) ? e.source : []).map((s) => s.name),
+                ...relationsFor(e.term).flatMap((r) => [r.note, ...r.terms]),
+            ]
+                .join(' ')
+                .toUpperCase()
+                .includes(q)
+
+        const currentFilter = () =>
+            document.querySelector<HTMLInputElement>(
+                'input[name="term-filter"]:checked'
+            )?.value ?? 'all'
+
+        const passesFilter = (e: (typeof entries)[number], f: string) => {
+            if (f === 'all') return true
+            if (f === 'translated') return Boolean(e.translation?.trim())
+            return e.status === f
+        }
+
+        const applyFilters = () => {
+            const q = search.value.trim().toUpperCase()
+            const f = currentFilter()
+            const filtering = q !== '' || f !== 'all'
+            let any = false
+
+            for (const box of boxes) {
+                const rows = [...box.querySelectorAll('.term-row')]
+                if (rows.length === 0) {
+                    // empty-letter boxes only show when nothing is being filtered
+                    box.toggleAttribute('hidden', filtering)
+                    continue
+                }
+                let visible = 0
+                for (const row of rows) {
+                    const e = entryOf((row as HTMLElement).dataset.term)
+                    const show =
+                        e != null &&
+                        passesFilter(e, f) &&
+                        (q === '' || matches(e, q))
+                    // hide the <li> wrapper so no empty bullets/gaps remain
+                    ;(row.closest('li') ?? row).toggleAttribute('hidden', !show)
+                    if (show) visible++
+                }
+                box.toggleAttribute('hidden', visible === 0)
+                if (visible > 0) any = true
+            }
+            noResults.toggleAttribute('hidden', !filtering || any)
+        }
+
+        search.addEventListener('input', applyFilters)
+        document
+            .querySelectorAll('input[name="term-filter"]')
+            .forEach((r) => r.addEventListener('change', applyFilters))
+
+        const escapeHtml = (s: string) =>
+            s
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
+
+        const render = (e: (typeof entries)[number]) => {
+            const status = e.status ?? 'proposed'
+
+            const alts = (e.alternatives ?? [])
+                .map(
+                    (a) =>
+                        `<li><strong>${escapeHtml(a.translation)}</strong> — ${escapeHtml(a.note)}</li>`
+                )
+                .join('')
+
+            const derivs = (e.derivations ?? [])
+                .map(
+                    (d) =>
+                        `<tr><td>${escapeHtml(d.form)}</td><td>${escapeHtml(d.gloss)}</td></tr>`
+                )
+                .join('')
+
+            const sources = (Array.isArray(e.source) ? e.source : [])
+                .map(
+                    (s) =>
+                        `<a href="${escapeHtml(s.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.name)}</a>`
+                )
+                .join('، ')
+
+            const rels = relationsFor(e.term)
+                .map((r) => {
+                    const label = relationTypeLabels[r.type] ?? r.type
+                    const chips = r.terms
+                        .filter((t) => t !== e.term)
+                        .map(
+                            (t) =>
+                                `<button class="relation-chip" type="button" data-term="${escapeHtml(t)}">${escapeHtml(t)}</button>`
+                        )
+                        .join('')
+                    return `<p class="relation-group">
+        <span class="badge relation-type">${escapeHtml(label)}</span>
+        <span class="relation-chips">${chips}</span>
+        <span class="relation-note">${escapeHtml(r.note)}</span>
+      </p>`
+                })
+                .join('')
+
+            return `
+    <p class="tag-list">
+      <span class="badge ${classes[status]}">${labels[status]}</span>
     </p>
-  </header>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2>${e.translation ? escapeHtml(e.translation) : '—'}</h2>
+      <h2>${escapeHtml(e.term)}</h2>
+    </div>
+    ${e.explanation ? `<p>${escapeHtml(e.explanation)}</p>` : ''}
+    ${alts ? `<h3>بدائل مطروحة</h3><ul>${alts}</ul>` : ''}
+    ${
+        derivs
+            ? `<h3>الاشتقاق</h3><table><thead><tr><th>الصيغة</th><th>المعنى</th></tr></thead><tbody>${derivs}</tbody></table>`
+            : ''
+    }
+    ${rels ? `<h3>علاقات</h3><div class="relation-list">${rels}</div>` : ''}
+    ${sources ? `<p class="dialog-source">المصدر: ${sources}</p>` : ''}
+  `
+        }
 
-  <!-- <h2>أ — ي</h2>
-  <div class="glossary-grid">
-    {arabicLetters.map((letter) => {
-      const entries = entriesFor(letter);
-      return (
-        <section class="letter-box">
-          <h3>{letter}</h3>
-          {entries.length ? (
-            <table>
-              <thead>
-                <tr><th>المصطلح</th><th>المقابل</th><th>الشرح</th><th>المصدر</th></tr>
-              </thead>
-              <tbody>
-                {entries.map((e) => (
-                  <tr>
-                    <td style="text-align: center;">{toArabicDigits(e.term)}</td>
-                    <td><strong>{toArabicDigits(e.translation)}</strong></td>
-                    <td>{toArabicDigits(e.explanation)}</td>
-                    <td>{toArabicDigits(e.source)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <p class="letter-empty">لا مداخل بعد</p>
-          )}
-        </section>
-      );
-    })}
-  </div> -->
-
-  <h2>a — z</h2>
-  <div dir="ltr" class="glossary-grid">
-    {latinLetters.map((letter) => {
-      const entries = entriesFor(letter);
-      return (
-        <section class="letter-box">
-          <h3>{letter}</h3>
-          {entries.length ? (
-            <table>
-              <thead>
-                <tr><th>المصطلح</th><th>المقابل</th><th>الشرح</th><th>المصدر</th></tr>
-              </thead>
-              <tbody>
-                {entries.map((e) => (
-                  <tr>
-                    <td style="text-align: center;"><strong>{toArabicDigits(e.term)}</strong></td>
-                    <td><strong>{toArabicDigits(e.translation)}</strong></td>
-                    <td>{toArabicDigits(e.explanation)}</td>
-                    <td>{toArabicDigits(e.source)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          ) : (
-            <p class="letter-empty">لا مداخل بعد</p>
-          )}
-        </section>
-      );
-    })}
-  </div>
+        document.addEventListener('click', (ev) => {
+            if (!(ev.target instanceof Element)) return
+            const row = ev.target.closest('.term-row')
+            if (row) {
+                const e = entryOf((row as HTMLElement).dataset.term)
+                if (e) {
+                    body.innerHTML = render(e)
+                    dialog.showModal()
+                }
+                return
+            }
+            const chip = ev.target.closest('.relation-chip')
+            if (chip) {
+                const rel = entryOf((chip as HTMLElement).dataset.term)
+                if (rel) body.innerHTML = render(rel)
+                return
+            }
+            if (ev.target.closest('.dialog-close') || ev.target === dialog) {
+                dialog.close()
+            }
+        })
+    </script>
 </BaseLayout>
