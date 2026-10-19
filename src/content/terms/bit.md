@@ -1,6 +1,6 @@
 ---
 term: Bit
-translation: ''
+translation: 'أُحدة'
 explanation: ''
 status: proposed
 source: []
