@@ -10,8 +10,14 @@ interface Source {
   url: string;
   image?: string;
 }
+type SourceGroup = Record<string, Source[]>;
 
-const sources = raw as Source[];
+const sources = raw as SourceGroup[];
+
+const categories = sources.flatMap((group) =>
+  Object.entries(group).map(([name, items]) => ({ name, items }))
+);
+
 const hostOf = (url: string) => new URL(url).hostname;
 ---
 
@@ -20,24 +26,34 @@ const hostOf = (url: string) => new URL(url).hostname;
     <h1>مصادر</h1>
     <p>جهات ومنشورات ألهمت بعض هذا العمل — مع الشكر لمن صكّ المصطلح قبلنا.</p>
   </header>
-  <div class="source-grid">
-    {sources.map((source) => (
-      <article class="source-card">
-        <div class="source-pic">
-          {source.image ? (
-            <img src={source.image} alt={source.name} />
-          ) : (
-            <SourcePlaceholder />
-          )}
-        </div>
-        <div class="source-text">
-          <h2 class="source-name">{toArabicDigits(source.name)}</h2>
-          <p class="source-desc">{toArabicDigits(source.description)}</p>
-          <p class="source-link">
-            <a href={source.url} target="_blank" rel="noopener">{hostOf(source.url)}</a>
-          </p>
-        </div>
-      </article>
-    ))}
-  </div>
+
+  {categories.map((category) => (
+    <section class="source-category">
+      <h2>{category.name}</h2>
+      <hr>
+      <br>
+      <div class="source-grid">
+        {category.items.map((item) => (
+          <article class="source-card">
+            <div class="source-pic">
+              {item.image ? (
+                <img src={item.image} alt={item.name} loading="lazy" />
+              ) : (
+                <SourcePlaceholder />
+              )}
+            </div>
+            <div class="source-text">
+              <h3 class="source-name">{toArabicDigits(item.name)}</h3>
+              {item.description && (
+                <p class="source-desc">{toArabicDigits(item.description)}</p>
+              )}
+              <p class="source-link">
+                الرابط: <a href={item.url} target="_blank" rel="noopener">{hostOf(item.url)}</a>
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
 </BaseLayout>
