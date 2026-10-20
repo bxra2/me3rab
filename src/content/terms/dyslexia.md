@@ -7,5 +7,6 @@ source: []
 alternatives:
   - translation: ديسلكسيا
     note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
+  - translation: عُسْر القراءة
 derivations: []
 ---

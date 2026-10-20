@@ -1,9 +1,11 @@
 ---
 term: Protocol
-translation: ''
-explanation: ''
+translation: 'ميفاق'
+explanation: 'تُستعمل هذه الكلمة في شتى المجالات من التقانة و السياسة والطب ويقصد بها نفس المعنى تقريبا: مجموعة من القواعد والنظم المتفق عليها في سياق معين'
 status: proposed
 source: []
-alternatives: []
+alternatives: 
+   - translation: بروتوكول
+     note: "تترجم هذه الكلمة بالإجماع إلى بروتوكول و هي نقحرة الكلمة دون محاولة إلى ترجمتها"
 derivations: []
 ---

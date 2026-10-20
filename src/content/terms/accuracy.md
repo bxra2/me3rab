@@ -10,11 +10,10 @@ alternatives:
   - translation: مصوبة
     note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
   - translation: دِقَّة
-    note:
+    note: ''
   - translation: صَوَاب
-    note:
+    note: ''
   - translation: الضباطة
-    note:
-
+    note: ''
 derivations: []
 ---

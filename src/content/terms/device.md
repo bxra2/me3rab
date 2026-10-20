@@ -1,6 +1,6 @@
 ---
 term: Device
-translation: ''
+translation: 'جهاز'
 explanation: ''
 status: proposed
 source: []
