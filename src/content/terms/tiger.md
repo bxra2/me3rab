@@ -1,6 +1,6 @@
 ---
 term: Tiger
-translation: ''
+translation: 'بَبْر'
 explanation: ''
 status: proposed
 source: []

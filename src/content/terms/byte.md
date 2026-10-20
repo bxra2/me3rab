@@ -14,4 +14,5 @@ alternatives:
 derivations:
   - form: أُثمون
     gloss: 'الاسم: وحدة المعلومات'
+isComplete: true
 ---

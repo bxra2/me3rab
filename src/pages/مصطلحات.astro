@@ -321,7 +321,7 @@ const entriesFor = (letter: string) =>
                     (s) =>
                         `<a href="${escapeHtml(s.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.name)}</a>`
                 )
-                .join('، ')
+                .join('، &nbsp;')
 
             const rels = relationsFor(e.term)
                 .map((r) => {
@@ -357,7 +357,7 @@ const entriesFor = (letter: string) =>
             : ''
     }
     ${rels ? `<h3>علاقات</h3><div class="relation-list">${rels}</div>` : ''}
-    ${sources ? `<p class="dialog-source">المصدر: ${sources}</p>` : ''}
+    ${sources ? `<hr/><p class="dialog-source">المصدر: ${sources}</p>` : ''}
   `
         }
 

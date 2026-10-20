@@ -1,6 +1,6 @@
 ---
 term: Jaguar
-translation: ''
+translation: 'فهد'
 explanation: ''
 status: proposed
 source: []

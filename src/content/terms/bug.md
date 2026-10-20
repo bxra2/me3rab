@@ -3,7 +3,9 @@ term: Bug
 translation: علة
 explanation: خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.
 status: agreed
-source: []
+source: 
+  - name: "عربآيز"
+    link: "https://www.arabeyes.org/techdict:Bug"
 alternatives:
   - translation: خطأ
     note: شائعة لكنها تتصادم مع error وتمسح التمييز بين المفهومين.
@@ -14,4 +16,5 @@ derivations:
     gloss: 'الاسم: الخلل نفسه'
   - form: عَليل
     gloss: 'صفة: شيفرة فيها عِلّة'
+isComplete: true
 ---

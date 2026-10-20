@@ -1,6 +1,6 @@
 ---
 term: Leopard
-translation: ''
+translation: 'نَمِر'
 explanation: ''
 status: proposed
 source: []
