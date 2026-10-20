@@ -25,6 +25,7 @@ const terms = defineCollection({
     source: z.array(z.object({ name: z.string(), link: z.string() })).default([]),
     alternatives: z.array(z.object({ translation: z.string(), note: z.string().default('') })).default([]),
     derivations: z.array(z.object({ form: z.string(), gloss: z.string() })).default([]),
+    isComplete: z.boolean().default(false)
   }),
 });
 

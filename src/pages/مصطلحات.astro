@@ -19,6 +19,7 @@ const entries: TermView[] = rawEntries
         status: entry.data.status as TermStatusKey,
         alternatives: entry.data.alternatives,
         derivations: entry.data.derivations,
+        isComplete: entry.data.isComplete ?? false,
     }))
     .sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }))
 
@@ -132,8 +133,9 @@ const entriesFor = (letter: string) =>
                                             class='term-row'
                                             data-term={e.term}
                                         >
-                                            <span class='term-row-term'>
+                                            <span class="term-row-term">
                                                 {toArabicDigits(e.term)}
+                                                {e.isComplete && <span class="term-complete" title="Completed">✓</span>}
                                             </span>
                                             <span class='term-row-translation'>
                                                 {e.translation
@@ -155,7 +157,7 @@ const entriesFor = (letter: string) =>
                                 ))}
                             </ul>
                         ) : (
-                            <p class='letter-empty'>لا مداخل بعد</p>
+                            <p class='letter-empty'>لا مصطلحات بعد</p>
                         )}
                     </section>
                 )

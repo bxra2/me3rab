@@ -23,4 +23,5 @@ export interface TermView {
   status: TermStatusKey;
   alternatives: Alternative[];
   derivations: Derivation[];
+  isComplete: boolean;
 }

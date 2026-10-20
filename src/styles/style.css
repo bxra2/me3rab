@@ -524,6 +524,12 @@ header .title-row {
 
 .term-row-translation { font-weight: 700; }
 
+.term-complete {
+    color: #4f8a65;
+    font-size: 0.85em;
+    margin-inline-end: 0.4em;
+}
+
 .term-stats input[type="radio"] {
   display: block;
   margin: 0 auto;
