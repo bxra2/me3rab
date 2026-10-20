@@ -1,7 +1,7 @@
 [
     {
         "term": "Bug",
-        "translation": "علة",
+        "recommended": "علة",
         "explanation": "خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.",
         "source": [],
         "status": "agreed",
@@ -16,13 +16,19 @@
             }
         ],
         "derivations": [
-            { "form": "عِلّة", "gloss": "الاسم: الخلل نفسه" },
-            { "form": "عَليل", "gloss": "صفة: شيفرة فيها عِلّة" }
+            {
+                "form": "عِلّة",
+                "gloss": "الاسم: الخلل نفسه"
+            },
+            {
+                "form": "عَليل",
+                "gloss": "صفة: شيفرة فيها عِلّة"
+            }
         ]
     },
     {
         "term": "Byte",
-        "translation": "أثمون",
+        "recommended": "أثمون",
         "explanation": "وحدة معلومات من ثماني بتّات؛ صِيغ «أثمون» على وزن أُفعول من الثَّمانية.",
         "source": [
             {
@@ -37,11 +43,16 @@
                 "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
             }
         ],
-        "derivations": [{ "form": "أُثمون", "gloss": "الاسم: وحدة المعلومات" }]
+        "derivations": [
+            {
+                "form": "أُثمون",
+                "gloss": "الاسم: وحدة المعلومات"
+            }
+        ]
     },
     {
         "term": "Commit",
-        "translation": "إيداع",
+        "recommended": "إيداع",
         "explanation": "تثبيت تغييرات في مستودع التحكم بالإصدارات؛ على وزن إيداع الوديعة في الذمة.",
         "source": [],
         "status": "coined",
@@ -52,14 +63,23 @@
             }
         ],
         "derivations": [
-            { "form": "يُودِع", "gloss": "الفعل: يثبّت التغييرات" },
-            { "form": "إيداع", "gloss": "الاسم: عملية التثبيت" },
-            { "form": "مُودَع", "gloss": "اسم المفعول: ما ثبت في المستودع" }
+            {
+                "form": "يُودِع",
+                "gloss": "الفعل: يثبّت التغييرات"
+            },
+            {
+                "form": "إيداع",
+                "gloss": "الاسم: عملية التثبيت"
+            },
+            {
+                "form": "مُودَع",
+                "gloss": "اسم المفعول: ما ثبت في المستودع"
+            }
         ]
     },
     {
         "term": "Compile",
-        "translation": "تصريف",
+        "recommended": "تصريف",
         "explanation": "تحويل الشيفرة المصدرية إلى وحدة قابلة للتنفيذ؛ على وزن تصريف الأفعال.",
         "source": [],
         "status": "proposed",
@@ -70,17 +90,23 @@
             }
         ],
         "derivations": [
-            { "form": "يُصرِّف", "gloss": "الفعل: يحوّل المصدر إلى تنفيذي" },
+            {
+                "form": "يُصرِّف",
+                "gloss": "الفعل: يحوّل المصدر إلى تنفيذي"
+            },
             {
                 "form": "مُصرِّف",
                 "gloss": "اسم الفاعل: البرنامج الذي يُصرِّف (compiler)"
             },
-            { "form": "مُصرَّف", "gloss": "اسم المفعول: ما نتج عن التصريف" }
+            {
+                "form": "مُصرَّف",
+                "gloss": "اسم المفعول: ما نتج عن التصريف"
+            }
         ]
     },
     {
         "term": "Transliteration",
-        "translation": "نقحرة",
+        "recommended": "نقحرة",
         "explanation": "",
         "source": [
             {
@@ -91,7 +117,7 @@
     },
     {
         "term": "Routine",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -105,7 +131,7 @@
     },
     {
         "term": "Archive",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "alternatives": [
             {
@@ -126,7 +152,7 @@
     },
     {
         "term": "Character",
-        "translation": "مِحرف",
+        "recommended": "مِحرف",
         "explanation": "",
         "source": [
             {
@@ -151,25 +177,25 @@
     },
     {
         "term": "Protocol",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Tag",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Prompt",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Vulnerability",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "derivations": [
@@ -181,139 +207,154 @@
     },
     {
         "term": "Pixel",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Glyph",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Parameter",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Parse",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Placebo",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Framework",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Subtitles",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Trainee",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Gadget",
-        "translation": "",
+        "recommended": "أويلة",
         "explanation": "",
-        "source": []
+        "alternatives": [
+            {
+                "translation": "أداة",
+                "note": "ترجمة عامة تصطدم مع مصطلحات أخرى تترجم بنفس الكلمة مثل tool"
+            }
+        ],
+        "source": [
+            {
+                "name": "ويكيبديا",
+                "link": "https://ar.wikipedia.org/wiki/أويلة"
+            }
+        ]
     },
     {
         "term": "Tweak",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Middleware",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Firmware",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Backpropagation",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Deadlock",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Idempotence",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Serialization",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Sharding",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Asynchronous",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Boilerplate",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Polymorphism",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": []
     },
     {
         "term": "Accuracy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
             {
                 "translation": "أكيورسي",
                 "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            },
+            {
+                "translation": "مصوبة",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
             }
         ]
     },
     {
         "term": "Aeronautic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -325,7 +366,7 @@
     },
     {
         "term": "Anomaly",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -337,19 +378,23 @@
     },
     {
         "term": "Applet",
-        "translation": "",
+        "recommended": "بُريمج",
         "explanation": "",
         "source": [],
         "alternatives": [
             {
                 "translation": "أبليت",
                 "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            },
+            {
+                "translation": "تطبيق",
+                "note": ""
             }
         ]
     },
     {
         "term": "Apprentice",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -361,7 +406,7 @@
     },
     {
         "term": "Archipelago",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -373,7 +418,7 @@
     },
     {
         "term": "Armor",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -385,7 +430,7 @@
     },
     {
         "term": "Automate",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -397,7 +442,7 @@
     },
     {
         "term": "Average",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -409,7 +454,7 @@
     },
     {
         "term": "Bay",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -421,7 +466,7 @@
     },
     {
         "term": "Bit",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -433,7 +478,7 @@
     },
     {
         "term": "Bookmark",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -445,7 +490,7 @@
     },
     {
         "term": "Brand",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -457,7 +502,7 @@
     },
     {
         "term": "Burnout",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -469,7 +514,7 @@
     },
     {
         "term": "CAPTCHA",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -481,7 +526,7 @@
     },
     {
         "term": "Cape",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -493,7 +538,7 @@
     },
     {
         "term": "Chart",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -505,7 +550,7 @@
     },
     {
         "term": "Cheetah",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -517,7 +562,7 @@
     },
     {
         "term": "Club",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -529,7 +574,7 @@
     },
     {
         "term": "Comma",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -541,7 +586,7 @@
     },
     {
         "term": "Compress file",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -553,7 +598,7 @@
     },
     {
         "term": "Core",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -565,7 +610,7 @@
     },
     {
         "term": "Coworking space",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -577,7 +622,7 @@
     },
     {
         "term": "Cove",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -589,7 +634,7 @@
     },
     {
         "term": "Creole",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -601,7 +646,7 @@
     },
     {
         "term": "Cringe",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -613,7 +658,7 @@
     },
     {
         "term": "Crowdfunding",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -625,7 +670,7 @@
     },
     {
         "term": "Crowdsourcing",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -637,7 +682,7 @@
     },
     {
         "term": "Device",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -649,7 +694,7 @@
     },
     {
         "term": "Diagram",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -673,7 +718,7 @@
     },
     {
         "term": "Disclaimer",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -685,7 +730,7 @@
     },
     {
         "term": "Drone",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -697,7 +742,7 @@
     },
     {
         "term": "Dumbbell",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -709,7 +754,7 @@
     },
     {
         "term": "Dynamic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -721,7 +766,7 @@
     },
     {
         "term": "Dyslexia",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -733,7 +778,7 @@
     },
     {
         "term": "Empathy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -745,7 +790,7 @@
     },
     {
         "term": "Emoji",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -757,7 +802,7 @@
     },
     {
         "term": "Entropy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -769,7 +814,7 @@
     },
     {
         "term": "Epistemology",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -781,7 +826,7 @@
     },
     {
         "term": "Feedback",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -793,7 +838,7 @@
     },
     {
         "term": "Gatekeeping",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -805,7 +850,7 @@
     },
     {
         "term": "Geobragging",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -817,7 +862,7 @@
     },
     {
         "term": "Genre",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -829,7 +874,7 @@
     },
     {
         "term": "Geopolitical",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -841,7 +886,7 @@
     },
     {
         "term": "Graph",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -853,7 +898,7 @@
     },
     {
         "term": "Gulf",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -865,7 +910,7 @@
     },
     {
         "term": "Hardware",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -877,7 +922,7 @@
     },
     {
         "term": "Hash tag",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -889,7 +934,7 @@
     },
     {
         "term": "Icon",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -901,7 +946,7 @@
     },
     {
         "term": "Idiom",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -913,7 +958,7 @@
     },
     {
         "term": "Illustration",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -925,7 +970,7 @@
     },
     {
         "term": "Indexing",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -937,7 +982,7 @@
     },
     {
         "term": "Infographic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -949,7 +994,7 @@
     },
     {
         "term": "Internship",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -961,7 +1006,7 @@
     },
     {
         "term": "Isthmus",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -973,7 +1018,7 @@
     },
     {
         "term": "Jaguar",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -985,7 +1030,7 @@
     },
     {
         "term": "Kettlebell",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -997,7 +1042,7 @@
     },
     {
         "term": "Kinetic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1009,7 +1054,7 @@
     },
     {
         "term": "LASER",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1021,7 +1066,7 @@
     },
     {
         "term": "Language Model",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1033,7 +1078,7 @@
     },
     {
         "term": "Leopard",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1045,7 +1090,7 @@
     },
     {
         "term": "Liberalism",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1057,7 +1102,7 @@
     },
     {
         "term": "Ligature",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1069,7 +1114,7 @@
     },
     {
         "term": "Mace",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1081,7 +1126,7 @@
     },
     {
         "term": "Maintain",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1093,7 +1138,7 @@
     },
     {
         "term": "Map",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1105,7 +1150,7 @@
     },
     {
         "term": "Matriarchy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1117,7 +1162,7 @@
     },
     {
         "term": "Mechanic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1129,7 +1174,7 @@
     },
     {
         "term": "Metal",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1141,7 +1186,7 @@
     },
     {
         "term": "Mineral",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1153,7 +1198,7 @@
     },
     {
         "term": "Nitrogen",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1165,7 +1210,7 @@
     },
     {
         "term": "Nomenclature",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1177,7 +1222,7 @@
     },
     {
         "term": "Noob",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1189,7 +1234,7 @@
     },
     {
         "term": "Ontology",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1201,7 +1246,7 @@
     },
     {
         "term": "Outsource",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1213,7 +1258,7 @@
     },
     {
         "term": "Packet",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1225,7 +1270,7 @@
     },
     {
         "term": "Paradox",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1237,7 +1282,7 @@
     },
     {
         "term": "Patriarchy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1249,7 +1294,7 @@
     },
     {
         "term": "Peninsula",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1261,7 +1306,7 @@
     },
     {
         "term": "Peripheral",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1273,7 +1318,19 @@
     },
     {
         "term": "Pidgin",
-        "translation": "",
+        "recommended": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": [
+            {
+                "translation": "بيدجين",
+                "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            }
+        ]
+    },
+    {
+        "term": "Overwrite",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1285,7 +1342,7 @@
     },
     {
         "term": "Plain text",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1297,7 +1354,7 @@
     },
     {
         "term": "Plastic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1309,7 +1366,7 @@
     },
     {
         "term": "Plot",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1321,7 +1378,7 @@
     },
     {
         "term": "Podcast",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1333,7 +1390,7 @@
     },
     {
         "term": "Portfolio",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1345,7 +1402,7 @@
     },
     {
         "term": "Pragmatic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1357,7 +1414,7 @@
     },
     {
         "term": "Pragmatics",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1369,7 +1426,7 @@
     },
     {
         "term": "Precision",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1381,7 +1438,7 @@
     },
     {
         "term": "Profile",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1393,7 +1450,7 @@
     },
     {
         "term": "Proxy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1405,7 +1462,7 @@
     },
     {
         "term": "Psychedelic",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1417,7 +1474,7 @@
     },
     {
         "term": "Qubit",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1429,7 +1486,7 @@
     },
     {
         "term": "Radicalism",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1441,7 +1498,7 @@
     },
     {
         "term": "Rasterize",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1453,7 +1510,7 @@
     },
     {
         "term": "Recursion",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1465,7 +1522,7 @@
     },
     {
         "term": "Refute",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1477,7 +1534,7 @@
     },
     {
         "term": "Remote controller",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1489,7 +1546,7 @@
     },
     {
         "term": "Render",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1501,7 +1558,7 @@
     },
     {
         "term": "Representation",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1513,7 +1570,7 @@
     },
     {
         "term": "Retro",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1525,7 +1582,7 @@
     },
     {
         "term": "SCUBA",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1537,7 +1594,7 @@
     },
     {
         "term": "Schema",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1549,7 +1606,7 @@
     },
     {
         "term": "Screenshot",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1561,7 +1618,7 @@
     },
     {
         "term": "Shield",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1573,7 +1630,7 @@
     },
     {
         "term": "Software",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1585,7 +1642,7 @@
     },
     {
         "term": "Slop",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1597,7 +1654,7 @@
     },
     {
         "term": "Splice",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1609,7 +1666,7 @@
     },
     {
         "term": "Strategy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1621,7 +1678,7 @@
     },
     {
         "term": "Strait",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1633,7 +1690,7 @@
     },
     {
         "term": "Studio",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1645,7 +1702,7 @@
     },
     {
         "term": "Surreal",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1657,7 +1714,7 @@
     },
     {
         "term": "Swap",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1669,7 +1726,7 @@
     },
     {
         "term": "System of lakes",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1681,7 +1738,7 @@
     },
     {
         "term": "Table",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1693,7 +1750,7 @@
     },
     {
         "term": "Tactics",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1705,7 +1762,7 @@
     },
     {
         "term": "Tensor",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1717,7 +1774,7 @@
     },
     {
         "term": "Theology",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1729,7 +1786,7 @@
     },
     {
         "term": "Therapy",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1741,7 +1798,7 @@
     },
     {
         "term": "Therapist",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1753,7 +1810,7 @@
     },
     {
         "term": "Thread",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1765,7 +1822,7 @@
     },
     {
         "term": "Tiger",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1777,7 +1834,7 @@
     },
     {
         "term": "Toggle",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1789,7 +1846,7 @@
     },
     {
         "term": "Token",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1801,7 +1858,7 @@
     },
     {
         "term": "Torrent",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1812,20 +1869,24 @@
         ]
     },
     {
-        "term": "Toxins",
-        "translation": "ذيفان",
+        "term": "Toxin",
+        "recommended": "ذيفان",
         "explanation": "",
         "source": [],
         "alternatives": [
             {
-                "translation": "توكسنز",
+                "translation": "توكسن",
                 "note": "كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي."
+            },
+            {
+                "translation": "سُم",
+                "note": ""
             }
         ]
     },
     {
         "term": "Trend",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1837,7 +1898,7 @@
     },
     {
         "term": "Truncate",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1849,7 +1910,7 @@
     },
     {
         "term": "Typography",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1861,7 +1922,7 @@
     },
     {
         "term": "Vintage",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1873,7 +1934,7 @@
     },
     {
         "term": "Visualization",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1885,7 +1946,7 @@
     },
     {
         "term": "Widget",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": [
@@ -1897,28 +1958,42 @@
     },
     {
         "term": "Proton",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": []
     },
     {
         "term": "Neutron",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": []
     },
     {
         "term": "Electron",
-        "translation": "",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": []
     },
     {
         "term": "Blackmail",
-        "translation": "",
+        "recommended": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": []
+    },
+    {
+        "term": "Scam",
+        "recommended": "",
+        "explanation": "",
+        "source": [],
+        "alternatives": []
+    },
+    {
+        "term": "Procedure",
+        "recommended": "",
         "explanation": "",
         "source": [],
         "alternatives": []
