@@ -114,14 +114,122 @@ test('glossary hub: معاجم.astro and index.astro link exist', () => {
   );
 });
 
-test('glossary chemistry: scaffold has no table', () => {
-  const src = readFileSync(
+test('glossary chemistry: periodic table is integrated', () => {
+  const page = readFileSync(
     new URL('../src/pages/معاجم/الكيمياء.astro', import.meta.url),
     'utf8'
   ).normalize('NFC');
+  assert.match(
+    page,
+    /import\s+PeriodicTable\s+from\s+['"]\.\.\/\.\.\/components\/PeriodicTable\.astro['"]/,
+    'الكيمياء.astro must import PeriodicTable from ../../components/PeriodicTable.astro'
+  );
+  assert.match(
+    page,
+    /<PeriodicTable\s*\/>/,
+    'الكيمياء.astro must render <PeriodicTable />'
+  );
   assert.ok(
-    !/<table/i.test(src),
+    !/<table/i.test(page),
     'الكيمياء.astro must not contain a <table> element'
+  );
+
+  const component = readFileSync(
+    new URL('../src/components/PeriodicTable.astro', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+  assert.equal(
+    (component.match(/<li\b/g) || []).length,
+    118,
+    'PeriodicTable.astro must contain exactly 118 <li> elements'
+  );
+  assert.match(
+    component,
+    /import\s+['"]\.\/periodic-table\.css['"]/,
+    'PeriodicTable.astro must import ./periodic-table.css'
+  );
+  assert.match(
+    component,
+    /<div[^>]*class=["']periodic-table["'][^>]*>/,
+    'PeriodicTable.astro must wrap content in <div class="periodic-table">'
+  );
+  assert.match(
+    component,
+    /<div[^>]*dir=["']ltr["'][^>]*>/,
+    'PeriodicTable.astro wrapper must set dir="ltr"'
+  );
+  assert.match(
+    component,
+    /<div[^>]*lang=["']en["'][^>]*>/,
+    'PeriodicTable.astro wrapper must set lang="en"'
+  );
+});
+
+test('glossary chemistry: table is a component, not a route', () => {
+  assert.ok(
+    !existsSync(
+      fileURLToPath(new URL('../src/pages/معاجم/table.astro', import.meta.url))
+    ),
+    'src/pages/معاجم/table.astro must not exist'
+  );
+  assert.ok(
+    !existsSync(
+      fileURLToPath(new URL('../src/pages/معاجم/table.css', import.meta.url))
+    ),
+    'src/pages/معاجم/table.css must not exist'
+  );
+});
+
+test('glossary chemistry: table CSS is scoped', () => {
+  const css = readFileSync(
+    new URL('../src/components/periodic-table.css', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+  assert.match(css, /^\.periodic-table\s*\{/m, 'CSS must scope .periodic-table');
+  assert.doesNotMatch(css, /^body\b/m, 'CSS must not have a top-level body rule');
+  assert.doesNotMatch(
+    css,
+    /^(?:fieldset|ol)\s*\{/m,
+    'CSS must not have top-level fieldset/ol rules'
+  );
+  assert.doesNotMatch(
+    css,
+    /^\.(?:alk|aec|trn|trm|met|rnm|hln|nbl|lan|act)\s*\{/m,
+    'CSS must not have top-level color class rules'
+  );
+  assert.match(
+    css,
+    /\.periodic-table:has\(#alk:checked\)/,
+    'CSS must scope the filter :has() rule under .periodic-table'
+  );
+  assert.match(
+    css,
+    /^\.periodic-table label\s*\{/m,
+    'CSS must scope filter labels under .periodic-table'
+  );
+  assert.doesNotMatch(
+    css,
+    /^(?:abbr|li)\s*\{/m,
+    'CSS must not have top-level abbr/li element selectors'
+  );
+  assert.match(
+    css,
+    /\.periodic-table:has\(#brb:checked\)/,
+    'CSS must scope the Heisenberg :has() rule under .periodic-table'
+  );
+  // The ol declares font-size: 2cqi. cqi resolves against the nearest ANCESTOR
+  // container, so container-type must live on the .periodic-table wrapper.
+  // On the ol itself it would fall back to viewport width and the table would
+  // break on viewports wider than the 70rem page box.
+  assert.match(
+    css,
+    /^\.periodic-table\s*\{[^}]*container-type:\s*inline-size/m,
+    'CSS must declare container-type on the .periodic-table wrapper'
+  );
+  assert.doesNotMatch(
+    css,
+    /\.periodic-table ol\s*\{[^}]*container-type/m,
+    'CSS must not declare container-type on the ol (cqi would resolve to viewport width)'
   );
 });
 
