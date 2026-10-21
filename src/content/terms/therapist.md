@@ -1,6 +1,6 @@
 ---
 term: Therapist
-translation: ''
+translation: 'طبابي'
 explanation: ''
 status: proposed
 source: []
