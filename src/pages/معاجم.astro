@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import categories from '../data/glossary-categories.json';
+import { toArabicDigits } from '../utils/arabicDigits';
+---
+
+<BaseLayout title="معاجم">
+  <header>
+    <h1>معاجم</h1>
+    <p>
+      معاجم تخصصية تفاعلية، تجمع المصطلح الواحد بالعربية والإنجليزية والفرنسية،
+      وتقارن بين ترجمات المصادر والمعاجم.
+    </p>
+  </header>
+
+  <div class="hub-grid">
+    {
+      categories.map((category) =>
+        category.href ? (
+          <a
+            class="card hub-card"
+            href={category.href}
+            aria-label={`معجم ${toArabicDigits(category.title)}`}
+          >
+            <span class="hub-card-kicker">متاح الآن</span>
+            <h2 class="hub-card-title">{toArabicDigits(category.title)}</h2>
+            <p class="hub-card-desc">{toArabicDigits(category.description)}</p>
+            <span class="hub-card-cta">تصفح المعجم</span>
+          </a>
+        ) : (
+          <div class="card hub-card hub-card--soon">
+            <span class="badge">قريبًا</span>
+            <h2 class="hub-card-title">{toArabicDigits(category.title)}</h2>
+            <p class="hub-card-desc">{toArabicDigits(category.description)}</p>
+          </div>
+        )
+      )
+    }
+  </div>
+</BaseLayout>

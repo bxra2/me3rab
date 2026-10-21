@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PeriodicTable from '../../components/PeriodicTable.astro';
+---
+
+<BaseLayout title="الكيمياء — معاجم">
+  <header>
+    <p><a href="/معاجم">العودة إلى المعاجم</a></p>
+    <h1>الكيمياء</h1>
+    <p>
+      الجدول الدوري التفاعلي: أسماء العناصر بالإنجليزية حاليًا، وستُضاف
+      الترجمات العربية والفرنسية ومقارنة المعاجم لاحقًا.
+    </p>
+  </header>
+
+  <section>
+    <h2>الجدول الدوري</h2>
+    <PeriodicTable />
+  </section>
+</BaseLayout>

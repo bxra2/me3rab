@@ -1,0 +1,615 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getCollection } from 'astro:content'
+import relations from '../data/relations.json'
+import { buildGraph } from '../utils/relationGraph.mjs'
+
+const rawEntries = await getCollection('terms')
+const terms = rawEntries.map((entry) => ({
+  term: entry.data.term,
+  translation: entry.data.translation,
+  explanation: entry.data.explanation,
+  status: entry.data.status,
+}))
+
+const graph = buildGraph(terms, relations)
+
+const termNameSet = new Set(terms.map((t) => t.term))
+const fallbackRelations = relations.map((r) => ({
+  type: r.type,
+  note: r.note,
+  terms: r.terms,
+  ghostCount: r.terms.filter((t) => !termNameSet.has(t)).length,
+}))
+
+const graphJson = JSON.stringify(graph).replace(/<\//g, '<\\/')
+---
+
+<style is:global>
+  .graph-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+    align-items: center;
+    margin-block: var(--space-m);
+  }
+  .graph-controls fieldset {
+    display: flex;
+    gap: var(--space-m);
+    border: 1px solid var(--color-rule);
+    padding: var(--space-s) var(--space-m);
+  }
+  .graph-controls legend {
+    font-size: var(--text-s);
+  }
+  .graph-controls label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-s);
+  }
+  .graph-stage {
+    border: 2px solid var(--color-ink);
+    background: var(--bg-color);
+    overflow: hidden;
+  }
+  #graph-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+.graph-edge {
+    stroke: var(--color-rule);
+    stroke-width: 1.5;
+    color: var(--color-rule);
+  }
+  .graph-node {
+    cursor: pointer;
+    outline: none;
+  }
+  .graph-node:focus-visible circle {
+    stroke: var(--color-accent);
+    stroke-width: 3;
+  }
+  .graph-node-matched {
+    fill: var(--bg-color);
+    stroke: var(--color-ink);
+    stroke-width: 2;
+  }
+  .graph-node-ghost {
+    fill: var(--bg-color);
+    stroke: var(--color-ink);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 3;
+    opacity: 0.55;
+  }
+  .graph-hub {
+    fill: var(--color-secondary);
+    stroke: var(--color-ink);
+    stroke-width: 1;
+  }
+  .graph-label {
+    fill: var(--color-ink);
+    font-size: 12px;
+    font-family: var(--font-body);
+    pointer-events: none;
+  }
+  .graph-dialog {
+    border: 2px solid var(--color-ink);
+    background: var(--bg-color);
+    color: var(--color-ink);
+    padding: var(--space-l);
+    inline-size: min(38rem, calc(100% - 2 * var(--space-m)));
+    max-block-size: 80dvh;
+    overflow: auto;
+    margin: auto;
+  }
+  .graph-dialog::backdrop {
+    background: rgb(58 55 51 / 0.45);
+  }
+  .graph-dialog .dialog-body h2 {
+    margin-block-start: 0;
+  }
+  .term-card {
+    border: 1px solid var(--color-rule);
+    padding: var(--space-s) var(--space-m);
+    margin-block: var(--space-s);
+  }
+  .member-block {
+    border-block-start: 1px solid var(--color-rule);
+    padding-block: var(--space-s);
+  }
+  .ref-block {
+    margin-block: var(--space-s);
+  }
+  .ref-note {
+    font-weight: 600;
+  }
+  .ghost-note {
+    opacity: 0.7;
+    font-style: italic;
+  }
+  .graph-fallback ol {
+    display: grid;
+    gap: var(--space-s);
+  }
+  .graph-fallback li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    align-items: baseline;
+  }
+  .fallback-members {
+    font-size: var(--text-s);
+    opacity: 0.85;
+  }
+  .fallback-ghosts {
+    font-size: var(--text-s);
+    color: var(--color-secondary);
+  }
+</style>
+
+<BaseLayout title='شبكة العلاقات'>
+  <header>
+    <h1>شبكة العلاقات</h1>
+    <p class='term-intro'>
+      شبكة تفاعلية تربط المصطلحات بعلاقات التمييز والعائلة والسلسلة. انقر أي
+      عقدة أو بنية لفتح لوحة التفاصيل.
+    </p>
+  </header>
+
+  <div class='graph-controls'>
+    <fieldset>
+      <legend>أنواع العلاقات</legend>
+      <label><input type='checkbox' data-type='contrast' checked /> تمييز</label>
+      <label><input type='checkbox' data-type='family' checked /> عائلة</label>
+      <label><input type='checkbox' data-type='pipeline' checked /> سلسلة</label>
+    </fieldset>
+    <label class='ghost-toggle'>
+      <input type='checkbox' id='show-ghosts' checked />
+      إظهار الأسماء غير المُعرَّفة
+    </label>
+    <input
+      id='graph-search'
+      dir='auto'
+      type='search'
+      placeholder='ابحث في الأسماء…'
+      aria-label='البحث في الشبكة'
+    />
+  </div>
+
+  <div class='graph-stage'>
+    <svg
+      id='graph-svg'
+      viewBox='0 0 1200 800'
+      role='img'
+      aria-label='شبكة علاقات المصطلحات'
+    ></svg>
+  </div>
+
+  <dialog id='graph-dialog' class='graph-dialog'>
+    <button class='dialog-close' type='button' aria-label='إغلاق'>✕</button>
+    <div class='dialog-body'></div>
+  </dialog>
+
+  <noscript>
+    <section class='graph-fallback'>
+      <h2>قائمة العلاقات</h2>
+      <ol>
+        {fallbackRelations.map((r) => (
+          <li>
+            <span class='badge'>{r.type}</span>
+            <strong>{r.note}</strong>
+            <span class='fallback-members'>{r.terms.join('، ')}</span>
+            {r.ghostCount > 0 && (
+              <span class='fallback-ghosts'>
+                ({r.ghostCount} غير مُعرَّف)
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </section>
+  </noscript>
+
+  <script
+    is:inline
+    type='application/json'
+    id='graph-data'
+    set:html={graphJson}
+  />
+
+  <script>
+    const graph = JSON.parse(
+      document.getElementById('graph-data')?.textContent ?? '{"nodes":[],"edges":[],"structures":[],"ghosts":[]}'
+    )
+
+    const W = 1200
+    const H = 800
+    const TICKS = 300
+    const REPULSION = 12000
+    const ATTRACTION = 0.02
+    const LINK_DISTANCE = 120
+    const GRAVITY = 0.01
+    const DAMPING = 0.85
+
+    const typeLabels = { contrast: 'تمييز', family: 'عائلة', pipeline: 'سلسلة' }
+
+    const svg = document.getElementById('graph-svg')
+    const dialog = document.getElementById('graph-dialog')
+    const body = dialog.querySelector('.dialog-body')
+    const search = document.getElementById('graph-search')
+    const showGhosts = document.getElementById('show-ghosts')
+
+    // ---- simulation model ----
+    const simNodes = []
+    const nodeById = new Map()
+
+    for (const n of graph.nodes) {
+      const sn = {
+        id: n.id,
+        name: n.name,
+        ghost: n.ghost,
+        matched: n.matched,
+        term: n.term,
+        isHub: false,
+        x: 0, y: 0, vx: 0, vy: 0,
+      }
+      simNodes.push(sn)
+      nodeById.set(n.id, sn)
+    }
+    for (const s of graph.structures) {
+      if (s.kind === 'hub') {
+        const sn = {
+          id: s.id,
+          name: s.note,
+          isHub: true,
+          structureId: s.id,
+          type: s.type,
+          x: 0, y: 0, vx: 0, vy: 0,
+        }
+        simNodes.push(sn)
+        nodeById.set(s.id, sn)
+      }
+    }
+
+    const simEdges = graph.edges
+      .map((e) => ({
+        ...e,
+        sourceNode: nodeById.get(e.source),
+        targetNode: nodeById.get(e.target),
+      }))
+      .filter((e) => e.sourceNode && e.targetNode)
+
+    // ---- force-directed layout ----
+    function initPositions() {
+      const n = simNodes.length
+      simNodes.forEach((node, i) => {
+        const angle = (i / n) * 2 * Math.PI
+        const r = 180 + (i % 7) * 45
+        node.x = W / 2 + Math.cos(angle) * r
+        node.y = H / 2 + Math.sin(angle) * r
+        node.vx = 0
+        node.vy = 0
+      })
+    }
+
+    function step() {
+      const n = simNodes.length
+      for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+          const a = simNodes[i]
+          const b = simNodes[j]
+          let dx = a.x - b.x
+          let dy = a.y - b.y
+          let d2 = dx * dx + dy * dy
+          if (d2 < 1) {
+            dx = Math.random() - 0.5
+            dy = Math.random() - 0.5
+            d2 = dx * dx + dy * dy
+          }
+          const d = Math.sqrt(d2)
+          const f = REPULSION / d2
+          const fx = (dx / d) * f
+          const fy = (dy / d) * f
+          a.vx += fx
+          a.vy += fy
+          b.vx -= fx
+          b.vy -= fy
+        }
+      }
+      for (const e of simEdges) {
+        const a = e.sourceNode
+        const b = e.targetNode
+        const dx = b.x - a.x
+        const dy = b.y - a.y
+        const d = Math.sqrt(dx * dx + dy * dy) || 1
+        const f = (d - LINK_DISTANCE) * ATTRACTION
+        const fx = (dx / d) * f
+        const fy = (dy / d) * f
+        a.vx += fx
+        a.vy += fy
+        b.vx -= fx
+        b.vy -= fy
+      }
+      for (const node of simNodes) {
+        node.vx += (W / 2 - node.x) * GRAVITY
+        node.vy += (H / 2 - node.y) * GRAVITY
+        node.vx *= DAMPING
+        node.vy *= DAMPING
+        node.x += node.vx
+        node.y += node.vy
+      }
+    }
+
+    // ---- rendering ----
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs')
+    defs.innerHTML =
+      '<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/></marker>'
+    svg.appendChild(defs)
+
+    const edgeLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g')
+    const nodeLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g')
+    svg.appendChild(edgeLayer)
+    svg.appendChild(nodeLayer)
+
+    const edgeEls = []
+    for (const e of simEdges) {
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+      line.setAttribute('class', 'graph-edge')
+      line.dataset.type = e.type
+      line.dataset.structureId = e.structureId
+      if (e.directed) line.setAttribute('marker-end', 'url(#arrow)')
+      line.addEventListener('click', () => {
+        if (e.directed) openStructure(e.structureId)
+      })
+      edgeLayer.appendChild(line)
+      edgeEls.push({ el: line, edge: e })
+    }
+
+    const nodeEls = []
+    for (const sn of simNodes) {
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g')
+      g.setAttribute('class', 'graph-node')
+      g.setAttribute('tabindex', '0')
+      g.setAttribute('role', 'button')
+      g.dataset.id = sn.id
+      if (sn.isHub) {
+        g.dataset.hub = 'true'
+        g.dataset.type = sn.type
+      } else {
+        g.dataset.ghost = sn.ghost ? 'true' : 'false'
+      }
+
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+      circle.setAttribute('r', sn.isHub ? 8 : 14)
+      circle.setAttribute('class', sn.isHub ? 'graph-hub' : sn.ghost ? 'graph-node-ghost' : 'graph-node-matched')
+      g.appendChild(circle)
+
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text')
+      label.setAttribute('class', 'graph-label')
+      label.setAttribute('text-anchor', 'middle')
+      label.setAttribute('dy', sn.isHub ? -14 : -20)
+      label.setAttribute('direction', sn.isHub ? 'rtl' : 'ltr')
+      label.textContent = sn.name
+      g.appendChild(label)
+
+      g.addEventListener('click', () => {
+        if (sn.isHub) openStructure(sn.structureId)
+        else openMember(sn.name)
+      })
+      g.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter') {
+          ev.preventDefault()
+          if (sn.isHub) openStructure(sn.structureId)
+          else openMember(sn.name)
+        }
+      })
+
+      nodeLayer.appendChild(g)
+      nodeEls.push({ el: g, node: sn })
+    }
+
+    function render() {
+      for (const { el, edge } of edgeEls) {
+        el.setAttribute('x1', edge.sourceNode.x)
+        el.setAttribute('y1', edge.sourceNode.y)
+        el.setAttribute('x2', edge.targetNode.x)
+        el.setAttribute('y2', edge.targetNode.y)
+      }
+      for (const { el, node } of nodeEls) {
+        el.setAttribute('transform', `translate(${node.x},${node.y})`)
+      }
+    }
+
+    // ---- filtering ----
+    const state = {
+      types: { contrast: true, family: true, pipeline: true },
+      showGhosts: true,
+      query: '',
+    }
+
+    function matchesQuery(node) {
+      if (!state.query) return true
+      const q = state.query.toLowerCase()
+      const hay = [
+        node.name,
+        node.term?.translation ?? '',
+        node.term?.explanation ?? '',
+      ]
+        .join(' ')
+        .toLowerCase()
+      return hay.includes(q)
+    }
+
+    function applyFilters() {
+      for (const { el, edge } of edgeEls) {
+        const visible = state.types[edge.type]
+        el.style.display = visible ? '' : 'none'
+      }
+      for (const { el, node } of nodeEls) {
+        let visible = true
+        if (node.isHub) {
+          visible = state.types[node.type]
+        } else {
+          if (node.ghost && !state.showGhosts) visible = false
+          if (visible && state.query && !matchesQuery(node)) {
+            // dim rather than hide so the network stays legible
+            el.style.opacity = '0.2'
+          } else {
+            el.style.opacity = ''
+          }
+        }
+        el.style.display = visible ? '' : 'none'
+      }
+    }
+
+    document.querySelectorAll('input[data-type]').forEach((cb) => {
+      cb.addEventListener('change', () => {
+        state.types[cb.dataset.type] = cb.checked
+        applyFilters()
+      })
+    })
+    showGhosts.addEventListener('change', () => {
+      state.showGhosts = showGhosts.checked
+      applyFilters()
+    })
+    search.addEventListener('input', () => {
+      state.query = search.value.trim()
+      applyFilters()
+    })
+
+    // ---- side panel ----
+    const escapeHtml = (s) =>
+      String(s ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+
+    const memberNode = (name) => graph.nodes.find((n) => n.name === name)
+
+    function termCard(name) {
+      const node = memberNode(name)
+      if (!node || !node.matched) {
+        return `<p class="ghost-note">«${escapeHtml(name)}» غير مُعرَّف بعد.</p>`
+      }
+      const t = node.term
+      return `
+        <div class="term-card">
+          <h3>${escapeHtml(t.term)}</h3>
+          <p><strong>الترجمة الحالية:</strong> ${t.translation ? escapeHtml(t.translation) : '—'}</p>
+          ${t.explanation ? `<p>${escapeHtml(t.explanation)}</p>` : ''}
+          <p><span class="badge">${escapeHtml(t.status)}</span></p>
+        </div>`
+    }
+
+    function openStructure(id) {
+      const structure = graph.structures.find((s) => s.id === id)
+      if (!structure) return
+      const label = typeLabels[structure.type] ?? structure.type
+
+      const refsHtml = structure.refs
+        .map((ref) => {
+          const pairs = ref.terms
+            .map((t, i) => {
+              const ar = ref.ar ? ref.ar[i] : null
+              return ar
+                ? `<li>${escapeHtml(t)} ← ${escapeHtml(ar)}</li>`
+                : `<li>${escapeHtml(t)}</li>`
+            })
+            .join('')
+          return `
+            <div class="ref-block">
+              <p class="ref-note">${escapeHtml(ref.note)}</p>
+              <ul>${pairs}</ul>
+            </div>`
+        })
+        .join('')
+
+      const membersHtml = structure.members
+        .map((m) => {
+          const node = memberNode(m)
+          const current = node && node.matched ? node.term.translation : ''
+          const proposed = structure.refs
+            .map((ref) => {
+              const idx = ref.terms.indexOf(m)
+              return idx >= 0 && ref.ar ? ref.ar[idx] : null
+            })
+            .find((v) => v != null)
+          return `
+            <div class="member-block">
+              <h4>${escapeHtml(m)}</h4>
+              <p><strong>الترجمة الحالية:</strong> ${current ? escapeHtml(current) : '—'}</p>
+              <p><strong>الترجمة المقترحة:</strong> ${proposed ? escapeHtml(proposed) : '—'}</p>
+              ${termCard(m)}
+            </div>`
+        })
+        .join('')
+
+      body.innerHTML = `
+        <p class="tag-list"><span class="badge relation-type">${escapeHtml(label)}</span></p>
+        <h2>${escapeHtml(structure.note)}</h2>
+        <h3>المراجع</h3>
+        ${refsHtml}
+        <h3>الأعضاء</h3>
+        ${membersHtml}`
+      dialog.showModal()
+    }
+
+    function openMember(name) {
+      const node = memberNode(name)
+      if (!node) return
+      const structures = graph.structures.filter((s) => s.members.includes(name))
+      const relsHtml = structures
+        .map((s) => {
+          const label = typeLabels[s.type] ?? s.type
+          return `<button class="relation-chip" type="button" data-structure="${escapeHtml(s.id)}"><span class="badge">${escapeHtml(label)}</span> ${escapeHtml(s.note)}</button>`
+        })
+        .join('')
+
+      body.innerHTML = `
+        ${termCard(name)}
+        ${relsHtml ? `<h3>العلاقات</h3><div class="relation-list">${relsHtml}</div>` : ''}`
+      dialog.showModal()
+    }
+
+    body.addEventListener('click', (ev) => {
+      const chip = ev.target.closest('.relation-chip')
+      if (chip) {
+        openStructure(chip.dataset.structure)
+      }
+    })
+
+    document.addEventListener('click', (ev) => {
+      if (ev.target.closest('.dialog-close') || ev.target === dialog) {
+        dialog.close()
+      }
+    })
+
+    // ---- run ----
+    initPositions()
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (reduced) {
+      for (let t = 0; t < TICKS; t++) step()
+      render()
+      applyFilters()
+    } else {
+      let tick = 0
+      function frame() {
+        for (let i = 0; i < 3; i++) {
+          if (tick < TICKS) {
+            step()
+            tick++
+          }
+        }
+        render()
+        if (tick < TICKS) requestAnimationFrame(frame)
+      }
+      requestAnimationFrame(frame)
+      applyFilters()
+    }
+  </script>
+</BaseLayout>
