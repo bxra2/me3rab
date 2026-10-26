@@ -28,20 +28,10 @@
   text-transform: none;
 }
 
-.periodic-table input[type="radio"] {
-  inline-size: auto;
-  block-size: auto;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  accent-color: var(--color-accent);
-}
-
 .periodic-table ol {
   all: unset;
   counter-reset: element;
-  display: grid; 
+  display: grid;
   font-size: 2cqi;
   gap: 1px;
   grid-template-columns: repeat(18, 1fr);
@@ -55,6 +45,7 @@
     line-height: 1;
     text-align: center;
     text-decoration: none;
+
     &::after {
       content: attr(title);
       display: block;
@@ -67,66 +58,166 @@
   /* Element Box */
   & li {
     aspect-ratio: 1 / 1;
+    position: relative;
     background: #EEE;
     counter-increment: element;
+    cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     padding: .25ch;
     transition: scale .125s ease-in;
+
     &::before {
       content: counter(element);
     }
+
     &::after {
       content: attr(data-mass);
       grid-area: 1 / 2 / 2 / 2;
       justify-self: end;
     }
-    &::before, &::after {
+
+    &::before,
+    &::after {
       font-size: .33em;
     }
+
     @media (hover: hover) {
       &:hover {
-        box-shadow: 0 0 0 .25px #000;
+        box-shadow: 0 0 0 1px var(--color-ink);
+        opacity: 0.9;
         scale: var(--scale);
+      }
+
+      &:active {
+        scale: calc(var(--scale) * 0.96);
       }
     }
 
     /* Layout */
-    &:nth-of-type(2) { grid-column: 18; }
-    &:nth-of-type(5), &:nth-of-type(13) { grid-column: 13; }
-    
+    &:nth-of-type(2) {
+      grid-column: 18;
+    }
+
+    &:nth-of-type(5),
+    &:nth-of-type(13) {
+      grid-column: 13;
+    }
+
     /* Lanthenides */
-    &:nth-of-type(58) { grid-area: 9 / 4 / 9/ 4; }
-    &:nth-of-type(59) { grid-area: 9 / 5 / 9/ 5; }
-    &:nth-of-type(60) { grid-area: 9 / 6 / 9/ 6; }
-    &:nth-of-type(61) { grid-area: 9 / 7 / 9/ 7; }
-    &:nth-of-type(62) { grid-area: 9 / 8 / 9/ 8; }
-    &:nth-of-type(63) { grid-area: 9 / 9 / 9/ 9; }
-    &:nth-of-type(64) { grid-area: 9 / 10 / 9 / 10; }
-    &:nth-of-type(65) { grid-area: 9 / 11 / 9 / 11; }
-    &:nth-of-type(66) { grid-area: 9 / 12 / 9 / 12; }
-    &:nth-of-type(67) { grid-area: 9 / 13 / 9 / 13; }
-    &:nth-of-type(68) { grid-area: 9 / 14 / 9 / 14; }
-    &:nth-of-type(69) { grid-area: 9 / 15 / 9 / 15; }
-    &:nth-of-type(70) { grid-area: 9 / 16 / 9 / 16; }
-    &:nth-of-type(71) { grid-area: 9 / 17 / 9 / 17; }
+    &:nth-of-type(58) {
+      grid-area: 9 / 4 / 9/ 4;
+    }
+
+    &:nth-of-type(59) {
+      grid-area: 9 / 5 / 9/ 5;
+    }
+
+    &:nth-of-type(60) {
+      grid-area: 9 / 6 / 9/ 6;
+    }
+
+    &:nth-of-type(61) {
+      grid-area: 9 / 7 / 9/ 7;
+    }
+
+    &:nth-of-type(62) {
+      grid-area: 9 / 8 / 9/ 8;
+    }
+
+    &:nth-of-type(63) {
+      grid-area: 9 / 9 / 9/ 9;
+    }
+
+    &:nth-of-type(64) {
+      grid-area: 9 / 10 / 9 / 10;
+    }
+
+    &:nth-of-type(65) {
+      grid-area: 9 / 11 / 9 / 11;
+    }
+
+    &:nth-of-type(66) {
+      grid-area: 9 / 12 / 9 / 12;
+    }
+
+    &:nth-of-type(67) {
+      grid-area: 9 / 13 / 9 / 13;
+    }
+
+    &:nth-of-type(68) {
+      grid-area: 9 / 14 / 9 / 14;
+    }
+
+    &:nth-of-type(69) {
+      grid-area: 9 / 15 / 9 / 15;
+    }
+
+    &:nth-of-type(70) {
+      grid-area: 9 / 16 / 9 / 16;
+    }
+
+    &:nth-of-type(71) {
+      grid-area: 9 / 17 / 9 / 17;
+    }
 
     /* Actinides */
-    &:nth-of-type(90) { grid-area: 10 / 4 / 10 / 4; }
-    &:nth-of-type(91) { grid-area: 10 / 5 / 10 / 5; }
-    &:nth-of-type(92) { grid-area: 10 / 6 / 10 / 6; }
-    &:nth-of-type(93) { grid-area: 10 / 7 / 10 / 7; }
-    &:nth-of-type(94) { grid-area: 10 / 8 / 10 / 8; }
-    &:nth-of-type(95) { grid-area: 10 / 9 / 10 / 9; }
-    &:nth-of-type(96) { grid-area: 10 / 10 / 10 / 10; }
-    &:nth-of-type(97) { grid-area: 10 / 11 / 10 / 11; }
-    &:nth-of-type(98) { grid-area: 10 / 12 / 10 / 12; }
-    &:nth-of-type(99) { grid-area: 10 / 13 / 10 / 13; }
-    &:nth-of-type(100) { grid-area: 10 / 14 / 10 / 14; }
-    &:nth-of-type(101) { grid-area: 10 / 15 / 10 / 15; }
-    &:nth-of-type(102) { grid-area: 10 / 16 / 10 / 16; }
-    &:nth-of-type(103) { grid-area: 10 / 17 / 10 / 17; }
+    &:nth-of-type(90) {
+      grid-area: 10 / 4 / 10 / 4;
+    }
+
+    &:nth-of-type(91) {
+      grid-area: 10 / 5 / 10 / 5;
+    }
+
+    &:nth-of-type(92) {
+      grid-area: 10 / 6 / 10 / 6;
+    }
+
+    &:nth-of-type(93) {
+      grid-area: 10 / 7 / 10 / 7;
+    }
+
+    &:nth-of-type(94) {
+      grid-area: 10 / 8 / 10 / 8;
+    }
+
+    &:nth-of-type(95) {
+      grid-area: 10 / 9 / 10 / 9;
+    }
+
+    &:nth-of-type(96) {
+      grid-area: 10 / 10 / 10 / 10;
+    }
+
+    &:nth-of-type(97) {
+      grid-area: 10 / 11 / 10 / 11;
+    }
+
+    &:nth-of-type(98) {
+      grid-area: 10 / 12 / 10 / 12;
+    }
+
+    &:nth-of-type(99) {
+      grid-area: 10 / 13 / 10 / 13;
+    }
+
+    &:nth-of-type(100) {
+      grid-area: 10 / 14 / 10 / 14;
+    }
+
+    &:nth-of-type(101) {
+      grid-area: 10 / 15 / 10 / 15;
+    }
+
+    &:nth-of-type(102) {
+      grid-area: 10 / 16 / 10 / 16;
+    }
+
+    &:nth-of-type(103) {
+      grid-area: 10 / 17 / 10 / 17;
+    }
   }
 }
 
@@ -140,7 +231,7 @@
 .periodic-table:has(#hln:checked) li:not(.hln),
 .periodic-table:has(#nbl:checked) li:not(.nbl),
 .periodic-table:has(#lan:checked) li:not(.lan),
-.periodic-table:has(#act:checked) li:not(.act) { 
+.periodic-table:has(#act:checked) li:not(.act) {
   opacity: 0.2;
 }
 
@@ -161,51 +252,251 @@
 } */
 
 /* Alkali Metals */
-.periodic-table .alk {
+.periodic-table .alk,
+.pt-figure.alk,
+.pt-mini.alk {
   background-color: #ff6666;
 }
 
 /* Alkaline Earth Metals */
-.periodic-table .aec {
+.periodic-table .aec,
+.pt-figure.aec,
+.pt-mini.aec {
   background-color: #ffdead;
 }
 
 /* Transition Metals */
-.periodic-table .trn {
+.periodic-table .trn,
+.pt-figure.trn,
+.pt-mini.trn {
   background-color: #add8e6;
 }
 
 /* Post-Transition Metals */
-.periodic-table .trm {
+.periodic-table .trm,
+.pt-figure.trm,
+.pt-mini.trm {
   background-color: #cccccc;
 }
 
 /* Metalloids (Semimetals) */
-.periodic-table .met {
+.periodic-table .met,
+.pt-figure.met,
+.pt-mini.met {
   background-color: #cccc99;
 }
 
 /* Reactive Non-Metals */
-.periodic-table .rnm {
+.periodic-table .rnm,
+.pt-figure.rnm,
+.pt-mini.rnm {
   background-color: #99ff99;
 }
 
 /* Halogens */
-.periodic-table .hln {
+.periodic-table .hln,
+.pt-figure.hln,
+.pt-mini.hln {
   background-color: #ffff99;
 }
 
 /* Noble Gases */
-.periodic-table .nbl {
+.periodic-table .nbl,
+.pt-figure.nbl,
+.pt-mini.nbl {
   background-color: #ffb3e6;
 }
 
 /* Lanthanides */
-.periodic-table .lan {
+.periodic-table .lan,
+.pt-figure.lan,
+.pt-mini.lan {
   background-color: #ffb366;
 }
 
 /* Actinides */
-.periodic-table .act {
+.periodic-table .act,
+.pt-figure.act,
+.pt-mini.act {
   background-color: #ff99cc;
+}
+
+/* Clickable cell overlay */
+.pt-open {
+  background: transparent;
+  block-size: 100%;
+  border: 0;
+  cursor: pointer;
+  inline-size: 100%;
+  inset: 0;
+  padding: 0;
+  position: absolute;
+}
+
+/* Neutralize the global button hover so the cell background never changes */
+.pt-open:hover {
+  background: transparent;
+  color: inherit;
+}
+
+.pt-open:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+/* Element detail popup */
+.pt-dialog {
+  background: var(--bg-color);
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  inline-size: min(60rem, 92vw);
+  margin: auto;
+  max-block-size: 85vh;
+  overflow: auto;
+  padding: var(--space-l);
+}
+
+.pt-dialog::backdrop {
+  background: rgb(58 55 51 / 0.55);
+}
+
+.pt-head {
+  align-items: start;
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(3, minmax(0, 18rem));
+  justify-content: center;
+}
+
+.pt-figure,
+.pt-translations,
+.pt-langs {
+  aspect-ratio: 1 / 1;
+  overflow: auto;
+}
+
+.pt-figure {
+  border: 2px solid var(--color-ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: .8rem;
+  text-align: center;
+}
+
+.pt-number {
+  font-size: 1rem;
+  justify-self: start;
+  grid-area: 1 / 1 / 2 / 2;
+  line-height: 1;
+}
+
+.pt-mass {
+  font-size: 1rem;
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: end;
+  line-height: 1;
+}
+
+.pt-symbol {
+  font-size: 8.5rem;
+  font-weight: 500;
+  grid-area: 1 / 1 / 4 / 3;
+  line-height: 1;
+  place-self: center;
+}
+
+.pt-elname {
+  font-size: 1.1rem;
+  font-weight: 400;
+  grid-area: 3 / 1 / 4 / 3;
+  justify-self: center;
+  align-self: end;
+  line-height: 1;
+}
+
+.pt-number,
+.pt-mass,
+.pt-elname {
+  position: relative;
+  z-index: 1;
+}
+
+.pt-translations,
+.pt-langs {
+  border: 2px solid var(--color-ink);
+  padding: var(--space-m);
+}
+
+.pt-dialog h3 {
+  margin: 0 0 0.3rem;
+}
+
+.pt-list {
+  margin: 0;
+  padding-inline-start: 1.2em;
+}
+
+/* Suggested symbol tile (suggestions list only) */
+.pt-sugg .pt-list li {
+  align-items: center;
+  display: flex;
+  gap: 0.5ch;
+}
+
+.pt-list li {
+  font-size: 1.2rem
+}
+
+
+.pt-mini {
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--color-ink);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  inline-size: 2.7rem;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.pt-desc,
+.pt-sugg {
+  margin-block-start: var(--space-m);
+}
+
+.pt-desc p {
+  white-space: pre-line;
+}
+
+.pt-empty {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.pt-close {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  font-size: 0.85rem;
+  margin-block-end: var(--space-s);
+  margin-inline-end: auto;
+  padding: 0.2em 0.6em;
+}
+
+.pt-close:hover {
+  background: var(--color-ink);
+  color: var(--bg-color);
+}
+
+@media (max-width: 40rem) {
+  .pt-head {
+    grid-template-columns: minmax(0, 18rem);
+  }
 }
