@@ -138,10 +138,19 @@ test('glossary chemistry: periodic table is integrated', () => {
     new URL('../src/components/PeriodicTable.astro', import.meta.url),
     'utf8'
   ).normalize('NFC');
-  assert.equal(
-    (component.match(/<li\b/g) || []).length,
-    118,
-    'PeriodicTable.astro must contain exactly 118 <li> elements'
+  assert.match(
+    component,
+    /import\s+elements\s+from\s+['"]\.\.\/data\/periodic-table\.json['"]/,
+    'PeriodicTable.astro must import elements from ../data/periodic-table.json'
+  );
+  assert.match(
+    component,
+    /elements\.map/,
+    'PeriodicTable.astro must generate cells from the JSON data'
+  );
+  assert.ok(
+    !/data-mass="1\.0078"/.test(component),
+    'cells must be generated from JSON, not hardcoded in the component'
   );
   assert.match(
     component,
@@ -162,6 +171,94 @@ test('glossary chemistry: periodic table is integrated', () => {
     component,
     /<div[^>]*lang=["']en["'][^>]*>/,
     'PeriodicTable.astro wrapper must set lang="en"'
+  );
+});
+
+test('glossary chemistry: periodic table JSON is complete and ordered', () => {
+  const elements = JSON.parse(
+    readFileSync(new URL('../src/data/periodic-table.json', import.meta.url), 'utf8').normalize('NFC')
+  );
+  assert.equal(elements.length, 118, 'JSON must contain exactly 118 elements');
+  assert.deepEqual(
+    elements.map((el) => el.number),
+    Array.from({ length: 118 }, (_, i) => i + 1),
+    'JSON must list elements 1..118 in atomic order (drives nth-of-type grid placement)'
+  );
+  const CATS = new Set(['alk', 'aec', 'trn', 'trm', 'met', 'rnm', 'hln', 'nbl', 'lan', 'act']);
+  const symbols = new Set();
+  for (const el of elements) {
+    assert.ok(el.symbol, `element ${el.number} needs a symbol`);
+    assert.ok(el.name, `element ${el.number} needs a name`);
+    assert.ok(el.mass, `element ${el.number} needs a mass`);
+    assert.ok(CATS.has(el.category), `element ${el.number} category must be a known color class`);
+    assert.ok(!symbols.has(el.symbol), `symbol ${el.symbol} must be unique`);
+    symbols.add(el.symbol);
+    assert.ok(Array.isArray(el.translations), `element ${el.number} translations must be an array`);
+    assert.ok(Array.isArray(el.suggestions), `element ${el.number} suggestions must be an array`);
+    assert.equal(typeof el.description, 'string', `element ${el.number} description must be a string`);
+    for (const t of el.translations) {
+      assert.ok(t.term, `element ${el.number} translation needs a term`);
+      assert.ok(t.source, `element ${el.number} translation needs a source`);
+    }
+    for (const s of el.suggestions) {
+      assert.ok(s.term, `element ${el.number} suggestion needs a term`);
+      assert.ok(s.source, `element ${el.number} suggestion needs a source`);
+    }
+  }
+  const h = elements[0];
+  assert.ok(h.description.length > 0, 'Hydrogen must keep its filled template description');
+  assert.ok(h.translations.length > 0, 'Hydrogen must keep its filled template translation');
+});
+
+test('glossary chemistry: popup dialogs and wiring', () => {
+  const component = readFileSync(
+    new URL('../src/components/PeriodicTable.astro', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+  assert.match(component, /<dialog/, 'component must render <dialog> popups');
+  assert.match(component, /id=\{`pt-el-\$\{el\.number\}`\}/, 'dialogs must use pt-el-N ids');
+  assert.match(component, /showModal/, 'script must call showModal()');
+  assert.match(component, /data-pt-close/, 'dialogs must have a data-pt-close close button');
+  assert.match(component, /class="pt-open"/, 'cells must have a .pt-open overlay button');
+  assert.match(component, /aria-haspopup="dialog"/, 'overlay buttons must declare dialog popup');
+  // Dialogs must live OUTSIDE the .periodic-table wrapper: container-type: inline-size
+  // implies layout containment, which would capture position:fixed dialogs.
+  const wrapEnd = component.indexOf('</div>', component.indexOf('</fieldset>'));
+  assert.ok(wrapEnd !== -1, 'wrapper must close after the fieldset');
+  const firstDialog = component.indexOf('<dialog');
+  assert.ok(firstDialog > wrapEnd, 'dialogs must be rendered outside the .periodic-table wrapper');
+  // figure must carry the element's category class so it shares the cell color
+  assert.match(
+    component,
+    /pt-figure \$\{el\.category\}/,
+    'popup figure must carry the element category class'
+  );
+  // close button must sit at the top of the dialog, before the header
+  assert.ok(
+    component.indexOf('data-pt-close') < component.indexOf('<header class="pt-head"'),
+    'close button must be the first element inside the dialog'
+  );
+});
+
+test('glossary chemistry: popup boxes are equal squares sharing cell colors', () => {
+  const css = readFileSync(
+    new URL('../src/components/periodic-table.css', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+  assert.match(
+    css,
+    /\.pt-figure,\s*\n\.pt-translations\s*\{[^}]*aspect-ratio:\s*1 \/ 1/,
+    'figure and translations boxes must be equal squares (aspect-ratio: 1/1)'
+  );
+  assert.match(
+    css,
+    /\.pt-head\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 18rem\)\)/,
+    'popup head must use two capped equal columns'
+  );
+  assert.equal(
+    (css.match(/\.pt-figure\.(?:alk|aec|trn|trm|met|rnm|hln|nbl|lan|act)/g) || []).length,
+    10,
+    'all 10 category colors must also apply to the popup figure'
   );
 });
 
@@ -217,6 +314,9 @@ test('glossary chemistry: table CSS is scoped', () => {
     /\.periodic-table:has\(#brb:checked\)/,
     'CSS must scope the Heisenberg :has() rule under .periodic-table'
   );
+  assert.match(css, /\.pt-open\s*\{/, 'CSS must style the .pt-open overlay');
+  assert.match(css, /\.pt-dialog\s*\{/, 'CSS must style the .pt-dialog popup');
+  assert.doesNotMatch(css, /^dialog\s*\{/m, 'CSS must not have a top-level dialog element rule');
   // The ol declares font-size: 2cqi. cqi resolves against the nearest ANCESTOR
   // container, so container-type must live on the .periodic-table wrapper.
   // On the ol itself it would fall back to viewport width and the table would
