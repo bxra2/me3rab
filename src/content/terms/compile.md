@@ -7,6 +7,12 @@ source: []
 alternatives:
   - translation: تجميع
     note: الشائعة في الاستعمال لكنها لا تُشتق منها أفعال ومشتقات بسهولة.
+  - translation: مُترجم
+    note: من هندسة كهربائية
+  - translation: يُصرِّف
+    note: من معجم مصطلحات المعلوماتية
+  - translation: يترجم
+    note: من قاموس مفردات الكمبيوتر
 derivations:
   - form: يُصرِّف
     gloss: 'الفعل: يحوّل المصدر إلى تنفيذي'

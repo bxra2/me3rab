@@ -4,6 +4,8 @@ translation: ''
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: سَلْسَلَة
+    note: من المعجم الموحد لمصطلحات المعلوماتية، قائمة مصطلحات المعلوماتية
 derivations: []
 ---

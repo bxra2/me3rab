@@ -4,6 +4,8 @@ translation: ''
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: مُتَدَرِّب
+    note: من العلوم التطبيقية - علم الصيدلة
 derivations: []
 ---

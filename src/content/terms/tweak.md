@@ -4,6 +4,10 @@ translation: ''
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: تطويع
+    note: من القاموس التقني المعلوماتي
+  - translation: يَمرُز
+    note: من معجم مصطلحات المعلوماتية
 derivations: []
 ---

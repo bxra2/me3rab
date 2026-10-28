@@ -7,5 +7,7 @@ source: []
 alternatives:
   - translation: راديكاليزم
     note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
+  - translation: راديكالية
+    note: من علم الاجتماع والأنثروبولوجيا
 derivations: []
 ---

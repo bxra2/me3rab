@@ -4,6 +4,12 @@ translation: ''
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: نيوترون
+    note: من الكيمياء، العلوم التطبيقية - علم الصيدلة
+  - translation: نوترون
+    note: من الكيمياء، العلوم التطبيقية - علم الصيدلة
+  - translation: نترون
+    note: من الفيزياء، العلوم التطبيقية - الطباعة - الكهرباء
 derivations: []
 ---

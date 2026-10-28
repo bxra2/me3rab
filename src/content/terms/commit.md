@@ -7,6 +7,8 @@ source: []
 alternatives:
   - translation: تسليم
     note: تستعمل في بعض الواجهات لكنها تتصادم مع deliver.
+  - translation: تثبيت
+    note: من قائمة مصطلحات المعلوماتية
 derivations:
   - form: يُودِع
     gloss: 'الفعل: يثبّت التغييرات'

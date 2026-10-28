@@ -7,5 +7,9 @@ source: []
 alternatives:
   - translation: ماترياركي
     note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
+  - translation: نظام الأمومة
+    note: من الفلسفة وعلم النفس
+  - translation: نظام أمامي
+    note: من علم الاجتماع والأنثروبولوجيا
 derivations: []
 ---

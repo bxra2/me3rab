@@ -4,6 +4,8 @@ translation: ''
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: ابتزاز
+    note: من القانون
 derivations: []
 ---
