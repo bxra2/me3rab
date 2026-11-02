@@ -1,6 +1,7 @@
 ---
 import '../styles/style.css';
 import Nav from '../components/Nav.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 
 interface Props {
   title: string;
@@ -15,16 +16,44 @@ const { title } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} — معراب</title>
+    <meta name="theme-color" content="#f2ecdd" />
+    <script is:inline>
+      // keep in sync with src/utils/theme.js
+      (() => {
+        let stored = null;
+        try {
+          stored = localStorage.getItem('muarrib-theme');
+        } catch {
+          stored = null;
+        }
+        const theme =
+          stored === 'light' || stored === 'dark'
+            ? stored
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = theme;
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) {
+          meta.setAttribute(
+            'content',
+            theme === 'dark' ? '#1f2a25' : '#f2ecdd'
+          );
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/favicon.webp">
   </head>
   <body>
     <main class="container stack">
       <Nav currentPath={Astro.url.pathname} />
       <slot />
     </main>
+    <ThemeToggle />
     <div class='paperOverlay'></div>
   </body>
 </html>

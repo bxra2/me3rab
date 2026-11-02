@@ -1,0 +1,59 @@
+---
+import './theme-toggle.css';
+---
+
+<button
+  class='theme-toggle'
+  type='button'
+  aria-label='وضع السبورة'
+  aria-pressed='false'
+  title='تبديل المظهر'
+>
+  <span class='theme-toggle-glyph' aria-hidden='true'>م</span>
+</button>
+
+<script>
+  import { decideTheme } from '../utils/theme.js'
+
+  const button = document.querySelector('.theme-toggle')
+  if (button) {
+    const root = document.documentElement
+    const meta = document.querySelector('meta[name="theme-color"]')
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    const themeColors = { light: '#f2ecdd', dark: '#1f2a25' }
+
+    const syncUi = (theme) => {
+      button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false')
+      button.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'تبديل المظهر' : 'وضع السبورة'
+      )
+      if (meta) meta.setAttribute('content', themeColors[theme])
+    }
+
+    const applyTheme = (theme, persist) => {
+      root.dataset.theme = theme
+      if (persist) {
+        try {
+          localStorage.setItem('muarrib-theme', theme)
+        } catch {
+          // Storage may be unavailable; the visual toggle still works.
+        }
+      }
+      syncUi(theme)
+    }
+
+    // Initialize from the attribute set by the inline FOUC guard.
+    syncUi(root.dataset.theme === 'dark' ? 'dark' : 'light')
+
+    button.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark'
+      applyTheme(next, true)
+    })
+
+    window.addEventListener('storage', (event) => {
+      if (event.key !== 'muarrib-theme') return
+      applyTheme(decideTheme(event.newValue, prefersDark.matches), false)
+    })
+  }
+</script>

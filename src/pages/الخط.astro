@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ScriptEntry from '../components/ScriptEntry.astro';
+import Kashida from '../components/Kashida.astro';
+
+const articles = (await getCollection('script')).sort(
+  (a, b) => a.data.order - b.data.order || a.id.localeCompare(b.id, 'ar')
+);
+---
+
+<BaseLayout title="الخط العربي">
+  <header>
+    <h1>الخط العربي</h1>
+    <p class="lede">
+      صفحات في نشأة الحرف العربي وتاريخه، وامتداده إلى لغاتٍ أخرى، وما تُرك
+      من علاماته وحروفه القديمة.
+    </p>
+  </header>
+  <div class="entries">
+    {articles.map((article) => <ScriptEntry article={article} />)}
+  </div>
+  <Kashida selector=".lede" />
+</BaseLayout>

@@ -1,0 +1,267 @@
+---
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import './muscle-figure.css';
+import data from '../data/muscles/body-muscles.json';
+
+const groups = data.groups;
+const groupEntries = Object.entries(groups);
+
+const views = [
+  {
+    key: 'front',
+    file: 'male_front_muscle_anatomy.svg',
+    className: 'male-front-svg',
+    label: 'المنظر الأمامي',
+    expectedPaths: 87,
+  },
+  {
+    key: 'back',
+    file: 'male_back_muscle_anatomy.svg',
+    className: 'male-back-svg',
+    label: 'المنظر الخلفي',
+    expectedPaths: 52,
+  },
+] as const;
+
+const renderedViews = views.map((view) => {
+  const pathToGroup = new Map<string, string>();
+
+  for (const [key, meta] of groupEntries) {
+    for (const id of meta.views[view.key] ?? []) {
+      if (pathToGroup.has(id)) throw new Error(`Duplicate muscle path in ${view.key}: ${id}`);
+      pathToGroup.set(id, key);
+    }
+  }
+
+  const svgFile = resolve(
+    process.cwd(),
+    'public/muscles',
+    view.file
+  );
+  let svg = readFileSync(svgFile, 'utf8');
+
+  // Strip all <g> wrapper ids and upstream data attributes.
+  svg = svg.replace(/<g\b([^>]*?)\sid="[^"]*"([^>]*)>/g, '<g$1$2>');
+  svg = svg.replace(/\sdata-atlas="[^"]*"/g, '');
+  svg = svg.replace(/\sdata-kind="[^"]*"/g, '');
+
+  let replaced = 0;
+  for (const [id, key] of pathToGroup) {
+    const side = id.endsWith('_l') ? 'left' : id.endsWith('_r') ? 'right' : 'midline';
+    const pattern = new RegExp(`(<path\\b[^>]*?\\bid="${id}"[^>]*?)(\\s*/>)`);
+    svg = svg.replace(pattern, (whole, attrs, end) => {
+      replaced++;
+      return `${attrs} class="muscle-shape" data-muscle="${key}" data-side="${side}" data-view="${view.key}"${end}`;
+    });
+  }
+  if (replaced !== view.expectedPaths) {
+    throw new Error(
+      `Expected ${view.expectedPaths} mapped ${view.key} paths, replaced ${replaced}`
+    );
+  }
+
+  // After annotation, strip the id from EVERY path so both inline SVGs
+  // cannot create duplicate DOM ids.
+  svg = svg.replace(/(<path\b[^>]*?)\sid="[^"]*"/g, '$1');
+
+  svg = svg.replace(/<svg\b([^>]*)>/, (whole, attrs) =>
+    `<svg${attrs} class="muscle-svg ${view.className}" role="img" aria-label="عضلات جسم الإنسان — ${view.label}"><title>عضلات جسم الإنسان — ${view.label}</title>`
+  );
+
+  return { ...view, svg };
+});
+---
+
+<div class="muscle-figure" data-muscle-figure>
+  <p class="muscle-hint">
+    مرّر فوق أي عضلة في المنظرين لإبرازها، واضغط لعرض اسمها ووظيفتها. للتنقل بلوحة المفاتيح، استخدم فهرس العضلات أدناه.
+  </p>
+
+  <div class="muscle-views">
+    {
+      renderedViews.map((view) => (
+        <div class="muscle-view">
+          <h3>{view.label}</h3>
+          <div class="muscle-view-body" set:html={view.svg} />
+        </div>
+      ))
+    }
+  </div>
+
+  <details class="muscle-index">
+    <summary>فهرس العضلات ({groupEntries.length})</summary>
+    <div class="muscle-index-grid" role="group" aria-label="فهرس العضلات">
+      {
+        groupEntries.map(([key, meta]) => (
+          <button
+            type="button"
+            data-muscle={key}
+            aria-haspopup="dialog"
+            aria-label={`${meta.ar} — ${meta.en}`}
+          >
+            <span class="muscle-index-ar">{meta.ar}</span>
+            <span class="muscle-index-en" lang="en" dir="ltr">
+              {meta.en}
+            </span>
+          </button>
+        ))
+      }
+    </div>
+  </details>
+
+  <dialog
+    class="term-dialog muscle-dialog"
+    aria-labelledby="muscle-dialog-title"
+    aria-describedby="muscle-dialog-desc"
+  >
+    <button
+      class="dialog-close"
+      data-muscle-close
+      type="button"
+      aria-label="إغلاق"
+    >
+      ✕
+    </button>
+    <div class="dialog-body">
+      <p class="muscle-dialog-kicker">عضلة</p>
+      <h2 id="muscle-dialog-title"></h2>
+      <p class="muscle-dialog-en" lang="en" dir="ltr"></p>
+      <p id="muscle-dialog-desc"></p>
+      <p class="muscle-dialog-view"></p>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="muscle-noscript">
+      يتطلب عرض تفاصيل العضلات تفعيل JavaScript، ويمكنك تنزيل الرسمين الأصليين
+      من الرابطين أسفل الصفحة.
+    </p>
+  </noscript>
+
+  <script
+    is:inline
+    type="application/json"
+    id="muscle-groups-data"
+    set:html={JSON.stringify(groups).replace(/</g, '\\u003c')}
+  />
+</div>
+
+<script>
+  const root = document.querySelector('[data-muscle-figure]');
+
+  if (root) {
+    const dialog = root.querySelector('.muscle-dialog');
+    const title = root.querySelector('#muscle-dialog-title');
+    const english = root.querySelector('.muscle-dialog-en');
+    const description = root.querySelector('#muscle-dialog-desc');
+    const viewField = root.querySelector('.muscle-dialog-view');
+    const details = root.querySelector('details.muscle-index');
+    const dataNode = root.querySelector('#muscle-groups-data');
+    const groups = dataNode ? JSON.parse(dataNode.textContent ?? '{}') : {};
+    const viewLabels = {
+      front: 'المنظر الأمامي',
+      back: 'المنظر الخلفي',
+    };
+
+    const sideText = (side) =>
+      side === 'left'
+        ? 'الجهة: اليسرى'
+        : side === 'right'
+          ? 'الجهة: اليمنى'
+          : 'خط الوسط';
+
+    const groupViews = (meta) => {
+      const hasFront = (meta.views.front ?? []).length > 0;
+      const hasBack = (meta.views.back ?? []).length > 0;
+      if (hasFront && hasBack) return 'المنظران: أمامي وخلفي';
+      return hasFront ? 'المنظر الأمامي' : 'المنظر الخلفي';
+    };
+
+    const groupSide = (meta) => {
+      const paths = [...(meta.views.front ?? []), ...(meta.views.back ?? [])];
+      const hasLeft = paths.some((id) => id.endsWith('_l'));
+      const hasRight = paths.some((id) => id.endsWith('_r'));
+      if (hasLeft && hasRight) return 'كلتا الجهتين';
+      if (hasLeft) return 'الجهة: اليسرى';
+      if (hasRight) return 'الجهة: اليمنى';
+      return 'خط الوسط';
+    };
+
+    let lastFocus = null;
+
+    const findIndexButton = (name) =>
+      [...root.querySelectorAll('.muscle-index [data-muscle]')].find(
+        (button) => button.dataset.muscle === name
+      );
+
+    const setActive = (name, active) => {
+      for (const shape of root.querySelectorAll('.muscle-svg .muscle-shape')) {
+        if (shape.dataset.muscle === name) {
+          shape.classList.toggle('is-active', active);
+        }
+      }
+    };
+
+    const open = (name, view, side) => {
+      const meta = groups[name];
+      if (!meta || !dialog || !title || !english || !description || !viewField) {
+        return;
+      }
+
+      title.textContent = meta.ar;
+      english.textContent = meta.en;
+      description.textContent = meta.desc;
+      viewField.textContent = view
+        ? `${viewLabels[view] ?? ''} · ${sideText(side)}`
+        : `${groupViews(meta)} · ${groupSide(meta)}`;
+
+      lastFocus = findIndexButton(name);
+      if (!dialog.open) dialog.showModal();
+    };
+
+    root.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const trigger = target.closest(
+        '.muscle-shape, .muscle-index [data-muscle]'
+      );
+      if (!trigger) return;
+
+      const name = trigger.dataset.muscle;
+      if (name) open(name, trigger.dataset.view, trigger.dataset.side);
+    });
+
+    for (const button of root.querySelectorAll('.muscle-index [data-muscle]')) {
+      const name = button.dataset.muscle;
+      if (!name) continue;
+
+      button.addEventListener('pointerenter', () => setActive(name, true));
+      button.addEventListener('pointerleave', () => setActive(name, false));
+      button.addEventListener('focus', () => setActive(name, true));
+      button.addEventListener('blur', () => setActive(name, false));
+    }
+
+    if (dialog) {
+      dialog.addEventListener('click', (event) => {
+        const target = event.target;
+        if (
+          target === dialog ||
+          (target instanceof Element &&
+            target.closest('[data-muscle-close]'))
+        ) {
+          dialog.close();
+        }
+      });
+
+      dialog.addEventListener('close', () => {
+        if (details && !details.open) details.open = true;
+        const target = lastFocus;
+        window.setTimeout(() => {
+          if (target instanceof HTMLElement) target.focus({ preventScroll: true });
+        }, 0);
+      });
+    }
+  }
+</script>

@@ -20,12 +20,12 @@ import { toArabicDigits } from '../utils/arabicDigits';
           <a
             class="card hub-card"
             href={category.href}
-            aria-label={`معجم ${toArabicDigits(category.title)}`}
+            aria-label={category.ariaLabel ?? `معجم ${toArabicDigits(category.title)}`}
           >
-            <span class="hub-card-kicker">متاح الآن</span>
+            <span class="hub-card-kicker">{category.kicker ?? 'متاح الآن'}</span>
             <h2 class="hub-card-title">{toArabicDigits(category.title)}</h2>
             <p class="hub-card-desc">{toArabicDigits(category.description)}</p>
-            <span class="hub-card-cta">تصفح المعجم</span>
+            <span class="hub-card-cta">{category.cta ?? 'تصفح المعجم'}</span>
           </a>
         ) : (
           <div class="card hub-card hub-card--soon">

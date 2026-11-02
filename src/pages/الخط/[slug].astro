@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Kashida from '../../components/Kashida.astro';
+import { toArabicDigits } from '../../utils/arabicDigits';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('script');
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content, headings } = await render(article);
+const tocItems = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const hasSidenotes = (article.body ?? '').includes('^[');
+const hasToc = article.data.toc && tocItems.length > 0;
+---
+
+<BaseLayout title={article.data.title}>
+  <div class:list={[hasToc && 'with-aside', { 'has-sidenotes': hasSidenotes }]}>
+    <article>
+      <header>
+        <p><a href="/الخط">العودة إلى الخط</a></p>
+        <h1>{article.data.title}</h1>
+      </header>
+      <div class="post-body">
+        <Content />
+      </div>
+    </article>
+    {hasToc && (
+      <aside class="aside-box toc">
+        <div>
+          <h2 class="aside-title">محتويات</h2>
+          <ul>
+            {tocItems.map((h) => (
+              <li class={h.depth === 3 ? 'toc-h3' : ''}>
+                <a href={`#${h.slug}`}>{toArabicDigits(h.text)}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+    )}
+  </div>
+  <Kashida selector=".post-body p" />
+</BaseLayout>

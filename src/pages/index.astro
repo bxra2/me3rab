@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 import { site } from '../data/site';
+
+const articles = await getCollection('script');
+const forgotten = articles.find((a) => a.id === 'المهمل-والمتروك');
+const forgottenHref = forgotten ? `/الخط/${forgotten.id}` : '/الخط';
 ---
 
 <BaseLayout title="الرئيسية">
@@ -8,10 +13,22 @@ import { site } from '../data/site';
     <section>
       <header>
         <h1>معراب</h1>
-        <p>
-          مشروع لتعريب المصطلح التقني: مقابلٌ واحد لكل مصطلح، بشرحٍ ومصدر، على
-          ورق مطبعة.
-        </p>
+        <section class="intro">
+          <p class="intro-lede">
+            معراب مشروعٌ لتعريب المصطلح التقني: يضع لكل مصطلح مقابلًا عربيًا
+            واحدًا، بشرحٍ موجز ومصدرٍ موثّق، على ورق مطبعة.
+          </p>
+          <p>
+            تتفرّق المصطلحات الوافدة بين ترجماتٍ متباينة، فيضيع القارئ بين لفظٍ
+            وآخر. يثبّت معراب مقابلًا واحدًا، ويربط كل مصطلح بعلاقاته من تمييزٍ
+            وعائلةٍ وسلسلة.
+          </p>
+          <ol class="intro-steps">
+            <li>نرصد المصطلح في مصادره، ونقارن ما قيل فيه.</li>
+            <li>نختار مقابلًا واحدًا، ونشرح لماذا.</li>
+            <li>نحرّره وننشره، ونعيد النظر فيه كلما جدّ جديد.</li>
+          </ol>
+        </section>
         <p>
           <a href="/مدونة">المدونة</a> · <a href="/مصطلحات">مصطلحات</a>
         </p>
@@ -25,6 +42,24 @@ import { site } from '../data/site';
             العربية والإنجليزية والفرنسية بحسب المصدر أو المعجم.
           </p>
           <span class="hub-card-cta">تصفح المعاجم</span>
+        </a>
+        <a class="card hub-card" href="/الخط" aria-label="الخط العربي: تاريخ الحرف وامتداده إلى اللغات الأخرى">
+          <span class="hub-card-kicker">قسم جديد</span>
+          <h2 class="hub-card-title">الخط العربي</h2>
+          <p class="hub-card-desc">
+            تاريخ الحرف العربي من النبطية إلى الأقلام الستة، وتكيّفه مع
+            الفارسية والأردية والسندية والبشتوية وغيرها.
+          </p>
+          <span class="hub-card-cta">تصفح الخط</span>
+        </a>
+        <a class="card hub-card" href={forgottenHref} aria-label="المهمل والمتروك: خط التاج والعلامات المندثرة">
+          <span class="hub-card-kicker">مهمل ومتروك</span>
+          <h2 class="hub-card-title">المهمل والمتروك</h2>
+          <p class="hub-card-desc">
+            خط التاج، وعلامات الوقف القديمة، والألف الخنجرية، والحروف التي
+            اندثرت؛ ما كان من الكتابة ثم تُرك.
+          </p>
+          <span class="hub-card-cta">اقرأ المقال</span>
         </a>
       </div>
     </section>

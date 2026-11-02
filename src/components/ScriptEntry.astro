@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  article: CollectionEntry<'script'>;
+}
+
+const { article } = Astro.props;
+---
+
+<article class="entry">
+  <div class="title-row">
+    <h2 class="entry-title">
+      <a href={`/الخط/${article.id}`}>{article.data.title}</a>
+    </h2>
+  </div>
+  <p>{article.data.description}</p>
+</article>

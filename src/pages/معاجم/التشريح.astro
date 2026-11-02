@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MuscleFigure from '../../components/MuscleFigure.astro';
+---
+
+<BaseLayout title="التشريح — معاجم">
+  <header>
+    <p><a href="/معاجم">العودة إلى المعاجم</a></p>
+    <h1>التشريح</h1>
+    <p>
+      أطلس مصوّر تفاعلي لعضلات جسم الإنسان في المنظرين الأمامي والخلفي: مرّر فوق
+      أي عضلة واضغط لعرض اسمها ووظيفتها.
+    </p>
+  </header>
+
+  <section>
+    <h2>عضلات المنظرين الأمامي والخلفي</h2>
+    <figure class="card anatomy-figure">
+      <MuscleFigure />
+      <figcaption>
+        <p>
+          الرسمان: <bdi>Ryan Graves</bdi> —
+          <a href="https://www.figma.com/community/file/1320468164820924031/human-anatomy-component-system" target="_blank" rel="noopener">Human Anatomy Component System</a>،
+          رخصة <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"><bdi>CC BY 4.0</bdi></a>،
+          عبر <a href="https://github.com/suryamolly/muscle_mapper" target="_blank" rel="noopener"><bdi>muscle_mapper</bdi></a>.
+        </p>
+        <p>
+          النسختان التفاعليتان: أُضيفت فئات وسمات للتفاعل دون تغيير مسارات الرسم.
+          <a href="/muscles/male_front_muscle_anatomy.svg" download>تحميل الرسم الأمامي</a>
+          <a href="/muscles/male_back_muscle_anatomy.svg" download>تحميل الرسم الخلفي</a>
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+</BaseLayout>
