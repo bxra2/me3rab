@@ -29,4 +29,14 @@ const terms = defineCollection({
   }),
 });
 
-export const collections = { blog, terms };
+const script = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/script' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    order: z.number().default(0),
+    toc: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog, terms, script };

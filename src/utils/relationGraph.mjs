@@ -214,7 +214,7 @@ export function buildGraph(terms, relations) {
  * @param {string} s
  * @returns {string}
  */
-function normalizeName(s) {
+export function normalizeName(s) {
   return s
     .replace(/['"`«»]/g, '')
     .replace(/\s+/g, '')
