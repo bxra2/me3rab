@@ -4,6 +4,12 @@ translation: ''
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: مدير
+    note: من القاموس التقني المعلوماتي، الفن، التسلية والرياضة، التجارة والمحاسبة، علوم البحار
+  - translation: مُدَبِّر
+    note: من المعلومات و التواصل، معجم تقانة المعلومات الموحد
+  - translation: برنامج إدارة
+    note: من معجم مصطلحات المعلوماتية
 derivations: []
 ---
