@@ -47,6 +47,7 @@
     { "type": "contrast", "terms": ["Recursion", "Regression"], "ar": ["عَوْدِيّة", "انكفاء"], "note": "متقاربات تحتاج ترجمات متمايزة" },
     { "type": "contrast", "terms": ["Seek", "Search"], "ar": ["نِشْدان", "بحث"], "note": "متقاربات تحتاج ترجمات متمايزة" },
     { "type": "family", "terms": ["Bit", "Byte", "Qubit"], "note": "وحدات معلومات" },
+    { "type": "family", "terms": ["Nitrogen", "Oxygen", "Hydrogen"], "note": "مصطلحات كيميائية" },
     { "type": "family", "terms": ["Hardware", "Software", "Firmware", "Middleware", "Vaporware"], "note": "عائلة -ware" },
     { "type": "family", "terms": ["Glyph", "Character", "Ligature", "Comma", "Typography"], "note": "عناقيد الطباعة" },
     { "type": "family", "terms": ["Protocol", "Proxy", "Packet", "Torrent"], "note": "الشبكات" },

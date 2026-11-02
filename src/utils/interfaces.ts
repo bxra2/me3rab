@@ -1,4 +1,4 @@
-import type { TermStatusKey } from '../data/statuses'
+import type { TermStatusKey, TermSourceKey,TermMotivationKey,TermFormationKey } from '../data/termStatuses'
 
 export interface Source {
   name: string;
@@ -21,6 +21,9 @@ export interface TermView {
   explanation: string;
   source: Source[];
   status: TermStatusKey;
+  termSource: TermSourceKey;
+  TermMotivation: TermMotivationKey;
+  TermFormation: TermFormationKey;
   alternatives: Alternative[];
   derivations: Derivation[];
   isComplete: boolean;

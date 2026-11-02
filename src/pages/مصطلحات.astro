@@ -3,8 +3,22 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import { getCollection } from 'astro:content'
 import relations from '../data/relations.json'
 import { toArabicDigits } from '../utils/arabicDigits'
-import { TermStatus, statusBadgeClass } from '../data/statuses'
-import type { TermStatusKey } from '../data/statuses'
+import {
+    TermStatus,
+    statusBadgeClass,
+    TermSource,
+    sourceBadgeClass,
+    TermMotivation,
+    motivationBadgeClass,
+    TermFormation,
+    formationBadgeClass,
+} from '../data/termStatuses'
+import type {
+    TermSourceKey,
+    TermStatusKey,
+    TermMotivationKey,
+    TermFormationKey,
+} from '../data/termStatuses'
 import { TermView } from '../utils/interfaces'
 
 const rawEntries = await getCollection('terms')
@@ -17,6 +31,9 @@ const entries: TermView[] = rawEntries
         explanation: entry.data.explanation,
         source: entry.data.source,
         status: entry.data.status as TermStatusKey,
+        termSource: entry.data.termSource as TermSourceKey,
+        termMotivation: entry.data.termMotivation as TermMotivationKey,
+        termFormation: entry.data.termFormation as TermFormationKey,
         alternatives: entry.data.alternatives,
         derivations: entry.data.derivations,
         isComplete: entry.data.isComplete ?? false,
@@ -48,7 +65,9 @@ const statRows = [
     { label: TermStatus.coined, value: statusCounts.coined, filter: 'coined' },
     { label: TermStatus.agreed, value: statusCounts.agreed, filter: 'agreed' },
     {
-      label: TermStatus.abandoned, value: statusCounts.abandoned, filter: 'abandoned',
+        label: TermStatus.abandoned,
+        value: statusCounts.abandoned,
+        filter: 'abandoned',
     },
 ]
 
@@ -133,9 +152,16 @@ const entriesFor = (letter: string) =>
                                             class='term-row'
                                             data-term={e.term}
                                         >
-                                            <span class="term-row-term">
+                                            <span class='term-row-term'>
                                                 {toArabicDigits(e.term)}
-                                                {e.isComplete && <span class="term-complete" title="Completed">✓</span>}
+                                                {e.isComplete && (
+                                                    <span
+                                                        class='term-complete'
+                                                        title='Completed'
+                                                    >
+                                                        ✓
+                                                    </span>
+                                                )}
                                             </span>
                                             <span class='term-row-translation'>
                                                 {e.translation
@@ -191,10 +217,18 @@ const entriesFor = (letter: string) =>
         set:html={JSON.stringify({
             labels: TermStatus,
             classes: statusBadgeClass,
+            sourceLabels: TermSource,
+            sourceClasses: sourceBadgeClass,
+            motivationLabels: TermMotivation,
+            motivationClasses: motivationBadgeClass,
+            formationLabels: TermFormation,
+            formationClasses: formationBadgeClass,
         })}
     />
 
     <script>
+        import { motivationBadgeClass } from '../data/termStatuses'
+
         const search = document.getElementById(
             'term-search'
         ) as HTMLInputElement
@@ -212,12 +246,33 @@ const entriesFor = (letter: string) =>
             explanation: string
             source: { name: string; link: string }[]
             status?: string
+            termSource?: string
+            termMotivation?: string
+            termFormation?: string
             alternatives?: { translation: string; note: string }[]
             derivations?: { form: string; gloss: string }[]
         }[]
-        const { labels, classes } = JSON.parse(
+        const {
+            labels,
+            classes,
+            sourceLabels,
+            sourceClasses,
+            motivationLabels,
+            motivationClasses,
+            formationLabels,
+            formationClasses,
+        } = JSON.parse(
             document.getElementById('status-data')?.textContent ?? '{}'
-        ) as { labels: Record<string, string>; classes: Record<string, string> }
+        ) as {
+            labels: Record<string, string>
+            classes: Record<string, string>
+            sourceLabels: Record<string, string>
+            sourceClasses: Record<string, string>
+            motivationLabels: Record<string, string>
+            motivationClasses: Record<string, string>
+            formationLabels: Record<string, string>
+            formationClasses: Record<string, string>
+        }
         const relations = JSON.parse(
             document.getElementById('relation-data')?.textContent ?? '[]'
         ) as { type: string; terms: string[]; note: string }[]
@@ -301,6 +356,9 @@ const entriesFor = (letter: string) =>
 
         const render = (e: (typeof entries)[number]) => {
             const status = e.status ?? 'proposed'
+            const termSource = e.termSource ?? 'unknown'
+            const termMotivation = e.termMotivation ?? 'ambiguity'
+            const termFormation = e.termFormation ?? 'derivation'
 
             const alts = (e.alternatives ?? [])
                 .map(
@@ -334,7 +392,7 @@ const entriesFor = (letter: string) =>
                         )
                         .join('')
                     return `<p class="relation-group">
-        <span class="badge relation-type">${escapeHtml(label)}</span>
+        <span class="badge relation-type">${escapeHtml(label)}</span>: 
         <span class="relation-chips">${chips}</span>
         <span class="relation-note">${escapeHtml(r.note)}</span>
       </p>`
@@ -344,6 +402,9 @@ const entriesFor = (letter: string) =>
             return `
     <p class="tag-list">
       <span class="badge ${classes[status]}">${labels[status]}</span>
+      <span class="badge ${sourceClasses[termSource]}">${sourceLabels[termSource]}</span>
+      <span class="badge ${motivationClasses[termMotivation]}">${motivationLabels[termMotivation]}</span>
+      <span class="badge ${formationClasses[termFormation]}">${formationLabels[termFormation]}</span>
     </p>
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <h2>${e.translation ? escapeHtml(e.translation) : '—'}</h2>

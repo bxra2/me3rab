@@ -744,6 +744,48 @@ input[type="radio"]:focus-visible {
 
 .badge-abandoned { opacity: 0.55; }
 
+.source-personal {
+    color: #904e36;
+    /* background-color: #d5ac76; */
+    border-color: #904e36;
+}
+
+.source-individual {
+    color: #314657;
+    /* background-color: #314657; */
+    border-color: #314657;;
+}
+
+.source-institutional {
+    color: #8b3621;
+    /* background-color: #8b3621; */
+    border-color: #8b3621;
+}
+
+.source-lexicographical {
+    color: #736d4b;
+    /* background-color: #849f80; */
+    border-color: #736d4b;
+}
+
+.source-heritage {
+    color: #FFEDD5;
+    /* background-color: #FFEDD5; */
+    border-color: #FFEDD5;
+}
+
+.source-foreign {
+    color: #CFFAFE;
+    /* background-color: #CFFAFE; */
+    border-color: #CFFAFE;
+}
+
+.source-unknown {
+    color: #475569;
+    /* background-color: #F1F5F9; */
+    border-color: #475569;
+}
+
 .no-results {
   border: 2px dashed var(--color-ink);
   padding: var(--space-m);
@@ -808,8 +850,9 @@ input[type="radio"]:focus-visible {
 }
 
 .relation-chip:hover {
-  border-color: var(--color-secondary);
-  color: var(--color-secondary);
+  /* border-color: var(--color-secondary); */
+  color: var(--bg-color);
+  background-color: var(--stripe-color1);
 }
 
 .relation-note {

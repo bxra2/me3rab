@@ -3,6 +3,7 @@ term: Bit
 translation: 'أُحدة'
 explanation: ''
 status: proposed
+termSource: personal
 source: []
 alternatives:
   - translation: بتّ
