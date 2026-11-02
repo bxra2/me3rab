@@ -1,75 +1,20 @@
-import {
-  readFileSync,
-  writeFileSync,
-  mkdirSync,
-  readdirSync,
-  unlinkSync,
-} from 'node:fs';
-import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import jsyaml from 'js-yaml';
-import { fillTermKeys, slugifyTerm } from '../src/data/termDefaults.js';
+/**
+ * Deprecated.
+ *
+ * This converter regenerated term markdown from the legacy
+ * `src/data/glossary.json`. That dataset uses `recommended` where the
+ * content schema uses `translation`, and it is stale compared with the
+ * richer hand-edited files under `src/content/terms/`. Running it would
+ * blank translations and drop fields such as `isComplete`.
+ *
+ * `src/content/terms/*.md` is now the single source of truth. Manage
+ * relation drift with `scripts/sync-relations.mjs` instead.
+ */
 
-const glossaryPath = fileURLToPath(
-  new URL('../src/data/glossary.json', import.meta.url)
+console.error(
+  'terms:generate مُهمَل — src/content/terms/*.md هو المصدر الوحيد للحقيقة؛ أدر العلاقات عبر scripts/sync-relations.mjs.'
 );
-const termsDir = fileURLToPath(
-  new URL('../src/content/terms/', import.meta.url)
+console.error(
+  'terms:generate is deprecated — src/content/terms/*.md is now the single source of truth; manage relations with scripts/sync-relations.mjs.'
 );
-
-const glossary = JSON.parse(readFileSync(glossaryPath, 'utf8'));
-
-mkdirSync(termsDir, { recursive: true });
-
-// Remove any pre-existing .md files (idempotent re-run).
-for (const file of readdirSync(termsDir)) {
-  if (file.endsWith('.md')) {
-    unlinkSync(join(termsDir, file));
-  }
-}
-
-const usedSlugs = new Set();
-
-function uniqueSlug(term) {
-  const base = slugifyTerm(term) || 'term';
-  let slug = base;
-  let n = 2;
-  while (usedSlugs.has(slug)) {
-    slug = `${base}-${n}`;
-    n += 1;
-  }
-  usedSlugs.add(slug);
-  return slug;
-}
-
-let filesWritten = 0;
-
-for (const entry of glossary) {
-  const full = fillTermKeys(entry);
-  const slug = uniqueSlug(full.term);
-
-  const frontmatter = {
-    term: full.term,
-    translation: full.translation,
-    explanation: full.explanation,
-    status: full.status,
-    source: full.source,
-    alternatives: full.alternatives,
-    derivations: full.derivations,
-  };
-
-  const yamlBody = jsyaml.dump(frontmatter, { lineWidth: -1 });
-
-  const content = '---\n' + yamlBody + '---\n';
-
-  writeFileSync(join(termsDir, `${slug}.md`), content, 'utf8');
-  filesWritten += 1;
-}
-
-if (filesWritten !== glossary.length) {
-  throw new Error(
-    `expected ${glossary.length} files but wrote ${filesWritten}`
-  );
-}
-
-console.log(`Wrote ${filesWritten} term files to ${termsDir}`);
+process.exit(1);
