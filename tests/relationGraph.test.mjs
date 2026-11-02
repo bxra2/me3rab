@@ -1,44 +1,17 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { buildGraph, validateRelations } from '../src/utils/relationGraph.mjs';
-
-const root = fileURLToPath(new URL('..', import.meta.url));
+import { parseTermNames } from '../scripts/lib/terms.mjs';
 
 const relations = JSON.parse(
   readFileSync(new URL('../src/data/relations.json', import.meta.url), 'utf8')
 );
 
-/**
- * Parses term names from src/content/terms/*.md (minimal line-anchored
- * parser, mirroring scripts/check-glossary.mjs).
- * @returns {string[]}
- */
-function parseTermNames() {
-  const dir = new URL('../src/content/terms/', import.meta.url);
-  const names = [];
-  for (const file of readdirSync(dir)) {
-    if (!file.endsWith('.md')) continue;
-    const content = readFileSync(new URL(file, dir), 'utf8');
-    for (const line of content.split('\n')) {
-      if (line.startsWith('term:')) {
-        let value = line.slice('term:'.length).trim();
-        if (
-          (value.startsWith("'") && value.endsWith("'")) ||
-          (value.startsWith('"') && value.endsWith('"'))
-        ) {
-          value = value.slice(1, -1);
-        }
-        names.push(value);
-        break;
-      }
-    }
-  }
-  return names;
-}
-
-const termNames = parseTermNames();
+const termNames = parseTermNames(
+  fileURLToPath(new URL('../src/content/terms/', import.meta.url))
+);
 const terms = termNames.map((term) => ({
   term,
   translation: '',
@@ -48,7 +21,7 @@ const terms = termNames.map((term) => ({
 
 const graph = buildGraph(terms, relations);
 
-test('matched vs ghost: known terms matched, quoted Mineral is a ghost', () => {
+test('matched vs ghost: known terms matched, Mineral is no longer quoted', () => {
   const byName = new Map(graph.nodes.map((n) => [n.name, n]));
 
   assert.ok(byName.has('Language Model'), 'Language Model should be a node');
@@ -58,9 +31,10 @@ test('matched vs ghost: known terms matched, quoted Mineral is a ghost', () => {
   assert.ok(byName.has('System of lakes'), 'System of lakes should be a node');
   assert.equal(byName.get('System of lakes').matched, true);
 
-  assert.ok(byName.has("'Mineral'"), "'Mineral' should be a node");
-  assert.equal(byName.get("'Mineral'").matched, false);
-  assert.equal(byName.get("'Mineral'").ghost, true);
+  assert.ok(byName.has('Mineral'), 'Mineral should be a node');
+  assert.equal(byName.get('Mineral').matched, true);
+  assert.equal(byName.get('Mineral').ghost, false);
+  assert.equal(byName.has("'Mineral'"), false);
 
   // Ghost count derived from data, not hardcoded.
   const expectedGhosts = new Set();

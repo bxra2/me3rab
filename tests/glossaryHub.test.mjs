@@ -89,13 +89,14 @@ test('glossary pages: every page under معاجم/ is registered', () => {
   }
 });
 
-test('glossary categories: only الكيمياء is available in this release', () => {
+test('glossary categories: only الكيمياء and التشريح are available in this release', () => {
   // Update this test when a new glossary category goes live.
+  // deepEqual is insertion-order-sensitive: keep the expected array in JSON order.
   const available = categories.filter((c) => c.href);
   assert.deepEqual(
     available.map((c) => c.title),
-    ['الكيمياء'],
-    'update this test when a new glossary category goes live'
+    ['الكيمياء', 'التشريح'],
+    'update this test when a new glossary category goes live; expected order must match JSON insertion order'
   );
 });
 
@@ -219,8 +220,8 @@ test('glossary chemistry: popup dialogs and wiring', () => {
   assert.match(component, /id=\{`pt-el-\$\{el\.number\}`\}/, 'dialogs must use pt-el-N ids');
   assert.match(component, /showModal/, 'script must call showModal()');
   assert.match(component, /data-pt-close/, 'dialogs must have a data-pt-close close button');
-  assert.match(component, /class="pt-open"/, 'cells must have a .pt-open overlay button');
-  assert.match(component, /aria-haspopup="dialog"/, 'overlay buttons must declare dialog popup');
+  assert.match(component, /class=["']pt-open["']/, 'cells must have a .pt-open overlay button');
+  assert.match(component, /aria-haspopup=["']dialog["']/, 'overlay buttons must declare dialog popup');
   // Dialogs must live OUTSIDE the .periodic-table wrapper: container-type: inline-size
   // implies layout containment, which would capture position:fixed dialogs.
   const wrapEnd = component.indexOf('</div>', component.indexOf('</fieldset>'));
@@ -234,8 +235,15 @@ test('glossary chemistry: popup dialogs and wiring', () => {
     'popup figure must carry the element category class'
   );
   // close button must sit at the top of the dialog, before the header
+  const dialogStart = component.indexOf('<dialog');
+  const dialogEnd = component.indexOf('</dialog>');
   assert.ok(
-    component.indexOf('data-pt-close') < component.indexOf('<header class="pt-head"'),
+    dialogStart !== -1 && dialogEnd > dialogStart,
+    'component must render a complete <dialog>...</dialog>'
+  );
+  const dialog = component.slice(dialogStart, dialogEnd);
+  assert.ok(
+    dialog.indexOf('data-pt-close') < dialog.search(/<header\b/),
     'close button must be the first element inside the dialog'
   );
 });
@@ -247,13 +255,13 @@ test('glossary chemistry: popup boxes are equal squares sharing cell colors', ()
   ).normalize('NFC');
   assert.match(
     css,
-    /\.pt-figure,\s*\n\.pt-translations\s*\{[^}]*aspect-ratio:\s*1 \/ 1/,
-    'figure and translations boxes must be equal squares (aspect-ratio: 1/1)'
+    /\.pt-figure,\s*\n\.pt-translations,\s*\n\.pt-langs\s*\{[^}]*aspect-ratio:\s*1 \/ 1/,
+    'figure, translations, and langs boxes must be equal squares (aspect-ratio: 1/1)'
   );
   assert.match(
     css,
-    /\.pt-head\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 18rem\)\)/,
-    'popup head must use two capped equal columns'
+    /\.pt-head\s*\{[^}]*grid-template-columns:\s*repeat\(3, minmax\(0, 18rem\)\)/,
+    'popup head must use three capped equal columns'
   );
   assert.equal(
     (css.match(/\.pt-figure\.(?:alk|aec|trn|trm|met|rnm|hln|nbl|lan|act)/g) || []).length,
@@ -330,6 +338,96 @@ test('glossary chemistry: table CSS is scoped', () => {
     css,
     /\.periodic-table ol\s*\{[^}]*container-type/m,
     'CSS must not declare container-type on the ol (cqi would resolve to viewport width)'
+  );
+});
+
+test('glossary anatomy: front/back interactive atlas is integrated and attributed', () => {
+  const page = readFileSync(
+    new URL('../src/pages/معاجم/التشريح.astro', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+
+  assert.match(
+    page,
+    /import\s+BaseLayout\s+from\s+['"]\.\.\/\.\.\/layouts\/BaseLayout\.astro['"]/,
+    'التشريح.astro must import BaseLayout from ../../layouts/BaseLayout.astro'
+  );
+  assert.match(
+    page,
+    /import\s+MuscleFigure\s+from\s+['"]\.\.\/\.\.\/components\/MuscleFigure\.astro['"]/,
+    'التشريح.astro must import MuscleFigure from ../../components/MuscleFigure.astro'
+  );
+  assert.match(page, /<MuscleFigure\s*\/>/, 'التشريح.astro must render <MuscleFigure />');
+
+  assert.match(page, /<a href="\/معاجم">العودة إلى المعاجم<\/a>/, 'page must link back to /معاجم');
+  assert.match(page, /<h1>التشريح<\/h1>/, 'page must have an h1 التشريح');
+  assert.match(
+    page,
+    /<h2>عضلات المنظرين الأمامي والخلفي<\/h2>/,
+    'page must present both views'
+  );
+
+  assert.match(
+    page,
+    /href="\/muscles\/male_front_muscle_anatomy\.svg"[^>]*download/,
+    'page must offer the new front SVG as a download'
+  );
+  assert.match(
+    page,
+    /href="\/muscles\/male_back_muscle_anatomy\.svg"[^>]*download/,
+    'page must offer the new back SVG as a download'
+  );
+  assert.match(page, /Ryan Graves/, 'figcaption must credit Ryan Graves');
+  assert.match(
+    page,
+    /https:\/\/creativecommons\.org\/licenses\/by\/4\.0\//,
+    'figcaption must link to CC BY 4.0'
+  );
+  assert.match(page, /muscle_mapper/, 'figcaption must credit muscle_mapper');
+  assert.match(
+    page,
+    /https:\/\/www\.figma\.com\/community\/file\/1320468164820924031\/human-anatomy-component-system/,
+    'figcaption must link the Figma Community asset'
+  );
+  assert.doesNotMatch(page, /OpenStax/i, 'page must not mention OpenStax');
+  assert.doesNotMatch(page, /snaprepo/i, 'page must not mention snaprepo');
+  assert.doesNotMatch(page, /by-sa/i, 'page must not mention BY-SA');
+  assert.doesNotMatch(page, /muscles_full\.svg/, 'page must not reference the old static atlas');
+  assert.doesNotMatch(page, /body-muscles/i, 'page must not mention the old body-muscles attribution');
+  assert.doesNotMatch(page, /<img\b/i, 'page must not contain a static <img>');
+});
+
+test('glossary anatomy: referenced muscle assets resolve', () => {
+  const page = readFileSync(
+    new URL('../src/pages/معاجم/التشريح.astro', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+
+  const srcs = [...page.matchAll(/\/muscles\/[^"'\s]+/g)].map((m) => m[0]);
+  assert.ok(srcs.length > 0, 'التشريح.astro must reference at least one /muscles/ asset');
+  for (const src of srcs) {
+    const asset = fileURLToPath(new URL(`../public${src}`, import.meta.url));
+    assert.ok(existsSync(asset), `referenced asset must exist under public/: ${src}`);
+  }
+});
+
+test('glossary hub: atlas card labels come from category data', () => {
+  const hub = readFileSync(
+    new URL('../src/pages/معاجم.astro', import.meta.url),
+    'utf8'
+  ).normalize('NFC');
+
+  assert.ok(
+    hub.includes("category.kicker ?? 'متاح الآن'"),
+    'hub must read kicker from category data with a fallback'
+  );
+  assert.ok(
+    hub.includes("category.cta ?? 'تصفح المعجم'"),
+    'hub must read cta from category data with a fallback'
+  );
+  assert.ok(
+    hub.includes('category.ariaLabel ??'),
+    'hub must read ariaLabel from category data with a fallback'
   );
 });
 
