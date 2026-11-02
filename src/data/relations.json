@@ -4,7 +4,7 @@
     { "type": "contrast", "terms": ["Pragmatic", "Pragmatics"], "note": "صفة سلوكية مقابل حقل لغوي دراسي" },
     { "type": "contrast", "terms": ["Matriarchy", "Patriarchy"], "note": "نظاما القرابة والسلطة" },
     { "type": "contrast", "terms": ["Apprentice", "Internship"], "note": "صنعة مُتعلَّمة مقابل تدريب مهني" },
-    { "type": "contrast", "terms": ["'Mineral'", "Metal"], "note": "مادة مصنَّعة مقابل مادة مستخرجة" },
+    { "type": "contrast", "terms": ["Mineral", "Metal"], "note": "مادة مصنَّعة مقابل مادة مستخرجة" },
     { "type": "contrast", "terms": ["Process", "Operation", "Procedure"], "note": "السيرورة وإتمام المهام" },
     { "type": "contrast", "terms": ["Grid", "Network", "Net"], "note": "التشابك" },
     { "type": "contrast", "terms": ["Version", "Copy", "Release"], "ar": ["إصدار", "نسخة", "سَحْب"], "note": "متقاربات تحتاج ترجمات متمايزة" },

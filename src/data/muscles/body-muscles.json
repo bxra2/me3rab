@@ -1,0 +1,682 @@
+{
+  "groups": {
+    "pectoralis-major": {
+      "ar": "العضلة الصدرية الكبرى",
+      "en": "Pectoralis major",
+      "desc": "تغطي مقدمة الصدر، وتقرّب الذراع من الجسم وتديرها داخليًا.",
+      "region": "chest",
+      "views": {
+        "front": [
+          "pectoralis_major_l",
+          "pectoralis_major_r"
+        ],
+        "back": []
+      }
+    },
+    "rectus-abdominis": {
+      "ar": "العضلة المستقيمة البطنية",
+      "en": "Rectus abdominis",
+      "desc": "تكوّن جدار البطن الأمامي، وتثني الجذع وتثبّت الحوض.",
+      "region": "core",
+      "views": {
+        "front": [
+          "rectus_abdominis_1",
+          "rectus_abdominis_2_l",
+          "rectus_abdominis_2_r",
+          "rectus_abdominis_3_l",
+          "rectus_abdominis_3_r",
+          "rectus_abdominis_4_l",
+          "rectus_abdominis_4_r"
+        ],
+        "back": []
+      }
+    },
+    "external-oblique": {
+      "ar": "العضلة المائلة الخارجية",
+      "en": "External oblique",
+      "desc": "تغطي جانبي البطن، وتساعد على ثني الجذع وتدويره.",
+      "region": "core",
+      "views": {
+        "front": [
+          "external_oblique_1_l",
+          "external_oblique_1_r",
+          "external_oblique_2_l",
+          "external_oblique_2_r",
+          "external_oblique_3_l",
+          "external_oblique_3_r",
+          "external_oblique_4_l",
+          "external_oblique_4_r",
+          "external_oblique_5_l",
+          "external_oblique_5_r",
+          "external_oblique_6_l",
+          "external_oblique_6_r",
+          "external_oblique_7_l",
+          "external_oblique_7_r",
+          "external_oblique_8_l",
+          "external_oblique_8_r"
+        ],
+        "back": [
+          "external_oblique_1_l",
+          "external_oblique_1_r"
+        ]
+      }
+    },
+    "adductor-longus": {
+      "ar": "العضلة المقربة الطويلة",
+      "en": "Adductor longus",
+      "desc": "تقرّب الفخذ من الجسم وتساعد على ثنيه.",
+      "region": "adductors",
+      "views": {
+        "front": [
+          "adductor_longus_l",
+          "adductor_longus_r"
+        ],
+        "back": []
+      }
+    },
+    "pectineus": {
+      "ar": "العضلة العانية",
+      "en": "Pectineus",
+      "desc": "تقرّب الفخذ وتساعد على ثنيه.",
+      "region": "adductors",
+      "views": {
+        "front": [
+          "pectineus_l",
+          "pectineus_r"
+        ],
+        "back": []
+      }
+    },
+    "gracilis": {
+      "ar": "العضلة الرشيقة",
+      "en": "Gracilis",
+      "desc": "تقرّب الفخذ وتثني الركبة.",
+      "region": "adductors",
+      "views": {
+        "front": [
+          "gracilis_l",
+          "gracilis_r"
+        ],
+        "back": []
+      }
+    },
+    "biceps-long-head": {
+      "ar": "الرأس الطويل للعضلة ذات الرأسين",
+      "en": "Biceps brachii — long head",
+      "desc": "يثني الكوع ويساعد على قلب الساعد.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "biceps_brachii_caput_longum_l",
+          "biceps_brachii_caput_longum_r"
+        ],
+        "back": []
+      }
+    },
+    "biceps-short-head": {
+      "ar": "الرأس القصير للعضلة ذات الرأسين",
+      "en": "Biceps brachii — short head",
+      "desc": "يثني الكوع ويساعد على قلب الساعد.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "biceps_brachii_caput_breve_l",
+          "biceps_brachii_caput_breve_r"
+        ],
+        "back": []
+      }
+    },
+    "triceps-long-head": {
+      "ar": "الرأس الطويل للعضلة ثلاثية الرؤوس",
+      "en": "Triceps brachii — long head",
+      "desc": "يمدّ الكوع ويساعد على تقريب الذراع.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "triceps_brachii_caput_longum_l",
+          "triceps_brachii_caput_longum_r"
+        ],
+        "back": [
+          "triceps_brachii_caput_longum_l",
+          "triceps_brachii_caput_longum_r"
+        ]
+      }
+    },
+    "triceps-lateral-head": {
+      "ar": "الرأس الجانبي للعضلة ثلاثية الرؤوس",
+      "en": "Triceps brachii — lateral head",
+      "desc": "يمدّ الكوع.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "triceps_brachii_caput_laterale_l",
+          "triceps_brachii_caput_laterale_r"
+        ],
+        "back": [
+          "triceps_brachii_caput_laterale_l",
+          "triceps_brachii_caput_laterale_r"
+        ]
+      }
+    },
+    "flexor-carpi-radialis": {
+      "ar": "العضلة المثنية الكعبرية للرسغ",
+      "en": "Flexor carpi radialis",
+      "desc": "تثني الرسغ وتساعد على تقريبه.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "flexor_carpi_radialis_l",
+          "flexor_carpi_radialis_r"
+        ],
+        "back": []
+      }
+    },
+    "palmaris-longus": {
+      "ar": "العضلة الراحية الطويلة",
+      "en": "Palmaris longus",
+      "desc": "تثني الرسغ وتشدّ اللفافة الراحية.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "palmaris_longus_l",
+          "palmaris_longus_r"
+        ],
+        "back": []
+      }
+    },
+    "flexor-digitorum-superficialis": {
+      "ar": "العضلة المثنية السطحية للأصابع",
+      "en": "Flexor digitorum superficialis",
+      "desc": "تثني الأصابع عند المفاصل السلامية.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "flexor_digitorum_superficialis_l",
+          "flexor_digitorum_superficialis_r"
+        ],
+        "back": []
+      }
+    },
+    "pronator-teres": {
+      "ar": "العضلة الكابة المدورة",
+      "en": "Pronator teres",
+      "desc": "تكبّ الساعد وتثني الكوع.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "pronator_teres_l",
+          "pronator_teres_r"
+        ],
+        "back": []
+      }
+    },
+    "pronator-quadratus": {
+      "ar": "العضلة الكابة المربعة",
+      "en": "Pronator quadratus",
+      "desc": "تكبّ الساعد وتثبّت الكعبرة والزند.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "pronator_quadratus_l",
+          "pronator_quadratus_r"
+        ],
+        "back": []
+      }
+    },
+    "extensor-carpi-radialis-longus": {
+      "ar": "العضلة الباسطة الكعبرية الطويلة للرسغ",
+      "en": "Extensor carpi radialis longus",
+      "desc": "تبسط الرسغ وتحرّكه نحو الكعبرة.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "extensor_carpi_radialis_longus_l",
+          "extensor_carpi_radialis_longus_r"
+        ],
+        "back": []
+      }
+    },
+    "brachioradialis": {
+      "ar": "العضلة العضدية الكعبرية",
+      "en": "Brachioradialis",
+      "desc": "تثني الكوع، خاصة عندما يكون الساعد في وضع محايد.",
+      "region": "arms",
+      "views": {
+        "front": [
+          "brachioradialis_l",
+          "brachioradialis_r"
+        ],
+        "back": [
+          "brachioradialis_l",
+          "brachioradialis_r"
+        ]
+      }
+    },
+    "anterior-deltoid": {
+      "ar": "العضلة الدالية الأمامية",
+      "en": "Anterior deltoid",
+      "desc": "ترفع الذراع إلى الأمام وتساعد على ثني الكتف.",
+      "region": "shoulders",
+      "views": {
+        "front": [
+          "anterior_deltoid_l",
+          "anterior_deltoid_r"
+        ],
+        "back": []
+      }
+    },
+    "lateral-deltoid": {
+      "ar": "العضلة الدالية الجانبية",
+      "en": "Lateral deltoid",
+      "desc": "ترفع الذراع إلى الجانب.",
+      "region": "shoulders",
+      "views": {
+        "front": [
+          "lateral_deltoid_l",
+          "lateral_deltoid_r"
+        ],
+        "back": [
+          "lateral_deltoid_l",
+          "lateral_deltoid_r"
+        ]
+      }
+    },
+    "upper-trapezius": {
+      "ar": "العضلة شبه المنحرفة العلوية",
+      "en": "Upper trapezius",
+      "desc": "ترفع الكتف وتدعم الرقبة.",
+      "region": "shoulders",
+      "views": {
+        "front": [
+          "trapezius_upper_l",
+          "trapezius_upper_r"
+        ],
+        "back": [
+          "trapezius_upper_l",
+          "trapezius_upper_r"
+        ]
+      }
+    },
+    "latissimus-dorsi": {
+      "ar": "العضلة الظهرية العريضة",
+      "en": "Latissimus dorsi",
+      "desc": "تسحب الذراع نحو الجذع وتديرها.",
+      "region": "back",
+      "views": {
+        "front": [
+          "latissimus_dorsi_l",
+          "latissimus_dorsi_r"
+        ],
+        "back": [
+          "latissimus_dorsi_l",
+          "latissimus_dorsi_r"
+        ]
+      }
+    },
+    "gluteus-medius": {
+      "ar": "العضلة الألوية المتوسطة",
+      "en": "Gluteus medius",
+      "desc": "تبعّد الفخذ وتثبّت الحوض عند الوقوف.",
+      "region": "glutes",
+      "views": {
+        "front": [
+          "gluteus_medius_2_l",
+          "gluteus_medius_2_r"
+        ],
+        "back": [
+          "gluteus_medius_1_l",
+          "gluteus_medius_1_r",
+          "gluteus_medius_2_l",
+          "gluteus_medius_2_r"
+        ]
+      }
+    },
+    "vastus-lateralis": {
+      "ar": "العضلة المتسعة الجانبية",
+      "en": "Vastus lateralis",
+      "desc": "تمدّ الركبة وهي جزء من العضلة الرباعية.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "vastus_lateralis_l",
+          "vastus_lateralis_r"
+        ],
+        "back": []
+      }
+    },
+    "rectus-femoris": {
+      "ar": "العضلة المستقيمة الفخذية",
+      "en": "Rectus femoris",
+      "desc": "تمدّ الركبة وتثني الورك.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "rectus_femoris_l",
+          "rectus_femoris_r"
+        ],
+        "back": []
+      }
+    },
+    "vastus-medialis": {
+      "ar": "العضلة المتسعة الإنسية",
+      "en": "Vastus medialis",
+      "desc": "تمدّ الركبة وتساعد على تثبيت الصابونة.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "vastus_medialis_l",
+          "vastus_medialis_r"
+        ],
+        "back": []
+      }
+    },
+    "sartorius": {
+      "ar": "العضلة الخياطية",
+      "en": "Sartorius",
+      "desc": "أطول عضلة في الجسم؛ تثني الورك والركبة وتدير الفخذ.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "sartoris_l",
+          "sartoris_r"
+        ],
+        "back": []
+      }
+    },
+    "semitendinosus": {
+      "ar": "العضلة نصف الوترية",
+      "en": "Semitendinosus",
+      "desc": "تثني الركبة وتمدّ الورك.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "semitendinosus_l",
+          "semitendinosus_r"
+        ],
+        "back": [
+          "semitendinosus_l",
+          "semitendinosus_r"
+        ]
+      }
+    },
+    "gastrocnemius": {
+      "ar": "العضلة التوأمية الربلية",
+      "en": "Gastrocnemius",
+      "desc": "تمدّ الكاحل وترفع الكعب.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "gastrocnemius_l",
+          "gastrocnemius_r"
+        ],
+        "back": [
+          "gastrocnemius_l",
+          "gastrocnemius_r"
+        ]
+      }
+    },
+    "tibialis-anterior": {
+      "ar": "العضلة الظنبوبية الأمامية",
+      "en": "Tibialis anterior",
+      "desc": "تثني الكاحل وترفع باطن القدم.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "tibialis_anterior_l",
+          "tibialis_anterior_r"
+        ],
+        "back": []
+      }
+    },
+    "extensor-digitorum-longus": {
+      "ar": "العضلة الباسطة الطويلة للأصابع",
+      "en": "Extensor digitorum longus",
+      "desc": "تبسط الأصابع وترفع مقدمة القدم.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "extensor_digitorum_longus_l",
+          "extensor_digitorum_longus_r"
+        ],
+        "back": []
+      }
+    },
+    "fibularis-longus": {
+      "ar": "العضلة الشظوية الطويلة",
+      "en": "Fibularis longus",
+      "desc": "تبعّد القدم وتثبّت قوسها.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "fibularis_longus_l",
+          "fibularis_longus_r"
+        ],
+        "back": []
+      }
+    },
+    "extensor-hallucis-longus": {
+      "ar": "العضلة الباسطة الطويلة لإبهام القدم",
+      "en": "Extensor hallucis longus",
+      "desc": "تبسط إبهام القدم وترفع مقدمة القدم.",
+      "region": "legs",
+      "views": {
+        "front": [
+          "extensor_hallucis_longus_l",
+          "extensor_hallucis_longus_r"
+        ],
+        "back": []
+      }
+    },
+    "sternocleidomastoid": {
+      "ar": "العضلة القصية الترقوية الحلمية",
+      "en": "Sternocleidomastoid",
+      "desc": "تدير الرأس وتميله إلى الجانب.",
+      "region": "neck",
+      "views": {
+        "front": [
+          "sternocleidomastoid_l",
+          "sternocleidomastoid_r"
+        ],
+        "back": [
+          "sternocleidomastoid_l",
+          "sternocleidomastoid_r"
+        ]
+      }
+    },
+    "platysma": {
+      "ar": "العضلة الجلدية للرقبة",
+      "en": "Platysma",
+      "desc": "تشدّ جلد الرقبة وتساعد على خفض الفك.",
+      "region": "neck",
+      "views": {
+        "front": [
+          "platysma"
+        ],
+        "back": []
+      }
+    },
+    "sternohyoid": {
+      "ar": "العضلة القصية اللامية",
+      "en": "Sternohyoid",
+      "desc": "تخفض العظم اللامي وتساعد على البلع.",
+      "region": "neck",
+      "views": {
+        "front": [
+          "sternohyoid"
+        ],
+        "back": []
+      }
+    },
+    "adductor-magnus": {
+      "ar": "العضلة المقربة الكبيرة",
+      "en": "Adductor magnus",
+      "desc": "تقرّب الفخذ وتساعد على تمديد الورك.",
+      "region": "adductors",
+      "views": {
+        "front": [],
+        "back": [
+          "adductor_magnus_l",
+          "adductor_magnus_r"
+        ]
+      }
+    },
+    "semimembranosus": {
+      "ar": "العضلة نصف الغشائية",
+      "en": "Semimembranosus",
+      "desc": "تثني الركبة وتمدّ الورك.",
+      "region": "legs",
+      "views": {
+        "front": [],
+        "back": [
+          "semimembranosus_1_l",
+          "semimembranosus_1_r",
+          "semimembranosus_2_l",
+          "semimembranosus_2_r"
+        ]
+      }
+    },
+    "biceps-femoris": {
+      "ar": "العضلة ذات الرأسين الفخذية",
+      "en": "Biceps femoris",
+      "desc": "تثني الركبة وتمدّ الورك.",
+      "region": "legs",
+      "views": {
+        "front": [],
+        "back": [
+          "biceps_femoris_l",
+          "biceps_femoris_r"
+        ]
+      }
+    },
+    "gluteus-maximus": {
+      "ar": "العضلة الألوية الكبرى",
+      "en": "Gluteus maximus",
+      "desc": "تمدّ الورك وتدير الفخذ خارجيًا، وهي أكبر عضلة في الجسم.",
+      "region": "glutes",
+      "views": {
+        "front": [],
+        "back": [
+          "gluteus_maximus_l",
+          "gluteus_maximus_r"
+        ]
+      }
+    },
+    "extensor-digitorum": {
+      "ar": "العضلة الباسطة للأصابع",
+      "en": "Extensor digitorum",
+      "desc": "تبسط الأصابع والرسغ.",
+      "region": "arms",
+      "views": {
+        "front": [],
+        "back": [
+          "extensor_digitorum_l",
+          "extensor_digitorum_r"
+        ]
+      }
+    },
+    "extensor-carpi-ulnaris": {
+      "ar": "العضلة الباسطة الزندية للرسغ",
+      "en": "Extensor carpi ulnaris",
+      "desc": "تبسط الرسغ وتحرّكه نحو الزند.",
+      "region": "arms",
+      "views": {
+        "front": [],
+        "back": [
+          "extensor_carpi_ulnaris_l",
+          "extensor_carpi_ulnaris_r"
+        ]
+      }
+    },
+    "anconeus": {
+      "ar": "العضلة المرفقية",
+      "en": "Anconeus",
+      "desc": "تساعد على تمديد الكوع وتثبيت المفصل.",
+      "region": "arms",
+      "views": {
+        "front": [],
+        "back": [
+          "anconeus_l",
+          "anconeus_r"
+        ]
+      }
+    },
+    "flexor-carpi-ulnaris": {
+      "ar": "العضلة المثنية الزندية للرسغ",
+      "en": "Flexor carpi ulnaris",
+      "desc": "تثني الرسغ وتقرّبه نحو الزند.",
+      "region": "arms",
+      "views": {
+        "front": [],
+        "back": [
+          "flexor_carpi_ulnaris_l",
+          "flexor_carpi_ulnaris_r"
+        ]
+      }
+    },
+    "triceps-medial-head": {
+      "ar": "الرأس الإنسي للعضلة ثلاثية الرؤوس",
+      "en": "Triceps brachii — medial head",
+      "desc": "يمدّ الكوع.",
+      "region": "arms",
+      "views": {
+        "front": [],
+        "back": [
+          "triceps_brachii_caput_mediale_l",
+          "triceps_brachii_caput_mediale_r"
+        ]
+      }
+    },
+    "infraspinatus": {
+      "ar": "العضلة تحت الشوكة",
+      "en": "Infraspinatus",
+      "desc": "تدير الذراع خارجيًا وتثبّت مفصل الكتف.",
+      "region": "shoulders",
+      "views": {
+        "front": [],
+        "back": [
+          "infraspinatus_l",
+          "infraspinatus_r"
+        ]
+      }
+    },
+    "posterior-deltoid": {
+      "ar": "العضلة الدالية الخلفية",
+      "en": "Posterior deltoid",
+      "desc": "تسحب الذراع إلى الخلف وتساعد على تدويرها خارجيًا.",
+      "region": "shoulders",
+      "views": {
+        "front": [],
+        "back": [
+          "posterior_deltoid_l",
+          "posterior_deltoid_r"
+        ]
+      }
+    },
+    "trapezius-middle": {
+      "ar": "العضلة شبه المنحرفة الوسطى",
+      "en": "Middle trapezius",
+      "desc": "تقرّب لوحي الكتف من العمود الفقري.",
+      "region": "shoulders",
+      "views": {
+        "front": [],
+        "back": [
+          "trapezius_middle_l",
+          "trapezius_middle_r"
+        ]
+      }
+    },
+    "trapezius-lower": {
+      "ar": "العضلة شبه المنحرفة السفلى",
+      "en": "Lower trapezius",
+      "desc": "تخفض لوح الكتف وتثبّته.",
+      "region": "shoulders",
+      "views": {
+        "front": [],
+        "back": [
+          "trapezius_lower_l",
+          "trapezius_lower_r"
+        ]
+      }
+    }
+  }
+}

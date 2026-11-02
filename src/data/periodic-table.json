@@ -1351,6 +1351,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=EFC90C86D04CFFB83A4A6DD4A99876CE5760481AB8FD43A1F4AB928FDDEBC85DD4AB2F9986E819C16E7EFEDCC219D0B83D84A4EBB73F922353974300DD08C0CBB1F73FE4B4DD914F7508CC3A12820EFACAE2AA41FEDDF165F66FB41B52F36FF02D1A08EFD406F11E1F0CD999AF5CE56B2B0992C6C1AFFB491F97F7720D7016A3"
+            },
+            {
+                "term": "السكند",
+                "symbol": "س ك",
+                "note": "Scandium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1408,6 +1414,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=54FB70195364C56E2ECD05EE473DD0659FB65DA7C3960FFB9AF713AC69EE57D6B7849AA7336217A69F4DAB40A7406EA7E228B2B7BB42E34DEE301F7680B011A1A4BB1C01745CE189A544875A61CB1C09DAF04042E79B83E3A7C25A6C7A1E49ACE12E2ADD7D29F9660F5A33588B61D2C3A732CE30979F431EF1348F4EF069D770"
+            },
+            {
+                "term": "قسيب",
+                "symbol": "ق س",
+                "note": "Titanium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1465,6 +1477,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=33CDB1D761DEF461CC1F5934DE3846E22A74AD0CF28211CC608138C688F1A0EF11C819A1F98D630D8AFBBFE231257E372B70A597152A968C25BC96D76D5C7D55366F97F5FE314EA3D2AD0C1EC7AEE737EC9827F4D0E35B341B50277EE313030D86908C24090E14C07CAB6384D693A3CF24FABF77E9F400428198EA9C02C9C197"
+            },
+            {
+                "term": "سليغ",
+                "symbol": "س ل",
+                "note": "Vanadium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1527,6 +1545,12 @@
                 "term": "الخَضَّاب",
                 "note": "اللون | الأصل اللغوي (لاتينى/يوناني): يوناني : chroma",
                 "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "خضيب",
+                "symbol": "خ",
+                "note": "Chromium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1590,6 +1614,12 @@
                 "symbol": "Mn",
                 "note": "مغناطيسي | الأصل اللغوي (لاتينى/يوناني): لاتيني : magnes",
                 "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "غنيز",
+                "symbol": "غ ن",
+                "note": "Manganese",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1647,6 +1677,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=9DD13C9ED7EB7347DC05CD97F361633956F825F5B60B231ADEC91D93B3357BA0AE8D8536812BF1F3E23A01F0E3F71435578BAE23839DCC5F8B3B3C6877BA529B49A54732AA5730DA60FD908D002A8449D7F07D956FCC5F0F52D74B423591A651515B923247047CDC1E40A52F8B91754DAD7A18393AEAF6AC6ECB5BDBE060FC05"
+            },
+            {
+                "term": "حديد",
+                "symbol": "ح د",
+                "note": "Iron",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1704,6 +1740,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=CB64C0E1BDA174729E296FE3420A2153C047E1784A1B9CF9F9F469C8A57BC554EC7ACB693DAF30F47CA292C71ECE053FA56BD93B641A3519EE2D3744FAC531B08B5D1AD426843D904D358BA5DDDE69791FEF1062CDED4D828D6FE65B489081FAFB400EB114AC9BAA39506AAAADFF40BC00C9D4B1AE2C8EF11BC0F414518ABF9A"
+            },
+            {
+                "term": "مريد",
+                "symbol": "م ر",
+                "note": "Cobalt",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1766,6 +1808,12 @@
                 "term": "الفَلَّاز",
                 "note": "نحاس زائف | الأصل اللغوي (لاتينى/يوناني): ألماني : kupfernickel",
                 "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "نكيل",
+                "symbol": "ن ك",
+                "note": "Nickel",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1823,6 +1871,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=68E8EDC8B385FA6599E73EF99FA35D1431154CED639A750779581E85F899B516283CEF1877A258B2C2EB017BFEE580721DB11259F9755E2A0CC5B9DB12391BAE302049787ABAC51DE7088CAB1F061A9E0E2E48211C2E4B29C4191E90A8E1EDC190DE27B8183D48103D15C7C90F042753BF317236A75F700365B65686E974DB14"
+            },
+            {
+                "term": "نحيس",
+                "symbol": "ن ح",
+                "note": "Copper",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1871,6 +1925,16 @@
                 "term": "زنك",
                 "source": "ويكيبديا",
                 "href": "https://ar.wikipedia.org/wiki/%D8%B2%D9%86%D9%83"
+            },
+            {
+                "term": "خارصين",
+                "source": "مكتبة لبنان ناشرون",
+                "href": "https://web.archive.org/web/20191231002951/http://www.ldlp-dictionary.com/dictionaries/word/3194708/Kamous%20Taleb%20LilJeib%20(En/Ar)/zinc"
+            },
+            {
+                "term": "توتياء",
+                "source": "مكتبة لبنان ناشرون",
+                "href": "https://web.archive.org/web/20210110000348/http://www.ldlp-dictionary.com/dictionaries/word/6130283/Encyclopedic"
             }
         ],
         "description": "الأصل: ألماني (Zinke = أسنان أو شوكة)؛ لشكل بلوراته المدببة في الفرن.\nالمعنى بالعربية: المدبب أو الخارصين (نسبة إلى خارصين وهي منطقة في بلاد الزوج/آسيا قديماً).",
@@ -1880,6 +1944,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=A95A37C389BF9B0B3AEF1C2BD3A1EE84E240146C74F456D24D9393F48FD71DC235F663E1755FC52F71B0B629DD9A2CEB45881345FC264DCC527B8B82D78797AC4CBFC9B48F29C6F30F70EC694ACF727142FAD3CA011B21A9BC340E4FEECEC0649FCB7FC3CD0A9A8B538C46F91631BF23C2715D40D91E88B524DC029A26F8EFD2"
+            },
+            {
+                "term": "حسيك",
+                "symbol": "ح س",
+                "note": "Zinc",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1937,6 +2007,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=A104438C24DF37B42C1F9846731680CFD7F3EC3921FC2B864BFEF302D3EA4058A0A10CC24ADD74EFFAC8F3F05D9B1816D7B2AA8B76305AA44C8D7ECF8C4D516F2BF6C7BA0020D164A8FA38326B14C91DD9CD279F5AE2AFDD893916AFE50E679764EF810C5945C06FDD2459096238A166B17B163F15DFFBB2E3D6A58A0D0A4485"
+            },
+            {
+                "term": "غال",
+                "symbol": "غ أ",
+                "note": "Gallium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -1994,6 +2070,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=E4183DD0CBE5A3AC25EA6E8EAB9F13C1D07FED766A5B2ECEA295B90CB72A413718C34F355F3B532337597AA24F13FD4416558A0A1A7536D5CC5706332F7BA6E9FFD1B24B211759EFB09B0E3F45ACF073AF59D8B62733A81AE1868A38E58ACEDAD6D7F58DFF109E885BD5C2523137CE516F9A45701F7E391C8D3452BD362B1E23"
+            },
+            {
+                "term": "جرمان",
+                "symbol": "ج ر",
+                "note": "Germanium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2051,6 +2133,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=8B5251B4CEC445A7E83B8AECC32598B9D03DC9D38FA8460CD9398E9D5BD23509615E1FF1ED8B60DE7076EA21774854C2BA396CFA2B4943B2D640A85D27BCA039FF74A7BF30FAFD4AF32413618EF75F95C3CCD7F48B0C6EE3B7876A2362DD1F27E544EBFCEBD60683E3327390520665D2286819ED24A8C586FEE31368304C2B7C"
+            },
+            {
+                "term": "عقين",
+                "symbol": "ع ق",
+                "note": "Arsenic",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2108,6 +2196,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=D094C8409B495DAFF0FF8922F3F5F55BE5EB1DC78CC3525FB6E8D2987F72F4B91A3F90F7F168576E734BC05E68C90298EB2CB8F71018448C1D2CF6B2825FAC97D97D0B73704E7747A22B132F3614E03721E28DE8E46211DA10F685235C96156B3A504F5DE4213A05DD2D2F3AE1D0412AEAD655EF56BAFEE7DA2D645633A6C735"
+            },
+            {
+                "term": "غسين",
+                "symbol": "غ م",
+                "note": "Selenium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2171,6 +2265,12 @@
                 "symbol": "Br",
                 "note": "ذو رائحة كريهة | الأصل اللغوي (لاتينى/يوناني): يوناني : brōmos",
                 "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "ثنيت",
+                "symbol": "ث ن",
+                "note": "Bromine",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2228,6 +2328,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=8588A1FEA589506E14C8483E09FBF7639C8C7CABE6A61FF556F8D5E29086A12D92A8E82FADEBDCE583F15165444AFCE29D57E3503E6263052C3EBF08911388DDE1E66987F30709AE0C1B4D438D6EA30D7616F8FDCD042BA9F2434785F26AD0204755649133920B82D6B82F04528D3B8314D19AC8058FF48DAE06175115BD3F4A"
+            },
+            {
+                "term": "زديف",
+                "symbol": "ز د",
+                "note": "Krypton",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2285,6 +2391,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=7ECDFA6FE71D21738F38FD3DC1ABFD2AD562ECA7A30C26770D53AA2EF08C72B0CE517EA3E8DFD32E99926D48BBA89B3399FBF6049145F3825C4B2A70AC1BF184BF9213BA56C5E3E99C6A673803CEF4E51CD7168D32D791E5273DC0D78F50A3D93DE48CA88C92AFC0EC477A68DBF4E270E3D722D8E9D216794FB0EED67ACC690E"
+            },
+            {
+                "term": "بقيت",
+                "symbol": "ب ق",
+                "note": "Rubidium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2342,6 +2454,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=26FB2BB09B79D78F08DE278B36B15E41703BABD1928F2D8D5C0A7EF4BDFFCDDED48253963ABD57E330E72EECE1F7287C58691C432E01AA9C0CAD5E93FD8B0F6812CACA00AA9862B9098C9967B81E16F43781E0AA9E520D0263E86CC42B62BD2F7BA8D6C26BAACD51D52A744372D35B8E8978F743FEB53AFD215BAC77C1671D71"
+            },
+            {
+                "term": "سترنش",
+                "symbol": "س ت",
+                "note": "Strontium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2399,6 +2517,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=834B9E368E7403A5808C92ED87B9ABCFF6F134A57D9913278AC886FA2ED93B9889CF755E6C9704D47E00B03884106B6A6F48073F6EAAECA3B4A39A6677458E18649C40B7FE5717E5BE079BB2C6C4091D6E338913937A008DC0B6276CFF96E65A45E38870283A7ECD99060ADA6B201E7A759E2FF13FA1A56702838171CF93DB0A"
+            },
+            {
+                "term": "يتير",
+                "symbol": "ي",
+                "note": "Yttrium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2456,6 +2580,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=6CEAFAE7BA60234A18A2BFFD958FC3ED02E82DF7D04BBFE2B0EB0B1DF2E61279D5B722905B3CC79F31ED729DEB101ABCBF99E6D4036418766F94DA23ECB38F0E64B1CE0B9AE94AD656D6A0BED1F66713DD6CF7CF2A369748EA4608036508D79D92D4B92EF27699DA2FC724CAA4DC6A0B3B568AA2AC15C4CA58B861C23B4AC733"
+            },
+            {
+                "term": "جمين",
+                "symbol": "ج م",
+                "note": "Niobium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2513,6 +2643,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=7F90DF4690A9C60DED2CDE5AB2769A0F3268AF7A0491A38D3C027DB419386378B88A14203F56EC0E1E556D6D919F60148A4104AAC3D301EAFD8C40D017654744BA7DB772E8367529B75481D537CB9F8941F8EA6C4B56506950BE15ABFEFADC44FFEF003EFC93702997A2E571F8072A009D0049F7B46B5A419EDAB641B37E8D4D"
+            },
+            {
+                "term": "ركيف",
+                "symbol": "ر ك",
+                "note": "Zirconium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2570,6 +2706,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=26DECF72BC14427199858C5E8E1974AEA5730C8946C92408058A62BDB451783BC720C1540BD1D98F04BD720B7255D9180F30DB96954C46DAE1242CA4CE18E7D8725D8E90D16C58021FA2E89E0DA2E5D652982E1966F930840375D0FEAC414412397F9285AD258BF2D6B7B7405EAB1B5242CFF03A29C755ECACAAE325A621208A"
+            },
+            {
+                "term": "صليج",
+                "symbol": "ص ل",
+                "note": "Molybdenum",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2627,6 +2769,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=AC11015822B1BE2078C394EFD4E516DDCE6D2C8B41609945CC33C239AFDC142EDCE5119E23F2F9CFE455051AFC4848074C0D359B8B1B02289EF85CA3CA81A2A5C7E2560FEA6BE076A23EBCFAC41E3CEDA16B122BA1C9EE5FE29B952E4CFE54ECCE01B728FDAF84A283A41339B256093AE28B27A6DE38C305D5C0A69F1CC459D8"
+            },
+            {
+                "term": "سكيف",
+                "symbol": "س ك",
+                "note": "Technetium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2684,6 +2832,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=E028CC4EC95C22F607A2CDF5D944F0F5E042073E9CA52E50E317D5E7FAB0C82DF9C8658EA76D2FCC70335108F7500E76925279BEFC655D21541B1C16760A8205E0057B30E3AF52BD7289AC483C0519FA35663E1732325DD505E9A914107ED3738983B67889FF3BEE8984AB228BEC8ED1F75E02895865421003291F2E814A288A"
+            },
+            {
+                "term": "روسيا",
+                "symbol": "ر و",
+                "note": "Ruthenium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2741,6 +2895,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=9254BDDF4E1F38EBC35ABCA3F507CB025663FF6EE0BE99EE4185955BB7C1693F26B6E2F98FB2ADA1814B882EF357EDA8D0FCEDA85F6C3C51BD72339643FB2411A303BB23F6F04A22A8CCAAB20FDE9E5FFA1A94C44C559E0B96DDF50E620DA65D69CCFB4EE44C8B5395D1A2B5AD4F7D62B01DC52D5F905C59B84BE585EA83F8C6"
+            },
+            {
+                "term": "ضريج",
+                "symbol": "ض ر",
+                "note": "Rhodium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2798,6 +2958,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=2132DA3958983BC760BB47A933EF666501C00D7900865C43EAC822084C0817F3CA09475A2CA11221FBF551A90F41BC2C5130CA40F03CA7896DD94435C03490EF622989159EB8E0A2FFDD9228DE1F258C7820B884D6ABC95ED0735AB0EC01235FB392702B2B4C7F81AFEB472429A1330B331255A5902E3B565BED9EAA2B75D6BF"
+            },
+            {
+                "term": "تجيب",
+                "symbol": "ت ج",
+                "note": "Palladium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2855,6 +3021,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=01B618BE8A75C242B1FDF88BCF7B2D80597FD1B284DD54F4FC6B25388BB7E5F87620874619DC0F7DC37569EA877AF18A8C35C3C411350663812EF00612000EC4C3976EF29ED6A6A10E13C2FB6B73338F0F6EE3F69D402DAABA78A0A0CB474F308239F152B9FE0B72213D8D49212829B5E599B30E775B5D2317B65AF33239198D"
+            },
+            {
+                "term": "فضيض",
+                "symbol": "ف ض",
+                "note": "Silver",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2912,6 +3084,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=A6D01AA5BD09B13D7F25AC5E09AE90BE5578E1EF53E6EC49389E8BB813FF7FA53215F9F7FE37B63D8C1BABAB20AAEFF32A926A8AB6FF6E85A48662DF762870AC7415DD395F4C6AC61700DCA0A13E9380DA065ECE079584B266F500208F96A0F29D77D3FAAD61048A7B049673A0484186B6D302D4A3D930E7B33C39BF53E32232"
+            },
+            {
+                "term": "كضيم",
+                "symbol": "ك ض",
+                "note": "Cadmium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -2969,6 +3147,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=94550FDB538E148B6277BE935F051C673296FAE935C39167E4A068FD3E0A3EEFA5959E924F6CC423B86A4C551EFF96D7935C9D0EC7FB14B8C2B389EA27EA17A65D607C63AE69A3A2AD3AD8BBF7A6DB17C93C1B6F9AC9DAB3DE7D72974053AB67114D99AA559B206833412FD234D254CAD15E86C4061EABC82505136F10531FC2"
+            },
+            {
+                "term": "غدين",
+                "symbol": "ك ض",
+                "note": "Indium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3026,6 +3210,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=AB38E9CF5A10263EFCCED616F6538B9ECBAEA797DC585E8DC7E53ABB58150A7374BBA5ED5AC53B5E835F1602E7E2FC86F993D24FF785B7F9031B0BFDCFECCF8A650205B460A297FE5BC27B02459BC72D14C1609B13EED29B0E9DA23916231D2BA0F33B461F6BD205016CFE9ABD5A42F7BA3A11B76EEB24E14A457498EF15E8B0"
+            },
+            {
+                "term": "دليص",
+                "symbol": "ك م",
+                "note": "Tin",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3083,6 +3273,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=C6278CBD8F6CFC050746D9D4DF8F4433EDB3B33888E2790DB1D141CE3A3BC1158E46657A2E1FF826611B952BCF7F09E9D3552241D0A4024DBD5F7FD8247D01879C290B0E5F0705A39ED4899D559165D39E9EE136D7C478178AD200527987F6BEAB0DD889F1A2BDE277E2F6FEEA5710890E9AAF9538A4E45CD54D72BF24FFD053"
+            },
+            {
+                "term": "ثميد",
+                "symbol": "ك",
+                "note": "Antimony",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3140,6 +3336,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=C76ADE30C2FB539A03D49A302F4920551C64DC44E400F94D696AFECDF340E53EF8D6586FAC8E7D77B863A8E4563E9E47D2C7AD936D60876A46AF360CABD6B1DCD90F3DCF658F68E05F582466EFE2CD6C1053C7C9E6348BB850FE0342ECA3064A9CDDF60AFE0CDEF537848AC1E6E14C06AB137E6F5035BED1C9DA330AEF4F1B13"
+            },
+            {
+                "term": "تليل",
+                "symbol": "ت ل",
+                "note": "Tellurium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3203,6 +3405,12 @@
                 "symbol": "I",
                 "note": "الشبيه بالبنفسجي | الأصل اللغوي (لاتينى/يوناني): يوناني : ioeides",
                 "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "كهيب",
+                "symbol": "ث م",
+                "note": "Iodine",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3260,6 +3468,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=1712B289AA9FD6CC1A56AC4D40A1EE630AE7A9A8113D5616874044C7798A91C2373B1392D8F991D9F707B9BBC509C029D8B27BFBEAB5C86D7F251F554F9BE72B264144DBDF2EBF819141E25937CDB5EFADB34F19B88DE461FCC3C62EA2F959863E39D4A7B62E41B7FF679BB8D9A8FF80FCA91F03727AFF106DDF6283108E7EEB"
+            },
+            {
+                "term": "كميغ",
+                "symbol": "د ل",
+                "note": "Xenon",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3317,6 +3531,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=A2E017851C0CF3A720D829B0E04EBB4FE859468466C203B20C949DAB27A8CABA14F55A0B6E80586D3683FE6A3B1AAD1EBE8995F9680908D2330CCF9AF41E974D5FA3BC2E1F148A773817F58C18F666E582D2F00851574DB02B5C05E3A04CB6AE1DF47E61947BA6B7B336468786112AF36A8B1404DFD7463E19E181DD41934C84"
+            },
+            {
+                "term": "تسيغ",
+                "symbol": "ت س",
+                "note": "Caesium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3374,6 +3594,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=2C710C658B886372E62150EA19245AA27DD09735882D8A6355F759FD6E06D08482261E60328DCCE5DD46DEFE439EF12A2CB6F70F36455EFDB52803E46D4683DC7C888BB1CADB2312CA130BDD677EF4AC94D563D8E71D4816A84A4A8C1E4B79EAC7E9C1CF203D1ED8A4BF2B6E2B94D36CD2E86EA6900EC1D23B3D123055854ADE"
+            },
+            {
+                "term": "نننط",
+                "symbol": "ن أ",
+                "note": "Barium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3431,6 +3657,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=79A8DEFA129EF401BD42A9243F7B32DA220EA6623701D541A0BA46D8E05A9C3150B7E68763E6E3B7C442E7E248577DA5B2AD8C998E57BD9093627F58A108CEFCE5B6850E88A7A06A6F1E69F7411CF8B64209ED5175DA5377E7973CB47F3D8BBEEFB929E8F1E8BC9CBD1E89A8DCD53430A878A3C54278181D6A6847DDD2AAA125"
+            },
+            {
+                "term": "دخيس",
+                "symbol": "د خ",
+                "note": "Lanthanum",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3488,6 +3720,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=D31195FE41D74A83F1B8701A1D387B7B4A7B2874F040D39A96BA2814D748261623D622D5B53249F714074FC2117CDE5FEC51D419792201A7F649CEE39E060362BA4E683F3FDAC9DA0C3DD5FCA7241D53DCE0F241AFA3E3C4C15F37A6AB1CE306C7511BF95099E4BFD2A092D900E614042E21CF832B9CABDFA6B4F2DB5D49AD78"
+            },
+            {
+                "term": "هافن",
+                "symbol": "ه ف",
+                "note": "Cerium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3545,6 +3783,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=A1E7AE4AF5DD49AB1A3EE458B53995A34084EBD7008DDCDC323B9FD9D35D48538E42B9DC80B2C9C32E685AE82C3424FEB9136B02D64AB23D25A2C135CBB2F49A3218CAA846331E75A5DE1A498DE7D104FABEDDE7A2021927C3AF3444D2FCC5D4AF1C63937230AEF26F14538BA81D04D20F3F9251BCADA8E2E60F4CC2F36DC83F"
+            },
+            {
+                "term": "تنتال",
+                "symbol": "ت ت",
+                "note": "Praseodymium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3602,6 +3846,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=321D2343CDCC4BA6E9D37B1C1EC262E8DD5AC787497F4DE8B3761D922934DD5384DAE9B8500E2B7B804B8B4B65C134D2B949ED484414D2D81A7EA01D3480D934D28E1665665BAA980ABB52BA1CE9C3D70C85E5D0F9D03A5F73B2585F7BEC7BCEBFB6A62EBBEA8E9DA9B357746C4134E69F75EEE9D468FE400B961DA6E378FEAE"
+            },
+            {
+                "term": "قميد",
+                "symbol": "ق م",
+                "note": "Neodymium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3659,6 +3909,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=B0155E037153F42F03DABE7B2B54672FAD961E8C101BD5726230AA8F68DA4954E8CB8B03A848F3E91CA1DB42A31A65166DBCA7F53D1CBABD1EA8E2FC59C416DC9ADCC55D3A827FED668D39B24A827D1016EF37D995223C468C5805E8992991EDFEDCEA114023A3FF8D015A5CCD12BA450DB0B15BAF7B25385703E2139DB66CB2"
+            },
+            {
+                "term": "راين",
+                "symbol": "ر ي",
+                "note": "Promethium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3716,6 +3972,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=270D03AB1F2C9DCA2788B89699839500E916C778908E10CFC752620AF7354813DC538A637C58C1F37D3045E74102BE713A79EE1E55D72C076E31771DC8F3AEC50E1327568AA297C2EEF2775E378BFD786BB288647B10A6F9F833F4CADFD3E598EB57168642ECADC94327531967CC0567F1246BB108846FA651730261F394A172"
+            },
+            {
+                "term": "صنيك",
+                "symbol": "ص أ",
+                "note": "Samarium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3773,6 +4035,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=57AC22E01C94C25DC83725E889D07FECDF23E5B58A6CF47F18D4E11A0A825E9AD9D535B9BD5713434F4C6E61778A61A1963E04196D52093E126E5691BBF3F59C5B67B004CA8F189ACDF295E5BD66B049FCAF33C978EBB82D9E3D2838D3390E0914792FBB819E68EC54A4BCB37604C29CFA1AA460BE980BC27167DDAC956D294D"
+            },
+            {
+                "term": "قزيح",
+                "symbol": "ق ر",
+                "note": "Europium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3830,6 +4098,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=410C125C91A267ED0713F89BAE73D87E5ECB265834D55C1F06D6EDA1E7AA6712038A80B0081D4ED7FE4D1F992F111EAA2889233ACA48CEB0DBFE5A088D0DAB86BEAC3E9B932DB2CB89DB8B8A2E5107DF00EA007308FB8EF1B27E3447E443252E3680AF297705345A65174540D99AAEDB2E2C4E105BB57A0C096FF1A29E91923B"
+            },
+            {
+                "term": "وذيل",
+                "symbol": "و ذ",
+                "note": "Gadolinium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3887,6 +4161,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=90A84E54B485AAB4F70F0C248BFA4DD4B985BCE2D1FBDB95C0020AC7EA5EF74E8A3CBBF30E5C5B6CDF39A6E808B297F229BF90682B3BF85E33657A656BC4EF60D6FDE23348AA1FF020BEE7682C3641EA11039564AB9F8EF5ED10314AEAF29644F0B53395734D67A603C52D23879B83B44CC8EE23E3C42C817274D205F0F014CA"
+            },
+            {
+                "term": "تبير",
+                "symbol": "ت ب",
+                "note": "Terbium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -3944,6 +4224,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=7A8C837B17FE26F8C0B1BC1B2959B8C2768524B5129A20E49820FDC0D23A6D8F2B5FAC5FB579D16569EDE0260557753434CB10AD9F1541C371CF1F84370D3C7FF8E278A61DF2FA0842CF9C6A7CA7093E0CBBB66A057C302C6B2F92C8225ED87D987BDAF2DC9260C466E32B86D9C2349B01EC46BFE2E344C09665B87B5417D277"
+            },
+            {
+                "term": "زويق",
+                "symbol": "ز و",
+                "note": "Dysprosium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4001,6 +4287,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=8C6CE8685FF90F9DE276730472C836F087DFBCEAAC652CCF346F0B0F4A69A87E83B5BE6E1ADAE86231D3D7AC2712B532140939028871B4DA385814B6A96E900E5BD739BA27830B7F3A24261DA4CAEFFBAD667C37CF231D9BC06F6D93551BD8DBC9E22EE212BEA055749768BE7B83842CC8165A024DF6F0A5BE788536E34EA78F"
+            },
+            {
+                "term": "ضميك",
+                "symbol": "ض م",
+                "note": "Holmium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4058,6 +4350,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=175BE566C22E601CF1C9A735E39458F0F169BBCE8A76ACA70ADF460C04D556003F8F7552257075A5A60300E471B7DEFC2FAD3AB2BBD4BD4F28D0A83CAE22790EA0688BA538C6217819003F198427F684F8E8E3BE3867DBCA776C3FDC11BE0CF2A236815B836164735F4B04C63CD72DCDB0C50D31F29B45180C5079F0BD556BA4"
+            },
+            {
+                "term": "رصيص",
+                "symbol": "ر ص",
+                "note": "Erbium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4115,6 +4413,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=39E9B7575C4771BE9E4DBF112BB397076E268651DA72102109412881D9ED73F93D49336D67B0B4F8F28A808424394837955737B3D4A351CA117FB056C3AD797A1C9A01E479F04DF1315EA14D95D9C4C8182510AC6F10E917B83357E06D092B74E653FE283E27EFCEDE77E22A4ED63F91F0814F16147F5F7100FCB74A46378A66"
+            },
+            {
+                "term": "بهيش",
+                "symbol": "ب ش",
+                "note": "Thulium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4172,6 +4476,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=C7A70A026B2452A591E17F55CDFEDE40538192A344B170B936176AA3F72FDF1A2D8562C921408779BDDB2BFBD522C0681A611131E5CEB9A05DF244E1A83A5354B3D0932F5ED50A57CCBE41A3DE94CB0B2AEF32F0F8D5E6020FADE7013B12B1EFF14E6B6D9BBB847936A724EC7AEE15D17D939D9686907AE8ACE199AF570F58BA"
+            },
+            {
+                "term": "بولون",
+                "symbol": "ب و",
+                "note": "Ytterbium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4229,6 +4539,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=65F3FF2F5B2B447362345675ACBADD2EB70EBEBDE9EB56788DBFB4FAAC16FC08132352295F1C7AFA1191A7FCEA29CF9CB86E52A3C8C7760DDEA918C2AB3D1A2AAE7DBA3520FBB692F3CEBA68BD61AC13E7B9979C1847D93E1E2AA6519EB1CAF02F3F76F69497B43271537C9D73599D246FDE3C445A226DA175819D1BC09BCFFA"
+            },
+            {
+                "term": "وفيز",
+                "symbol": "و ف",
+                "note": "Lutetium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4286,6 +4602,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=8E2B6F52C138E15075B8FACF80211BA61ECCD129AB8B8C9560E35D1A2A6AF25C56076DEDA422979464B8A723C7232589C9DF80AF4EA79FB0EBC57E896BC58E7425AC78AE573F31B3EB6D72B4D9A15BD04928C77DEC9876040AA4398CA6B6BBF95E6078240E76917CF9DCE567CC24DBD52C5F62BEA361FF9F3821FF472273076C"
+            },
+            {
+                "term": "شويع",
+                "symbol": "ش و",
+                "note": "Hafnium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4343,6 +4665,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=C0A2ED8977CE105102D0D8BC013045EED63EEB6D9B8AB19CFAF8EA56771659C19EEF64AD55109A5BC7A724222E61E4C250C53280164F2463253BC54A110D9C1B136755A596116163F44BC42CB52EB5D556318D8F663C3F6EDAA13AE89F52020BF34CD73C167C124E177D2FCE356B37401DAC5C25EB8B469CF6C51F5A6F895FE4"
+            },
+            {
+                "term": "فرنسا",
+                "symbol": "ف ر",
+                "note": "Tantalum",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4400,6 +4728,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=9DF2067227A374A4EE5F3F8C49505477D21E5837112F65A6083777AC015A42C5BBBBF5AA6F686D694B8EADC05F3D4E8BAAC619C70380D206FB0F9CD4CDA106B606CAEF67916D191B5038E7C7DCFF29DAAD7ED4214E69BEBA479956156929B846F29E6012D1773C506B2418B3C7C82C017800A6E884ACBB15813BB5FCBA232548"
+            },
+            {
+                "term": "شعيع",
+                "symbol": "ش ع",
+                "note": "Tungsten",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4457,6 +4791,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=C32E7A09B880C3B543EFC2DE9FB7079103A5CBCD55D7B2BC0BFBFB4C92DDE50F94BA16D5C1AC72423BDD9C8DCCA9AD9DBACC9E8B5D164D25F346E560F04AA9173DE9E07856AE100FF53E00141000EAF8D2CAC70872C2487D702D759FD17681C5D08A22C2C35B347B728DDA067AC200D0A1136509AF233FED6A7C2E9C3C128FFC"
+            },
+            {
+                "term": "وهير",
+                "symbol": "و ه",
+                "note": "Rhenium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4514,6 +4854,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=90164508AC8948ADCACEF5C1F725793EF8E9AB7DBCADAE813277EEB22AEFEE4DAD2CA6D5E63378049BD0650B4AF1029C09E233E48430199A274D2824C29B065D9F4C3426B10C4493EF693395D4DB4CB9DEC3F71CC3CD6A50C5BD4A30FD91E3AEA43EADC4946CF6B7EC824A466AC1E80D4E50466C04A6ED9A5887F4D875989C15"
+            },
+            {
+                "term": "رذرفد",
+                "symbol": "ر ذ",
+                "note": "Osmium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4571,6 +4917,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=34531D6606E628CAAE7D5CBC41374541574F53DBEEA05B2C22C47DAF9387CFF9FC1C97592FAD1681F56F78128556E0AB0071A59222099F3C9035E47E7AC92164DCCF33C8EBD51C9FC3D3F4E7240F45C48319E81A248E365B957416067E1A4D81204EE476BBAD1AF2BF1D9DF5637C6833DE92B30ADC0236E876B786E0A8680637"
+            },
+            {
+                "term": "دوين",
+                "symbol": "د ب",
+                "note": "Iridium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4633,6 +4985,12 @@
                 "term": "النَّسَّاك",
                 "note": "الفضة الصغيرة | الأصل اللغوي (لاتينى/يوناني): إسباني : platina",
                 "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "سيبورج",
+                "symbol": "ب هـ",
+                "note": "Platinum",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4690,6 +5048,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=34883E2AAED59676C716BC0ECABC52189E7F7542EFB7FBE7FB853C937DF82ECB7AEDEDD0A1F224E751096A2E34A0BA373D858041C78410657F05BD2C08D7B9EE28FD5A64650329BC9F9B2C98C18E7E70B0A43C66D3B97509DD988FDDBD04B5B7B52C55F8059B008EBB111FCF9DA0C2FBD7C6335B51564E351CCB5A055C361156"
+            },
+            {
+                "term": "هاسا",
+                "symbol": "هـ م",
+                "note": "Gold",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4747,6 +5111,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=15D5C501238643BDCF5B0975701F675F9392C63098D2F80ED3A5ADD8BD0C8EA4869F64DC7583E0BE858F6169F7E06919264BCF06DD334FA8EF0845E43D4216AA71285EFE9B4B70BFCA8060D9FBA96440FB955D574B85D7ECAE97A75EE06E42DF98DE0FBDA8EAB4A1C9D13DF09138BB290025126894877720B00D0AAD86C1C9FB"
+            },
+            {
+                "term": "مينتر",
+                "symbol": "م ت",
+                "note": "Mercury",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4804,6 +5174,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=4C9457F582C8D50868C185315785B77DCFF27575F8E19C6F5D36363D1517B29A78F4ED23039954BC81078499456D00613FD958383015D70FC5A778A3F08622ABB5662401C067A9EE46D6418DC9BC6D483DE1517D4550CC892A67B7E7ED6545F3E26DDD34ED495FBAB5690BC3DAEE6716F960AB8C45B1CED69E349039F4DF6CAA"
+            },
+            {
+                "term": "رمشت",
+                "symbol": "د ش",
+                "note": "Thallium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4861,6 +5237,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=CF774196983C8E7449277D7F2A6B8A26A0F8A799B9ED065C100B436FEE1C940EA36CA536EC7A2D8CEF9C5A8FBC2BD271ABE0CD8492B8AF238D7D244C00BC3318D0E98DA34D4B5BD1D17035CBF12A718D250CF27F2D859CF3D124A584D34D39B6E6E7002AFA558427EFFCEF3419665B434195466924D0B88E545DB674F86E7DC7"
+            },
+            {
+                "term": "رتنجين",
+                "symbol": "ر ج",
+                "note": "Lead",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4918,6 +5300,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=BE98EBF78EE0E61F113690C256E2943E6ED3BCEF1D699801F033C2BE376A2E8C8B6180D1E87B351BD8F61119EB6006CC0513A452DCC9A1E5699FB57BEF82EAA4AE42E9F3D32A9F2340C4BDCD133605BFD43832E089AC306BB8B0E188333CED95AF1B4BBA6910AD6B04DBC98DE102C8A562A03CCFCEBA24EC169967D706CCCA02"
+            },
+            {
+                "term": "كورنيلك",
+                "symbol": "ك و",
+                "note": "Bismuth",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -4975,6 +5363,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=40B482863C8F3D24C40A0279B9533ECF853797E62870342D349244DBA33D106E6827008A587C6B98A76136A4EA0BCB052F7663E5C5590C32112742D2CB785FDBDB70BB7744FA4050DE11EDA77CBC6AC5CC96AAEFD547B08013AEE101215987E99BE7612BA8E8137F4D88038C4A4A6FC2DC4676DC96D83FA175A55F58791903A8"
+            },
+            {
+                "term": "نون",
+                "symbol": "ن هـ",
+                "note": "Polonium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5032,6 +5426,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=DE6CDD3C95E8BC46075A5BF2B7DC8968E14498F5A84AB841585817F5AF4549B4ED30F50D90F36A3BD071ED0661E8826260F2D78276A75B44F96FD4B70FB8D51366EBE2A7910AA2AAC202230C1ACFDC27162D45DD332DB5B04D16EF9BA3CF7D7F909F766E5FE70FD48E9073A0FD19D42E1C70167556B916654D7129892BD24D02"
+            },
+            {
+                "term": "فلوروف",
+                "symbol": "ف ل",
+                "note": "Astatine",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5089,6 +5489,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=9918C2E7FE5E84A81BA53D79F1BB0CE5043507D352AE3D0CE41C94AD2121FF247AF26875165666A6A6753A5F858113EBB10317F560E4FC119B1905F4E484529A6396E441FE432F0CE1AFE45869A856DEE91C6BC4B79E73765B62068ED0C9C0B95B42BFAF6D7BAC0EC949C1D73B92C3FD56B7E3ED93AB51FB6283D1F900C73AD8"
+            },
+            {
+                "term": "موسكو",
+                "symbol": "م س",
+                "note": "Radon",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5146,6 +5552,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=D51161C852733691E03C6091102300FC17A258157936D8F1F86726A98DF115B6A40E80EDF727A5D0848323A0007C95BF8221EB11B314F8A4BE8F62273F346EEFB08415572E6E14822EF4FCBD9D1FF1D3F4F5606D185A45F4E694125D515972D45A1303F67124E70BFFE966F0DC4D25922EDC3CBA72ED87CE55738C681E842BD4"
+            },
+            {
+                "term": "بارنورد",
+                "symbol": "ل ف",
+                "note": "Francium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5203,6 +5615,17 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=3C7DD408A62B28FB104D512D39DC28B7E3D33191C47D996B04B54A070849D650E64D0B63161A0DB916520B1CF74AFF9A1F5B980D0728BBDDA7349F2F5E2577C8BD161C0F771742F1F190C657E42CEBF29F44A430BFE06E78D004E2FAF0B2E10F0992278D861ED1A8B32C5D8A18DE9D11B73E4981EC429C8BC5697DB08A2870D5"
+            },
+            {
+                "term": "الشعَّاَّع",
+                "note": "نسبة إلى أنه مشع",
+                "source": "أحمد الإسكندري"
+            },
+            {
+                "term": "تنيم",
+                "symbol": "ت ي",
+                "note": "Radium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5260,6 +5683,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=AD0DFC8FB0DB76CA2A8F2A6592B2E9AC926A631C46D259F12B695C2CAAA922898A4BD2A787EE99D86EB11CFD5C47C5F8D34480374C760B2D7C12A2A93B0D83E7A164C73351C50C7AD027835F41D313F3C4E613E892143EB4BF6D5C2719CF350A18209C78759B9F3E844E8B1BBD6DB2725A90A821E08A80FDA8B79FA73ADB5B2B"
+            },
+            {
+                "term": "وجاميم",
+                "symbol": "أ ج",
+                "note": "Actinium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5317,6 +5746,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=1EDBCF059A98774598173343A8EA6D6E5F288D0A545CF70E137CBD42858493028FED85DCB9EE441B2B703542F57CFDE002E5DA280B6908559A08C285FEF4CACB8D9C492F693C4D06FCD52B3A8E2F190131FA5AD21A5F50C50B0EFFFE1529FBCE76E0E7C09508CB137B7BD4BAFCBA10DC544B06A362C4632D1315FDC90AE2F8D0"
+            },
+            {
+                "term": "تونيك",
+                "symbol": "ت ك",
+                "note": "Thorium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5374,6 +5809,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=2EF12FA982FAAAE67B55B65BBF66AC86BFB936FCD9A9BF38BC37C9388555A308067FFD8B4ECFF6B135220E28C3551BB354F3A78DA8C77BBDF39193374BF3AE277EC8DAD2A4E85AED9B5AC80B63E2FB6C13E6BE8676C2318B57C25EC975D2935C76DCA701FFFF6CEECB8ACFBA4CADBCA75154878EE859D9696A6B7D19B431E76D"
+            },
+            {
+                "term": "لوينت",
+                "symbol": "ل ت",
+                "note": "Protactinium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5431,6 +5872,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=2E7EE170650255D52B37216B940F249906B5B2737D6B9ED3AA121B52143CA75FE20B3AE397626AB8585FBBA2ACB132268B3361A2F0ABD86113847DAFC9EC6295D12CBC5823E307375B00AB535C730519C98B21EC95A41193E713F830D860BCC2C5FA167BCC97F11B93F12C052C2BA77DA3869E16E290A31EBADC031FD286D70F"
+            },
+            {
+                "term": "بيريب",
+                "symbol": "ي ت",
+                "note": "Uranium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5488,6 +5935,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=25C7434C694265787119B9713111A3F30E74472ED9C45448BC586D54F110FA5F0AE22AAEC1B4BA8797523AF401C603769C9A91B15EC70F4969A7EA7410E26A75792BAB0CDF676177573EB14E932847FF0A2BF81D78293ABE413564AA6A57F28872103FFC9D8C53BC09885DB3D8ED0A514DCBB61C8204323B2590F3735C08D5D2"
+            },
+            {
+                "term": "نول",
+                "symbol": "ث ل",
+                "note": "Neptunium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5545,6 +5998,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=6DA695084A2EC4A2B5A2441E08C7C359FEBBC530F4838943588AD6C8E7D370B5E5A2776F8CD5B66596DF236B5695F6785372E3FE48C9158D0646967A8959169CEEE62AC0B6915DDF853A03C486693A57D358D8EB8F35A0C52007408342B18FAE8DA01945A99F71C34343A75EE606B18E0D05068A2BA86C30F120F61FDD5584FC"
+            },
+            {
+                "term": "إريب",
+                "symbol": "أي",
+                "note": "Plutonium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5602,6 +6061,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=975A4252487998AEE15F92BE4828B4F1479F50277B2BA7F206081BA3CBAF6186FE8298F8877A192C3B41C11C1C6EF4824EC1A751C0514B751F17727E95EEC7334EC11687BA59157C41590BC73A2547CA3A0E377C5E6D6ED0A3AA461CBFEE75F688C25C868445676E344521001B3234E4CDB042C73AB60D1E61FC8BB5493A22A2"
+            },
+            {
+                "term": "هولم",
+                "symbol": "هـ ل",
+                "note": "Americium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5659,6 +6124,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=ECD337EB4E0A3B7C582F38C9C65E6D79608FE6CA3AE5117C48AAF6FDFFD722B92B330D80C76BAAC74179376BAF2EC4CF4454A74FE0324A167A65640726B8629C1D5F06B6BB85C1FFB78F49E65F79EAB4F88E3A45B995129CCF1D3C4B657703DE14B3EBE64EAB19D132C3C5D8FB959D7896F17AE65401C971705185DC1F7D5DC0"
+            },
+            {
+                "term": "تنين",
+                "symbol": "ت ن",
+                "note": "Curium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5716,6 +6187,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=83AD6D9DE9217CB74956780A7DFA16A5E9A87E1A61C93B9948A9E1155723389D0A52D15F23E7D5EE8D36303343A56A790302B86D4600053C35096566E26ED2A1D1DF7F8FAA79288CAB0C633EAFF2FD7D7B40166D6605A64704C58D755190F1C0FDDC7658A59DD4A4122358C08A169842C3ED76D3939D6706524A6A435BEE0023"
+            },
+            {
+                "term": "قريب",
+                "symbol": "ت ر",
+                "note": "Berkelium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5773,6 +6250,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=EB7197BC9EA50BA924A35A72381E27AA69CD819E544CB5109BB016032FA077CA63CD483E74BDECFF1FECFC8A9713FEBFED4C1AD00CE7DAD5753A0733393992FD5A0495FA7E9ED8EB5CA814E1795248DA827A3F228B215AE579D1976C483EB2D619305C5D1DA3F3541C861C4CA03132AC33DF2C06B7A231CBE4DDC3D1ED31E15A"
+            },
+            {
+                "term": "جادول",
+                "symbol": "ج د",
+                "note": "Californium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5830,6 +6313,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=9F556B4A8A148B1CF419264D3C817EF7EA7F0F0629DF169DCF0BEF3AB2783647767559927F016E7167632664E9794BA2E8E020FBDC11C012A68206AAB6959342292A80A84BC30370E198DC57A84BCE960B9C22943BD8B96E4CFFEFC037519672C0B2F15CF3557648E92656285639A8F4AC8252FAB9718D60984153D580FFE93B"
+            },
+            {
+                "term": "أوروبا",
+                "symbol": "أ ر",
+                "note": "Einsteinium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5887,6 +6376,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=00CB1DDAE66C0E07430043093DEA27A11B05A1FEB995D5C7BC263D68DFA0FBB23B6025274152D3FCF5A23309A371E54985050707B74C689E97F5FB96931FC2A643408C848260893C7ACE6427921FDE33CBB836BEAD1379E713686BEE8C065D5EEED4F866E9F8C97D92AD4BF95757F70A29B228785F8D1B1FF6CDFE1716AF6A76"
+            },
+            {
+                "term": "سمارا",
+                "symbol": "س م",
+                "note": "Fermium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -5944,6 +6439,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=17142F65EAB2512289DB654DF05F33F0E9AEC5ABC6CF95110349AA19EC0F8435DBC9EA733913A8B7ABE3381A751B230505D36C567AA757710835C1E1E2E2C2CF9BF03526C954688A01E2796DE1B41D001557560C3B7E46558BE70CFE2C1388D8B198DE9A0505EFD9911EB04F4BAF4294ABDDFC637933D2E63C44C7DACAC538A8"
+            },
+            {
+                "term": "أرست",
+                "symbol": "أ ر",
+                "note": "Mendelevium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6001,6 +6502,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=20E21518B887F91DE91A86F038AC2823CF4207AEBAADFA7C92098743FDBCA081480857619015F500CCC17D55A8A1770ADBA77516F199DE499DA892D9570CEE1E0E195C84179105C7D5CE049930C5231E1D792C5D31A65D481CE2370C6B2A6D28AF5C1C5DB307D15EDFFE29573C89E842E1C91906CF52C1644D3CAA582D664E97"
+            },
+            {
+                "term": "القيس",
+                "symbol": "ل ق",
+                "note": "Nobelium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6058,6 +6565,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=BF61C72F8189DE1079AB81F756FCA59278BB4616A24B5712D7785026267F1F100A72396917CD07D1E56A6283B3293B50049DF4B97630373B87F55CCF5C1095C2C9A3C4F4EB11A648141AE96D3D8132995FA7566A5050C284234299A48C1F68AA7797DF4317E10EF14BDD67BDBE147B8DB2F54AD03C49B4A3EE774E0D6F5DB89C"
+            },
+            {
+                "term": "تنين",
+                "symbol": "ت أ",
+                "note": "Lawrencium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6115,6 +6628,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=F18738D4C89E2D4E68926AA2EF7F10C51489CF6CC12B6F8C4F7E94F1C6C5D05DC57BFFD1EF860559D5E4A2B6A218839C2BDACFABD10BAF91B433471FC2CEC614E1658CAAF4237429C79947F1882E2D0463700298D44BF41E95BCE45E3BB874B654AE36E9B4A830B3D3D7A0B8B8838DC6CDC6CBFB42A9BF4C87FA9F0EF14E24E5"
+            },
+            {
+                "term": "بين",
+                "symbol": "ب ن",
+                "note": "Rutherfordium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6172,6 +6691,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=FD2779D2ADBA22882F90CBC11BA22E6335917F7FF212D19EF35A3AFAC7D01F2BEAB671D37A795BAFA3289C1BA12B3981013BCFD6C3CBFB94D36DE343A9FCA2D852EF87625B6C7A9D76434BF34AAC2106DFD99788FCD7B261E9D35406FBB394644D16D50437F98425180F9B101A2029FFB052F5DDF47D1D7B23240E88983D3F55"
+            },
+            {
+                "term": "رجيس",
+                "symbol": "ر ج",
+                "note": "Dubnium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6229,6 +6754,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=E710CC9A857EF7A7A2E61A3E3C7C7BCD5185EA568DC878B051CED41FFF57024E9FAC23B31B2A46A8787651F3598BD401FA3DF6931E08C98CA52683726F8F871DEE7FEF6A7874FE7E4F38B7A0D62D1B98408002DA006B7CB50766C3E144A69CCD7F9794B19063B62A7EB48F90026449A12BDD4714D88C3942D812DAAECB553E39"
+            },
+            {
+                "term": "وهور",
+                "symbol": "و ر",
+                "note": "Seaborgium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6286,6 +6817,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=2F88E376AF17FEFA2D6256E168A9B528E53D9A5E345EAFD98B1A902D468544FA0F4C66A72C9EC3897CB2481B17EFDA451F65579FB9FEF0BD7925D3516F98F428491850407F8034DCF780C68AF9BC47C87EB15596A22B322B8DDB098B0C592BD202BFFA615B8DB2A4B72119AF70E3C7D4C53BF947EEAB932FFEB560A441C0C8A1"
+            },
+            {
+                "term": "أوبر",
+                "symbol": "أ",
+                "note": "Bohrium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6343,6 +6880,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=8463A3BE95A6697F5D6568ABBBAC31FA7774915072568F714999D5929E1EDAFF971BECD8859FFF9C45193B3A62641B7B5A664444EDB8EFD61C0C89D7BB88E11B3D52667628D772282BD1B1363C0276A080A49135CB7E6C9D5A91CD4F0E417008987D14A4FD833BB7C396B6B4D48355F807101C307106C21844AFFB6C29E7014D"
+            },
+            {
+                "term": "نيت",
+                "symbol": "ن ب",
+                "note": "Hassium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6400,6 +6943,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=E6E7FDADD04A31906643753290881C89F0374A42CE225C233570EC5A23C6600006020AF53E3D59C21C395BBF2BB3301F11541214A9E653D5BDDE7881A33AF748FAE3AE98C80D7E2C13DA9EFF83BF794087A3B1C4DF7B4743DDA1B104D3B192E13FB5C0E74A3D383C8FA8B74D44BC652DAA95AE52A08A4B557E41B95BA8BAA0DF"
+            },
+            {
+                "term": "خصيب",
+                "symbol": "خ ض",
+                "note": "Meitnerium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6457,6 +7006,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=4445BE46D454A52D9AA85BC0F75E050CFBACCAAC0660FC53C1DCA8D95B86D5744ED184D20941C31B4A50661307700C5211440CDA7F84B433FE8C5FC1345D84B260C2A70F9C4DA988137201584558439CD4626E0D7FA4DDB8A91480067A0C78EEDE62481B1947EF4E1B0D0D79111BBAFF97346DE72F8FA121309C631CC0872792"
+            },
+            {
+                "term": "أمريكا",
+                "symbol": "أ ك",
+                "note": "Darmstadtium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6514,6 +7069,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=AE89C23864620A6F356E1D0242FAFCAAF52EC372ADC6278B1FBC337ECE10CEED300BD91A2628108ACCA6996F93857558A08E4C0B65D36825A81FCD3322783D5C0487150D1BF7709EC5F314F2DCEBA10678B377B0FBF07F49800C35BF61837C9DF019C48EB5400E01FA165C11DE00C175844A2DF62BB27FD615234E3F45D091C8"
+            },
+            {
+                "term": "كوري",
+                "symbol": "ك ر",
+                "note": "Roentgenium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6571,6 +7132,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=C3B873BD89D87D973FB22D52A2D74B29251C65C3CB10AC3E2344E93EE4591F8AAF10A509B95AC63242D0FD3EB299DAC5CE30C0ACC608ACB175C219754119EE8FB3139BB4D53100177E02F77CA31752546206C85EF648E607BE124C2BD733B0B2085F9AA54E7E3B4A38AC9ED88BBD0CAC475580D082DCBC71AFBFF3D25D40B440"
+            },
+            {
+                "term": "بركي",
+                "symbol": "ب ك",
+                "note": "Copernicium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6628,6 +7195,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=5629C20CA0C4BA01F314D32A69C9BDA3951372BBE9B2AEE8720E182D962EFD18E161C6795F040FBE105C740EAAD7263A1407A8F6F22340C947812989D7D11F82D912DEFEACA2B2AD022EE5F424A825061D9B4EC014BA0046F3EF966BCEA6F2A29F562F49C61B0D41C765D15446279CC8772188426603F09C293E4E31E0913752"
+            },
+            {
+                "term": "أنشتين",
+                "symbol": "ن ش",
+                "note": "Nihonium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6685,6 +7258,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=0EBD427AF4FB405F7785DE0ADD16CEE9A8E7A61F7A7C7ECFF247DA62F60C2E3DCCCE4D6CD9D2844F7F63520C8BB9EE69934466A2F722FE92DBADCE7AB9D84BA8DAE8F7D0D2A96DC9844C224C65C72033D7CFD8E0DA6F0B72369DD46B6601D467C6745343EA128660625559A936FE94DE15D653374E231F188243BCABDE466043"
+            },
+            {
+                "term": "فيرمي",
+                "symbol": "ف ر",
+                "note": "Flerovium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6742,6 +7321,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=5E77B0A71BCFA34A7C9A266D7CF69579202AFE37EA7E5FB495BE9EFBB98FFB3648B740005FE3B55E8E3AEA5DF8E59822D3C83EF5DE568DC6C134E1745B7AF635624BB6434C1F9C3077D2928263C96174844DA6D70FB4BC9995E16E607040FE6D7D10DFCBF9B494AA77EE3F6F6BAA2825266A7DF855A51830C0916FB102BB352F"
+            },
+            {
+                "term": "مندليف",
+                "symbol": "م ف",
+                "note": "Moscovium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6799,6 +7384,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=882064D52D5699F558EF462B581DBBEDBB4B5972F0B7374810859A88ED3329814402AC0E8BC179E455BA870B2AF0205BF596EB1FDCAFD3B4BF54B7658BED467106614F142599899CF8F53E3513A7E4CD421497F69DF95359921A2DAD02C450F412E34325AA06FE91D68EC0A9504631F28F978A0041F4FB1618B6D3A982DA4C5B"
+            },
+            {
+                "term": "نويل",
+                "symbol": "ن ل",
+                "note": "Livermorium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6856,6 +7447,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=4F32F4669AB8027C66E3F1300EA06689181A42E78294871F6A90E59F05CA6A071D12B6E0353A74030EE6CAC5B10E5B623B2FAEC1A0EE73455E539BBD016BAA1E616020F8B1D3549143D65A2332012463980FBDD5DC50FC20688496FC4C411AD99176D96E39ADA24C7AFDF38228D822EFD0038C8539D50AE68C9D481A59DD3C52"
+            },
+            {
+                "term": "لورانس",
+                "symbol": "ل ر",
+                "note": "Tennessine",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
@@ -6913,6 +7510,12 @@
                 "note": "العناصر الكيميائية",
                 "source": "ديوان اللغة العربية",
                 "href": "http://diwanalarabia.com/Display.aspx?args=D7B8D2443FCF07740C94FFE0360F776239699DF9AD0821A2AF139FFDE927DC6AB25EBE7A547F40706EBF902E0F7B38F6ABB44955FD10CB0F4483F36AD3263919C406D7D0E587BDA9C9A13181252744129337DB01D5FD508E7A9379EA3CC62E15DDBD04DB3B7BF9109DCFDD98F7B37112A243F0B7BE1FE8542086C22F89F515E7"
+            },
+            {
+                "term": "لورانس",
+                "symbol": "ل ر",
+                "note": "Technetium",
+                "source": "سامح الشاعر"
             }
         ],
         "languages": [
