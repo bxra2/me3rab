@@ -1,0 +1,164 @@
+.muscle-figure {
+  --muscle-figure-rev: 3;
+}
+
+.muscle-figure .muscle-hint {
+  margin: 0 0 var(--space-m);
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+}
+
+.muscle-figure .muscle-views {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-l);
+  align-items: start;
+}
+
+.muscle-figure .muscle-view {
+  min-width: 0;
+}
+
+.muscle-figure .muscle-view h3 {
+  margin: 0 0 var(--space-xs);
+  font-size: var(--text-m);
+  text-align: center;
+}
+
+.muscle-figure .muscle-view-body {
+  max-inline-size: 30rem;
+  margin-inline: auto;
+}
+
+.muscle-figure .muscle-svg {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.muscle-figure .muscle-svg path {
+  pointer-events: none;
+}
+
+.muscle-figure .muscle-svg .muscle-shape {
+  pointer-events: auto;
+  cursor: pointer;
+  transition:
+    opacity 0.15s,
+    stroke 0.15s,
+    stroke-width 0.15s;
+}
+
+@media (hover: hover) {
+  .muscle-figure .muscle-svg .muscle-shape:hover {
+    opacity: 0.6;
+    stroke: var(--color-accent);
+    stroke-width: 1.4;
+    vector-effect: non-scaling-stroke;
+  }
+}
+
+.muscle-figure .muscle-svg .muscle-shape.is-active {
+  opacity: 0.6;
+  stroke: var(--color-accent);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.muscle-figure .muscle-index {
+  margin-block-start: var(--space-l);
+}
+
+.muscle-figure .muscle-index summary {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+}
+
+.muscle-figure .muscle-index summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.muscle-figure .muscle-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: var(--space-s);
+  margin-block-start: var(--space-s);
+}
+
+.muscle-figure .muscle-index button {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: var(--space-xxs);
+  padding: var(--space-s) var(--space-m);
+  text-align: start;
+}
+
+.muscle-figure .muscle-index button:hover,
+.muscle-figure .muscle-index button:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.muscle-figure .muscle-index button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.muscle-figure .muscle-index-ar {
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+}
+
+.muscle-figure .muscle-index-en {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+}
+
+.muscle-figure .muscle-dialog .muscle-dialog-kicker {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+}
+
+.muscle-figure .muscle-dialog .muscle-dialog-en {
+  margin: 0;
+  font-size: var(--text-m);
+}
+
+.muscle-figure .muscle-dialog .muscle-dialog-view {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+}
+
+@media (max-width: 50rem) {
+  .muscle-figure .muscle-views {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .muscle-figure .muscle-svg .muscle-shape {
+    transition: none;
+  }
+}
+
+@media print {
+  .muscle-figure .muscle-dialog,
+  .muscle-figure .muscle-index,
+  .muscle-figure .muscle-hint {
+    display: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .muscle-figure .muscle-svg .muscle-shape.is-active {
+    stroke: Highlight;
+  }
+}

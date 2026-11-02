@@ -59,7 +59,7 @@
   & li {
     aspect-ratio: 1 / 1;
     position: relative;
-    background: #EEE;
+    background: var(--pt-cell);
     counter-increment: element;
     cursor: pointer;
     display: grid;
@@ -255,70 +255,70 @@
 .periodic-table .alk,
 .pt-figure.alk,
 .pt-mini.alk {
-  background-color: #ff6666;
+  background-color: var(--pt-cat-alk);
 }
 
 /* Alkaline Earth Metals */
 .periodic-table .aec,
 .pt-figure.aec,
 .pt-mini.aec {
-  background-color: #ffdead;
+  background-color: var(--pt-cat-aec);
 }
 
 /* Transition Metals */
 .periodic-table .trn,
 .pt-figure.trn,
 .pt-mini.trn {
-  background-color: #add8e6;
+  background-color: var(--pt-cat-trn);
 }
 
 /* Post-Transition Metals */
 .periodic-table .trm,
 .pt-figure.trm,
 .pt-mini.trm {
-  background-color: #cccccc;
+  background-color: var(--pt-cat-trm);
 }
 
 /* Metalloids (Semimetals) */
 .periodic-table .met,
 .pt-figure.met,
 .pt-mini.met {
-  background-color: #cccc99;
+  background-color: var(--pt-cat-met);
 }
 
 /* Reactive Non-Metals */
 .periodic-table .rnm,
 .pt-figure.rnm,
 .pt-mini.rnm {
-  background-color: #99ff99;
+  background-color: var(--pt-cat-rnm);
 }
 
 /* Halogens */
 .periodic-table .hln,
 .pt-figure.hln,
 .pt-mini.hln {
-  background-color: #ffff99;
+  background-color: var(--pt-cat-hln);
 }
 
 /* Noble Gases */
 .periodic-table .nbl,
 .pt-figure.nbl,
 .pt-mini.nbl {
-  background-color: #ffb3e6;
+  background-color: var(--pt-cat-nbl);
 }
 
 /* Lanthanides */
 .periodic-table .lan,
 .pt-figure.lan,
 .pt-mini.lan {
-  background-color: #ffb366;
+  background-color: var(--pt-cat-lan);
 }
 
 /* Actinides */
 .periodic-table .act,
 .pt-figure.act,
 .pt-mini.act {
-  background-color: #ff99cc;
+  background-color: var(--pt-cat-act);
 }
 
 /* Clickable cell overlay */
@@ -358,7 +358,7 @@
 }
 
 .pt-dialog::backdrop {
-  background: rgb(58 55 51 / 0.55);
+  background: var(--backdrop-overlay-strong);
 }
 
 .pt-head {

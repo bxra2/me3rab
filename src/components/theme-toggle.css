@@ -1,0 +1,84 @@
+.theme-toggle {
+  --wax-light: color-mix(in srgb, var(--color-accent) 55%, white);
+  --wax-edge: color-mix(in srgb, var(--color-accent) 65%, var(--color-ink));
+  --wax-dark: color-mix(in srgb, var(--color-accent) 55%, black);
+  --wax-bg: radial-gradient(
+      circle at 34% 28%,
+      var(--wax-light) 0 18%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      var(--color-accent) 0 55%,
+      var(--wax-edge) 76%,
+      var(--wax-dark) 100%
+    );
+
+  position: fixed;
+  inset-block-end: clamp(1rem, 3vw, 2rem);
+  inset-inline-end: clamp(1rem, 3vw, 2rem);
+  z-index: 50;
+
+  display: grid;
+  place-items: center;
+  inline-size: 3.4rem;
+  block-size: 3.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  background: var(--wax-bg);
+  color: var(--bg-color);
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  line-height: 1;
+  text-shadow: 0 1px 1px rgb(0 0 0 / 0.25);
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 2px 3px rgb(255 255 255 / 0.35),
+    inset 0 -3px 5px rgb(0 0 0 / 0.35),
+    0 2px 4px rgb(0 0 0 / 0.25),
+    0 6px 14px rgb(0 0 0 / 0.18);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--wax-bg);
+  color: var(--bg-color);
+  box-shadow:
+    inset 0 2px 3px rgb(255 255 255 / 0.35),
+    inset 0 -3px 5px rgb(0 0 0 / 0.35),
+    0 3px 6px rgb(0 0 0 / 0.28),
+    0 8px 18px rgb(0 0 0 / 0.22);
+}
+
+.theme-toggle:active {
+  transform: translateY(1px) scale(0.95);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.theme-toggle-glyph {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+
+  .theme-toggle:active {
+    transform: none;
+  }
+}
+
+@media print {
+  .theme-toggle {
+    display: none;
+  }
+}
