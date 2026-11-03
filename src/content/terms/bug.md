@@ -3,6 +3,8 @@ term: Bug
 translation: علة
 explanation: خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.
 status: agreed
+termMotivation: multipleEquivalents
+termFormation: semanticTranslation
 source: 
   - name: "عربآيز"
     link: "https://www.arabeyes.org/techdict:Bug"
