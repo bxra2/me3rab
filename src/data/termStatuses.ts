@@ -56,16 +56,16 @@ export const motivationBadgeClass: Record<TermMotivationKey, string> = {
 }
 
 export const TermFormation = {
-    derivation: 'الاشتقاق',
+    derivation: 'اشتقاق',
     blending: 'النحت',
-    arabization: 'التعريب',
+    arabization: 'تعريب',
     borrowing: 'الاقتراض',
-    literalTranslation: 'الترجمة الحرفية',
-    semanticTranslation: 'الترجمة الدلالية',
+    literalTranslation: 'ترجمة الحرفية',
+    semanticTranslation: 'ترجمة الدلالية',
     revival: 'إحياء لفظ مهجور',
-    semanticShift: 'النقل الدلالي',
+    semanticShift: 'نقل دلالي',
     compounding: 'التركيب',
-    reformulation: 'إعادة الصياغة',
+    reformulation: 'إعادة صياغة',
 } as const
 
 export const formationBadgeClass: Record<TermFormationKey, string> = {

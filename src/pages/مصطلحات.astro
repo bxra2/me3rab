@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import TermDialog from '../components/TermDialog.astro'
 import { getCollection } from 'astro:content'
 import relations from '../data/relations.json'
 import { toArabicDigits } from '../utils/arabicDigits'
@@ -39,6 +40,95 @@ const entries: TermView[] = rawEntries
         isComplete: entry.data.isComplete ?? false,
     }))
     .sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }))
+
+const escapeHtml = (s: string) =>
+    s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+
+const relationTypeLabels: Record<string, string> = {
+    family: 'عائلة',
+    contrast: 'تمييز',
+    pipeline: 'سلسلة',
+}
+
+const relationsFor = (term: string) =>
+    relations.filter((r) => r.terms.includes(term))
+
+const knownTerms = new Set(entries.map((e) => e.term))
+
+const dialogProps = (e: TermView) => {
+    const alts = (e.alternatives ?? [])
+        .map(
+            (a) =>
+                `<li><strong>${escapeHtml(a.translation)}</strong> — ${escapeHtml(a.note)}</li>`
+        )
+        .join('')
+
+    const derivs = (e.derivations ?? [])
+        .map(
+            (d) =>
+                `<tr><td>${escapeHtml(d.form)}</td><td>${escapeHtml(d.gloss)}</td></tr>`
+        )
+        .join('')
+
+    const rels = relationsFor(e.term)
+        .map((r) => {
+            const label = relationTypeLabels[r.type] ?? r.type
+            const chips = r.terms
+                .filter((t) => t !== e.term)
+                .map((t) =>
+                    knownTerms.has(t)
+                        ? `<button class="relation-chip" type="button" aria-haspopup="dialog" data-term="${escapeHtml(t)}">${escapeHtml(t)}</button>`
+                        : `<span class="relation-chip relation-chip--ghost">${escapeHtml(t)}</span>`
+                )
+                .join('')
+            return `<p class="relation-group">
+        <span class="badge relation-type">${escapeHtml(label)}</span>: 
+        <span class="relation-chips">${chips}</span>
+        <span class="relation-note">${escapeHtml(r.note)}</span>
+      </p>`
+        })
+        .join('')
+
+    const sources = (Array.isArray(e.source) ? e.source : [])
+        .map(
+            (s) =>
+                `<a href="${escapeHtml(s.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.name)}</a>`
+        )
+        .join('، &nbsp;')
+
+    return {
+        e,
+        status: e.status,
+        termSource: e.termSource,
+        termMotivation: e.termMotivation,
+        termFormation: e.termFormation,
+        alts,
+        derivs,
+        rels,
+        sources,
+        classes: statusBadgeClass,
+        labels: TermStatus,
+        sourceClasses: sourceBadgeClass,
+        sourceLabels: TermSource,
+        motivationClasses: motivationBadgeClass,
+        motivationLabels: TermMotivation,
+        formationClasses: formationBadgeClass,
+        formationLabels: TermFormation,
+    }
+}
+
+const searchEntries = entries.map((e) => ({
+    term: e.term,
+    translation: e.translation,
+    explanation: e.explanation,
+    status: e.status,
+    source: (e.source ?? []).map((s) => ({ name: s.name })),
+}))
 
 const statusCounts = Object.fromEntries(
     (Object.keys(TermStatus) as TermStatusKey[]).map((status) => [
@@ -151,6 +241,7 @@ const entriesFor = (letter: string) =>
                                         <button
                                             class='term-row'
                                             data-term={e.term}
+                                            aria-haspopup='dialog'
                                         >
                                             <span class='term-row-term'>
                                                 {toArabicDigits(e.term)}
@@ -193,49 +284,34 @@ const entriesFor = (letter: string) =>
 
     <p class='no-results' hidden>لا نتائج تطابق بحثك.</p>
 
-    <dialog id='term-dialog' class='term-dialog'>
-        <button class='dialog-close' type='button' aria-label='إغلاق'>✕</button>
-        <div class='dialog-body'></div>
-    </dialog>
+    <div class='term-dialogs'>
+        {
+            entries.map((e) => (
+                <dialog class='term-dialog-shell' data-term={e.term} aria-label={e.term}>
+                    <button class='dialog-close' type='button'>إغلاق</button>
+                    <TermDialog {...dialogProps(e)} />
+                </dialog>
+            ))
+        }
+    </div>
 
     <script
         is:inline
         type='application/json'
         id='term-data'
-        set:html={JSON.stringify(entries)}
+        set:html={JSON.stringify(searchEntries).replace(/</g, '\\u003c')}
     />
     <script
         is:inline
         type='application/json'
         id='relation-data'
-        set:html={JSON.stringify(relations)}
-    />
-    <script
-        is:inline
-        type='application/json'
-        id='status-data'
-        set:html={JSON.stringify({
-            labels: TermStatus,
-            classes: statusBadgeClass,
-            sourceLabels: TermSource,
-            sourceClasses: sourceBadgeClass,
-            motivationLabels: TermMotivation,
-            motivationClasses: motivationBadgeClass,
-            formationLabels: TermFormation,
-            formationClasses: formationBadgeClass,
-        })}
+        set:html={JSON.stringify(relations).replace(/</g, '\\u003c')}
     />
 
     <script>
-        import { motivationBadgeClass } from '../data/termStatuses'
-
         const search = document.getElementById(
             'term-search'
         ) as HTMLInputElement
-        const dialog = document.getElementById(
-            'term-dialog'
-        ) as HTMLDialogElement
-        const body = dialog.querySelector('.dialog-body') as HTMLElement
         const noResults = document.querySelector('.no-results') as HTMLElement
         const boxes = [...document.querySelectorAll('.letter-box')]
         const entries = JSON.parse(
@@ -244,44 +320,12 @@ const entriesFor = (letter: string) =>
             term: string
             translation: string
             explanation: string
-            source: { name: string; link: string }[]
             status?: string
-            termSource?: string
-            termMotivation?: string
-            termFormation?: string
-            alternatives?: { translation: string; note: string }[]
-            derivations?: { form: string; gloss: string }[]
+            source?: { name: string }[]
         }[]
-        const {
-            labels,
-            classes,
-            sourceLabels,
-            sourceClasses,
-            motivationLabels,
-            motivationClasses,
-            formationLabels,
-            formationClasses,
-        } = JSON.parse(
-            document.getElementById('status-data')?.textContent ?? '{}'
-        ) as {
-            labels: Record<string, string>
-            classes: Record<string, string>
-            sourceLabels: Record<string, string>
-            sourceClasses: Record<string, string>
-            motivationLabels: Record<string, string>
-            motivationClasses: Record<string, string>
-            formationLabels: Record<string, string>
-            formationClasses: Record<string, string>
-        }
         const relations = JSON.parse(
             document.getElementById('relation-data')?.textContent ?? '[]'
         ) as { type: string; terms: string[]; note: string }[]
-
-        const relationTypeLabels: Record<string, string> = {
-            family: 'عائلة',
-            contrast: 'تمييز',
-            pipeline: 'سلسلة',
-        }
 
         const relationsFor = (term: string) =>
             relations.filter((r) => r.terms.includes(term))
@@ -346,101 +390,42 @@ const entriesFor = (letter: string) =>
             .querySelectorAll('input[name="term-filter"]')
             .forEach((r) => r.addEventListener('change', applyFilters))
 
-        const escapeHtml = (s: string) =>
-            s
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;')
+        const dialogs = new Map(
+            [...document.querySelectorAll('dialog[data-term]')].map((d) => [
+                (d as HTMLElement).dataset.term,
+                d as HTMLDialogElement,
+            ])
+        )
 
-        const render = (e: (typeof entries)[number]) => {
-            const status = e.status ?? 'proposed'
-            const termSource = e.termSource ?? 'unknown'
-            const termMotivation = e.termMotivation ?? 'ambiguity'
-            const termFormation = e.termFormation ?? 'derivation'
-
-            const alts = (e.alternatives ?? [])
-                .map(
-                    (a) =>
-                        `<li><strong>${escapeHtml(a.translation)}</strong> — ${escapeHtml(a.note)}</li>`
-                )
-                .join('')
-
-            const derivs = (e.derivations ?? [])
-                .map(
-                    (d) =>
-                        `<tr><td>${escapeHtml(d.form)}</td><td>${escapeHtml(d.gloss)}</td></tr>`
-                )
-                .join('')
-
-            const sources = (Array.isArray(e.source) ? e.source : [])
-                .map(
-                    (s) =>
-                        `<a href="${escapeHtml(s.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.name)}</a>`
-                )
-                .join('، &nbsp;')
-
-            const rels = relationsFor(e.term)
-                .map((r) => {
-                    const label = relationTypeLabels[r.type] ?? r.type
-                    const chips = r.terms
-                        .filter((t) => t !== e.term)
-                        .map(
-                            (t) =>
-                                `<button class="relation-chip" type="button" data-term="${escapeHtml(t)}">${escapeHtml(t)}</button>`
-                        )
-                        .join('')
-                    return `<p class="relation-group">
-        <span class="badge relation-type">${escapeHtml(label)}</span>: 
-        <span class="relation-chips">${chips}</span>
-        <span class="relation-note">${escapeHtml(r.note)}</span>
-      </p>`
-                })
-                .join('')
-
-            return `
-    <p class="tag-list">
-      <span class="badge ${classes[status]}">${labels[status]}</span>
-      <span class="badge ${sourceClasses[termSource]}">${sourceLabels[termSource]}</span>
-      <span class="badge ${motivationClasses[termMotivation]}">${motivationLabels[termMotivation]}</span>
-      <span class="badge ${formationClasses[termFormation]}">${formationLabels[termFormation]}</span>
-    </p>
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <h2>${e.translation ? escapeHtml(e.translation) : '—'}</h2>
-      <h2>${escapeHtml(e.term)}</h2>
-    </div>
-    ${e.explanation ? `<p>${escapeHtml(e.explanation)}</p>` : ''}
-    ${alts ? `<h3>بدائل مطروحة</h3><ul>${alts}</ul>` : ''}
-    ${
-        derivs
-            ? `<h3>الاشتقاق</h3><table><thead><tr><th>الصيغة</th><th>المعنى</th></tr></thead><tbody>${derivs}</tbody></table>`
-            : ''
-    }
-    ${rels ? `<h3>علاقات</h3><div class="relation-list">${rels}</div>` : ''}
-    ${sources ? `<hr/><p class="dialog-source">المصدر: ${sources}</p>` : ''}
-  `
+        const openTerm = (term: string | undefined) => {
+            const target = term ? dialogs.get(term) : undefined
+            if (!target) return
+            document.querySelector('dialog[open]')?.close()
+            target.showModal()
         }
 
         document.addEventListener('click', (ev) => {
             if (!(ev.target instanceof Element)) return
             const row = ev.target.closest('.term-row')
             if (row) {
-                const e = entryOf((row as HTMLElement).dataset.term)
-                if (e) {
-                    body.innerHTML = render(e)
-                    dialog.showModal()
-                }
+                openTerm((row as HTMLElement).dataset.term)
                 return
             }
-            const chip = ev.target.closest('.relation-chip')
+            const chip = ev.target.closest('button.relation-chip')
             if (chip) {
-                const rel = entryOf((chip as HTMLElement).dataset.term)
-                if (rel) body.innerHTML = render(rel)
+                openTerm((chip as HTMLElement).dataset.term)
                 return
             }
-            if (ev.target.closest('.dialog-close') || ev.target === dialog) {
-                dialog.close()
+            const closer = ev.target.closest('.dialog-close')
+            if (closer) {
+                closer.closest('dialog')?.close()
+                return
+            }
+            if (
+                ev.target instanceof HTMLDialogElement &&
+                ev.target.open
+            ) {
+                ev.target.close()
             }
         })
     </script>

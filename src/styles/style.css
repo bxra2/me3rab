@@ -809,10 +809,20 @@ input[type="radio"]:focus-visible {
 .term-dialog .dialog-body h2 { margin-block-start: 0; }
 
 .dialog-close {
-  position: absolute;
-  inset-block-start: var(--space-s);
-  inset-inline-end: var(--space-s);
-  padding: 0 var(--space-s);
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  font-size: 0.85rem;
+  margin-block-end: var(--space-s);
+  margin-inline-end: auto;
+  padding: 0.2em 0.6em;
+}
+
+.dialog-close:hover {
+  background: var(--color-ink);
+  color: var(--bg-color);
 }
 
 .dialog-source {
@@ -849,7 +859,14 @@ input[type="radio"]:focus-visible {
   font-size: var(--text-s);
 }
 
-.relation-chip:hover {
+.relation-chip--ghost {
+  opacity: 0.55;
+  border-style: dashed;
+}
+
+button.relation-chip { cursor: pointer; }
+
+button.relation-chip:hover {
   /* border-color: var(--color-secondary); */
   color: var(--bg-color);
   background-color: var(--stripe-color1);
@@ -1024,6 +1041,10 @@ input[type="radio"]:focus-visible {
   h3 {
     break-after: avoid;
   }
+}
+
+h2{
+  font-size: 1.8rem;
 }
 
 @page {
