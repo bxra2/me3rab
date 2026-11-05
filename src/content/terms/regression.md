@@ -25,5 +25,15 @@ alternatives:
     note: من قاموس المصطلحات العلمية
   - translation: انحدار
     note: من معجم البيانات و الذكاء الاصطناعي
+  - translation: ارتداد
+    note: من قاموس المورد الحديث
+  - translation: انكفاء
+    note: من قاموس المورد الحديث
+  - translation: التَّردِّي
+    note: من قاموس المورد الحديث
+  - translation: «أ
+    note: من قاموس المورد الحديث
+  - translation: النكوص
+    note: من قاموس المورد الحديث
 derivations: []
 ---

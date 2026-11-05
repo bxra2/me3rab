@@ -20,6 +20,8 @@ alternatives:
     note: من المعجم الموسوعي في الكومبيوتر والإلكترونيك
   - translation: ثانية
     note: من قائمة مصطلحات المعلوماتية
+  - translation: البَيْتة
+    note: من قاموس المورد الحديث
 derivations:
   - form: أُثمون
     gloss: 'الاسم: وحدة المعلومات'

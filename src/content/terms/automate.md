@@ -9,5 +9,7 @@ alternatives:
     note: كتابة صوتية شائعة بلا اشتقاق ولا وزن عربي.
   - translation: أتمت
     note: من مصطلحات التقنيات و العلوم التطبيقية
+  - translation: يُؤَتْمِت
+    note: من قاموس المورد الحديث
 derivations: []
 ---

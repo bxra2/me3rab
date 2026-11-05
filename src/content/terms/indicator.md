@@ -25,5 +25,13 @@ alternatives:
     note: من قاموس مفردات الكمبيوتر
   - translation: معين
     note: من قاموس مفردات الكمبيوتر
+  - translation: «أ
+    note: من قاموس المورد الحديث
+  - translation: المُؤشِّر
+    note: من قاموس المورد الحديث
+  - translation: الدليل
+    note: من قاموس المورد الحديث
+  - translation: مُبَيِّن
+    note: من معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
 derivations: []
 ---

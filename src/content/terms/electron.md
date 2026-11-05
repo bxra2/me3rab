@@ -11,5 +11,9 @@ alternatives:
     note: من الجيولوجيا
   - translation: كهريب
     note: من علم الزلازل
+  - translation: الألكترون
+    note: من قاموس المورد الحديث
+  - translation: الكُهَيْرب
+    note: من قاموس المورد الحديث
 derivations: []
 ---

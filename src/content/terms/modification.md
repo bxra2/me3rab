@@ -15,5 +15,13 @@ alternatives:
     note: من قاموس مفردات الكمبيوتر
   - translation: تعزيز
     note: من قاموس مفردات الكمبيوتر
+  - translation: «أ
+    note: من قاموس المورد الحديث
+  - translation: مص modify وبخاصة
+    note: من قاموس المورد الحديث
+  - translation: تكيُّف
+    note: من قاموس المورد الحديث
+  - translation: صُورة مُعَدَّل
+    note: من معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
 derivations: []
 ---

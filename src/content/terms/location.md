@@ -19,5 +19,17 @@ alternatives:
     note: من دليل وظيفي في المعلوميات
   - translation: مكان
     note: من قاموس مفردات الكمبيوتر
+  - translation: مَقَرّ
+    note: من قاموس المورد الحديث
+  - translation: مركز
+    note: من قاموس المورد الحديث
+  - translation: المركز
+    note: من قاموس المورد الحديث
+  - translation: الموقع الخارجي
+    note: من قاموس المورد الحديث
+  - translation: مص
+    note: من قاموس المورد الحديث
+  - translation: مَوقِعُ تَخْزين
+    note: من معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
 derivations: []
 ---

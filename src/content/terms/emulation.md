@@ -17,5 +17,7 @@ alternatives:
     note: من قاموس مفردات الكمبيوتر
   - translation: توفيق
     note: من قاموس مفردات الكمبيوتر
+  - translation: مُنافسة
+    note: من قاموس المورد الحديث
 derivations: []
 ---

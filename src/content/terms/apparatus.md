@@ -13,5 +13,7 @@ alternatives:
     note: من الطب البيطري
   - translation: جهاز . آلة
     note: من معجم تكنولوجيا الورش
+  - translation: أدوات
+    note: من قاموس المورد الحديث
 derivations: []
 ---

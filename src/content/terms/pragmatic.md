@@ -17,5 +17,17 @@ alternatives:
     note: من اللغة والأدب
   - translation: برغماتي
     note: من اللغة والأدب
+  - translation: «أ» ناشط
+    note: من قاموس المورد الحديث
+  - translation: نشيط . «ب» فضوليّ . «ج» مغرور
+    note: من قاموس المورد الحديث
+  - translation: دَوْليّ
+    note: من قاموس المورد الحديث
+  - translation: مجتمعيّ
+    note: من قاموس المورد الحديث
+  - translation: عمليّ
+    note: من قاموس المورد الحديث
+  - translation: براغماتيّ
+    note: من قاموس المورد الحديث
 derivations: []
 ---

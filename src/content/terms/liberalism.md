@@ -19,5 +19,7 @@ alternatives:
     note: من الفلسفة وعلم النفس
   - translation: مذهب الحرية الطبيعية
     note: من مصطلحات الفلسفة
+  - translation: الليبراليّة
+    note: من قاموس المورد الحديث
 derivations: []
 ---

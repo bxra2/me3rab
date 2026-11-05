@@ -17,5 +17,9 @@ alternatives:
     note: من مصطلحات العلوم الانسانية و الاجتماعية
   - translation: حدس
     note: من مصطلحات الفلسفة
+  - translation: الاعتناق
+    note: من قاموس المورد الحديث
+  - translation: التقمُّص العاطفيّ
+    note: من قاموس المورد الحديث
 derivations: []
 ---

@@ -15,5 +15,11 @@ alternatives:
     note: من معجم مصطلحات المعلوماتية، قائمة مصطلحات المعلوماتية
   - translation: نصمة
     note: من قاموس مفردات الكمبيوتر
+  - translation: تمثال
+    note: من قاموس المورد الحديث
+  - translation: معبودٌ
+    note: من قاموس المورد الحديث
+  - translation: الأيقونة
+    note: من قاموس المورد الحديث
 derivations: []
 ---

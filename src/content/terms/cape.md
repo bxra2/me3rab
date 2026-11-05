@@ -17,5 +17,11 @@ alternatives:
     note: من صناعة النسيج
   - translation: جبة
     note: من صناعة النسيج
+  - translation: الرأس
+    note: من قاموس المورد الحديث
+  - translation: الكاب
+    note: من قاموس المورد الحديث
+  - translation: بُرْنُس
+    note: من معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
 derivations: []
 ---

@@ -45,5 +45,9 @@ alternatives:
     note: من قاموس مفردات الكمبيوتر
   - translation: نظم الحماية المبرمجة
     note: من قاموس مفردات الكمبيوتر
+  - translation: المناهج
+    note: من قاموس المورد الحديث
+  - translation: المُلْحَقات
+    note: من قاموس المورد الحديث
 derivations: []
 ---

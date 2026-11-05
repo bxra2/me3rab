@@ -15,5 +15,7 @@ alternatives:
     note: من معجم مصطلحات المعلوماتية
   - translation: علامة مرجعية
     note: من قائمة مصطلحات المعلوماتية
+  - translation: المؤشِّرة
+    note: من قاموس المورد الحديث
 derivations: []
 ---

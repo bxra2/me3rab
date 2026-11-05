@@ -4,6 +4,8 @@ translation: أرخبيل
 explanation: ''
 status: proposed
 source: []
-alternatives: []
+alternatives:
+  - translation: الأَرْخبِيل
+    note: من قاموس المورد الحديث
 derivations: []
 ---

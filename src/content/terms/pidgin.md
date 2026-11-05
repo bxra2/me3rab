@@ -11,5 +11,7 @@ alternatives:
     note: من المعلومات و التواصل
   - translation: لغة هجينة
     note: من اللغة والأدب
+  - translation: البِدْجينيّة
+    note: من قاموس المورد الحديث
 derivations: []
 ---

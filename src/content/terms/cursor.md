@@ -27,5 +27,7 @@ alternatives:
     note: من قاموس مفردات الكمبيوتر
   - translation: مؤشر الشاشة
     note: من قاموس مفردات الكمبيوتر
+  - translation: المُنْزَلِقة
+    note: من قاموس المورد الحديث
 derivations: []
 ---

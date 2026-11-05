@@ -17,5 +17,7 @@ alternatives:
     note: من معجم مصطلحات المعلوماتية
   - translation: محفوظات
     note: من المعجم الموحد لمصطلحات المعلوماتية
+  - translation: يُؤَرْشِف
+    note: من قاموس المورد الحديث
 derivations: []
 ---

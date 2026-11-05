@@ -39,5 +39,19 @@ alternatives:
     note: من مصطلحات التقنيات و العلوم التطبيقية
   - translation: أس
     note: من مسرد معجم مصطلحات الرياضيات
+  - translation: فِهرست
+    note: من قاموس المورد الحديث
+  - translation: دلالة
+    note: من قاموس المورد الحديث
+  - translation: قائمة الكتب المحرَّمة
+    note: من قاموس المورد الحديث
+  - translation: الأُسّ
+    note: من قاموس المورد الحديث
+  - translation: الدليل
+    note: من قاموس المورد الحديث
+  - translation: السبّابة
+    note: من قاموس المورد الحديث
+  - translation: يؤشِّر
+    note: من قاموس المورد الحديث
 derivations: []
 ---
