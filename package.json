@@ -10,6 +10,7 @@
     "check": "node scripts/check-glossary.mjs",
     "check:muscle": "node scripts/check-muscle-page.mjs",
     "check:nutrients": "node scripts/check-nutrient-page.mjs",
+    "check:atom": "node scripts/check-atom-page.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:py": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "sync:relations": "node scripts/sync-relations.mjs",

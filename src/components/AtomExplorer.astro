@@ -1,0 +1,469 @@
+---
+import './nutrient-explorer.css';
+import atoms from '../data/atoms.json';
+import { collectTermIds, validateAtoms } from '../utils/atoms.mjs';
+import { toArabicDigits } from '../utils/arabicDigits';
+
+const validation = validateAtoms(atoms);
+if (validation.errors.length > 0) {
+  throw new Error(
+    `atom data validation failed:\n${validation.errors.join('\n')}`
+  );
+}
+
+const diagram = atoms.diagrams[0];
+const terms = atoms.terms;
+const termIds = collectTermIds(atoms);
+const termCount = termIds.length;
+
+const term = (id) => {
+  const record = terms[id];
+  if (!record) throw new Error(`Unknown atom term: ${id}`);
+  return record;
+};
+---
+
+<div class="nutrient-explorer atom-explorer" data-atom-explorer>
+  <p class="nutrient-hint">
+    خريطة تفاعلية لمصطلحات الذرّة: من النواة والإلكترونات إلى الكواركات
+    واللبتونات والبوزونات والقوى الأساسية. اضغط على أي مصطلح لعرض أصله
+    ومعناه وترجماته ولغاته ومصادره، أو استخدم فهرس المصطلحات أدناه.
+  </p>
+
+  <p class="nutrient-diagram-intro">{diagram.intro}</p>
+
+  <div class="nutrient-root">
+    <button
+      class="nutrient-node nutrient-root-node"
+      type="button"
+      data-atom={diagram.root.term}
+      aria-haspopup="dialog"
+    >
+      <span class="nutrient-node-ar">{term(diagram.root.term).ar}</span>
+      <bdi class="nutrient-node-en" lang="en" dir="auto">
+        {term(diagram.root.term).en}
+      </bdi>
+    </button>
+    {diagram.root.note && (
+      <p class="nutrient-root-note">{diagram.root.note}</p>
+    )}
+  </div>
+
+  <div class="nutrient-groups nutrient-groups--atom">
+    {
+      diagram.groups.map((group) => (
+        <section class={`nutrient-group nutrient-group--${group.accent}`}>
+          <header class="nutrient-group-head">
+            <button
+              class="nutrient-node"
+              type="button"
+              data-atom={group.term}
+              aria-haspopup="dialog"
+            >
+              <span class="nutrient-node-ar">{term(group.term).ar}</span>
+              <bdi class="nutrient-node-en" lang="en" dir="auto">
+                {term(group.term).en}
+              </bdi>
+            </button>
+            {group.note && <p class="nutrient-group-note">{group.note}</p>}
+          </header>
+
+          <div class="nutrient-branches">
+            {group.branches.map((branch) => (
+              <section class="nutrient-branch">
+                {branch.term ? (
+                  <button
+                    class="nutrient-node"
+                    type="button"
+                    data-atom={branch.term}
+                    aria-haspopup="dialog"
+                  >
+                    <span class="nutrient-node-ar">{term(branch.term).ar}</span>
+                    <bdi class="nutrient-node-en" lang="en" dir="auto">
+                      {term(branch.term).en}
+                    </bdi>
+                  </button>
+                ) : (
+                  <p class="nutrient-branch-label">{branch.label}</p>
+                )}
+
+                {branch.note && (
+                  <p class="nutrient-branch-note">{branch.note}</p>
+                )}
+
+                {branch.columns && (
+                  <div class="nutrient-columns">
+                    {branch.columns.map((column) => (
+                      <article class="nutrient-card">
+                        <button
+                          class="nutrient-node"
+                          type="button"
+                          data-atom={column.term}
+                          aria-haspopup="dialog"
+                        >
+                          <span class="nutrient-node-ar">
+                            {term(column.term).ar}
+                          </span>
+                          <bdi class="nutrient-node-en" lang="en" dir="auto">
+                            {term(column.term).en}
+                          </bdi>
+                        </button>
+
+                        {column.note && (
+                          <p class="nutrient-card-note">{column.note}</p>
+                        )}
+
+                        {column.items && (
+                          <ul class="nutrient-static-list">
+                            {column.items.map((item) => (
+                              <li>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+
+                        {column.terms && (
+                          <div class="nutrient-child-terms">
+                            {column.terms.map((childId) => (
+                              <button
+                                class="nutrient-node"
+                                type="button"
+                                data-atom={childId}
+                                aria-haspopup="dialog"
+                              >
+                                <span class="nutrient-node-ar">
+                                  {term(childId).ar}
+                                </span>
+                                <bdi
+                                  class="nutrient-node-en"
+                                  lang="en"
+                                  dir="auto"
+                                >
+                                  {term(childId).en}
+                                </bdi>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </article>
+                    ))}
+                  </div>
+                )}
+
+                {branch.items && (
+                  <ul class="nutrient-static-list">
+                    {branch.items.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {branch.terms && (
+                  <div class="nutrient-child-terms">
+                    {branch.terms.map((childId) => (
+                      <button
+                        class="nutrient-node"
+                        type="button"
+                        data-atom={childId}
+                        aria-haspopup="dialog"
+                      >
+                        <span class="nutrient-node-ar">
+                          {term(childId).ar}
+                        </span>
+                        <bdi class="nutrient-node-en" lang="en" dir="auto">
+                          {term(childId).en}
+                        </bdi>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </section>
+            ))}
+          </div>
+
+          {group.roles && (
+            <ul class="nutrient-roles">
+              {group.roles.map((role) => (
+                <li>{role}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))
+    }
+  </div>
+
+  <p class="nutrient-footer">{diagram.footer}</p>
+
+  <details class="nutrient-index">
+    <summary>
+      فهرس المصطلحات ({toArabicDigits(String(termCount))})
+    </summary>
+    <div
+      class="nutrient-index-grid"
+      role="group"
+      aria-label="فهرس المصطلحات"
+    >
+      {
+        termIds.map((id) => (
+          <button
+            class="nutrient-node"
+            type="button"
+            data-atom={id}
+            aria-haspopup="dialog"
+          >
+            <span class="nutrient-node-ar">{term(id).ar}</span>
+            <bdi class="nutrient-node-en" lang="en" dir="auto">
+              {term(id).en}
+            </bdi>
+          </button>
+        ))
+      }
+    </div>
+  </details>
+
+  <div class="nutrient-dialogs">
+    {
+      termIds.map((id) => {
+        const record = term(id);
+        return (
+          <dialog
+            class="nutrient-dialog atom-dialog"
+            id={`atom-term-${id}`}
+            dir="rtl"
+            lang="ar"
+            aria-labelledby={`atom-dialog-title-${id}`}
+            aria-describedby={`atom-dialog-desc-${id}`}
+          >
+            <div class="nutrient-dialog-inner">
+              <button
+                class="nutrient-dialog-close"
+                data-atom-close
+                type="button"
+              >
+                إغلاق
+              </button>
+
+              <header class="nutrient-dialog-head">
+                <div class="nutrient-dialog-figure">
+                  <p class="nutrient-dialog-kicker">مصطلح ذرّي</p>
+                  <h2 id={`atom-dialog-title-${id}`}>{record.ar}</h2>
+                  <p class="nutrient-dialog-en" lang="en" dir="ltr">
+                    {record.en}
+                  </p>
+                </div>
+
+                <section class="nutrient-dialog-translations">
+                  <h3>الترجمات</h3>
+                  {record.translations.length === 0 ? (
+                    <p class="nutrient-empty">لا ترجمات مسجّلة بعد.</p>
+                  ) : (
+                    <ul class="nutrient-list">
+                      {record.translations.map((item) => (
+                        <li>
+                          <bdi dir="auto">{item.term}</bdi>
+                          {item.source && (
+                            <span class="nutrient-source">
+                              {' — '}
+                              {item.href ? (
+                                <a
+                                  href={item.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {item.source}
+                                </a>
+                              ) : (
+                                item.source
+                              )}
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+
+                <section class="nutrient-dialog-languages">
+                  <h3>لغات أخرى</h3>
+                  {record.languages.length === 0 ? (
+                    <p class="nutrient-empty">لا لغات مسجّلة بعد.</p>
+                  ) : (
+                    <ul class="nutrient-list">
+                      {record.languages.map((item) => (
+                        <li>
+                          <bdi dir="auto" lang={item.code}>
+                            {item.term}
+                          </bdi>
+                          <span class="nutrient-note"> — {item.language}</span>
+                          {item.source && (
+                            <span class="nutrient-source">
+                              {' — '}
+                              {item.href ? (
+                                <a
+                                  href={item.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {item.source}
+                                </a>
+                              ) : (
+                                item.source
+                              )}
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              </header>
+
+              <section class="nutrient-dialog-origin">
+                <h3>الأصل والمعنى</h3>
+                <dl>
+                  <dt>الأصل</dt>
+                  <dd>{record.origin}</dd>
+                  <dt>المعنى بالعربية</dt>
+                  <dd>{record.arabicMeaning}</dd>
+                </dl>
+              </section>
+
+              <section class="nutrient-dialog-desc">
+                <h3>الوصف</h3>
+                <p id={`atom-dialog-desc-${id}`}>{record.description}</p>
+              </section>
+
+              <section class="nutrient-dialog-suggestions">
+                <h3>المصطلحات المقترحة</h3>
+                {record.suggestions.length === 0 ? (
+                  <p class="nutrient-empty">لا اقتراحات تحريرية لهذا المصطلح.</p>
+                ) : (
+                  <ul class="nutrient-list">
+                    {record.suggestions.map((item) => (
+                      <li>
+                        <bdi dir="auto">{item.term}</bdi>
+                        {item.note && (
+                          <span class="nutrient-note"> — {item.note}</span>
+                        )}
+                        {item.source && (
+                          <span class="nutrient-source">
+                            {' — '}
+                            {item.href ? (
+                              <a
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {item.source}
+                              </a>
+                            ) : (
+                              item.source
+                            )}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+
+              <footer class="nutrient-dialog-references">
+                <span>المصادر:</span>
+                <ul class="nutrient-list">
+                  {record.references.map((reference) => (
+                    <li>
+                      {reference.href ? (
+                        <a
+                          href={reference.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {reference.name}
+                        </a>
+                      ) : (
+                        reference.name
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </footer>
+            </div>
+          </dialog>
+        );
+      })
+    }
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-atom-explorer]');
+    if (!root) return;
+
+    root.dataset.enhanced = '';
+
+    const indexDetails = root.querySelector('.nutrient-index');
+
+    let lastFocus = null;
+    let openedFromIndex = false;
+
+    const setActiveTerm = (id, active) => {
+      if (!id) return;
+      const selector = `[data-atom='${CSS.escape(id)}']`;
+      for (const element of root.querySelectorAll(selector)) {
+        element.classList.toggle('is-active', active);
+      }
+    };
+
+    for (const element of root.querySelectorAll('[data-atom]')) {
+      const id = element.getAttribute('data-atom');
+      element.addEventListener('pointerenter', () => setActiveTerm(id, true));
+      element.addEventListener('pointerleave', () => setActiveTerm(id, false));
+      element.addEventListener('focus', () => setActiveTerm(id, true));
+      element.addEventListener('blur', () => setActiveTerm(id, false));
+    }
+
+    root.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const closer = target.closest('[data-atom-close]');
+      if (closer) {
+        const dialog = closer.closest('dialog');
+        if (dialog) dialog.close();
+        return;
+      }
+
+      const opener = target.closest('[data-atom]');
+      if (!opener) return;
+
+      const id = opener.getAttribute('data-atom');
+      if (!id) return;
+
+      const dialog = document.getElementById(`atom-term-${id}`);
+      if (!(dialog instanceof HTMLDialogElement)) return;
+
+      lastFocus = opener;
+      openedFromIndex = Boolean(opener.closest('.nutrient-index'));
+      if (!dialog.open) dialog.showModal();
+    });
+
+    for (const dialog of root.querySelectorAll('.atom-dialog')) {
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+
+      dialog.addEventListener('close', () => {
+        if (openedFromIndex && indexDetails && !indexDetails.open) {
+          indexDetails.open = true;
+        }
+        openedFromIndex = false;
+        window.setTimeout(() => {
+          if (lastFocus instanceof HTMLElement) {
+            lastFocus.focus({ preventScroll: true });
+          }
+        }, 0);
+      });
+    }
+  })();
+</script>

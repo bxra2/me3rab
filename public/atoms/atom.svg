@@ -1,0 +1,245 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1500" viewBox="0 0 1600 1500">
+<defs>
+  <pattern id="paper" width="12" height="12" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r=".6" fill="#a99470" opacity=".22"></circle>
+  </pattern>
+  <style>
+    .bg{fill:#f2e8d2}
+    .ink{fill:#30291f}
+    .muted{fill:#70634e}
+    .line{stroke:#827257;stroke-width:2;fill:none}
+    .dash{stroke:#a18e6c;stroke-width:1.5;stroke-dasharray:5 5;fill:none}
+    .panel{fill:#f8f1e2;stroke:#806d50;stroke-width:2}
+    .red{fill:#d98570;stroke:#864e3e;stroke-width:2}
+    .blue{fill:#82a9bf;stroke:#486b7c;stroke-width:2}
+    .green{fill:#a6b58a;stroke:#687b52;stroke-width:2}
+    .gold{fill:#e3bd70;stroke:#92703d;stroke-width:2}
+    .purple{fill:#b29abd;stroke:#786184;stroke-width:2}
+    .cream{fill:#e8d9bb;stroke:#927d5c;stroke-width:2}
+    .title{font:bold 46px Georgia,serif;fill:#f8f0dc}
+    .subtitle{font:italic 19px Georgia,serif;fill:#e7d9bd}
+    .section{font:bold 27px Georgia,serif;fill:#f8f0dc}
+    .heading{font:bold 23px Georgia,serif;fill:#30291f}
+    .body{font:18px Georgia,serif;fill:#30291f}
+    .small{font:15px Georgia,serif;fill:#554a38}
+    .tiny{font:13px Georgia,serif;fill:#70634e}
+    .particle{font:bold 16px Georgia,serif;fill:#30291f}
+    .white{fill:#fff8e9}
+  </style>
+</defs>
+
+<!-- Background and frame -->
+<rect width="1600" height="1500" class="bg"></rect>
+<rect width="1600" height="1500" fill="url(#paper)"></rect>
+<rect x="24" y="24" width="1552" height="1452" rx="5" fill="none" stroke="#6f5c40" stroke-width="3"></rect>
+<rect x="34" y="34" width="1532" height="1432" rx="4" fill="none" stroke="#b19b75" stroke-width="1"></rect>
+
+<!-- Header -->
+<rect x="230" y="48" width="1140" height="88" rx="4" fill="#383025"></rect>
+<text x="800" y="105" text-anchor="middle" class="title">ATOM TERMINOLOGY</text>
+<text x="800" y="165" text-anchor="middle" class="subtitle">From atomic structure to the fundamental particles of matter</text>
+<path d="M100 190 H1500" class="line"></path>
+
+<!-- Atomic structure -->
+<rect x="55" y="215" width="735" height="340" rx="9" class="panel"></rect>
+<rect x="55" y="215" width="735" height="45" rx="7" fill="#514333"></rect>
+<text x="80" y="246" class="section">01 · ATOMIC STRUCTURE</text>
+
+<!-- Small atom illustration -->
+<g transform="translate(210 390)">
+  <ellipse rx="105" ry="43" transform="rotate(35)" class="line"></ellipse>
+  <ellipse rx="105" ry="43" transform="rotate(-35)" class="line"></ellipse>
+  <ellipse rx="105" ry="43" class="line"></ellipse>
+  <circle cx="0" cy="0" r="13" class="red"></circle>
+  <circle cx="-12" cy="-10" r="12" class="blue"></circle>
+  <circle cx="13" cy="-10" r="12" class="red"></circle>
+  <circle cx="-12" cy="12" r="12" class="blue"></circle>
+  <circle cx="13" cy="12" r="12" class="gold"></circle>
+  <circle cx="104" cy="0" r="7" class="blue"></circle>
+  <circle cx="-74" cy="-64" r="7" class="blue"></circle>
+  <circle cx="-75" cy="64" r="7" class="blue"></circle>
+</g>
+<text x="210" y="490" text-anchor="middle" class="small">Simplified atomic model</text>
+
+<text x="370" y="300" class="heading">Electron (e⁻)</text>
+<text x="370" y="325" class="body">Negative charge (−1e)</text>
+<text x="370" y="349" class="small">Occupies atomic orbitals around the nucleus.</text>
+<text x="370" y="392" class="heading">Nucleus</text>
+<text x="370" y="417" class="body">Contains protons and neutrons.</text>
+<text x="370" y="460" class="heading">Atomic number (Z)</text>
+<text x="570" y="460" class="body">Number of protons.</text>
+<text x="370" y="495" class="heading">Mass number (A)</text>
+<text x="570" y="495" class="body">Protons + neutrons.</text>
+<text x="370" y="530" class="small">Isotopes: same Z, different neutron count.</text>
+
+<!-- Nucleons -->
+<rect x="810" y="215" width="735" height="340" rx="9" class="panel"></rect>
+<rect x="810" y="215" width="735" height="45" rx="7" fill="#514333"></rect>
+<text x="835" y="246" class="section">02 · PROTONS &amp; NEUTRONS</text>
+
+<!-- Proton -->
+<g transform="translate(1000 370)">
+  <circle cx="-23" cy="-15" r="24" class="red"></circle>
+  <circle cx="22" cy="-15" r="24" class="blue"></circle>
+  <circle cx="0" cy="25" r="24" class="red"></circle>
+  <text x="-23" y="-9" text-anchor="middle" class="particle">u</text>
+  <text x="22" y="-9" text-anchor="middle" class="particle">u</text>
+  <text x="0" y="31" text-anchor="middle" class="particle">d</text>
+</g>
+<text x="1000" y="435" text-anchor="middle" class="heading">Proton (p⁺)</text>
+<text x="1000" y="460" text-anchor="middle" class="body">uud · charge +1e</text>
+<text x="1000" y="485" text-anchor="middle" class="small">Two up quarks, one down quark</text>
+
+<!-- Neutron -->
+<g transform="translate(1350 370)">
+  <circle cx="-23" cy="-15" r="24" class="blue"></circle>
+  <circle cx="22" cy="-15" r="24" class="red"></circle>
+  <circle cx="0" cy="25" r="24" class="blue"></circle>
+  <text x="-23" y="-9" text-anchor="middle" class="particle">u</text>
+  <text x="22" y="-9" text-anchor="middle" class="particle">d</text>
+  <text x="0" y="31" text-anchor="middle" class="particle">d</text>
+</g>
+<text x="1350" y="435" text-anchor="middle" class="heading">Neutron (n⁰)</text>
+<text x="1350" y="460" text-anchor="middle" class="body">udd · charge 0</text>
+<text x="1350" y="485" text-anchor="middle" class="small">One up quark, two down quarks</text>
+<text x="1175" y="530" text-anchor="middle" class="small">Protons and neutrons are collectively called nucleons.</text>
+
+<!-- Quarks -->
+<rect x="55" y="575" width="735" height="355" rx="9" class="panel"></rect>
+<rect x="55" y="575" width="735" height="45" rx="7" fill="#514333"></rect>
+<text x="80" y="606" class="section">03 · THE SIX QUARK FLAVOURS</text>
+<text x="80" y="650" class="small">Elementary matter particles · carry fractional electric charge</text>
+
+<g>
+  <circle cx="160" cy="710" r="30" class="red"></circle>
+  <text x="160" y="716" text-anchor="middle" class="particle">u</text>
+  <text x="160" y="762" text-anchor="middle" class="heading">Up</text>
+  <text x="160" y="786" text-anchor="middle" class="small">+⅔e</text>
+
+  <circle cx="370" cy="710" r="30" class="blue"></circle>
+  <text x="370" y="716" text-anchor="middle" class="particle">d</text>
+  <text x="370" y="762" text-anchor="middle" class="heading">Down</text>
+  <text x="370" y="786" text-anchor="middle" class="small">−⅓e</text>
+
+  <circle cx="580" cy="710" r="30" class="green"></circle>
+  <text x="580" y="716" text-anchor="middle" class="particle">c</text>
+  <text x="580" y="762" text-anchor="middle" class="heading">Charm</text>
+  <text x="580" y="786" text-anchor="middle" class="small">+⅔e</text>
+
+  <circle cx="160" cy="850" r="30" class="gold"></circle>
+  <text x="160" y="856" text-anchor="middle" class="particle">s</text>
+  <text x="160" y="902" text-anchor="middle" class="heading">Strange</text>
+  <text x="160" y="922" text-anchor="middle" class="small">−⅓e</text>
+
+  <circle cx="370" cy="850" r="30" class="red"></circle>
+  <text x="370" y="856" text-anchor="middle" class="particle">t</text>
+  <text x="370" y="902" text-anchor="middle" class="heading">Top</text>
+  <text x="370" y="922" text-anchor="middle" class="small">+⅔e</text>
+
+  <circle cx="580" cy="850" r="30" class="purple"></circle>
+  <text x="580" y="856" text-anchor="middle" class="particle">b</text>
+  <text x="580" y="902" text-anchor="middle" class="heading">Bottom</text>
+  <text x="580" y="922" text-anchor="middle" class="small">−⅓e</text>
+</g>
+
+<!-- Gluons -->
+<rect x="810" y="575" width="735" height="355" rx="9" class="panel"></rect>
+<rect x="810" y="575" width="735" height="45" rx="7" fill="#514333"></rect>
+<text x="835" y="606" class="section">04 · GLUONS &amp; COLOUR CHARGE</text>
+
+<!-- stylized gluon lines -->
+<g fill="none" stroke-width="5" stroke-linecap="round">
+  <path d="M900 700 q20 -35 40 0 t40 0 t40 0" stroke="#b85c46"></path>
+  <path d="M900 755 q20 -35 40 0 t40 0 t40 0" stroke="#638b65"></path>
+  <path d="M900 810 q20 -35 40 0 t40 0 t40 0" stroke="#527eaa"></path>
+  <path d="M900 865 q20 -35 40 0 t40 0 t40 0" stroke="#c58b37"></path>
+</g>
+<text x="1100" y="700" class="heading">Gluon (g)</text>
+<text x="1100" y="730" class="body">Carrier of the strong interaction.</text>
+<text x="1100" y="770" class="body">Eight gluon states.</text>
+<text x="1100" y="810" class="body">Carries colour charge itself.</text>
+<text x="1100" y="850" class="body">Binds quarks inside hadrons.</text>
+<text x="1100" y="895" class="small">Colour labels: red, green and blue — not literal colours.</text>
+
+<!-- Leptons -->
+<rect x="55" y="950" width="735" height="300" rx="9" class="panel"></rect>
+<rect x="55" y="950" width="735" height="45" rx="7" fill="#514333"></rect>
+<text x="80" y="981" class="section">05 · LEPTONS</text>
+<text x="80" y="1025" class="small">Elementary fermions that do not experience the strong interaction.</text>
+
+<g>
+  <circle cx="130" cy="1080" r="18" class="blue"></circle>
+  <text x="165" y="1087" class="body">Electron (e⁻)</text>
+  <circle cx="130" cy="1125" r="18" class="red"></circle>
+  <text x="165" y="1132" class="body">Muon (μ⁻)</text>
+  <circle cx="130" cy="1170" r="18" class="green"></circle>
+  <text x="165" y="1177" class="body">Tau (τ⁻)</text>
+  <line x1="390" y1="1045" x2="390" y2="1210" class="dash"></line>
+  <text x="425" y="1075" class="heading">Neutrinos</text>
+  <text x="425" y="1110" class="body">Electron neutrino (νₑ)</text>
+  <text x="425" y="1145" class="body">Muon neutrino (νμ)</text>
+  <text x="425" y="1180" class="body">Tau neutrino (ντ)</text>
+  <text x="425" y="1220" class="small">Neutral electric charge; very small masses.</text>
+</g>
+
+<!-- Bosons -->
+<rect x="810" y="950" width="735" height="300" rx="9" class="panel"></rect>
+<rect x="810" y="950" width="735" height="45" rx="7" fill="#514333"></rect>
+<text x="835" y="981" class="section">06 · BOSONS</text>
+<text x="835" y="1025" class="small">Integer-spin particles; includes force carriers and the Higgs boson.</text>
+<g>
+  <path d="M850 1070 q15 -20 30 0 t30 0 t30 0" stroke="#c58b37" stroke-width="4" fill="none"></path>
+  <text x="970" y="1077" class="body">Photon (γ) — electromagnetic</text>
+  <path d="M850 1115 q15 -20 30 0 t30 0 t30 0" stroke="#b85c46" stroke-width="4" fill="none"></path>
+  <text x="970" y="1122" class="body">Gluons (g) — strong</text>
+  <path d="M850 1160 q15 -20 30 0 t30 0 t30 0" stroke="#806a98" stroke-width="4" fill="none"></path>
+  <text x="970" y="1167" class="body">W⁺, W⁻, Z⁰ — weak</text>
+  <circle cx="870" cy="1210" r="14" class="gold"></circle>
+  <text x="970" y="1217" class="body">Higgs boson (H) — Higgs field</text>
+</g>
+
+<!-- Hadrons -->
+<rect x="55" y="1270" width="735" height="170" rx="9" class="panel"></rect>
+<rect x="55" y="1270" width="735" height="42" rx="7" fill="#514333"></rect>
+<text x="80" y="1300" class="section">07 · HADRONS</text>
+<text x="85" y="1345" class="heading">Baryons</text>
+<text x="85" y="1372" class="body">Three quarks</text>
+<text x="85" y="1402" class="small">Proton · Neutron</text>
+<g transform="translate(300 1370)">
+  <circle cx="-20" cy="-10" r="17" class="red"></circle>
+  <circle cx="20" cy="-10" r="17" class="blue"></circle>
+  <circle cx="0" cy="20" r="17" class="green"></circle>
+</g>
+<line x1="400" y1="1325" x2="400" y2="1420" class="dash"></line>
+<text x="445" y="1345" class="heading">Mesons</text>
+<text x="445" y="1372" class="body">Quark + antiquark</text>
+<text x="445" y="1402" class="small">Pions · Kaons</text>
+<g transform="translate(680 1370)">
+  <circle cx="-18" cy="0" r="19" class="red"></circle>
+  <circle cx="25" cy="0" r="19" class="purple"></circle>
+</g>
+
+<!-- Interactions -->
+<rect x="810" y="1270" width="735" height="170" rx="9" class="panel"></rect>
+<rect x="810" y="1270" width="735" height="42" rx="7" fill="#514333"></rect>
+<text x="835" y="1300" class="section">08 · FUNDAMENTAL INTERACTIONS</text>
+<g>
+  <rect x="835" y="1325" width="160" height="90" rx="6" class="red"></rect>
+  <text x="915" y="1355" text-anchor="middle" class="heading">Strong</text>
+  <text x="915" y="1385" text-anchor="middle" class="small">Gluons</text>
+  <rect x="1010" y="1325" width="160" height="90" rx="6" class="gold"></rect>
+  <text x="1090" y="1355" text-anchor="middle" class="heading">EM</text>
+  <text x="1090" y="1385" text-anchor="middle" class="small">Photon</text>
+  <rect x="1185" y="1325" width="160" height="90" rx="6" class="blue"></rect>
+  <text x="1265" y="1355" text-anchor="middle" class="heading">Weak</text>
+  <text x="1265" y="1385" text-anchor="middle" class="small">W and Z</text>
+  <rect x="1360" y="1325" width="160" height="90" rx="6" class="green"></rect>
+  <text x="1440" y="1355" text-anchor="middle" class="heading">Gravity</text>
+  <text x="1440" y="1385" text-anchor="middle" class="small">Not in SM</text>
+</g>
+
+<!-- Footer -->
+<path d="M100 1455 H1500" class="line"></path>
+<text x="800" y="1480" text-anchor="middle" class="tiny">Conceptual educational diagram · Not to scale · The graviton remains hypothetical</text>
+</svg>

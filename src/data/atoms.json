@@ -1,0 +1,2532 @@
+{
+  "diagrams": [
+    {
+      "id": "atom",
+      "title": "مصطلحات الذرّة",
+      "titleEn": "Atom terminology",
+      "intro": "من الذرّة إلى الكواركات واللبتونات والبوزونات: خريطة تفاعلية لمصطلحات بنية المادة والقوى الأساسية.",
+      "root": {
+        "term": "atom-terminology",
+        "note": "تسعة وثلاثون مصطلحًا تربط بنية الذرّة بالجسيمات الأولية والقوى الأساسية."
+      },
+      "groups": [
+        {
+          "term": "atomic-structure",
+          "accent": "accent",
+          "note": "الذرّة متعادلة كهربائيًا حين يتساوى عدد الإلكترونات مع عدد البروتونات.",
+          "branches": [
+            {
+              "label": "مكوّنات الذرّة",
+              "columns": [
+                {
+                  "term": "electron",
+                  "note": "جسيم سالب الشحنة"
+                },
+                {
+                  "term": "nucleus",
+                  "note": "مركز الذرّة الموجب"
+                },
+                {
+                  "term": "atomic-number",
+                  "note": "عدد البروتونات (Z)"
+                },
+                {
+                  "term": "mass-number",
+                  "note": "مجموع النويات (A)"
+                },
+                {
+                  "term": "isotopes",
+                  "note": "اختلاف عدد النيوترونات"
+                }
+              ]
+            }
+          ],
+          "roles": [
+            "الذرّة المتعادلة: عدد الإلكترونات يساوي عدد البروتونات.",
+            "النواة: تجمع البروتونات والنيوترونات وتحمل معظم الكتلة.",
+            "النظائر: ذرات العنصر نفسه تختلف في عدد النيوترونات."
+          ]
+        },
+        {
+          "term": "nucleons",
+          "accent": "secondary",
+          "note": "البروتون والنيوترون نوعان من النويات يختلفان في الشحنة.",
+          "branches": [
+            {
+              "label": "البروتون والنيوترون",
+              "columns": [
+                {
+                  "term": "proton",
+                  "note": "شحنة موجبة +1"
+                },
+                {
+                  "term": "neutron",
+                  "note": "شحنة متعادلة 0"
+                }
+              ]
+            }
+          ],
+          "roles": [
+            "البروتون: تركيب uud وشحنة +1.",
+            "النيوترون: تركيب udd وشحنة 0.",
+            "كتلة النوية تُقاس بوحدات الكتلة الذرية (u)."
+          ]
+        },
+        {
+          "term": "quarks",
+          "accent": "ink",
+          "note": "ست نكهات موزعة على ثلاثة أجيال، ولا تُرصد منفردة.",
+          "branches": [
+            {
+              "label": "نكهات الكوارك الست",
+              "columns": [
+                {
+                  "term": "up-quark",
+                  "note": "+2/3 • الجيل الأول"
+                },
+                {
+                  "term": "down-quark",
+                  "note": "−1/3 • الجيل الأول"
+                },
+                {
+                  "term": "charm-quark",
+                  "note": "+2/3 • الجيل الثاني"
+                },
+                {
+                  "term": "strange-quark",
+                  "note": "−1/3 • الجيل الثاني"
+                },
+                {
+                  "term": "top-quark",
+                  "note": "+2/3 • الجيل الثالث"
+                },
+                {
+                  "term": "bottom-quark",
+                  "note": "−1/3 • الجيل الثالث"
+                }
+              ]
+            }
+          ],
+          "roles": [
+            "الشحنة الكسرية: +2/3 للعلوي والساحر والقمي، و−1/3 للسفلي والغريب والقاعي.",
+            "الحجز اللوني: لا توجد كواركات حرة في الطبيعة.",
+            "الأجيال الثلاثة: (u,d) ثم (c,s) ثم (t,b)."
+          ]
+        },
+        {
+          "term": "gluon",
+          "accent": "accent",
+          "note": "حامل القوة الشديدة وأحد البوزونات الأولية.",
+          "branches": [
+            {
+              "label": "الشحنة اللونية",
+              "columns": [
+                {
+                  "term": "colour-charge",
+                  "note": "خاصية التفاعل القوي"
+                }
+              ],
+              "items": [
+                "ثماني حالات للغلوون",
+                "يحمل الشحنة اللونية بنفسه",
+                "يربط الكواركات داخل الهادرونات"
+              ]
+            }
+          ],
+          "roles": [
+            "الغلوون عديم الكتلة تقريبًا وعديم الشحنة الكهربائية.",
+            "عدد حالات الغلوون ثماني بحسب زمرة SU(3).",
+            "الحجز اللوني يمنع رصد الكواركات والغلوونات منفردة."
+          ]
+        },
+        {
+          "term": "leptons",
+          "accent": "secondary",
+          "note": "ثلاثة أجيال من اللبتونات المشحونة تقابلها ثلاثة نيوترينوات.",
+          "branches": [
+            {
+              "label": "اللبتونات المشحونة",
+              "columns": [
+                {
+                  "term": "electron",
+                  "note": "الجيل الأول"
+                },
+                {
+                  "term": "muon",
+                  "note": "الجيل الثاني"
+                },
+                {
+                  "term": "tau",
+                  "note": "الجيل الثالث"
+                }
+              ]
+            },
+            {
+              "term": "neutrinos",
+              "columns": [
+                {
+                  "term": "electron-neutrino",
+                  "note": "νe"
+                },
+                {
+                  "term": "muon-neutrino",
+                  "note": "νμ"
+                },
+                {
+                  "term": "tau-neutrino",
+                  "note": "ντ"
+                }
+              ]
+            }
+          ],
+          "roles": [
+            "الإلكترون والميون والتاو لبتونات مشحونة سالبة.",
+            "لكل لبتون مشحون نيوترينو مرافق.",
+            "اللبتونات لا تخضع للقوة الشديدة."
+          ]
+        },
+        {
+          "term": "bosons",
+          "accent": "ink",
+          "note": "حاملات القوى الأساسية وبوزون هيغز.",
+          "branches": [
+            {
+              "label": "حاملات القوى",
+              "columns": [
+                {
+                  "term": "photon",
+                  "note": "الكهرومغناطيسية"
+                },
+                {
+                  "term": "w-boson",
+                  "note": "الضعيفة • W±"
+                },
+                {
+                  "term": "z-boson",
+                  "note": "الضعيفة • Z0"
+                },
+                {
+                  "term": "gluon",
+                  "note": "الشديدة"
+                }
+              ]
+            },
+            {
+              "label": "بوزون هيغز",
+              "columns": [
+                {
+                  "term": "higgs-boson",
+                  "note": "آلية اكتساب الكتلة"
+                }
+              ]
+            }
+          ],
+          "roles": [
+            "الفوتون يحمل الكهرومغناطيسية.",
+            "بوزونا W وZ يحملان القوة الضعيفة.",
+            "الغلوون يحمل القوة الشديدة.",
+            "بوزون هيغز يرتبط بآلية اكتساب الكتلة."
+          ]
+        },
+        {
+          "term": "hadrons",
+          "accent": "accent",
+          "note": "جسيمات مركّبة تخضع للقوة الشديدة.",
+          "branches": [
+            {
+              "label": "تصنيف الهادرونات",
+              "columns": [
+                {
+                  "term": "baryons",
+                  "note": "ثلاثة كواركات"
+                },
+                {
+                  "term": "mesons",
+                  "note": "كوارك ونقيضه"
+                }
+              ],
+              "items": [
+                "البيونات",
+                "الكاونات"
+              ],
+              "terms": [
+                "proton",
+                "neutron"
+              ]
+            }
+          ],
+          "roles": [
+            "الباريونات: ثلاثة كواركات، ومنها البروتون والنيوترون.",
+            "الميزونات: كوارك ونقيضه، ومنها البيونات والكاونات.",
+            "عدد الكواركات يحدد إن كان الهادرون باريونًا أو ميزونًا."
+          ]
+        },
+        {
+          "term": "fundamental-interactions",
+          "accent": "secondary",
+          "note": "أربع قوى تفسّر تفاعلات المادة على المستوى الأساسي.",
+          "branches": [
+            {
+              "label": "القوى الأربع",
+              "columns": [
+                {
+                  "term": "strong-interaction",
+                  "note": "تربط الكواركات"
+                },
+                {
+                  "term": "electromagnetic-interaction",
+                  "note": "تؤثر في الشحنات"
+                },
+                {
+                  "term": "weak-interaction",
+                  "note": "التحلل بيتا"
+                },
+                {
+                  "term": "gravity",
+                  "note": "تجذب الكتل"
+                }
+              ]
+            }
+          ],
+          "roles": [
+            "الشديدة: تربط الكواركات والنويات.",
+            "الكهرومغناطيسية: تؤثر في الشحنات الكهربائية.",
+            "الضعيفة: مسؤولة عن التحلل بيتا.",
+            "الجاذبية: تجذب الكتل وتتحكم في البنى الكونية."
+          ]
+        }
+      ],
+      "footer": "خريطة مصطلحات الذرّة: من النواة والإلكترونات إلى الكواركات واللبتونات والبوزونات والقوى الأربع. الأسماء الأجنبية هنا إشارات اصطلاحية، والشرح بالعربية."
+    }
+  ],
+  "terms": {
+    "atom-terminology": {
+      "ar": "مصطلحات الذرّة",
+      "en": "Atom terminology",
+      "origin": "مركّب من «الذرّة» نسبةً إلى الذرّ، و«المصطلحات» جمع مصطلح بمعنى اصطلاح.",
+      "arabicMeaning": "مجموعة الألفاظ الاصطلاحية التي تصف بنية الذرّة ومكوّناتها والقوى المؤثرة فيها.",
+      "description": "تجمع هذه الخريطة تسعة وثلاثين مفهومًا تبدأ من النواة والإلكترونات، وتمتد إلى الكواركات واللبتونات والبوزونات، ثم إلى الهادرونات والقوى الأساسية الأربع.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Atom"
+        }
+      ],
+      "translations": [
+        {
+          "term": "مصطلحات الذرّة",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "المصطلحات الذرية",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "مصطلحات المادة الذرية",
+          "note": "صياغة أوسع تميّزها عن مصطلحات الجدول الدوري.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Atomterminologie",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "atomiterminologia",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "atomterminológia",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "atom terminolojisi",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "atomic-structure": {
+      "ar": "البنية الذرّية",
+      "en": "Atomic structure",
+      "origin": "«بنية» من الجذر ب-ن-ي بمعنى البناء، و«ذرّية» نسبةً إلى الذرّة.",
+      "arabicMeaning": "تنظيم مكوّنات الذرّة من نواة وإلكترونات وما يحيط بها من حقول.",
+      "description": "تتحدد البنية الذرية بعدد البروتونات والنيوترونات في النواة، وبتوزيع الإلكترونات في مستويات الطاقة المحيطة بها.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Atomic_structure"
+        }
+      ],
+      "translations": [
+        {
+          "term": "البنية الذرّية",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "بنية الذرة",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "التركيب الذري",
+          "note": "بديل شائع يجمع البنية والمكوّنات.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Atomaufbau",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "atomin rakenne",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "atomszerkezet",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "atom yapısı",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "electron": {
+      "ar": "الإلكترون",
+      "en": "Electron",
+      "origin": "من اليونانية ēlektron بمعنى الكهرمان، لأنّ دلك الكهرمان يولّد شحنة كهربائية.",
+      "arabicMeaning": "جسيم أولي سالب الشحنة يدور حول النواة ويشارك في الروابط الكيميائية.",
+      "description": "كتلته أصغر بنحو 1836 مرة من كتلة البروتون، ويحمل شحنة سالبة مقدارها وحدة شحنة أولية واحدة. يحدد توزيعه الخواص الكيميائية للذرّة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Electron"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الإلكترون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الكُهَيرب",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكُهَيرب",
+          "note": "صياغة عربية مقترحة تختصر «الإلكترون».",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "قُبَيْسُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الآيسلندية",
+          "code": "is",
+          "term": "rafeind",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الصينية",
+          "code": "cn",
+          "term": "电子 (diànzǐ)",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "전자 (jeonja)",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الفيتنامية",
+          "code": "vt",
+          "term": "điện tử",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "nucleus": {
+      "ar": "النواة",
+      "en": "Nucleus",
+      "origin": "من اللاتينية nucleus بمعنى البذرة أو النواة، ومنها الفرنسية noyau والإنجليزية nucleus. أما «النواة» العربية فمن الجذر ن-و-ي بمعنى الأصل أو المركز.",
+      "arabicMeaning": "المركز الموجب الشحنة في الذرّة الذي يحوي البروتونات والنيوترونات.",
+      "description": "تقارب النواة فائق ويتطلب طاقة ربط كبيرة؛ وهي تشغل حيزًا صغيرًا جدًا من حجم الذرّة لكنها تحوي معظم كتلتها.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Atomic_nucleus"
+        }
+      ],
+      "translations": [
+        {
+          "term": "النواة الذرية",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "النواة",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "نواة الذرّة",
+          "note": "تقييد المصطلح بالسياق الذري.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Atomkern",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الآيسلندية",
+          "code": "is",
+          "term": "atómkjarni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "ydin",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "atommag",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "atomic-number": {
+      "ar": "العدد الذري",
+      "en": "Atomic number (Z)",
+      "origin": "«عدد» من الجذر ع-د-د، و«ذري» نسبةً إلى الذرّة، ترجمةً لـ atomic number.",
+      "arabicMeaning": "عدد البروتونات في نواة الذرّة، ويُرمز له بالحرف Z.",
+      "description": "يحدد العدد الذري موقع العنصر في الجدول الدوري وهويته الكيميائية، فلا يمكن لعنصرين أن يتساويا فيه.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Atomic_number"
+        }
+      ],
+      "translations": [
+        {
+          "term": "العدد الذري",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "عدد البروتونات",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "العدد الذري (Z)",
+          "note": "إضافة الرمز Z تسهّل الربط بالمعادلات.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Ordnungszahl",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "järjestysluku",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "rendszám",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "atom numarası",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "mass-number": {
+      "ar": "العدد الكتلي",
+      "en": "Mass number (A)",
+      "origin": "«كتلي» نسبةً إلى الكتلة، ترجمةً لـ mass number.",
+      "arabicMeaning": "مجموع عدد البروتونات والنيوترونات في نواة الذرّة، ويُرمز له بالحرف A.",
+      "description": "يقارب العدد الكتلي الكتلة الذرية مقاسةً بوحدات الكتلة الذرية، ويختلف بين نظائر العنصر نفسه.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Mass_number"
+        }
+      ],
+      "translations": [
+        {
+          "term": "العدد الكتلي",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "عدد النويات",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "العدد الكتلي (A)",
+          "note": "إضافة الرمز A لتوحيد الصياغة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Massenzahl",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "massaluku",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "tömegszám",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "kütle numarası",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "isotopes": {
+      "ar": "النظائر",
+      "en": "Isotopes",
+      "origin": "من اليونانية isos (متساوٍ) وtopos (موضع)، لأنها تشغل الموضع نفسه في الجدول الدوري.",
+      "arabicMeaning": "ذرات العنصر نفسه تتفق في عدد البروتونات وتختلف في عدد النيوترونات.",
+      "description": "تتشابه النظائر كيميائيًا وتختلف في الكتلة والاستقرار النووي، وقد تكون بعضها مشعًا. يُشار إليها بعدد الكتلة المميز لكل نظير.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Isotope"
+        }
+      ],
+      "translations": [
+        {
+          "term": "النظائر",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "نظائر العنصر",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "النظائر الذرية",
+          "note": "تقييد المصطلح بالمجال الذري.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Isotope",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "isotoopit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "izotópok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "izotoplar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "nucleons": {
+      "ar": "النويات",
+      "en": "Nucleons",
+      "origin": "من اللاتينية nucleus (نواة)، بزيادة النسبة الدالة على الوحدة.",
+      "arabicMeaning": "البروتونات والنيوترونات بوصفها مكوّنات النواة المشتركة.",
+      "description": "يرتبط النويات معًا بالقوة الشديدة، ويحدد مجموعها العدد الكتلي، بينما يحدد عدد البروتونات وحدها العدد الذري.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Nucleon"
+        }
+      ],
+      "translations": [
+        {
+          "term": "النويات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "جسيمات النواة",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "نويات الذرة",
+          "note": "صياغة توضيحية لمن لا يعرف «النويات».",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Nukleonen",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "nukleonit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "nukleonok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "nükleonlar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "proton": {
+      "ar": "البروتون",
+      "en": "Proton",
+      "origin": "من اليونانية prōton بمعنى «الأول»، لأنه أول جسيم نووي اكتُشف.",
+      "arabicMeaning": "جسيم نووي موجب الشحنة، وهو نواة ذرّة الهيدروجين.",
+      "description": "يتكوّن البروتون من كواركين علويين وكوارك سفلي واحد (uud)، وتعادل شحنته الموجبة شحنة الإلكترون السالبة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Proton"
+        }
+      ],
+      "translations": [
+        {
+          "term": "البروتون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيم النووي الموجب",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيم النووي الموجب",
+          "note": "وصف تحريري يبرز موضعه وشحنته.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "أُوَيْلُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Proton",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الآيسلندية",
+          "code": "is",
+          "term": "róteind",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "protoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "proton",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "neutron": {
+      "ar": "النيوترون",
+      "en": "Neutron",
+      "origin": "من اللاتينية neuter بمعنى «محايد»، لأنه لا يحمل شحنة كهربائية.",
+      "arabicMeaning": "جسيم نووي متعادل الشحنة يزيد استقرار النواة وكتلتها.",
+      "description": "يتكوّن النيوترون من كوارك علوي واثنين من الكواركات السفلية (udd). النيوترون الحر غير مستقر ويتحول إلى بروتون وإلكترون ونقيض نيوترينو.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Neutron"
+        }
+      ],
+      "translations": [
+        {
+          "term": "النيوترون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيم النووي المتعادل",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيم النووي المتعادل",
+          "note": "وصف تحريري يبرز موضعه وتعاده.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "عُدَيْلُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Neutron",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الآيسلندية",
+          "code": "is",
+          "term": "nifteind",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "neutroni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "neutron",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "quarks": {
+      "ar": "الكواركات",
+      "en": "Quarks",
+      "origin": "اسم اختاره الفيزيائي موراي جيلمان من رواية جيمس جويس، ومعناه الأصلي غير محدّد.",
+      "arabicMeaning": "جسيمات أولية هي المكوّنات الأساسية للهادرونات مثل البروتون والنيوترون.",
+      "description": "ترتبط الكواركات بالقوة الشديدة ولا تُرصد منفردة بسبب الحجز اللوني. تأتي بست نكهات وثلاثة ألوان، وشحنتها الكهربائية كسرية.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكواركات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الكواركات الأولية",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكواركات الأولية",
+          "note": "تقييد المصطلح بوصفه جسيمات أولية.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "فُلَيْعُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Quarks",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "kvarkit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "kvarkok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "kuarklar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "up-quark": {
+      "ar": "الكوارك العلوي",
+      "en": "Up quark",
+      "origin": "«العلوي» ترجمةً لـ up، وهي تسمية اصطلاحية لكوارك من الجيل الأول.",
+      "arabicMeaning": "الكوارك العلوي شحنته +2/3 من شحنة الإلكترون، وينتمي إلى الجيل الأول.",
+      "description": "يُرمز له بالحرف u، ويشكّل مع الكوارك السفلي البروتونات والنيوترونات. وهو أخف الكواركات كتلةً.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Up_quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكوارك العلوي",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الكوارك الأعلى",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكوارك العلوي (u)",
+          "note": "إضافة الرمز u عند الحاجة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Up-Quark",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الصينية",
+          "code": "zh",
+          "term": "上夸克",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "اليابانية",
+          "code": "ja",
+          "term": "アップクォーク",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "업 쿼크",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "down-quark": {
+      "ar": "الكوارك السفلي",
+      "en": "Down quark",
+      "origin": "«السفلي» ترجمةً لـ down، وهي تسمية اصطلاحية لكوارك من الجيل الأول.",
+      "arabicMeaning": "الكوارك السفلي شحنته -1/3 من شحنة الإلكترون، وينتمي إلى الجيل الأول.",
+      "description": "يُرمز له بالحرف d، ويسهم مع الكوارك العلوي في بناء النويات. وجوده في النيوترون يفسّر شحنته المتعادلة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Down_quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكوارك السفلي",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الكوارك الأدنى",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكوارك السفلي (d)",
+          "note": "إضافة الرمز d عند الحاجة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Down-Quark",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الصينية",
+          "code": "zh",
+          "term": "下夸克",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "اليابانية",
+          "code": "ja",
+          "term": "ダウンクォーク",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "다운 쿼크",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "charm-quark": {
+      "ar": "الكوارك الساحر",
+      "en": "Charm quark",
+      "origin": "«الساحر» ترجمةً لـ charm، وهي تسمية اصطلاحية لكوارك من الجيل الثاني.",
+      "arabicMeaning": "الكوارك الساحر شحنته +2/3 من شحنة الإلكترون، وينتمي إلى الجيل الثاني.",
+      "description": "يُرمز له بالحرف c، وكتلته أكبر بكثير من كتلة الكوارك العلوي. يظهر في الهادرونات الثقيلة مثل الميزون J/ψ.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Charm_quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكوارك الساحر",
+          "source": "المعجم الفيزيائي"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكوارك الساحر (c)",
+          "note": "إضافة الرمز c عند الحاجة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Charm-Quark",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الصينية",
+          "code": "zh",
+          "term": "粲夸克",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "اليابانية",
+          "code": "ja",
+          "term": "チャームクォーク",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "참 쿼크",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "strange-quark": {
+      "ar": "الكوارك الغريب",
+      "en": "Strange quark",
+      "origin": "«الغريب» ترجمةً لـ strange، وهي تسمية اصطلاحية لكوارك من الجيل الثاني.",
+      "arabicMeaning": "الكوارك الغريب شحنته -1/3 من شحنة الإلكترون، وينتمي إلى الجيل الثاني.",
+      "description": "يُرمز له بالحرف s، ويُعدّ مسؤولًا عن غرابة الهادرونات. له نقيض هو الكوارك الغريب المضاد.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Strange_quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكوارك الغريب",
+          "source": "المعجم الفيزيائي"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكوارك الغريب (s)",
+          "note": "إضافة الرمز s عند الحاجة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Strange-Quark",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الصينية",
+          "code": "zh",
+          "term": "奇异夸克",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "اليابانية",
+          "code": "ja",
+          "term": "ストレンジクォーク",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "스트레인지 쿼크",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "top-quark": {
+      "ar": "الكوارك القمي",
+      "en": "Top quark",
+      "origin": "«القمي» ترجمةً لـ top، وهي تسمية اصطلاحية لكوارك من الجيل الثالث.",
+      "arabicMeaning": "الكوارك القمي شحنته +2/3 من شحنة الإلكترون، وينتمي إلى الجيل الثالث.",
+      "description": "يُرمز له بالحرف t، وكتلته قريبة من كتلة ذرّة الذهب تقريبًا. عمره قصير جدًا فيتحلل قبل أن يتشكّل هادرون.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Top_quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكوارك القمي",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "كوارك القمة",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكوارك القمي (t)",
+          "note": "إضافة الرمز t عند الحاجة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Top-Quark",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الصينية",
+          "code": "zh",
+          "term": "顶夸克",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "اليابانية",
+          "code": "ja",
+          "term": "トップクォーク",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "톱 쿼크",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "bottom-quark": {
+      "ar": "الكوارك القاعي",
+      "en": "Bottom quark",
+      "origin": "«القاعي» ترجمةً لـ bottom، وهي تسمية اصطلاحية لكوارك من الجيل الثالث.",
+      "arabicMeaning": "الكوارك القاعي شحنته -1/3 من شحنة الإلكترون، وينتمي إلى الجيل الثالث.",
+      "description": "يُرمز له بالحرف b، ويظهر في الميزونات الثقيلة وفي تحللات الجسيمات. يُعدّ ثاني أثقل كوارك بعد القمي.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Bottom_quark"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الكوارك القاعي",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "كوارك القاع",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكوارك القاعي (b)",
+          "note": "إضافة الرمز b عند الحاجة.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Bottom-Quark",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الصينية",
+          "code": "zh",
+          "term": "底夸克",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "اليابانية",
+          "code": "ja",
+          "term": "ボトムクォーク",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الكورية",
+          "code": "ko",
+          "term": "바텀 쿼크",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "gluon": {
+      "ar": "الغلوون",
+      "en": "Gluon",
+      "origin": "من الإنجليزية glue (غراء)، لأنه «يلصق» الكواركات داخل الهادرونات.",
+      "arabicMeaning": "بوزون أولي يحمل القوة الشديدة ويربط الكواركات معًا.",
+      "description": "الغلوون متعادل الشحنة الكهربائية لكنه يحمل شحنة لونية، لذا يتفاعل مع نفسه. ينتقل بين الكواركات ويحافظ على الحجز اللوني.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Gluon"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الغلوون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيم اللاصق",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيم اللاصق",
+          "note": "ترجمة وصفية لدور الغلوون في ربط الكواركات.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "دُبَقْيُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Gluon",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "gluoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الايسلندية",
+          "code": "fe",
+          "term": "Límeind",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "gluon",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "gluon",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "colour-charge": {
+      "ar": "الشحنة اللونية",
+      "en": "Colour charge",
+      "origin": "«لونية» استعارة اصطلاحية من الألوان لتمييز حالات الشحنة القوية، لا لونًا بصريًا.",
+      "arabicMeaning": "خاصية كمية تحملها الكواركات والغلوونات وتحدد تفاعلها بالقوة الشديدة.",
+      "description": "تأتي الشحنة اللونية بثلاث قيم هي الأحمر والأخضر والأزرق مع نظائرها المضادة، وتجتمع في الهادرونات لتكوّن حالة متعادلة لونيًا.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Color_charge"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الشحنة اللونية",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "شحنة اللون",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "شحنة اللون",
+          "note": "بديل عربي صريح يوازي «الشحنة اللونية».",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Farbladung",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "värivaraus",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "színtöltés",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "renk yükü",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "leptons": {
+      "ar": "اللبتونات",
+      "en": "Leptons",
+      "origin": "من اليونانية leptos بمعنى «نحيف» أو «خفيف»، تمييزًا لها عن الهادرونات.",
+      "arabicMeaning": "عائلة من الجسيمات الأولية لا تخضع للقوة الشديدة، ومنها الإلكترون والنيوترينو.",
+      "description": "تضم اللبتونات ستة أنواع موزعة على ثلاثة أجيال، لكل منها نقيض. تتفاعل بالكهرومغناطيسية والضعيفة والجاذبية فقط.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Lepton"
+        }
+      ],
+      "translations": [
+        {
+          "term": "اللبتونات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيمات الخفيفة",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيمات الخفيفة",
+          "note": "وصف تحريري يستند إلى معنى leptos الخفيف.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "شُذَرْيُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Leptonen",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "leptonit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "leptonok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "leptonlar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "muon": {
+      "ar": "الميون",
+      "en": "Muon",
+      "origin": "من الحرف اليوناني mu (μ)، الذي اتُّخذ رمزًا للجسيم ومنه الاسم الإنجليزي muon.",
+      "arabicMeaning": "لبتون ثقيل سالب الشحنة يشبه الإلكترون لكن كتلته أكبر نحو 207 مرات.",
+      "description": "يُرمز له بالحرف μ، وعمره قصير إذ يتحلل إلى إلكترون ونيوترينوات. يصل إلى سطح الأرض بوفرة من الأشعة الكونية.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Muon"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الميون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الميوون",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الميوون",
+          "note": "صيغة نقل صوتي بديلة للميون.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Myon",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "myoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "müon",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "müon",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "tau": {
+      "ar": "التاو",
+      "en": "Tau",
+      "origin": "من الحرف اليوناني tau، إشارةً إلى ثالث لبتون مكتشف.",
+      "arabicMeaning": "لبتون ثقيل سالب الشحنة، وهو أثقل اللبتونات المشحونة.",
+      "description": "يُرمز له بالحرف τ، وكتلته تقارب ضعف كتلة البروتون. عمره بالغ القصر فيتحلل إلى لبتونات أخف ونيوترينوات.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Tau_(particle)"
+        }
+      ],
+      "translations": [
+        {
+          "term": "التاو",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "التاوون",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "التاوون",
+          "note": "صيغة نقل صوتي بديلة للتاو.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Tauon",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "tau-leptoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "tau-lepton",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "tau leptonu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "neutrinos": {
+      "ar": "النيوترينوات",
+      "en": "Neutrinos",
+      "origin": "من الإيطالية neutrino، تصغيرًا لـ neutro بمعنى «محايد».",
+      "arabicMeaning": "لبتونات متعادلة الشحنة خفيفة الكتلة جدًا تتفاعل بالقوة الضعيفة والجاذبية فقط.",
+      "description": "تنتج النيوترينوات في التحللات النووية والتفاعلات الشمسية والانفجارات النجمية. تعبر المادة بسهولة بالغة لقلة تفاعلها.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Neutrino"
+        }
+      ],
+      "translations": [
+        {
+          "term": "النيوترينوات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "النيترينوات",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "النيترينوات",
+          "note": "بديل إملائي مختصر شائع.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Neutrinos",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "neutriinot",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "neutrínók",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "nötrinolar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "electron-neutrino": {
+      "ar": "نيوترينو الإلكترون",
+      "en": "Electron neutrino",
+      "origin": "«الإلكترون» اسم الجسيم المرافق، و«نيوترينو» تصغير محايد.",
+      "arabicMeaning": "النيوترينو الذي يقترن بالإلكترون في التفاعلات الضعيفة.",
+      "description": "يُرمز له بالحرف νe، وينتج في التحلل بيتا السالب والتفاعلات الشمسية. وهو أكثر النيوترينوات وفرةً في الكون.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Electron_neutrino"
+        }
+      ],
+      "translations": [
+        {
+          "term": "نيوترينو الإلكترون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "النيوترينو الإلكتروني",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "نيوترينو الإلكترون (νe)",
+          "note": "إضافة الرمز عند الكتابة الرياضية.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Elektron-Neutrino",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "elektronineutriino",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "elektronneutrínó",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "elektron nötrinosu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "muon-neutrino": {
+      "ar": "نيوترينو الميون",
+      "en": "Muon neutrino",
+      "origin": "سمّي نسبةً إلى الميون، وهو الجسيم المرافق له في الجيل الثاني.",
+      "arabicMeaning": "النيوترينو الذي يقترن بالميون في التفاعلات الضعيفة.",
+      "description": "يُرمز له بالحرف νμ، وينتج مع الميون في تحللات البيونات. أُثبت وجوده تجريبيًا قبل النيوترينو التاوي.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Muon_neutrino"
+        }
+      ],
+      "translations": [
+        {
+          "term": "نيوترينو الميون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "النيوترينو الميوني",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "نيوترينو الميون (νμ)",
+          "note": "إضافة الرمز عند الكتابة الرياضية.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Myon-Neutrino",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "myonineutriino",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "müonneutrínó",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "müon nötrinosu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "tau-neutrino": {
+      "ar": "نيوترينو التاو",
+      "en": "Tau neutrino",
+      "origin": "سمّي نسبةً إلى التاو، وهو الجسيم المرافق له في الجيل الثالث.",
+      "arabicMeaning": "النيوترينو الذي يقترن بالتاو في التفاعلات الضعيفة.",
+      "description": "يُرمز له بالحرف ντ، واكتشافه استغرق وقتًا أطول من النيوترينوات الأخرى. ينتج في تحللات التاو والتفاعلات العالية الطاقة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Tau_neutrino"
+        }
+      ],
+      "translations": [
+        {
+          "term": "نيوترينو التاو",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "النيوترينو التاوي",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "نيوترينو التاو (ντ)",
+          "note": "إضافة الرمز عند الكتابة الرياضية.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Tau-Neutrino",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "tauneutriino",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "tauneutrínó",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "tau nötrinosu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "bosons": {
+      "ar": "البوزونات",
+      "en": "Bosons",
+      "origin": "من اسم الفيزيائي الهندي ساتيندرا ناث بوز، تقديرًا لإسهامه في إحصاء الجسيمات.",
+      "arabicMeaning": "جسيمات ذات لفّ صحيح تحمل القوى وتتوسط في التفاعلات بين الجسيمات.",
+      "description": "لا تخضع البوزونات لمبدأ باولي للاستبعاد، فيمكن أن تتجمع أعداد كبيرة منها في الحالة الكمية نفسها، ومنها الفوتون والغلوون وبوزونات W وZ.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Boson"
+        }
+      ],
+      "translations": [
+        {
+          "term": "البوزونات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيمات الحاملة للقوى",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيمات الحاملة للقوى",
+          "note": "وصف تحريري لدور البوزونات في نقل القوى.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "بوز-وَيُّون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Bosonen",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "bosonit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "bozonok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "bozonlar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "photon": {
+      "ar": "الفوتون",
+      "en": "Photon",
+      "origin": "من اليونانية phōs (ضوء)، بزيادة اللاحقة الدالة على الجسيم.",
+      "arabicMeaning": "كوانت الطاقة الكهرومغناطيسية وحاملها، وكتلته السكونية صفر.",
+      "description": "ينتقل الفوتون بسرعة الضوء ويحمل طاقة تتناسب مع تردده. يمثل التفاعل الكهرومغناطيسي وهو أساس الضوء والإشعاع.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Photon"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الفوتون",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الكمّ الضوئي",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الكمّ الضوئي",
+          "note": "وصف تحريري يبرز كوانت الضوء.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "ضُوَيْئُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Photon",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الآيسلندية",
+          "code": "is",
+          "term": "ljóseind",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "fotoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "foton",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "w-boson": {
+      "ar": "البوزون W",
+      "en": "W boson",
+      "origin": "من الحرف W اختصارًا لـ weak (ضعيف)، لأنه يحمل التفاعل الضعيف.",
+      "arabicMeaning": "بوزون حامل للقوة الضعيفة، يوجد في حالتين موجب وسالب الشحنة.",
+      "description": "يُرمز له بـ W+ وW−، وكتلته كبيرة جدًا تقلّل مدى التفاعل الضعيف. يتوسط في التحلل بيتا وفي تغيّر نكهة الكواركات واللبتونات.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/W_and_Z_bosons"
+        }
+      ],
+      "translations": [
+        {
+          "term": "البوزون W",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "بوزون القوة الضعيفة W",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "البوزون W±",
+          "note": "إظهار الشحنتين في السياق التفاعلي.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "W-Boson",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "W-bosoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "W-bozon",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "W bozonu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "z-boson": {
+      "ar": "البوزون Z",
+      "en": "Z boson",
+      "origin": "يُشار إليه بالحرف Z لأنّ شحنته الكهربائية تساوي صفرًا.",
+      "arabicMeaning": "بوزون متعادل الشحنة يحمل التفاعل الضعيف مع البوزونات W.",
+      "description": "يُرمز له بـ Z0، وكتلته قريبة من كتلة W. يتوسط في التشتت المرن للنيوترينوات وفي التفاعلات الضعيفة المحايدة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/W_and_Z_bosons"
+        }
+      ],
+      "translations": [
+        {
+          "term": "البوزون Z",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "بوزون القوة الضعيفة Z",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "البوزون Z0",
+          "note": "إظهار الحياد الكهربائي.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Z-Boson",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "Z-bosoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "Z-bozon",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "Z bozonu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "higgs-boson": {
+      "ar": "بوزون هيغز",
+      "en": "Higgs boson",
+      "origin": "سمّي نسبةً إلى الفيزيائي بيتر هيغز، أحد الذين اقترحوا آلية كسر التناظر.",
+      "arabicMeaning": "بوزون أولي يُنسب إليه إعطاء الجسيمات كتلتها عبر آلية هيغز.",
+      "description": "كتلته نحو 125 غيغا إلكترون فولت، واكتُشف في مصادم CERN عام 2012. يكمّل النموذج القياسي ويشرح أصل كتلة الجسيمات الأساسية.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Higgs_boson"
+        }
+      ],
+      "translations": [
+        {
+          "term": "بوزون هيغز",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "جسيم هيغز",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "جسيم هيغز",
+          "note": "اختصار شائع يحذف لفظ البوزون.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Higgs-Boson",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "Higgsin bosoni",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "Higgs-bozon",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "Higgs bozonu",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "hadrons": {
+      "ar": "الهادرونات",
+      "en": "Hadrons",
+      "origin": "من اليونانية hadros بمعنى «قوي»، إشارةً إلى خضوعها للقوة الشديدة.",
+      "arabicMeaning": "جسيمات مركّبة من كواركات تربطها القوة الشديدة.",
+      "description": "تنقسم الهادرونات إلى باريونات وميزونات حسب عدد الكواركات. البروتون والنيوترون أشهر الباريونات، أما الميزونات فتحوي زوج كوارك ونقيضه.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Hadron"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الهادرونات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيمات القوية",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيمات القوية",
+          "note": "وصف تحريري يستند إلى معنى hadros القوي.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Hadronen",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "hadronit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "hadronok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "hadronlar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "baryons": {
+      "ar": "الباريونات",
+      "en": "Baryons",
+      "origin": "من اليونانية barys بمعنى «ثقيل»، لأنها أثقل من الميزونات.",
+      "arabicMeaning": "هادرونات مكوّنة من ثلاثة كواركات أو من ثلاث كواركات مضادة.",
+      "description": "يُعدّ الباريون فيرميونًا لأن عدده الكواركي فردي، ومنه البروتون والنيوترون واللامبدا. يخضع لمبدأ باولي وله نقيض باريوني.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Baryon"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الباريونات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيمات الثقيلة",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيمات الثقيلة",
+          "note": "وصف تحريري يستند إلى معنى barys الثقيل.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "نُئَيْطُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Baryonen",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "baryonit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "barionok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "baryonlar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "mesons": {
+      "ar": "الميزونات",
+      "en": "Mesons",
+      "origin": "من اليونانية mesos بمعنى «متوسط»، إشارةً إلى كتلتها بين الإلكترون والنويات.",
+      "arabicMeaning": "هادرونات مكوّنة من كوارك واحد ونقيض كوارك.",
+      "description": "الميزونات بوزونات ذات عدد كواركي زوجي، ومنها البيون والكاون. تتوسط في القوة الشديدة المتبقية بين النويات.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Meson"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الميزونات",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الجسيمات المتوسطة",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الجسيمات المتوسطة",
+          "note": "وصف تحريري يستند إلى معنى mesos المتوسط.",
+          "source": "اقتراح تحريري (معراب)"
+        },
+        {
+          "term": "أُوَيْسطُون",
+          "source": "سامح الشاعر (تكتوك)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Mesonen",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "mesonit",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "mezonok",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "mezonlar",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "fundamental-interactions": {
+      "ar": "القوى الأساسية",
+      "en": "Fundamental interactions",
+      "origin": "«أساسية» من الجذر أ-س-س، و«تفاعلات» جمع تفاعل بمعنى تأثير متبادل.",
+      "arabicMeaning": "القوى الأربع الأساسية التي تنظم تفاعلات المادة والطاقة في الكون.",
+      "description": "تشمل القوة الشديدة والكهرومغناطيسية والضعيفة والجاذبية. تختلف في المدى والشدة، وتوحّدها نظريات فيزيائية تتجاوز النموذج القياسي.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Fundamental_interaction"
+        }
+      ],
+      "translations": [
+        {
+          "term": "القوى الأساسية",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "التفاعلات الأساسية",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "القوى الأساسية الأربع",
+          "note": "تقييد المصطلح بالقوى الأربع.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Grundkräfte",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "perusvuorovaikutukset",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "alapvető kölcsönhatások",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "temel etkileşimler",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "strong-interaction": {
+      "ar": "القوة الشديدة",
+      "en": "Strong interaction",
+      "origin": "«شديدة» من الجذر ش-د-د، ترجمةً لـ strong، وأُطلقت لأنها أقوى القوى.",
+      "arabicMeaning": "القوة التي تربط الكواركات داخل الهادرونات والنويات داخل النواة.",
+      "description": "يحملها الغلوونات، وتزداد شدتها مع زيادة المسافة بين الكواركات، ما يفسّر الحجز اللوني. أثرها المتبقي يشدّ النويات بعضها إلى بعض.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Strong_interaction"
+        }
+      ],
+      "translations": [
+        {
+          "term": "القوة الشديدة",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "التفاعل القوي",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "التفاعل القوي",
+          "note": "بديل يبرز «التفاعل» بدل «القوة».",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Starke Wechselwirkung",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "vahva vuorovaikutus",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "erős kölcsönhatás",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "güçlü etkileşim",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "electromagnetic-interaction": {
+      "ar": "القوة الكهرومغناطيسية",
+      "en": "Electromagnetic interaction",
+      "origin": "مركّبة من «كهرومغناطيسية»، نسبةً إلى الكهرباء والمغناطيسية معًا.",
+      "arabicMeaning": "القوة التي تؤثر بين الجسيمات المشحونة كهربائيًا وتنتقل بالفوتونات.",
+      "description": "تفسّر التماسك الذري والروابط الكيميائية والضوء والتفاعلات الكهربائية. مداها غير محدود لكنها تضعف مع مربع المسافة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Electromagnetism"
+        }
+      ],
+      "translations": [
+        {
+          "term": "القوة الكهرومغناطيسية",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "التفاعل الكهرومغناطيسي",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "التفاعل الكهرومغناطيسي",
+          "note": "بديل يبرز «التفاعل».",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Elektromagnetische Wechselwirkung",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "sähkömagneettinen vuorovaikutus",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "elektromágneses kölcsönhatás",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "elektromanyetik etkileşim",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "weak-interaction": {
+      "ar": "القوة الضعيفة",
+      "en": "Weak interaction",
+      "origin": "«ضعيفة» من الجذر ض-ع-ف، لأنها أضعف من الشديدة والكهرومغناطيسية في المدى القريب.",
+      "arabicMeaning": "القوة المسؤولة عن التحلل بيتا وتغيّر نكهة الكواركات واللبتونات.",
+      "description": "يحملها بوزونا W وZ، ولها مدى قصير جدًا بسبب الكتل الكبيرة لحامليها. تلعب دورًا في اندماج الهيدروجين في الشمس.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Weak_interaction"
+        }
+      ],
+      "translations": [
+        {
+          "term": "القوة الضعيفة",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "التفاعل الضعيف",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "التفاعل الضعيف",
+          "note": "بديل يبرز «التفاعل».",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Schwache Wechselwirkung",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "heikko vuorovaikutus",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "gyenge kölcsönhatás",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "zayıf etkileşim",
+          "source": "Wiktionary"
+        }
+      ]
+    },
+    "gravity": {
+      "ar": "الجاذبية",
+      "en": "Gravity",
+      "origin": "من الجذر ج-ذ-ب بمعنى الانجذاب، ترجمةً لـ gravity المشتقة من اللاتينية gravis (ثقيل).",
+      "arabicMeaning": "القوة التي تجذب الأجسام ذات الكتلة أو الطاقة بعضها إلى بعض.",
+      "description": "أضعف القوى الأربع لكنها الأبعد مدى، وتتحكم في حركة الكواكب والمجرّات. يصفها النسبية العامة بانحناء الزمكان حول الكتلة.",
+      "references": [
+        {
+          "name": "ويكيبيديا الإنجليزية",
+          "href": "https://en.wikipedia.org/wiki/Gravity"
+        }
+      ],
+      "translations": [
+        {
+          "term": "الجاذبية",
+          "source": "المعجم الفيزيائي"
+        },
+        {
+          "term": "الثقالة",
+          "source": "استعمال عربي شائع"
+        }
+      ],
+      "suggestions": [
+        {
+          "term": "الثقالة",
+          "note": "مصطلح عربي تراثي يوازي الجاذبية.",
+          "source": "اقتراح تحريري (معراب)"
+        }
+      ],
+      "languages": [
+        {
+          "language": "الألمانية",
+          "code": "de",
+          "term": "Gravitation",
+          "source": "ويكيبيديا الألمانية"
+        },
+        {
+          "language": "الآيسلندية",
+          "code": "is",
+          "term": "þyngdarafl",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "الفنلندية",
+          "code": "fi",
+          "term": "painovoima",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "المجرية",
+          "code": "hu",
+          "term": "gravitáció",
+          "source": "Wiktionary"
+        },
+        {
+          "language": "التركية",
+          "code": "tr",
+          "term": "kütleçekim",
+          "source": "Wiktionary"
+        }
+      ]
+    }
+  }
+}

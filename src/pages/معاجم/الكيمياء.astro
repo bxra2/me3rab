@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PeriodicTable from '../../components/PeriodicTable.astro';
+import AtomExplorer from '../../components/AtomExplorer.astro';
 ---
 
 <BaseLayout title="الكيمياء — معاجم">
@@ -11,10 +12,35 @@ import PeriodicTable from '../../components/PeriodicTable.astro';
       الجدول الدوري التفاعلي: أسماء العناصر بالإنجليزية حاليًا، وستُضاف
       الترجمات العربية والفرنسية ومقارنة المعاجم لاحقًا.
     </p>
+    <p>
+      وتضم الصفحة أيضًا خريطة تفاعلية لمصطلحات الذرّة: من النواة والإلكترونات
+      إلى الكواركات واللبتونات والبوزونات والقوى الأساسية، مع الأصول والمعاني
+      والترجمات واللغات والمصادر.
+    </p>
   </header>
 
   <section>
     <h2>الجدول الدوري</h2>
     <PeriodicTable />
+  </section>
+
+  <section>
+    <h2>مصطلحات الذرّة</h2>
+    <AtomExplorer />
+
+    <figure class="nutrient-source-note">
+      <figcaption>
+        <p>
+          هذه الصفحة نسخة تفاعلية أُعيد بناؤها داخل الموقع اعتمادًا على ملصق
+          أصلي قدّمه صاحب المشروع. لا تُضمّن الصفحة الملصق، لكنه يبقى متاحًا
+          للتحميل كمرجع أصلي:
+        </p>
+        <p>
+          <a href="/atoms/atom.svg" download>
+            تحميل ملصق مصطلحات الذرّة
+          </a>
+        </p>
+      </figcaption>
+    </figure>
   </section>
 </BaseLayout>
