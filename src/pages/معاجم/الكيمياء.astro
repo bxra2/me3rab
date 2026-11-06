@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PeriodicTable from '../../components/PeriodicTable.astro';
 import AtomExplorer from '../../components/AtomExplorer.astro';
+import '../../components/glossary-tabs.css';
 ---
 
 <BaseLayout title="الكيمياء — معاجم">
@@ -19,28 +20,143 @@ import AtomExplorer from '../../components/AtomExplorer.astro';
     </p>
   </header>
 
-  <section>
-    <h2>الجدول الدوري</h2>
-    <PeriodicTable />
-  </section>
+  <div class="glossary-tabs" data-glossary-tabs>
+    <div class="glossary-tablist" role="tablist" aria-label="أقسام معجم الكيمياء">
+      <button class="glossary-tab" role="tab"
+        id="glossary-tab-periodic-table"
+        aria-controls="glossary-panel-periodic-table"
+        aria-selected="true"
+        tabindex="0"
+        data-glossary-tab="periodic-table"
+        type="button"
+      >
+        <span>الجدول الدوري</span>
+        <bdi class="glossary-tab-en" lang="en" dir="auto">Periodic Table</bdi>
+      </button>
+      <button class="glossary-tab" role="tab"
+        id="glossary-tab-atom-terminology"
+        aria-controls="glossary-panel-atom-terminology"
+        aria-selected="false"
+        tabindex="-1"
+        data-glossary-tab="atom-terminology"
+        type="button"
+      >
+        <span>مصطلحات الذرّة</span>
+        <bdi class="glossary-tab-en" lang="en" dir="auto">Atom Terminology</bdi>
+      </button>
+    </div>
 
-  <section>
-    <h2>مصطلحات الذرّة</h2>
-    <AtomExplorer />
+    <section class="glossary-panel" role="tabpanel"
+      id="glossary-panel-periodic-table"
+      aria-labelledby="glossary-tab-periodic-table"
+      data-glossary-panel="periodic-table"
+    >
+      <h2>الجدول الدوري</h2>
+      <PeriodicTable />
+    </section>
 
-    <figure class="nutrient-source-note">
-      <figcaption>
-        <p>
-          هذه الصفحة نسخة تفاعلية أُعيد بناؤها داخل الموقع اعتمادًا على ملصق
-          أصلي قدّمه صاحب المشروع. لا تُضمّن الصفحة الملصق، لكنه يبقى متاحًا
-          للتحميل كمرجع أصلي:
-        </p>
-        <p>
-          <a href="/atoms/atom.svg" download>
-            تحميل ملصق مصطلحات الذرّة
-          </a>
-        </p>
-      </figcaption>
-    </figure>
-  </section>
+    <section class="glossary-panel" role="tabpanel"
+      id="glossary-panel-atom-terminology"
+      aria-labelledby="glossary-tab-atom-terminology"
+      data-glossary-panel="atom-terminology"
+    >
+      <h2>مصطلحات الذرّة</h2>
+      <AtomExplorer />
+
+      <figure class="nutrient-source-note">
+        <figcaption>
+          <p>
+            هذه الصفحة نسخة تفاعلية أُعيد بناؤها داخل الموقع اعتمادًا على ملصق
+            أصلي قدّمه صاحب المشروع. لا تُضمّن الصفحة الملصق، لكنه يبقى متاحًا
+            للتحميل كمرجع أصلي:
+          </p>
+          <p>
+            <a href="/atoms/atom.svg" download>
+              تحميل ملصق مصطلحات الذرّة
+            </a>
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const root = document.querySelector('[data-glossary-tabs]');
+      if (!root) return;
+
+      root.dataset.enhanced = '';
+
+      const tabs = [...root.querySelectorAll('[data-glossary-tab]')];
+      const panels = [...root.querySelectorAll('[data-glossary-panel]')];
+      const tablist = root.querySelector('.glossary-tablist');
+      const panelIds = panels.map((panel) => panel.dataset.glossaryPanel);
+
+      const setActivePanel = (id, updateHash = false) => {
+        const activeId = panelIds.includes(id) ? id : panelIds[0];
+
+        for (const tab of tabs) {
+          const isActive = tab.dataset.glossaryTab === activeId;
+          tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          tab.tabIndex = isActive ? 0 : -1;
+        }
+
+        for (const panel of panels) {
+          const active = panel.dataset.glossaryPanel === activeId;
+          panel.toggleAttribute('hidden', !active);
+        }
+
+        if (updateHash) {
+          history.replaceState(null, '', '#' + activeId);
+        }
+      };
+
+      const initialHash = window.location.hash.replace(/^#/, '');
+      setActivePanel(panelIds.includes(initialHash) ? initialHash : panelIds[0]);
+
+      window.addEventListener('hashchange', () => {
+        const id = window.location.hash.replace(/^#/, '');
+        if (panelIds.includes(id)) setActivePanel(id);
+      });
+
+      if (tablist) {
+        tablist.addEventListener('click', (event) => {
+          const target = event.target;
+          if (!(target instanceof Element)) return;
+          const tab = target.closest('[data-glossary-tab]');
+          if (!tab) return;
+          setActivePanel(tab.dataset.glossaryTab, true);
+        });
+
+        tablist.addEventListener('keydown', (event) => {
+          const target = event.target;
+          if (!(target instanceof Element)) return;
+          const tab = target.closest('[data-glossary-tab]');
+          if (!tab) return;
+
+          const current = tabs.indexOf(tab);
+          if (current === -1) return;
+
+          let next = current;
+
+          if (event.key === 'ArrowLeft') {
+            next = (current + 1) % tabs.length;
+          } else if (event.key === 'ArrowRight') {
+            next = (current - 1 + tabs.length) % tabs.length;
+          } else if (event.key === 'Home') {
+            next = 0;
+          } else if (event.key === 'End') {
+            next = tabs.length - 1;
+          } else {
+            return;
+          }
+
+          event.preventDefault();
+          const nextTab = tabs[next];
+          setActivePanel(nextTab.dataset.glossaryTab, true);
+          nextTab.focus();
+        });
+      }
+    })();
+  </script>
 </BaseLayout>

@@ -1,0 +1,68 @@
+.glossary-tabs .glossary-tablist {
+  align-items: stretch;
+  border-block-end: 2px solid var(--color-ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-block-end: var(--space-l);
+  padding-block-end: var(--space-s);
+}
+
+.glossary-tabs .glossary-tab {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+  gap: var(--space-xxs);
+  padding: var(--space-s) var(--space-m);
+  text-align: start;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.glossary-tabs .glossary-tab:hover {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.glossary-tabs .glossary-tab[aria-selected="true"] {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--bg-color);
+}
+
+.glossary-tabs .glossary-tab[aria-selected="true"]:hover {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--bg-color);
+}
+
+.glossary-tabs .glossary-tab:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.glossary-tabs .glossary-tab-en {
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-s);
+}
+
+.glossary-tabs .glossary-tab[aria-selected="true"] .glossary-tab-en {
+  color: color-mix(in srgb, var(--bg-color) 78%, transparent);
+}
+
+.glossary-tabs .glossary-panel {
+  min-inline-size: 0;
+}
+
+.glossary-tabs .glossary-panel[hidden] {
+  display: none;
+}
