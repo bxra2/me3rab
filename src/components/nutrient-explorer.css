@@ -1,0 +1,541 @@
+.nutrient-explorer {
+  background: var(--bg-color);
+  border: 2px solid var(--color-ink);
+  margin-block-start: var(--space-l);
+  padding: var(--space-l);
+}
+
+.nutrient-explorer .nutrient-hint {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin: 0 0 var(--space-m);
+}
+
+.nutrient-explorer .nutrient-tabs {
+  align-items: stretch;
+  border-block-end: 2px solid var(--color-ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s);
+  margin-block-end: var(--space-l);
+  padding-block-end: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-tab {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+  gap: var(--space-xxs);
+  padding: var(--space-s) var(--space-m);
+  text-align: start;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.nutrient-explorer .nutrient-tab:hover {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.nutrient-explorer .nutrient-tab[aria-selected="true"] {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--bg-color);
+}
+
+.nutrient-explorer .nutrient-tab[aria-selected="true"]:hover {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--bg-color);
+}
+
+.nutrient-explorer .nutrient-tab:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.nutrient-explorer .nutrient-tab-en {
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  font-size: var(--text-s);
+}
+
+.nutrient-explorer .nutrient-tab[aria-selected="true"] .nutrient-tab-en {
+  color: color-mix(in srgb, var(--bg-color) 78%, transparent);
+}
+
+.nutrient-explorer .nutrient-panel {
+  min-inline-size: 0;
+}
+
+.nutrient-explorer .nutrient-diagram-intro {
+  border-inline-start: 4px solid var(--color-accent);
+  margin: 0 0 var(--space-m);
+  padding-inline-start: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-root {
+  background: color-mix(in srgb, var(--color-secondary) 8%, var(--bg-color));
+  border: 2px solid var(--color-ink);
+  margin-block-end: var(--space-l);
+  padding: var(--space-m);
+  text-align: center;
+}
+
+.nutrient-explorer .nutrient-root-node {
+  margin-inline: auto;
+  max-inline-size: 22rem;
+  text-align: center;
+}
+
+.nutrient-explorer .nutrient-root-note {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin: var(--space-s) 0 0;
+}
+
+.nutrient-explorer .nutrient-groups {
+  align-items: start;
+  display: grid;
+  gap: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-groups--macro {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nutrient-explorer .nutrient-groups--micro {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nutrient-explorer .nutrient-groups--atom {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.nutrient-explorer .nutrient-group {
+  background: var(--bg-color);
+  border: 2px solid var(--color-ink);
+  min-inline-size: 0;
+  padding: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-group--accent {
+  background: color-mix(in srgb, var(--color-accent) 7%, var(--bg-color));
+  border-color: var(--color-accent);
+}
+
+.nutrient-explorer .nutrient-group--secondary {
+  background: color-mix(in srgb, var(--color-secondary) 7%, var(--bg-color));
+  border-color: var(--color-secondary);
+}
+
+.nutrient-explorer .nutrient-group--ink {
+  background: color-mix(in srgb, var(--color-ink) 6%, var(--bg-color));
+  border-color: var(--color-ink);
+}
+
+.nutrient-explorer .nutrient-group-head {
+  border-block-end: 2px solid var(--color-ink);
+  margin-block-end: var(--space-m);
+  padding-block-end: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-group-note {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin: var(--space-s) 0 0;
+}
+
+.nutrient-explorer .nutrient-branches {
+  display: grid;
+  gap: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-branch {
+  border-block-start: 1px solid color-mix(in srgb, var(--color-ink) 30%, transparent);
+  min-inline-size: 0;
+  padding-block-start: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-branch:first-child {
+  border-block-start: 0;
+  padding-block-start: 0;
+}
+
+.nutrient-explorer .nutrient-branch-label {
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+  font-weight: 700;
+  margin: 0;
+}
+
+.nutrient-explorer .nutrient-branch-note,
+.nutrient-explorer .nutrient-card-note {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin: var(--space-xs) 0 0;
+}
+
+.nutrient-explorer .nutrient-node {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  inline-size: 100%;
+  min-inline-size: 0;
+  padding: var(--space-s) var(--space-m);
+  text-align: start;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s,
+    outline-color 0.15s;
+}
+
+.nutrient-explorer .nutrient-node:hover,
+.nutrient-explorer .nutrient-node:focus-visible,
+.nutrient-explorer .nutrient-node.is-active {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-ink);
+  outline-color: var(--color-accent);
+}
+
+.nutrient-explorer .nutrient-node:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.nutrient-explorer .nutrient-node-ar {
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+  line-height: 1.25;
+}
+
+.nutrient-explorer .nutrient-node-en {
+  color: var(--color-secondary);
+  font-size: var(--text-m);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.nutrient-explorer .nutrient-columns {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  margin-block-start: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-card {
+  border: 2px solid var(--color-ink);
+  min-inline-size: 0;
+  padding: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-static-list {
+  font-size: var(--text-s);
+  margin: var(--space-xs) 0 0;
+  padding-inline-start: 1.1em;
+}
+
+.nutrient-explorer .nutrient-static-list li {
+  margin-block-end: var(--space-xxs);
+}
+
+.nutrient-explorer .nutrient-child-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-block-start: var(--space-s);
+  overflow-wrap: anywhere;
+}
+
+.nutrient-explorer .nutrient-child-terms .nutrient-node {
+  flex: 1 1 auto;
+  font-size: var(--text-s);
+  inline-size: auto;
+  padding: var(--space-xxs) var(--space-s);
+  overflow-wrap: anywhere;
+}
+
+.nutrient-explorer .nutrient-child-terms .nutrient-node-ar {
+  font-size: var(--text-s);
+}
+
+.nutrient-explorer .nutrient-roles {
+  font-size: var(--text-s);
+  margin: var(--space-m) 0 0;
+  padding-inline-start: 1.2em;
+}
+
+.nutrient-explorer .nutrient-roles li {
+  margin-block-end: var(--space-xs);
+}
+
+.nutrient-explorer .nutrient-footer {
+  border-block-start: 2px solid var(--color-ink);
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin: var(--space-l) 0 0;
+  padding-block-start: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-index {
+  border-block-start: 2px solid var(--color-ink);
+  margin-block-start: var(--space-l);
+  padding-block-start: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-index summary {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: var(--text-m);
+}
+
+.nutrient-explorer .nutrient-index summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.nutrient-explorer .nutrient-index-grid {
+  display: grid;
+  gap: var(--space-s);
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  margin-block-start: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-index-grid .nutrient-node {
+  text-align: start;
+}
+
+.nutrient-explorer .nutrient-dialogs {
+  display: contents;
+}
+
+.nutrient-explorer .nutrient-dialog {
+  background: var(--bg-color);
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  margin: auto;
+  max-height: 85vh;
+  overflow: auto;
+  padding: 0;
+  width: min(60rem, 92vw);
+}
+
+.nutrient-explorer .nutrient-dialog-content,
+.nutrient-explorer .nutrient-dialog-inner {
+  padding: var(--space-l);
+}
+
+.nutrient-explorer .nutrient-dialog::backdrop {
+  background: var(--backdrop-overlay-strong);
+}
+
+.nutrient-explorer .nutrient-dialog-close {
+  background: transparent;
+  border: 2px solid var(--color-ink);
+  color: var(--color-ink);
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  font-size: 0.85rem;
+  margin-block-end: var(--space-s);
+  margin-inline-end: auto;
+  padding: 0.2em 0.6em;
+}
+
+.nutrient-explorer .nutrient-dialog-close:hover {
+  background: var(--color-ink);
+  color: var(--bg-color);
+}
+
+.nutrient-explorer .nutrient-dialog-head {
+  align-items: stretch;
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.nutrient-explorer .nutrient-dialog-translations {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.nutrient-explorer .nutrient-dialog-languages {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.nutrient-explorer .nutrient-dialog-translations,
+.nutrient-explorer .nutrient-dialog-languages {
+  border: 2px solid var(--color-ink);
+  max-block-size: 18rem;
+  overflow: auto;
+  padding: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-dialog-figure {
+  align-items: center;
+  background: color-mix(in srgb, var(--color-accent) 7%, var(--bg-color));
+  border: 2px solid var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  grid-row: 1;
+  justify-content: center;
+  min-block-size: 12rem;
+  padding: var(--space-m);
+  text-align: center;
+}
+
+.nutrient-explorer .nutrient-dialog-kicker {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin: 0;
+}
+
+.nutrient-explorer .nutrient-dialog-figure h2 {
+  font-size: clamp(2rem, 1.2rem + 3vw, 3.6rem);
+  line-height: 1.1;
+  margin: var(--space-s) 0;
+}
+
+.nutrient-explorer .nutrient-dialog-en {
+  color: var(--color-secondary);
+  font-size: var(--text-m);
+  margin: 0;
+}
+
+.nutrient-explorer .nutrient-dialog h3 {
+  margin: 0 0 var(--space-xs);
+}
+
+.nutrient-explorer .nutrient-dialog-origin,
+.nutrient-explorer .nutrient-dialog-desc,
+.nutrient-explorer .nutrient-dialog-suggestions {
+  margin-block-start: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-dialog dl {
+  display: grid;
+  gap: var(--space-xs) var(--space-m);
+  grid-template-columns: auto minmax(0, 1fr);
+  margin: 0;
+}
+
+.nutrient-explorer .nutrient-dialog dt {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.nutrient-explorer .nutrient-dialog dd {
+  margin: 0;
+}
+
+.nutrient-explorer .nutrient-dialog-references {
+  border-block-start: 2px solid var(--color-ink);
+  font-size: var(--text-s);
+  margin-block-start: var(--space-m);
+  padding-block-start: var(--space-s);
+}
+
+.nutrient-explorer .nutrient-list {
+  margin: 0;
+  padding-inline-start: 1.2em;
+}
+
+.nutrient-explorer .nutrient-list li {
+  margin-block-end: var(--space-xs);
+}
+
+.nutrient-explorer .nutrient-note {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+}
+
+.nutrient-explorer .nutrient-source {
+  font-size: var(--text-s);
+}
+
+.nutrient-source-note {
+  color: var(--color-secondary);
+  font-size: var(--text-s);
+  margin-block-start: var(--space-m);
+}
+
+.nutrient-explorer .nutrient-empty {
+  font-style: italic;
+  margin: 0;
+  opacity: 0.7;
+}
+
+@media (max-width: 50rem) {
+  .nutrient-explorer .nutrient-groups--macro,
+  .nutrient-explorer .nutrient-groups--micro,
+  .nutrient-explorer .nutrient-groups--atom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nutrient-explorer .nutrient-dialog-head {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .nutrient-explorer .nutrient-dialog-figure,
+  .nutrient-explorer .nutrient-dialog-translations,
+  .nutrient-explorer .nutrient-dialog-languages {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nutrient-explorer .nutrient-node,
+  .nutrient-explorer .nutrient-tab {
+    transition: none;
+  }
+}
+
+@media print {
+  .nutrient-explorer .nutrient-panel[hidden] {
+    display: block !important;
+  }
+
+  .nutrient-explorer .nutrient-tabs,
+  .nutrient-explorer .nutrient-index,
+  .nutrient-explorer .nutrient-hint,
+  .nutrient-explorer .nutrient-dialogs,
+  .nutrient-explorer .nutrient-dialog {
+    display: none !important;
+  }
+
+  .nutrient-explorer .nutrient-group,
+  .nutrient-explorer .nutrient-card,
+  .nutrient-explorer .nutrient-branch {
+    break-inside: avoid;
+  }
+}
+
+@media (forced-colors: active) {
+  .nutrient-explorer .nutrient-node.is-active,
+  .nutrient-explorer .nutrient-node:focus-visible {
+    border-color: Highlight;
+    outline-color: Highlight;
+  }
+
+  .nutrient-explorer .nutrient-tab[aria-selected="true"] {
+    background: Highlight;
+    color: HighlightText;
+  }
+}

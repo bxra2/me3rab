@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NutrientExplorer from '../../components/NutrientExplorer.astro';
+---
+
+<BaseLayout title="التغذية — معاجم">
+  <header>
+    <p><a href="/معاجم">العودة إلى المعاجم</a></p>
+    <h1>التغذية</h1>
+    <p>
+      خريطة تفاعلية للمغذيات الكبرى والدقيقة: الكربوهيدرات والبروتينات والدهون،
+      ثم الفيتامينات والمعادن. اضغط على أي مصطلح لعرض أصله ومعناه وترجماته
+      والمصادر.
+    </p>
+  </header>
+
+  <section>
+    <h2>خريطة المغذيات</h2>
+    <NutrientExplorer />
+
+    <figure class="nutrient-source-note">
+      <figcaption>
+        <p>
+          هذه الصفحة نسخة تفاعلية أُعيد بناؤها داخل الموقع اعتمادًا على ملصقين
+          أصليين قدّمهما صاحب المشروع. لا تُضمّن الصفحة الملصقين، لكنهما يبقيان
+          متاحين للتحميل كمرجعين أصليين:
+        </p>
+        <p>
+          <a href="/nutrients/macronutrients.svg" download>
+            تحميل ملصق المغذيات الكبرى
+          </a>
+          <a href="/nutrients/micronutrients.svg" download>
+            تحميل ملصق المغذيات الدقيقة
+          </a>
+        </p>
+      </figcaption>
+    </figure>
+  </section>
+</BaseLayout>

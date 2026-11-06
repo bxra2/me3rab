@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180">
+<defs><style>
+.bg{fill:#f7f4ed}.ink{fill:#263238}.muted{fill:#59666b}
+.title{font:700 38px 'DejaVu Sans',sans-serif;letter-spacing:1px}.sub{font:16px 'DejaVu Sans',sans-serif}
+.head{font:700 22px 'DejaVu Sans',sans-serif}.label{font:700 16px 'DejaVu Sans',sans-serif}
+.body{font:15px 'DejaVu Sans',sans-serif}.small{font:13px 'DejaVu Sans',sans-serif}.tiny{font:12px 'DejaVu Sans',sans-serif}
+.card{fill:#fffdf8;stroke:#b9b6aa;stroke-width:1.5}.vit{stroke:#a56f36}.min{stroke:#527c8d}
+.vfill{fill:#f4e7d0}.mfill{fill:#e1edf0}.line{fill:none;stroke:#8b918e;stroke-width:2}
+</style></defs>
+<rect class="bg" width="1600" height="1180"/>
+<text x="800" y="62" text-anchor="middle" class="title ink">MICRONUTRIENTS</text>
+<text x="800" y="92" text-anchor="middle" class="sub muted">Nutrients needed in small amounts • essential for regulation, protection and normal body function</text>
+<rect x="470" y="120" width="660" height="78" rx="14" class="card"/>
+<text x="800" y="151" text-anchor="middle" class="label ink">MICRONUTRIENTS</text>
+<text x="800" y="177" text-anchor="middle" class="body muted">Do not provide energy (kcal) • include vitamins and minerals</text>
+<path d="M800 198 V225 M400 225 H1200 M400 225 V250 M1200 225 V250" class="line"/>
+
+<!-- VITAMINS -->
+<rect x="55" y="250" width="730" height="820" rx="18" class="card vit"/>
+<rect x="55" y="250" width="730" height="72" rx="18" class="vfill"/>
+<path d="M55 304 V322 H785 V304" class="vfill"/>
+<text x="420" y="281" text-anchor="middle" class="head ink">VITAMINS</text>
+<text x="420" y="305" text-anchor="middle" class="small muted">Organic compounds • classified by solubility</text>
+<path d="M420 322 V348 M225 348 H615 M225 348 V370 M615 348 V370" class="line"/>
+<rect x="85" y="370" width="280" height="66" rx="10" class="card vit"/>
+<text x="225" y="398" text-anchor="middle" class="label ink">FAT-SOLUBLE</text>
+<text x="225" y="420" text-anchor="middle" class="small muted">Absorbed with dietary fat</text>
+<rect x="475" y="370" width="280" height="66" rx="10" class="card vit"/>
+<text x="615" y="398" text-anchor="middle" class="label ink">WATER-SOLUBLE</text>
+<text x="615" y="420" text-anchor="middle" class="small muted">Generally require regular intake</text>
+
+<rect x="85" y="460" width="280" height="260" rx="12" class="vfill" stroke="#a56f36"/>
+<text x="225" y="491" text-anchor="middle" class="head ink">A • RETINOIDS</text>
+<text x="105" y="527" class="body ink">• Vision</text><text x="105" y="555" class="body ink">• Immune function</text><text x="105" y="583" class="body ink">• Cell growth</text>
+<text x="105" y="627" class="small muted">Sources: liver, eggs, dairy;</text><text x="105" y="650" class="small muted">carotenoids in orange/green</text><text x="105" y="673" class="small muted">vegetables (provitamin A)</text>
+<rect x="85" y="740" width="280" height="275" rx="12" class="vfill" stroke="#a56f36"/>
+<text x="225" y="771" text-anchor="middle" class="head ink">D • CALCIFEROLS</text>
+<text x="105" y="807" class="body ink">• Calcium absorption</text><text x="105" y="835" class="body ink">• Bone and muscle health</text>
+<text x="105" y="879" class="small muted">Sources: sunlight-driven skin</text><text x="105" y="902" class="small muted">synthesis, oily fish, fortified</text><text x="105" y="925" class="small muted">foods</text>
+<text x="105" y="975" class="tiny muted">D₂ = ergocalciferol • D₃ = cholecalciferol</text>
+
+<rect x="385" y="460" width="175" height="260" rx="12" class="card vit"/>
+<text x="472" y="491" text-anchor="middle" class="head ink">E</text>
+<text x="405" y="527" class="body ink">Tocopherols</text><text x="405" y="555" class="body ink">Antioxidant</text><text x="405" y="583" class="body ink">protection</text>
+<text x="405" y="635" class="small muted">Sources:</text><text x="405" y="658" class="small muted">nuts, seeds,</text><text x="405" y="681" class="small muted">vegetable oils</text>
+
+<rect x="575" y="460" width="180" height="260" rx="12" class="card vit"/>
+<text x="665" y="491" text-anchor="middle" class="head ink">K</text>
+<text x="595" y="527" class="body ink">Phylloquinone</text><text x="595" y="555" class="body ink">Menaquinones</text><text x="595" y="595" class="body ink">Blood clotting</text><text x="595" y="623" class="body ink">Bone proteins</text>
+<text x="595" y="672" class="small muted">Sources: leafy greens,</text><text x="595" y="695" class="small muted">some fermented foods</text>
+
+<rect x="385" y="740" width="370" height="275" rx="12" class="card vit"/>
+<text x="570" y="771" text-anchor="middle" class="head ink">B-COMPLEX + C</text>
+<text x="405" y="808" class="body ink">B₁ Thiamin • energy metabolism</text>
+<text x="405" y="837" class="body ink">B₂ Riboflavin • redox reactions</text>
+<text x="405" y="866" class="body ink">B₃ Niacin • NAD / NADP coenzymes</text>
+<text x="405" y="895" class="body ink">B₆ Pyridoxine • amino-acid metabolism</text>
+<text x="405" y="924" class="body ink">B₉ Folate • DNA / cell division</text>
+<text x="405" y="953" class="body ink">B₁₂ Cobalamin • nerves / red blood cells</text>
+<text x="405" y="982" class="body ink">C Ascorbic acid • collagen / antioxidant</text>
+
+<!-- MINERALS -->
+<rect x="815" y="250" width="730" height="820" rx="18" class="card min"/>
+<rect x="815" y="250" width="730" height="72" rx="18" class="mfill"/>
+<path d="M815 304 V322 H1545 V304" class="mfill"/>
+<text x="1180" y="281" text-anchor="middle" class="head ink">MINERALS</text>
+<text x="1180" y="305" text-anchor="middle" class="small muted">Inorganic elements • classified by the amount required</text>
+<path d="M1180 322 V348 M990 348 H1370 M990 348 V370 M1370 348 V370" class="line"/>
+<rect x="850" y="370" width="280" height="66" rx="10" class="card min"/>
+<text x="990" y="398" text-anchor="middle" class="label ink">MAJOR MINERALS</text>
+<text x="990" y="420" text-anchor="middle" class="small muted">Larger daily requirements</text>
+<rect x="1230" y="370" width="280" height="66" rx="10" class="card min"/>
+<text x="1370" y="398" text-anchor="middle" class="label ink">TRACE MINERALS</text>
+<text x="1370" y="420" text-anchor="middle" class="small muted">Small / trace requirements</text>
+
+<rect x="850" y="460" width="280" height="555" rx="12" class="mfill" stroke="#527c8d"/>
+<text x="990" y="493" text-anchor="middle" class="label ink">MAJOR MINERALS</text>
+<text x="875" y="535" class="body ink">• Calcium (Ca)</text><text x="875" y="563" class="small muted">Bones, teeth, muscle, nerves</text>
+<text x="875" y="610" class="body ink">• Phosphorus (P)</text><text x="875" y="638" class="small muted">Bones, ATP, cell membranes</text>
+<text x="875" y="685" class="body ink">• Magnesium (Mg)</text><text x="875" y="713" class="small muted">Enzymes, muscles, nerves</text>
+<text x="875" y="760" class="body ink">• Sodium (Na)</text><text x="875" y="788" class="small muted">Fluid balance, nerve impulses</text>
+<text x="875" y="835" class="body ink">• Potassium (K)</text><text x="875" y="863" class="small muted">Cell fluid, heart and muscles</text>
+<text x="875" y="910" class="body ink">• Chloride (Cl)</text><text x="875" y="938" class="small muted">Fluid balance, stomach acid</text>
+<text x="875" y="985" class="body ink">• Sulfur (S)</text><text x="875" y="1007" class="tiny muted">Part of sulfur-containing amino acids</text>
+
+<rect x="1150" y="460" width="360" height="555" rx="12" class="mfill" stroke="#527c8d"/>
+<text x="1330" y="493" text-anchor="middle" class="label ink">TRACE MINERALS</text>
+<text x="1175" y="535" class="body ink">• Iron (Fe)</text><text x="1175" y="559" class="small muted">Haemoglobin, oxygen transport</text>
+<text x="1175" y="601" class="body ink">• Zinc (Zn)</text><text x="1175" y="625" class="small muted">Immunity, enzymes, wound healing</text>
+<text x="1175" y="667" class="body ink">• Iodine (I)</text><text x="1175" y="691" class="small muted">Thyroid hormones</text>
+<text x="1175" y="733" class="body ink">• Selenium (Se)</text><text x="1175" y="757" class="small muted">Antioxidant enzymes, thyroid</text>
+<text x="1175" y="799" class="body ink">• Copper (Cu)</text><text x="1175" y="823" class="small muted">Iron metabolism, connective tissue</text>
+<text x="1175" y="865" class="body ink">• Manganese (Mn)</text><text x="1175" y="889" class="small muted">Enzyme function, bone formation</text>
+<text x="1175" y="931" class="body ink">• Fluoride (F)</text><text x="1175" y="955" class="small muted">Tooth enamel</text>
+<text x="1175" y="987" class="small ink">Also: chromium (Cr), molybdenum (Mo)</text>
+
+<path d="M55 1090 H1545" stroke="#c5c0b4" stroke-width="1.5"/>
+<text x="800" y="1120" text-anchor="middle" class="label ink">IMPORTANT DISTINCTIONS</text>
+<text x="800" y="1150" text-anchor="middle" class="body muted">Vitamins are organic; minerals are elements. Fat-soluble: A, D, E, K • Water-soluble: B vitamins and C.</text>
+<text x="800" y="1172" text-anchor="middle" class="tiny muted">Deficiency and excess can both cause harm; needs vary with age, life stage and health.</text>
+</svg>

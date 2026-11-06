@@ -1,0 +1,550 @@
+---
+import './nutrient-explorer.css';
+import nutrients from '../data/nutrients.json';
+import { collectTermIds, validateNutrients } from '../utils/nutrients.mjs';
+import { toArabicDigits } from '../utils/arabicDigits';
+
+const validation = validateNutrients(nutrients);
+if (validation.errors.length > 0) {
+  throw new Error(
+    `nutrient data validation failed:\n${validation.errors.join('\n')}`
+  );
+}
+
+const terms = nutrients.terms;
+const termIds = collectTermIds(nutrients);
+const termCount = termIds.length;
+
+const term = (id) => {
+  const record = terms[id];
+  if (!record) throw new Error(`Unknown nutrient term: ${id}`);
+  return record;
+};
+
+const LANGUAGE_CODES = {
+  الإنجليزية: 'en',
+  الفرنسية: 'fr',
+  الألمانية: 'de',
+  الإسبانية: 'es',
+  الإيطالية: 'it',
+  البرتغالية: 'pt',
+  الروسية: 'ru',
+  اليونانية: 'el',
+  اللاتينية: 'la',
+  العبرية: 'he',
+  الأذرية: 'az',
+  اليابانية: 'ja',
+  التشيكية: 'cs',
+  التركية: 'tr',
+  الفارسية: 'fa',
+  الصينية: 'zh',
+};
+
+const languageCode = (language) => LANGUAGE_CODES[language];
+---
+
+<div class="nutrient-explorer" data-nutrient-explorer>
+  <p class="nutrient-hint">
+    اختر تبويبًا لعرض خريطة المغذيات الكبرى أو الدقيقة، ثم اضغط على أي مصطلح
+    لعرض أصله ومعناه وترجماته. يمكنك أيضًا استخدام فهرس المصطلحات أدناه.
+  </p>
+
+  <div class="nutrient-tabs" role="tablist" aria-label="أقسام المغذيات">
+    {
+      nutrients.diagrams.map((diagram, index) => (
+        <button class="nutrient-tab" role="tab"
+          id={`nutrient-tab-${diagram.id}`}
+          aria-controls={`nutrient-panel-${diagram.id}`}
+          aria-selected={index === 0 ? 'true' : 'false'}
+          tabindex={index === 0 ? 0 : -1}
+          data-nutrient-tab={diagram.id}
+          type="button"
+        >
+          <span>{diagram.title}</span>
+          <bdi class="nutrient-tab-en" lang="en" dir="auto">
+            {diagram.titleEn}
+          </bdi>
+        </button>
+      ))
+    }
+  </div>
+
+  {
+    nutrients.diagrams.map((diagram) => (
+      <section class="nutrient-panel" role="tabpanel"
+        id={`nutrient-panel-${diagram.id}`}
+        aria-labelledby={`nutrient-tab-${diagram.id}`}
+        data-nutrient-panel={diagram.id}
+      >
+        <p class="nutrient-diagram-intro">{diagram.intro}</p>
+
+        <div class="nutrient-root">
+          <button class="nutrient-node nutrient-root-node" type="button"
+            data-nutrient={diagram.root.term}
+            aria-haspopup="dialog"
+          >
+            <span class="nutrient-node-ar">
+              {term(diagram.root.term).ar}
+            </span>
+            <bdi class="nutrient-node-en" lang="en" dir="auto">
+              {term(diagram.root.term).en}
+            </bdi>
+          </button>
+          {diagram.root.note && (
+            <p class="nutrient-root-note">{diagram.root.note}</p>
+          )}
+        </div>
+
+        <div class={`nutrient-groups nutrient-groups--${diagram.id}`}>
+          {diagram.groups.map((group) => (
+            <section class={`nutrient-group nutrient-group--${group.accent}`}>
+              <header class="nutrient-group-head">
+                <button class="nutrient-node" type="button"
+                  data-nutrient={group.term}
+                  aria-haspopup="dialog"
+                >
+                  <span class="nutrient-node-ar">{term(group.term).ar}</span>
+                  <bdi class="nutrient-node-en" lang="en" dir="auto">
+                    {term(group.term).en}
+                  </bdi>
+                </button>
+                {group.note && (
+                  <p class="nutrient-group-note">{group.note}</p>
+                )}
+              </header>
+
+              <div class="nutrient-branches">
+                {group.branches.map((branch) => (
+                  <section class="nutrient-branch">
+                    {branch.term ? (
+                      <button class="nutrient-node" type="button"
+                        data-nutrient={branch.term}
+                        aria-haspopup="dialog"
+                      >
+                        <span class="nutrient-node-ar">
+                          {term(branch.term).ar}
+                        </span>
+                        <bdi class="nutrient-node-en" lang="en" dir="auto">
+                          {term(branch.term).en}
+                        </bdi>
+                      </button>
+                    ) : (
+                      <p class="nutrient-branch-label">{branch.label}</p>
+                    )}
+
+                    {branch.note && (
+                      <p class="nutrient-branch-note">{branch.note}</p>
+                    )}
+
+                    {branch.columns && (
+                      <div class="nutrient-columns">
+                        {branch.columns.map((column) => (
+                          <article class="nutrient-card">
+                            <button class="nutrient-node" type="button"
+                              data-nutrient={column.term}
+                              aria-haspopup="dialog"
+                            >
+                              <span class="nutrient-node-ar">
+                                {term(column.term).ar}
+                              </span>
+                              <bdi class="nutrient-node-en" lang="en" dir="auto">
+                                {term(column.term).en}
+                              </bdi>
+                            </button>
+
+                            {column.note && (
+                              <p class="nutrient-card-note">{column.note}</p>
+                            )}
+
+                            {column.items && (
+                              <ul class="nutrient-static-list">
+                                {column.items.map((item) => (
+                                  <li>{item}</li>
+                                ))}
+                              </ul>
+                            )}
+
+                            {column.terms && (
+                              <div class="nutrient-child-terms">
+                                {column.terms.map((childId) => (
+                                  <button class="nutrient-node" type="button"
+                                    data-nutrient={childId}
+                                    aria-haspopup="dialog"
+                                  >
+                                    <span class="nutrient-node-ar">
+                                      {term(childId).ar}
+                                    </span>
+                                    <bdi
+                                      class="nutrient-node-en"
+                                      lang="en"
+                                      dir="auto"
+                                    >
+                                      {term(childId).en}
+                                    </bdi>
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+                          </article>
+                        ))}
+                      </div>
+                    )}
+
+                    {branch.items && (
+                      <ul class="nutrient-static-list">
+                        {branch.items.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {branch.terms && (
+                      <div class="nutrient-child-terms">
+                        {branch.terms.map((childId) => (
+                          <button class="nutrient-node" type="button"
+                            data-nutrient={childId}
+                            aria-haspopup="dialog"
+                          >
+                            <span class="nutrient-node-ar">
+                              {term(childId).ar}
+                            </span>
+                            <bdi class="nutrient-node-en" lang="en" dir="auto">
+                              {term(childId).en}
+                            </bdi>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </section>
+                ))}
+              </div>
+
+              {group.roles && (
+                <ul class="nutrient-roles">
+                  {group.roles.map((role) => (
+                    <li>{role}</li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          ))}
+        </div>
+
+        <p class="nutrient-footer">{diagram.footer}</p>
+      </section>
+    ))
+  }
+
+  <details class="nutrient-index">
+    <summary>فهرس المصطلحات ({toArabicDigits(String(termCount))})</summary>
+    <div class="nutrient-index-grid">
+      {
+        termIds.map((id) => (
+          <button class="nutrient-node" type="button"
+            data-nutrient={id}
+            aria-haspopup="dialog"
+          >
+            <span class="nutrient-node-ar">{term(id).ar}</span>
+            <bdi class="nutrient-node-en" lang="en" dir="auto">
+              {term(id).en}
+            </bdi>
+          </button>
+        ))
+      }
+    </div>
+  </details>
+
+  <div class="nutrient-dialogs">
+    {
+      termIds.map((id) => {
+        const record = term(id);
+        return (
+          <dialog class="nutrient-dialog" id={`nutrient-term-${id}`}
+            dir="rtl"
+            lang="ar"
+            aria-labelledby={`nutrient-dialog-title-${id}`}
+            aria-describedby={`nutrient-dialog-desc-${id}`}
+          >
+            <div class="nutrient-dialog-content">
+            <button class="nutrient-dialog-close" data-nutrient-close type="button">
+              إغلاق
+            </button>
+
+            <header class="nutrient-dialog-head">
+              <div class="nutrient-dialog-figure">
+                <p class="nutrient-dialog-kicker">مصطلح تغذية</p>
+                <h2 id={`nutrient-dialog-title-${id}`}>{record.ar}</h2>
+                <p class="nutrient-dialog-en" lang="en" dir="ltr">
+                  {record.en}
+                </p>
+              </div>
+
+              <section class="nutrient-dialog-translations">
+                <h3>الترجمات</h3>
+                {record.translations.length === 0 ? (
+                  <p class="nutrient-empty">لا ترجمات مسجّلة بعد.</p>
+                ) : (
+                  <ul class="nutrient-list">
+                    {record.translations.map((item) => (
+                      <li>
+                        <bdi dir="auto">{item.term}</bdi>
+                        {item.source && (
+                          <span class="nutrient-source">
+                            {' — '}
+                            {item.href ? (
+                              <a
+                                href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {item.source}
+                              </a>
+                            ) : (
+                              item.source
+                            )}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+
+              <section class="nutrient-dialog-languages">
+                <h3>لغات أخرى</h3>
+                {record.languages.length === 0 ? (
+                  <p class="nutrient-empty">لا لغات مسجّلة بعد.</p>
+                ) : (
+                  <ul class="nutrient-list">
+                    {record.languages.map((item) => (
+                      <li>
+                        <bdi dir="auto" lang={languageCode(item.language)}>
+                          {item.term}
+                        </bdi>
+                        <span class="nutrient-note"> — {item.language}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            </header>
+
+            <section class="nutrient-dialog-origin">
+              <h3>الأصل والمعنى</h3>
+              <dl>
+                <dt>الأصل</dt>
+                <dd>{record.origin}</dd>
+                <dt>المعنى بالعربية</dt>
+                <dd>{record.arabicMeaning}</dd>
+              </dl>
+            </section>
+
+            <section class="nutrient-dialog-desc">
+              <h3>الوصف</h3>
+              <p id={`nutrient-dialog-desc-${id}`}>{record.description}</p>
+            </section>
+
+            <section class="nutrient-dialog-suggestions">
+              <h3>المصطلحات المقترحة</h3>
+              {record.suggestions.length === 0 ? (
+                <p class="nutrient-empty">لا اقتراحات تحريرية لهذا المصطلح.</p>
+              ) : (
+                <ul class="nutrient-list">
+                  {record.suggestions.map((item) => (
+                    <li>
+                      <bdi dir="auto">{item.term}</bdi>
+                      {item.note && (
+                        <span class="nutrient-note"> — {item.note}</span>
+                      )}
+                      {item.source && (
+                        <span class="nutrient-source">
+                          {' — '}
+                          {item.href ? (
+                            <a
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {item.source}
+                            </a>
+                          ) : (
+                            item.source
+                          )}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+
+            <footer class="nutrient-dialog-references">
+              <span>المصادر:</span>
+              <ul class="nutrient-list">
+                {record.references.map((reference) => (
+                  <li>
+                    {reference.href ? (
+                      <a
+                        href={reference.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {reference.name}
+                      </a>
+                    ) : (
+                      reference.name
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </footer>
+            </div>
+          </dialog>
+        );
+      })
+    }
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-nutrient-explorer]');
+    if (!root) return;
+
+    root.dataset.enhanced = '';
+
+    const tabs = [...root.querySelectorAll('[data-nutrient-tab]')];
+    const panels = [...root.querySelectorAll('[data-nutrient-panel]')];
+    const tablist = root.querySelector('.nutrient-tabs');
+    const panelIds = panels.map((panel) => panel.dataset.nutrientPanel);
+    const indexDetails = root.querySelector('.nutrient-index');
+
+    let lastFocus = null;
+    let openedFromIndex = false;
+
+    const setActivePanel = (id, updateHash = false) => {
+      const activeId = panelIds.includes(id) ? id : panelIds[0];
+
+      for (const tab of tabs) {
+        const isActive = tab.dataset.nutrientTab === activeId;
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        tab.tabIndex = isActive ? 0 : -1;
+      }
+
+      for (const panel of panels) {
+        const active = panel.dataset.nutrientPanel === activeId;
+        panel.toggleAttribute('hidden', !active);
+      }
+
+      if (updateHash) {
+        history.replaceState(null, '', '#' + activeId);
+      }
+    };
+
+    const initialHash = window.location.hash.replace(/^#/, '');
+    setActivePanel(panelIds.includes(initialHash) ? initialHash : panelIds[0]);
+
+    window.addEventListener('hashchange', () => {
+      const id = window.location.hash.replace(/^#/, '');
+      if (panelIds.includes(id)) setActivePanel(id);
+    });
+
+    if (tablist) {
+      tablist.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const tab = target.closest('[data-nutrient-tab]');
+        if (!tab) return;
+        setActivePanel(tab.dataset.nutrientTab, true);
+      });
+
+      tablist.addEventListener('keydown', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const tab = target.closest('[data-nutrient-tab]');
+        if (!tab) return;
+
+        const current = tabs.indexOf(tab);
+        if (current === -1) return;
+
+        let next = current;
+
+        if (event.key === 'ArrowLeft') {
+          next = (current + 1) % tabs.length;
+        } else if (event.key === 'ArrowRight') {
+          next = (current - 1 + tabs.length) % tabs.length;
+        } else if (event.key === 'Home') {
+          next = 0;
+        } else if (event.key === 'End') {
+          next = tabs.length - 1;
+        } else {
+          return;
+        }
+
+        event.preventDefault();
+        const nextTab = tabs[next];
+        setActivePanel(nextTab.dataset.nutrientTab, true);
+        nextTab.focus();
+      });
+    }
+
+    const setActiveTerm = (id, active) => {
+      if (!id) return;
+      const selector = `[data-nutrient='${CSS.escape(id)}']`;
+      for (const element of root.querySelectorAll(selector)) {
+        element.classList.toggle('is-active', active);
+      }
+    };
+
+    for (const element of root.querySelectorAll('[data-nutrient]')) {
+      const id = element.getAttribute('data-nutrient');
+      element.addEventListener('pointerenter', () => setActiveTerm(id, true));
+      element.addEventListener('pointerleave', () => setActiveTerm(id, false));
+      element.addEventListener('focus', () => setActiveTerm(id, true));
+      element.addEventListener('blur', () => setActiveTerm(id, false));
+    }
+
+    root.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const closer = target.closest('[data-nutrient-close]');
+      if (closer) {
+        const dialog = closer.closest('dialog');
+        if (dialog) dialog.close();
+        return;
+      }
+
+      const opener = target.closest('[data-nutrient]');
+      if (!opener) return;
+
+      const id = opener.getAttribute('data-nutrient');
+      if (!id) return;
+
+      const dialog = document.getElementById(`nutrient-term-${id}`);
+      if (!(dialog instanceof HTMLDialogElement)) return;
+
+      lastFocus = opener;
+      openedFromIndex = Boolean(opener.closest('.nutrient-index'));
+      if (!dialog.open) dialog.showModal();
+    });
+
+    for (const dialog of root.querySelectorAll('.nutrient-dialog')) {
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+
+      dialog.addEventListener('close', () => {
+        if (openedFromIndex && indexDetails && !indexDetails.open) {
+          indexDetails.open = true;
+        }
+        openedFromIndex = false;
+        window.setTimeout(() => {
+          if (lastFocus instanceof HTMLElement) {
+            lastFocus.focus({ preventScroll: true });
+          }
+        }, 0);
+      });
+    }
+  })();
+</script>

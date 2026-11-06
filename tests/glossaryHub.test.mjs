@@ -89,15 +89,29 @@ test('glossary pages: every page under معاجم/ is registered', () => {
   }
 });
 
-test('glossary categories: only الكيمياء and التشريح are available in this release', () => {
+test('glossary categories: available titles are الكيمياء, التشريح and التغذية', () => {
   // Update this test when a new glossary category goes live.
   // deepEqual is insertion-order-sensitive: keep the expected array in JSON order.
   const available = categories.filter((c) => c.href);
   assert.deepEqual(
     available.map((c) => c.title),
-    ['الكيمياء', 'التشريح'],
+    ['الكيمياء', 'التشريح', 'التغذية'],
     'update this test when a new glossary category goes live; expected order must match JSON insertion order'
   );
+});
+
+test('glossary categories: every available category has a non-empty description', () => {
+  for (const category of categories.filter((c) => c.href)) {
+    assert.equal(
+      typeof category.description,
+      'string',
+      `category "${category.title}" description must be a string`
+    );
+    assert.ok(
+      category.description.trim().length > 0,
+      `category "${category.title}" description must be non-empty`
+    );
+  }
 });
 
 test('glossary hub: معاجم.astro and index.astro link exist', () => {
