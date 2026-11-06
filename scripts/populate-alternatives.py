@@ -76,7 +76,7 @@ BALANCED_PATTERNS = (
     re.compile(r"\{[^{}]*\}"),
 )
 
-SPLIT_RE = re.compile(r"::|\s+او\s+|\s+أو\s+|[;؛,،/]+")
+SPLIT_RE = re.compile(r"::|\|\.|\s+او\s+|\s+أو\s+|[;؛,،/]+|\|+(?!\.)")
 EDGE_PUNCT = "-–—.,،؛;:/\\|!?؟«»\"“”‘’'()[]{}…"
 TRANSLATION_MAP = str.maketrans(
     {
