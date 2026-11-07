@@ -41,7 +41,7 @@ const topics = [...counts.entries()].sort(
         <tbody>
           {topics.map(([tag, count]) => (
             <tr>
-              <td><a href={`/م/${tag}`}>{tag}</a></td>
+              <td><a href={`${import.meta.env.BASE_URL}/م/${tag}`}>{tag}</a></td>
               <td>{toArabicDigits(String(count))}</td>
             </tr>
           ))}

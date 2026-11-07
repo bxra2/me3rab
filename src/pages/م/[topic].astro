@@ -27,7 +27,7 @@ const { topic, posts } = Astro.props;
 <BaseLayout title={`موضوع: ${topic}`}>
   <header>
     <h1>موضوع: {topic}</h1>
-    <p>{toArabicDigits(String(posts.length))} مقالة تحمل هذا الوسم · <a href="/مدونة">كل المواضيع</a></p>
+    <p>{toArabicDigits(String(posts.length))} مقالة تحمل هذا الوسم · <a href={`${import.meta.env.BASE_URL}/مدونة`}>كل المواضيع</a></p>
   </header>
   <div class="entries">
     {posts.map((post) => (

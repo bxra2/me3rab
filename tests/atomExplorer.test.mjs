@@ -1008,7 +1008,7 @@ test('atom page: imports, section order and download', () => {
   assert.match(page, /<h2>مصطلحات الذرّة<\/h2>/, 'page must have the atom heading');
   assert.match(
     page,
-    /<a href="\/atoms\/atom\.svg" download>/,
+    /<a href=\{`\$\{base\}atoms\/atom\.svg`\} download>/,
     'page must offer the atom SVG as a download'
   );
   assert.doesNotMatch(page, /href="\/atom\.svg"/, 'page must not use the old root path');
@@ -1033,11 +1033,11 @@ test('atom page: imports, section order and download', () => {
 });
 
 test('atom page: referenced assets exist under public', () => {
-  const assets = [...page.matchAll(/\/atoms\/[^"'\s]+/g)].map((m) => m[0]);
-  assert.ok(assets.includes('/atoms/atom.svg'), 'page must link the atom SVG');
+  const assets = [...page.matchAll(/atoms\/[^"'\s`]+/g)].map((m) => m[0]);
+  assert.ok(assets.includes('atoms/atom.svg'), 'page must link the atom SVG');
 
   for (const asset of assets) {
-    const file = fileURLToPath(new URL(`../public${asset}`, import.meta.url));
+    const file = fileURLToPath(new URL(`../public/${asset}`, import.meta.url));
     assert.ok(existsSync(file), `referenced asset must exist under public/: ${asset}`);
   }
 });

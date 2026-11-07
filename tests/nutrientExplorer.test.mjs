@@ -779,7 +779,7 @@ test('nutrient page: layout, downloads and no embedded posters', () => {
     'page must import NutrientExplorer'
   );
   assert.match(page, /<NutrientExplorer\s*\/>/, 'page must render the explorer');
-  assert.match(page, /<a href="\/معاجم">العودة إلى المعاجم<\/a>/, 'page must link back');
+  assert.match(page, /<a href=\{`\$\{base\}معاجم`\}>العودة إلى المعاجم<\/a>/, 'page must link back');
   assert.match(page, /<h1>التغذية<\/h1>/, 'page must have the right h1');
   assert.match(page, /<h2>خريطة المغذيات<\/h2>/, 'page must have the map heading');
   assert.doesNotMatch(page, /<img\b/i, 'page must not contain an <img>');
@@ -789,18 +789,18 @@ test('nutrient page: layout, downloads and no embedded posters', () => {
     'page must not reference the old misspelled file'
   );
 
-  const assets = [...page.matchAll(/\/nutrients\/[^"'\s]+/g)].map((m) => m[0]);
+  const assets = [...page.matchAll(/nutrients\/[^"'\s`]+/g)].map((m) => m[0]);
   assert.ok(
-    assets.includes('/nutrients/macronutrients.svg'),
+    assets.includes('nutrients/macronutrients.svg'),
     'page must link the macronutrients SVG'
   );
   assert.ok(
-    assets.includes('/nutrients/micronutrients.svg'),
+    assets.includes('nutrients/micronutrients.svg'),
     'page must link the micronutrients SVG'
   );
 
   for (const asset of assets) {
-    const file = fileURLToPath(new URL(`../public${asset}`, import.meta.url));
+    const file = fileURLToPath(new URL(`../public/${asset}`, import.meta.url));
     assert.ok(existsSync(file), `referenced asset must exist under public/: ${asset}`);
   }
 });

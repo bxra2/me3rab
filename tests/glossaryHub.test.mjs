@@ -124,8 +124,8 @@ test('glossary hub: معاجم.astro and index.astro link exist', () => {
   ).normalize('NFC');
   assert.match(
     index,
-    /href=["']\/معاجم["']/,
-    'index.astro must link to /معاجم (single or double quotes)'
+    /href=\{`\$\{base\}معاجم`\}/,
+    'index.astro must link to the معاجم hub'
   );
 });
 
@@ -373,7 +373,7 @@ test('glossary anatomy: front/back interactive atlas is integrated and attribute
   );
   assert.match(page, /<MuscleFigure\s*\/>/, 'التشريح.astro must render <MuscleFigure />');
 
-  assert.match(page, /<a href="\/معاجم">العودة إلى المعاجم<\/a>/, 'page must link back to /معاجم');
+  assert.match(page, /<a href=\{`\$\{base\}معاجم`\}>العودة إلى المعاجم<\/a>/, 'page must link back to /معاجم');
   assert.match(page, /<h1>التشريح<\/h1>/, 'page must have an h1 التشريح');
   assert.match(
     page,
@@ -383,12 +383,12 @@ test('glossary anatomy: front/back interactive atlas is integrated and attribute
 
   assert.match(
     page,
-    /href="\/muscles\/male_front_muscle_anatomy\.svg"[^>]*download/,
+    /href=\{`\$\{base\}muscles\/male_front_muscle_anatomy\.svg`\}[^>]*download/,
     'page must offer the new front SVG as a download'
   );
   assert.match(
     page,
-    /href="\/muscles\/male_back_muscle_anatomy\.svg"[^>]*download/,
+    /href=\{`\$\{base\}muscles\/male_back_muscle_anatomy\.svg`\}[^>]*download/,
     'page must offer the new back SVG as a download'
   );
   assert.match(page, /Ryan Graves/, 'figcaption must credit Ryan Graves');
@@ -417,10 +417,10 @@ test('glossary anatomy: referenced muscle assets resolve', () => {
     'utf8'
   ).normalize('NFC');
 
-  const srcs = [...page.matchAll(/\/muscles\/[^"'\s]+/g)].map((m) => m[0]);
+  const srcs = [...page.matchAll(/muscles\/[^"'\s`]+/g)].map((m) => m[0]);
   assert.ok(srcs.length > 0, 'التشريح.astro must reference at least one /muscles/ asset');
   for (const src of srcs) {
-    const asset = fileURLToPath(new URL(`../public${src}`, import.meta.url));
+    const asset = fileURLToPath(new URL(`../public/${src}`, import.meta.url));
     assert.ok(existsSync(asset), `referenced asset must exist under public/: ${src}`);
   }
 });
@@ -452,12 +452,12 @@ test('glossary nav: Nav.astro has معاجم and keeps شبكة', () => {
   ).normalize('NFC');
   assert.match(
     src,
-    /href:\s*["']\/معاجم["']/,
+    /href:\s*`\$\{base\}معاجم`/,
     'Nav.astro must contain the /معاجم entry'
   );
   assert.match(
     src,
-    /href:\s*["']\/شبكة["']/,
+    /href:\s*`\$\{base\}شبكة`/,
     'Nav.astro must retain the pre-existing /شبكة entry'
   );
 });

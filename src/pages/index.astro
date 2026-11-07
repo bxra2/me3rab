@@ -2,10 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../data/site';
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/';
 
 const articles = await getCollection('script');
 const forgotten = articles.find((a) => a.id === 'المهمل-والمتروك');
-const forgottenHref = forgotten ? `/الخط/${forgotten.id}` : '/الخط';
+const forgottenHref = forgotten ? `${base}الخط/${forgotten.id}` : `${base}الخط`;
 ---
 
 <BaseLayout title="الرئيسية">
@@ -30,11 +31,11 @@ const forgottenHref = forgotten ? `/الخط/${forgotten.id}` : '/الخط';
           </ol>
         </section>
         <p>
-          <a href="/مدونة">المدونة</a> · <a href="/مصطلحات">مصطلحات</a>
+          <a href={`${base}مدونة`}>المدونة</a> · <a href={`${base}مصطلحات`}>مصطلحات</a>
         </p>
       </header>
       <div class="hub-grid">
-        <a class="card hub-card" href="/معاجم" aria-label="معاجم: تصفح المعاجم التخصصية">
+        <a class="card hub-card" href={`${base}معاجم`} aria-label="معاجم: تصفح المعاجم التخصصية">
           <span class="hub-card-kicker">قسم جديد</span>
           <h2 class="hub-card-title">معاجم</h2>
           <p class="hub-card-desc">
@@ -43,7 +44,7 @@ const forgottenHref = forgotten ? `/الخط/${forgotten.id}` : '/الخط';
           </p>
           <span class="hub-card-cta">تصفح المعاجم</span>
         </a>
-        <a class="card hub-card" href="/الخط" aria-label="الخط العربي: تاريخ الحرف وامتداده إلى اللغات الأخرى">
+        <a class="card hub-card" href={`${base}الخط`} aria-label="الخط العربي: تاريخ الحرف وامتداده إلى اللغات الأخرى">
           <span class="hub-card-kicker">قسم جديد</span>
           <h2 class="hub-card-title">الخط العربي</h2>
           <p class="hub-card-desc">

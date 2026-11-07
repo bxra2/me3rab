@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import categories from '../data/glossary-categories.json';
 import { toArabicDigits } from '../utils/arabicDigits';
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/';
 ---
 
 <BaseLayout title="معاجم">
@@ -19,7 +20,7 @@ import { toArabicDigits } from '../utils/arabicDigits';
         category.href ? (
           <a
             class="card hub-card"
-            href={category.href}
+            href={`${base}${category.href.replace(/^\//, "")}`}
             aria-label={category.ariaLabel ?? `معجم ${toArabicDigits(category.title)}`}
           >
             <span class="hub-card-kicker">{category.kicker ?? 'متاح الآن'}</span>

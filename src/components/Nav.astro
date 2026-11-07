@@ -4,25 +4,37 @@ interface Props {
 }
 
 const { currentPath } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/';
+const basePath = base.replace(/\/+$/, '');
 
 const links = [
-  { href: '/', label: 'الرئيسية' },
-  { href: '/مدونة', label: 'المدونة' },
-  { href: '/مصطلحات', label: 'مصطلحات' },
-  { href: '/معاجم', label: 'معاجم' },
-  { href: '/المنهجية', label: 'المنهجية' },
-  // { href: '/الخط', label: 'الخط' },
-  // { href: '/شبكة', label: 'شبكة' },
-  { href: '/مصادر', label: 'مصادر' },
+  { href: `${base}`, label: 'الرئيسية' },
+  { href: `${base}مدونة`, label: 'المدونة' },
+  { href: `${base}مصطلحات`, label: 'مصطلحات' },
+  { href: `${base}معاجم`, label: 'معاجم' },
+  { href: `${base}المنهجية`, label: 'المنهجية' },
+  // { href: `${base}الخط`, label: 'الخط' },
+  // { href: `${base}شبكة`, label: 'شبكة' },
+  { href: `${base}مصادر`, label: 'مصادر' },
 ];
 
-const normalize = (p: string) =>
-  p === '/' ? '/' : decodeURIComponent(p).replace(/\/+$/, '');
+const normalize = (p: string) => {
+  const decoded = decodeURIComponent(p);
+  let rel = decoded;
+  if (
+    basePath !== '' &&
+    (decoded === basePath || decoded.startsWith(basePath + '/'))
+  ) {
+    rel = decoded.slice(basePath.length);
+  }
+  return rel.replace(/^\/+|\/+$/g, '') || '/';
+};
+
 const current = normalize(currentPath);
 ---
 
 <nav class="site-nav">
-  <a class="brand" href="/">معراب</a>
+  <a class="brand" href={base}>معراب</a>
   <ul>
     {links.map((l) => (
       <li>

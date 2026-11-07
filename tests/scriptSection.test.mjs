@@ -61,7 +61,7 @@ test('script section: ScriptEntry links articles to /الخط/{id}', () => {
   const entry = read('../src/components/ScriptEntry.astro');
   assert.match(
     entry,
-    /href=\{`\/الخط\/\$\{article\.id\}`\}/,
+    /href=\{`\$\{import\.meta\.env\.BASE_URL\}\/الخط\/\$\{article\.id\}`\}/,
     'ScriptEntry must link to /الخط/${article.id}'
   );
 });
@@ -83,8 +83,8 @@ test('script section: renderer omits blog-only fields', () => {
 
 test('script section: nav and index link to the section', () => {
   const nav = read('../src/components/Nav.astro');
-  assert.match(nav, /href:\s*["']\/الخط["']/, 'Nav.astro must link to /الخط');
+  assert.match(nav, /href:\s*`\$\{base\}الخط`/, 'Nav.astro must link to /الخط');
   const index = read('../src/pages/index.astro');
-  assert.match(index, /href=["']\/الخط["']/, 'index.astro must link to /الخط');
+  assert.match(index, /href=\{`\$\{base\}الخط`\}/, 'index.astro must link to /الخط');
   assert.match(index, /forgottenHref/, 'index.astro must resolve the forgotten article link dynamically');
 });

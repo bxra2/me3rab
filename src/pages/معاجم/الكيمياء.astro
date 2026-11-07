@@ -3,11 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PeriodicTable from '../../components/PeriodicTable.astro';
 import AtomExplorer from '../../components/AtomExplorer.astro';
 import '../../components/glossary-tabs.css';
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/';
 ---
 
 <BaseLayout title="الكيمياء — معاجم">
   <header>
-    <p><a href="/معاجم">العودة إلى المعاجم</a></p>
+    <p><a href={`${base}معاجم`}>العودة إلى المعاجم</a></p>
     <h1>الكيمياء</h1>
     <p>
       الجدول الدوري التفاعلي: أسماء العناصر بالإنجليزية حاليًا، وستُضاف
@@ -71,7 +72,7 @@ import '../../components/glossary-tabs.css';
             للتحميل كمرجع أصلي:
           </p>
           <p>
-            <a href="/atoms/atom.svg" download>
+            <a href={`${base}atoms/atom.svg`} download>
               تحميل ملصق مصطلحات الذرّة
             </a>
           </p>

@@ -6,7 +6,7 @@ interface Props {
 const { selector } = Astro.props;
 ---
 
-<script is:inline src="/raqim-kashida.js"></script>
+<script is:inline src={`${import.meta.env.BASE_URL}/raqim-kashida.js`}></script>
 <script is:inline define:vars={{ selector }}>
   (() => {
     const targets = [...document.querySelectorAll(selector)].filter(

@@ -35,7 +35,7 @@ const hasSidenotes = (post.body ?? '').includes('^[');
     <aside class="aside-box toc">
       <p class="tag-list aside-tags">
         {post.data.tags.map((t) => (
-          <a class="tag" href={`/م/${t}`}>{t}</a>
+          <a class="tag" href={`${import.meta.env.BASE_URL}/م/${t}`}>{t}</a>
         ))}
       </p>
       {post.data.toc && (

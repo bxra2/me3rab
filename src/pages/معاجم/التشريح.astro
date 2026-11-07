@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MuscleFigure from '../../components/MuscleFigure.astro';
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/';
 ---
 
 <BaseLayout title="التشريح — معاجم">
   <header>
-    <p><a href="/معاجم">العودة إلى المعاجم</a></p>
+    <p><a href={`${base}معاجم`}>العودة إلى المعاجم</a></p>
     <h1>التشريح</h1>
     <p>
       أطلس مصوّر تفاعلي لعضلات جسم الإنسان في المنظرين الأمامي والخلفي: مرّر فوق
@@ -26,8 +27,8 @@ import MuscleFigure from '../../components/MuscleFigure.astro';
         </p>
         <p>
           النسختان التفاعليتان: أُضيفت فئات وسمات للتفاعل دون تغيير مسارات الرسم.
-          <a href="/muscles/male_front_muscle_anatomy.svg" download>تحميل الرسم الأمامي</a>
-          <a href="/muscles/male_back_muscle_anatomy.svg" download>تحميل الرسم الخلفي</a>
+          <a href={`${base}muscles/male_front_muscle_anatomy.svg`} download>تحميل الرسم الأمامي</a>
+          <a href={`${base}muscles/male_back_muscle_anatomy.svg`} download>تحميل الرسم الخلفي</a>
         </p>
       </figcaption>
     </figure>

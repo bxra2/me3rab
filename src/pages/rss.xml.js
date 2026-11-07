@@ -7,12 +7,12 @@ export async function GET(context) {
   return rss({
     title: site.name,
     description: site.description,
-    site: context.site,
+    site: new URL(import.meta.env.BASE_URL, context.site).toString(),
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.date,
-      link: `/مدونة/${post.id}/`,
+      link: `${import.meta.env.BASE_URL}/مدونة/${post.id}/`,
     })),
   });
 }

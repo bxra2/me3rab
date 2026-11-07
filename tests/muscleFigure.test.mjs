@@ -396,12 +396,12 @@ test('muscle page: both views, both downloads, and no legacy attribution', () =>
   assert.match(page, /<h2>عضلات المنظرين الأمامي والخلفي<\/h2>/, 'page must be front+back');
   assert.match(
     page,
-    /href="\/muscles\/male_front_muscle_anatomy\.svg"[^>]*download/,
+    /href=\{`\$\{base\}muscles\/male_front_muscle_anatomy\.svg`\}[^>]*download/,
     'page must offer the front SVG download'
   );
   assert.match(
     page,
-    /href="\/muscles\/male_back_muscle_anatomy\.svg"[^>]*download/,
+    /href=\{`\$\{base\}muscles\/male_back_muscle_anatomy\.svg`\}[^>]*download/,
     'page must offer the back SVG download'
   );
   assert.match(page, /Ryan Graves/, 'page must credit Ryan Graves');

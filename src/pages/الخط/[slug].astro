@@ -23,7 +23,7 @@ const hasToc = article.data.toc && tocItems.length > 0;
   <div class:list={[hasToc && 'with-aside', { 'has-sidenotes': hasSidenotes }]}>
     <article>
       <header>
-        <p><a href="/الخط">العودة إلى الخط</a></p>
+        <p><a href={`${import.meta.env.BASE_URL}/الخط`}>العودة إلى الخط</a></p>
         <h1>{article.data.title}</h1>
       </header>
       <div class="post-body">
