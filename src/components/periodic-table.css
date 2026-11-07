@@ -500,3 +500,27 @@
     grid-template-columns: minmax(0, 18rem);
   }
 }
+
+/* ---- Narrow containers (small screens): lead with the element symbol ---- */
+@container (max-width: 30rem) {
+  .periodic-table ol {
+    font-size: 3.2cqi;
+  }
+
+  .periodic-table ol abbr {
+    grid-area: 1 / 1 / 4 / 3;
+    place-content: center;
+  }
+
+  .periodic-table ol abbr::after {
+    display: none;
+  }
+
+  .periodic-table ol li::after {
+    display: none;
+  }
+
+  .periodic-table ol li::before {
+    font-size: 0.6em;
+  }
+}

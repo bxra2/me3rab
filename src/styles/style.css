@@ -454,7 +454,7 @@ header .title-row {
 
 .glossary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(24rem, 100%), 1fr));
   gap: var(--space-l);
 }
 
@@ -1116,4 +1116,28 @@ dialog.stamp::backdrop {
 dialog.stamp .stamp-body {
   max-height: 70vh;
   overflow: auto;
+}
+
+/* ---- Small screens: tighter type, nav, and scrollable stat table ---- */
+@media (max-width: 40rem) {
+  :root {
+    --text-s: 0.95rem;
+    --text-m: 1.05rem;
+    --text-l: 1.2rem;
+    --text-xl: clamp(1.6rem, 1.25rem + 2.5vw, 2.1rem);
+  }
+
+  h2 { font-size: 1.45rem; }
+  h3 { font-size: 1.15rem; }
+
+  .site-nav .brand { font-size: 1.6rem; }
+  .site-nav ul { justify-content: center; }
+  .site-nav ul a { font-size: 1.05rem; }
+
+  .term-stats {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
