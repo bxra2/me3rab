@@ -504,7 +504,7 @@
 /* ---- Narrow containers (small screens): lead with the element symbol ---- */
 @container (max-width: 30rem) {
   .periodic-table ol {
-    font-size: 3.2cqi;
+    font-size: 2.4cqi;
   }
 
   .periodic-table ol abbr {
@@ -521,6 +521,6 @@
   }
 
   .periodic-table ol li::before {
-    font-size: 0.6em;
+    font-size: 0.4em;
   }
 }

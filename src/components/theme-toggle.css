@@ -21,18 +21,14 @@
 
   display: grid;
   place-items: center;
-  inline-size: 3.4rem;
-  block-size: 3.4rem;
+  inline-size: 2.6rem;
+  block-size: 2.6rem;
   padding: 0;
   border: 0;
   border-radius: 50%;
 
   background: var(--wax-bg);
   color: var(--bg-color);
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  line-height: 1;
-  text-shadow: 0 1px 1px rgb(0 0 0 / 0.25);
   cursor: pointer;
 
   box-shadow:
@@ -63,8 +59,23 @@
   outline-offset: 3px;
 }
 
-.theme-toggle-glyph {
+.theme-toggle-icon {
+  inline-size: 1.3rem;
+  block-size: 1.3rem;
   pointer-events: none;
+}
+
+/* moon invites the dark mode, sun invites the light mode */
+.theme-toggle-sun {
+  display: none;
+}
+
+:root[data-theme='dark'] .theme-toggle-sun {
+  display: block;
+}
+
+:root[data-theme='dark'] .theme-toggle-moon {
+  display: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

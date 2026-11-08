@@ -3,7 +3,7 @@
 
   --stripe-color1: #d22f47;
   --stripe-color2: #315f9b;
-  --stripe-width: 1.6rem;
+  --stripe-width: clamp(0.75rem, 2vw, 1.6rem);
   --bg-color: #f2ecdd;
   --color-ink: #3a3733;
   --color-accent: var(--stripe-color1);
@@ -121,7 +121,7 @@ body {
 }
 
 :root[data-theme="dark"] .paperOverlay {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.35'/%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.35'/%3E%3C/svg%3E"); */
   mix-blend-mode: soft-light;
 }
 
@@ -484,18 +484,24 @@ header .title-row {
   gap: var(--space-l);
 }
 
+/* compact catalog cards for مصادر */
+.source-grid {
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--space-m);
+}
+
 .source-card {
   display: flex;
-  gap: var(--space-m);
+  gap: var(--space-s);
   align-items: start;
   border: 2px solid var(--color-ink);
-  padding: var(--space-m);
+  padding: var(--space-s);
 }
 
 .source-pic {
   flex: none;
-  inline-size: 6rem;
-  block-size: 6rem;
+  inline-size: 4.25rem;
+  block-size: 4.25rem;
   border: 2px solid var(--color-ink);
 }
 
@@ -510,7 +516,7 @@ header .title-row {
 .source-text { min-width: 0; }
 
 .source-name {
-  font-size: var(--text-l);
+  font-size: var(--text-m);
   margin: 0 0 var(--space-xs);
 }
 
@@ -797,8 +803,9 @@ input[type="radio"]:focus-visible {
   border: 2px solid var(--color-ink);
   background: var(--bg-color);
   color: var(--color-ink);
+  box-sizing: border-box;
   padding: var(--space-l);
-  inline-size: min(34rem, calc(100% - 2 * var(--space-m)));
+  inline-size: min(34rem, calc(100vw - 2.5rem));
   margin: auto;
 }
 
@@ -1139,5 +1146,24 @@ dialog.stamp .stamp-body {
     max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* blog list: the date drops onto its own line */
+  .entries .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .entries .title-row .tag-list {
+    margin-inline-start: 0;
+  }
+
+  .term-dialog {
+    padding: var(--space-m);
+  }
+
+  .source-pic {
+    inline-size: 3.5rem;
+    block-size: 3.5rem;
   }
 }
