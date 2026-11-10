@@ -17,5 +17,7 @@ alternatives:
     note: من قاموس المورد الحديث
   - translation: يدرِّع
     note: من قاموس المورد الحديث
+  - translation: درع . مدرعات . تدريع
+    note: من معجم مصطلحات العلم والتكنولوجيا (ج.1
 derivations: []
 ---

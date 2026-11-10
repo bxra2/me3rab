@@ -22,6 +22,8 @@ alternatives:
     note: من قائمة مصطلحات المعلوماتية
   - translation: البَيْتة
     note: من قاموس المورد الحديث
+  - translation: بيتة
+    note: من معجم مصطلحات العلم والتكنولوجيا (ج.1
 derivations:
   - form: أُثمون
     gloss: 'الاسم: وحدة المعلومات'

@@ -17,5 +17,7 @@ alternatives:
     note: من قاموس المورد الحديث
   - translation: فترة فاصلة
     note: من قاموس المورد الحديث
+  - translation: قصلة
+    note: من معجم مصطلحات العلم والتكنولوجيا (ج.1
 derivations: []
 ---
