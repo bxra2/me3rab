@@ -17,5 +17,7 @@ alternatives:
     note: من مصطلحات اللسانيات و المعاجم
   - translation: الفونيمة
     note: من قاموس المورد الحديث
+  - translation: صوتلغوي
+    note: من مصطلحات اللسانيات و المعاجم
 derivations: []
 ---
