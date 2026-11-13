@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import TermPage from '../../components/TermPage.astro'
+import relations from '../../data/relations.json'
+import type {
+  TermStatusKey,
+  TermSourceKey,
+  TermMotivationKey,
+  TermFormationKey,
+} from '../../data/termStatuses'
+import type { TermView } from '../../utils/interfaces'
+
+export async function getStaticPaths() {
+  const rawEntries = await getCollection('terms')
+  const knownTerms = new Set(rawEntries.map((entry) => entry.data.term))
+  const slugFor = new Map(
+    rawEntries.map((entry) => [entry.data.term, entry.id])
+  )
+
+  return rawEntries.map((entry) => {
+    const e: TermView = {
+      term: entry.data.term,
+      translation: entry.data.translation,
+      explanation: entry.data.explanation,
+      source: entry.data.source,
+      status: entry.data.status as TermStatusKey,
+      termSource: entry.data.termSource as TermSourceKey,
+      termMotivation: entry.data.termMotivation as TermMotivationKey,
+      termFormation: entry.data.termFormation as TermFormationKey,
+      alternatives: entry.data.alternatives,
+      languages: entry.data.languages,
+      derivations: entry.data.derivations,
+      isComplete: entry.data.isComplete ?? false,
+    }
+
+    return {
+      params: { term: entry.id },
+      props: {
+        e,
+        relations: relations.filter((r) => r.terms.includes(e.term)),
+        knownTerms,
+        slugFor: (term: string) => slugFor.get(term),
+      },
+    }
+  })
+}
+
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/'
+const { e, relations, knownTerms, slugFor } = Astro.props
+---
+
+<BaseLayout title={`مصطلحات: ${e.term}`}>
+  <TermPage {e} {base} {relations} {knownTerms} {slugFor} />
+</BaseLayout>

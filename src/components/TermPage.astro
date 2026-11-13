@@ -1,0 +1,191 @@
+---
+import './term-page.css'
+import {
+  TermStatus,
+  statusBadgeClass,
+  TermSource,
+  sourceBadgeClass,
+  TermMotivation,
+  motivationBadgeClass,
+  TermFormation,
+  formationBadgeClass,
+} from '../data/termStatuses'
+import type { TermView } from '../utils/interfaces'
+
+interface Props {
+  e: TermView
+  base?: string
+  relations?: { type: string; terms: string[]; note: string }[]
+  knownTerms?: Set<string>
+  slugFor?: (term: string) => string | undefined
+}
+
+const relationTypeLabels: Record<string, string> = {
+  family: 'عائلة',
+  contrast: 'تمييز',
+  pipeline: 'سلسلة',
+}
+
+const { e, base = '/', relations = [], knownTerms = new Set(), slugFor } = Astro.props
+
+const termHref = (term: string) => {
+  const slug = slugFor?.(term)
+  return slug ? `${base}مصطلحات/${encodeURIComponent(slug)}` : undefined
+}
+
+const meta = [
+  ['الحالة', statusBadgeClass[e.status], TermStatus[e.status]],
+  ['الصياغة', formationBadgeClass[e.termFormation], TermFormation[e.termFormation]],
+  ['المصدر', sourceBadgeClass[e.termSource], TermSource[e.termSource]],
+  ['الدافع', motivationBadgeClass[e.termMotivation], TermMotivation[e.termMotivation]],
+]
+
+const sources = Array.isArray(e.source) ? e.source : []
+const languages = Array.isArray(e.languages) ? e.languages : []
+const derivations = Array.isArray(e.derivations) ? e.derivations : []
+
+// Every section renders in its grid slot; empty ones show a dashed
+// section-level placeholder so the page shape stays stable.
+const sectionPlaceholderHtml =
+  '<div class="term-section-placeholder" aria-hidden="true">' +
+  '<span class="visually-hidden">لا محتوى بعد</span>' +
+  '</div>'
+---
+
+<article class="term-page">
+  <nav class="term-back">
+    <a href={`${base}مصطلحات`}>العودة إلى مصطلحات</a>
+  </nav>
+
+  <header class="term-head">
+    <h1 class="term-translation">{e.translation || '—'}</h1>
+    <p class="term-original" dir="ltr" lang="en">
+      {e.term}
+      {e.isComplete && (
+        <span class="term-complete" title="Completed">✓</span>
+      )}
+    </p>
+  </header>
+
+  <div class="term-layout">
+    <section class="term-states term-section is-wide" aria-label="حالات المصطلح">
+      <h2 class="visually-hidden">الحالات</h2>
+      <table class="term-meta">
+        <tbody>
+          <tr>
+            {meta.map(([label, cls, text]) => (
+              <Fragment>
+                <th scope="row">{label}</th>
+                <td><span class={`badge ${cls}`}>{text}</span></td>
+              </Fragment>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="term-relations term-section">
+      <h2>علاقات</h2>
+      {relations.length > 0 ? (
+        <div class="relation-list">
+          {relations.map((r) => (
+            <p class="relation-group">
+              <span class="badge relation-type">{relationTypeLabels[r.type] ?? r.type}</span>:
+              <span class="relation-chips">
+                {r.terms
+                  .filter((t) => t !== e.term)
+                  .map((t) =>
+                    knownTerms.has(t) ? (
+                      <a class="relation-chip" href={termHref(t)!}>{t}</a>
+                    ) : (
+                      <span class="relation-chip relation-chip--ghost">{t}</span>
+                    )
+                  )}
+              </span>
+              <span class="relation-note">{r.note}</span>
+            </p>
+          ))}
+        </div>
+      ) : <Fragment set:html={sectionPlaceholderHtml} />}
+    </section>
+
+    <section class="term-main">
+      <div class="term-section">
+        <h2>الشرح</h2>
+        {e.explanation ? <p>{e.explanation}</p> : <Fragment set:html={sectionPlaceholderHtml} />}
+      </div>
+
+      <div class="term-section">
+        <h2>مصطلحات مقترحة</h2>
+        {e.alternatives.length > 0 ? (
+          <ul class="term-alternatives">
+            {e.alternatives.map((a) => (
+              <li>
+                <strong>{a.translation}</strong>
+                {a.note && <span> — {a.note}</span>}
+              </li>
+            ))}
+          </ul>
+        ) : <Fragment set:html={sectionPlaceholderHtml} />}
+      </div>
+
+      <div class="term-section">
+        <h2>الاشتقاق</h2>
+        {derivations.length > 0 ? (
+          <table>
+            <thead><tr><th>الصيغة</th><th>المعنى</th></tr></thead>
+            <tbody>
+              {derivations.map((d) => (
+                <tr><td>{d.form}</td><td>{d.gloss}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        ) : <Fragment set:html={sectionPlaceholderHtml} />}
+      </div>
+    </section>
+
+    <section class="term-side">
+      <div class="term-section">
+        <h2>بقية اللغات</h2>
+        {languages.length > 0 ? (
+          <table class="term-languages">
+            <caption class="visually-hidden">ترجمات المصطلح في لغات أخرى</caption>
+            <thead>
+              <tr>
+                <th scope="col">اللغة</th>
+                <th scope="col">المصطلح</th>
+              </tr>
+            </thead>
+            <tbody>
+              {languages.map((l) => (
+                <tr>
+                  <td>{l.language}</td>
+                  <td dir="auto">
+                    {l.link ? (
+                      <a href={l.link} target="_blank" rel="noopener noreferrer">{l.term}</a>
+                    ) : (
+                      l.term
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : <Fragment set:html={sectionPlaceholderHtml} />}
+      </div>
+
+      <div class="term-section term-sources">
+        <h2>المصادر</h2>
+        {sources.length > 0 ? (
+          <ul>
+            {sources.map((s) => (
+              <li dir="auto">
+                <a href={s.link} target="_blank" rel="noopener noreferrer">{s.name}</a>
+              </li>
+            ))}
+          </ul>
+        ) : <Fragment set:html={sectionPlaceholderHtml} />}
+      </div>
+    </section>
+  </div>
+</article>

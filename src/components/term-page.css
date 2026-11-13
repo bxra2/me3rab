@@ -1,0 +1,283 @@
+/* ---------- Page shell ---------- */
+.term-page {
+  display: grid;
+  gap: var(--space-m, 1.25rem);
+}
+
+/* ---------- Back link ---------- */
+.term-back a {
+  color: var(--color-ink);
+  font-size: var(--text-s);
+}
+
+/* ---------- Heading scale ---------- */
+.term-page .term-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  padding-block-end: var(--space-s, 0.75rem);
+  border-block-end: 1px solid var(--color-rule);
+}
+
+.term-translation {
+  font-size: 3.1rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.term-original {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.term-complete {
+  color: var(--color-complete);
+}
+
+.term-page h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem;
+  padding: 0.3rem 0.75rem;
+  display: inline-block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- States: 4 cells in one row, auto-wraps ---------- */
+.term-meta {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border, #e5e7eb);
+}
+
+/* Desktop: original format — label column + value column per state */
+.term-meta th,
+.term-meta td {
+  padding: 0.6rem 0.9rem;
+  text-align: start;
+  vertical-align: middle;
+  border: 1px solid var(--border, #e5e7eb);
+}
+
+.term-meta th {
+  width: 1%;
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.75;
+  background: var(--surface-2, var(--stripe-color2));
+  color: var(--bg-color);
+}
+
+.term-meta td {
+  width: 24%;
+}
+
+/* Mobile only: the four states wrap into two lines of two states each */
+@media (max-width: 640px) {
+  .term-meta {
+    border: none;
+  }
+
+  .term-meta tbody {
+    display: block;
+  }
+
+  .term-meta tr {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .term-meta th,
+  .term-meta td {
+    width: auto;
+    padding: 0.2rem .2rem;
+  }
+
+  /* let long badges wrap inside their cell instead of overflowing */
+  .term-meta .badge {
+    white-space: normal;
+  }
+}
+
+/* ---------- Layout grid: states / rels / main / side / derivations ---------- */
+.term-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-areas:
+    'states states states'
+    'rels main side';
+  gap: var(--space-m, 1.25rem);
+  align-items: start;
+}
+
+/* RTL: the first grid column sits on the right side */
+.term-states {
+  grid-area: states;
+}
+.term-relations {
+  grid-area: rels;
+}
+.term-main {
+  grid-area: main;
+}
+.term-side {
+  grid-area: side;
+  display: grid;
+  gap: var(--space-m, 1.25rem);
+}
+.term-main {
+  display: grid;
+  gap: var(--space-m, 1.25rem);
+}
+
+/* ---------- Empty-section placeholder ---------- */
+.term-section-placeholder {
+  border: 2px dashed var(--color-rule);
+  min-block-size: 3.5rem;
+  opacity: 0.45;
+}
+
+/* ---------- Sections ---------- */
+.term-section p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.term-section ul {
+  margin: 0;
+  padding-inline-start: 1.2rem;
+  line-height: 1.8;
+}
+
+.term-alternatives {
+  list-style: none;
+  padding-inline-start: 0 !important;
+}
+
+.term-alternatives li {
+  padding-block-end: var(--space-xs, 0.4rem);
+  border-block-end: 1px solid var(--color-rule);
+}
+
+/* ---------- Languages table ---------- */
+.term-languages {
+  width: 100%;
+  border-collapse: collapse;
+  /* border: 1px solid var(--color-rule); */
+}
+
+.term-languages th,
+.term-languages td {
+  padding: 0.45rem 0.7rem;
+  text-align: start;
+  border: 1px solid var(--color-rule);
+}
+
+.term-languages thead th {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.term-languages td {
+  font-size: 1.05rem;
+}
+
+/* Empty shapes that preview the table layout before data exists */
+.term-languages tr.term-placeholder td {
+  block-size: 2.1rem;
+  border-style: dashed;
+  opacity: 0.4;
+}
+
+.term-sources ul {
+  list-style: none;
+  padding-inline-start: 0 !important;
+}
+
+/* ---------- Derivation table ---------- */
+.term-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.term-section th,
+.term-section td {
+  text-align: start;
+  border-block-end: 1px solid var(--color-rule);
+}
+
+.term-section td {
+  padding: 0.5rem 0.3rem;
+}
+.term-section th {
+  font-size: 0.8rem;
+  padding: 0.5rem 0.75rem;
+  opacity: 0.65;
+  font-weight: 600;
+}
+
+/* ---------- Relation chips (links on a page, not buttons) ---------- */
+.term-page a.relation-chip {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.term-page a.relation-chip:hover {
+  color: var(--bg-color);
+  background-color: var(--stripe-color1);
+}
+
+/* ---------- Sources footer ---------- */
+.term-sources {
+  font-size: 0.9rem;
+}
+
+/* ---------- Narrow screens: stack ---------- */
+@media (max-width: 50rem) {
+  /* word and translation stay side by side: translation right, term left */
+  .term-head {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .term-translation {
+    font-size: 1.9rem;
+  }
+
+  .term-original {
+    font-size: 1.25rem;
+  }
+
+  .term-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .term-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      'states'
+      'main'
+      'rels'
+      'side';
+  }
+}

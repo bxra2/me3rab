@@ -24,6 +24,9 @@ alternatives:
     note: من قاموس المورد الحديث
   - translation: بيتة
     note: من معجم مصطلحات العلم والتكنولوجيا (ج.1
+languages:
+  - language: الفرنسية
+    term: Octet
 derivations:
   - form: أُثمون
     gloss: 'الاسم: وحدة المعلومات'

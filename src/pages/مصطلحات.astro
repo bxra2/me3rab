@@ -1,26 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import TermDialog from '../components/TermDialog.astro'
 import { getCollection } from 'astro:content'
 import relations from '../data/relations.json'
 import { toArabicDigits } from '../utils/arabicDigits'
 import {
     TermStatus,
     statusBadgeClass,
-    TermSource,
-    sourceBadgeClass,
-    TermMotivation,
-    motivationBadgeClass,
-    TermFormation,
-    formationBadgeClass,
 } from '../data/termStatuses'
 import type {
-    TermSourceKey,
     TermStatusKey,
+    TermSourceKey,
     TermMotivationKey,
     TermFormationKey,
 } from '../data/termStatuses'
-import { TermView } from '../utils/interfaces'
+import type { TermView } from '../utils/interfaces'
 
 const rawEntries = await getCollection('terms')
 const currentTermStatus = 'all'
@@ -36,91 +29,17 @@ const entries: TermView[] = rawEntries
         termMotivation: entry.data.termMotivation as TermMotivationKey,
         termFormation: entry.data.termFormation as TermFormationKey,
         alternatives: entry.data.alternatives,
+        languages: entry.data.languages,
         derivations: entry.data.derivations,
         isComplete: entry.data.isComplete ?? false,
     }))
     .sort((a, b) => a.term.localeCompare(b.term, 'en', { sensitivity: 'base' }))
 
-const escapeHtml = (s: string) =>
-    s
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;')
-
-const relationTypeLabels: Record<string, string> = {
-    family: 'عائلة',
-    contrast: 'تمييز',
-    pipeline: 'سلسلة',
-}
+const slugFor = new Map(rawEntries.map((entry) => [entry.data.term, entry.id]))
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '') + '/'
 
 const relationsFor = (term: string) =>
     relations.filter((r) => r.terms.includes(term))
-
-const knownTerms = new Set(entries.map((e) => e.term))
-
-const dialogProps = (e: TermView) => {
-    const alts = (e.alternatives ?? [])
-        .map(
-            (a) =>
-                `<li><strong>${escapeHtml(a.translation)}</strong> — ${escapeHtml(a.note)}</li>`
-        )
-        .join('')
-
-    const derivs = (e.derivations ?? [])
-        .map(
-            (d) =>
-                `<tr><td>${escapeHtml(d.form)}</td><td>${escapeHtml(d.gloss)}</td></tr>`
-        )
-        .join('')
-
-    const rels = relationsFor(e.term)
-        .map((r) => {
-            const label = relationTypeLabels[r.type] ?? r.type
-            const chips = r.terms
-                .filter((t) => t !== e.term)
-                .map((t) =>
-                    knownTerms.has(t)
-                        ? `<button class="relation-chip" type="button" aria-haspopup="dialog" data-term="${escapeHtml(t)}">${escapeHtml(t)}</button>`
-                        : `<span class="relation-chip relation-chip--ghost">${escapeHtml(t)}</span>`
-                )
-                .join('')
-            return `<p class="relation-group">
-        <span class="badge relation-type">${escapeHtml(label)}</span>: 
-        <span class="relation-chips">${chips}</span>
-        <span class="relation-note">${escapeHtml(r.note)}</span>
-      </p>`
-        })
-        .join('')
-
-    const sources = (Array.isArray(e.source) ? e.source : [])
-        .map(
-            (s) =>
-                `<a href="${escapeHtml(s.link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.name)}</a>`
-        )
-        .join('، &nbsp;')
-
-    return {
-        e,
-        status: e.status,
-        termSource: e.termSource,
-        termMotivation: e.termMotivation,
-        termFormation: e.termFormation,
-        alts,
-        derivs,
-        rels,
-        sources,
-        classes: statusBadgeClass,
-        labels: TermStatus,
-        sourceClasses: sourceBadgeClass,
-        sourceLabels: TermSource,
-        motivationClasses: motivationBadgeClass,
-        motivationLabels: TermMotivation,
-        formationClasses: formationBadgeClass,
-        formationLabels: TermFormation,
-    }
-}
 
 const searchEntries = entries.map((e) => ({
     term: e.term,
@@ -128,6 +47,7 @@ const searchEntries = entries.map((e) => ({
     explanation: e.explanation,
     status: e.status,
     source: (e.source ?? []).map((s) => ({ name: s.name })),
+    languages: (e.languages ?? []).map((l) => l.term),
 }))
 
 const statusCounts = Object.fromEntries(
@@ -172,7 +92,7 @@ const entriesFor = (letter: string) =>
         <h1>مصطلحات</h1>
         <div class='term-intro'>
             <p>
-                معجمٌ واحدٌ لواحد: انقر أي مدخل لفتح بطاقته — مقابلٌ وبدائل
+                معجمٌ واحدٌ لواحد: انقر أي مدخل لزيارة صفحته — مقابلٌ وبدائل
                 واشتقاق ومصدر.
             </p>
 
@@ -238,10 +158,12 @@ const entriesFor = (letter: string) =>
                             <ul class='term-rows'>
                                 {letterEntries.map((e) => (
                                     <li>
-                                        <button
+                                        <a
                                             class='term-row'
                                             data-term={e.term}
-                                            aria-haspopup='dialog'
+                                            href={`${base}مصطلحات/${encodeURIComponent(
+                                                slugFor.get(e.term) ?? ''
+                                            )}`}
                                         >
                                             <span class='term-row-term'>
                                                 {toArabicDigits(e.term)}
@@ -269,7 +191,7 @@ const entriesFor = (letter: string) =>
                                             >
                                                 {TermStatus[e.status]}
                                             </span>
-                                        </button>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
@@ -283,17 +205,6 @@ const entriesFor = (letter: string) =>
     </div>
 
     <p class='no-results' hidden>لا نتائج تطابق بحثك.</p>
-
-    <div class='term-dialogs'>
-        {
-            entries.map((e) => (
-                <dialog class='term-dialog-shell' data-term={e.term} aria-label={e.term}>
-                    <button class='dialog-close' type='button'>إغلاق</button>
-                    <TermDialog {...dialogProps(e)} />
-                </dialog>
-            ))
-        }
-    </div>
 
     <script
         is:inline
@@ -322,6 +233,7 @@ const entriesFor = (letter: string) =>
             explanation: string
             status?: string
             source?: { name: string }[]
+            languages?: string[]
         }[]
         const relations = JSON.parse(
             document.getElementById('relation-data')?.textContent ?? '[]'
@@ -338,6 +250,7 @@ const entriesFor = (letter: string) =>
                 e.translation,
                 e.explanation,
                 ...(Array.isArray(e.source) ? e.source : []).map((s) => s.name),
+                ...(e.languages ?? []),
                 ...relationsFor(e.term).flatMap((r) => [r.note, ...r.terms]),
             ]
                 .join(' ')
@@ -389,44 +302,5 @@ const entriesFor = (letter: string) =>
         document
             .querySelectorAll('input[name="term-filter"]')
             .forEach((r) => r.addEventListener('change', applyFilters))
-
-        const dialogs = new Map(
-            [...document.querySelectorAll('dialog[data-term]')].map((d) => [
-                (d as HTMLElement).dataset.term,
-                d as HTMLDialogElement,
-            ])
-        )
-
-        const openTerm = (term: string | undefined) => {
-            const target = term ? dialogs.get(term) : undefined
-            if (!target) return
-            document.querySelector('dialog[open]')?.close()
-            target.showModal()
-        }
-
-        document.addEventListener('click', (ev) => {
-            if (!(ev.target instanceof Element)) return
-            const row = ev.target.closest('.term-row')
-            if (row) {
-                openTerm((row as HTMLElement).dataset.term)
-                return
-            }
-            const chip = ev.target.closest('button.relation-chip')
-            if (chip) {
-                openTerm((chip as HTMLElement).dataset.term)
-                return
-            }
-            const closer = ev.target.closest('.dialog-close')
-            if (closer) {
-                closer.closest('dialog')?.close()
-                return
-            }
-            if (
-                ev.target instanceof HTMLDialogElement &&
-                ev.target.open
-            ) {
-                ev.target.close()
-            }
-        })
     </script>
 </BaseLayout>

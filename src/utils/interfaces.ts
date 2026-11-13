@@ -15,6 +15,12 @@ export interface Derivation {
   gloss: string;
 }
 
+export interface TermLanguage {
+  language: string;
+  term: string;
+  link: string;
+}
+
 export interface TermView {
   term: string;
   translation: string;
@@ -25,6 +31,7 @@ export interface TermView {
   termMotivation: TermMotivationKey;
   termFormation: TermFormationKey;
   alternatives: Alternative[];
+  languages: TermLanguage[];
   derivations: Derivation[];
   isComplete: boolean;
 }
