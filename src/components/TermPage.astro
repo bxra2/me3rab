@@ -10,6 +10,7 @@ import {
   TermFormation,
   formationBadgeClass,
 } from '../data/termStatuses'
+import { toArabicDigits } from '../utils/arabicDigits'
 import type { TermView } from '../utils/interfaces'
 
 interface Props {
@@ -82,34 +83,10 @@ const sectionPlaceholderHtml =
           </tr>
         </tbody>
       </table>
+      <hr>
     </section>
 
     <section class="term-relations term-section">
-      <h2>علاقات</h2>
-      {relations.length > 0 ? (
-        <div class="relation-list">
-          {relations.map((r) => (
-            <p class="relation-group">
-              <span class="badge relation-type">{relationTypeLabels[r.type] ?? r.type}</span>:
-              <span class="relation-chips">
-                {r.terms
-                  .filter((t) => t !== e.term)
-                  .map((t) =>
-                    knownTerms.has(t) ? (
-                      <a class="relation-chip" href={termHref(t)!}>{t}</a>
-                    ) : (
-                      <span class="relation-chip relation-chip--ghost">{t}</span>
-                    )
-                  )}
-              </span>
-              <span class="relation-note">{r.note}</span>
-            </p>
-          ))}
-        </div>
-      ) : <Fragment set:html={sectionPlaceholderHtml} />}
-    </section>
-
-    <section class="term-main">
       <div class="term-section">
         <h2>الشرح</h2>
         {e.explanation ? <p>{e.explanation}</p> : <Fragment set:html={sectionPlaceholderHtml} />}
@@ -144,7 +121,7 @@ const sectionPlaceholderHtml =
       </div>
     </section>
 
-    <section class="term-side">
+    <section class="term-main">
       <div class="term-section">
         <h2>بقية اللغات</h2>
         {languages.length > 0 ? (
@@ -173,14 +150,39 @@ const sectionPlaceholderHtml =
           </table>
         ) : <Fragment set:html={sectionPlaceholderHtml} />}
       </div>
+    </section>
+
+    <section class="term-side">
+       <h2>علاقات</h2>
+      {relations.length > 0 ? (
+        <div class="relation-list">
+          {relations.map((r) => (
+            <p class="relation-group">
+              <span class="badge relation-type">{relationTypeLabels[r.type] ?? r.type}</span>:
+              <span class="relation-chips">
+                {r.terms
+                  .filter((t) => t !== e.term)
+                  .map((t) =>
+                    knownTerms.has(t) ? (
+                      <a class="relation-chip" href={termHref(t)!}>{t}</a>
+                    ) : (
+                      <span class="relation-chip relation-chip--ghost">{t}</span>
+                    )
+                  )}
+              </span>
+              <span class="relation-note">{r.note}</span>
+            </p>
+          ))}
+        </div>
+      ) : <Fragment set:html={sectionPlaceholderHtml} />}
 
       <div class="term-section term-sources">
         <h2>المصادر</h2>
         {sources.length > 0 ? (
           <ul>
-            {sources.map((s) => (
+            {sources.map((s, i) => (
               <li dir="auto">
-                <a href={s.link} target="_blank" rel="noopener noreferrer">{s.name}</a>
+                [{toArabicDigits(String(i+1))}] - <a href={s.link} target="_blank" rel="noopener noreferrer">{s.name}</a>
               </li>
             ))}
           </ul>

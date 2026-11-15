@@ -121,7 +121,7 @@
 /* ---------- Layout grid: states / rels / main / side / derivations ---------- */
 .term-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas:
     'states states states'
     'rels main side';
@@ -133,17 +133,21 @@
 .term-states {
   grid-area: states;
 }
+
 .term-relations {
   grid-area: rels;
 }
+
 .term-main {
   grid-area: main;
 }
+
 .term-side {
   grid-area: side;
   display: grid;
   gap: var(--space-m, 1.25rem);
 }
+
 .term-main {
   display: grid;
   gap: var(--space-m, 1.25rem);
@@ -157,6 +161,11 @@
 }
 
 /* ---------- Sections ---------- */
+.term-section h2,
+.term-side h2 {
+  padding: 1rem 0 0 0;
+}
+
 .term-section p {
   margin: 0;
   line-height: 1.8;
@@ -229,6 +238,7 @@
 .term-section td {
   padding: 0.5rem 0.3rem;
 }
+
 .term-section th {
   font-size: 0.8rem;
   padding: 0.5rem 0.75rem;
@@ -254,6 +264,7 @@
 
 /* ---------- Narrow screens: stack ---------- */
 @media (max-width: 50rem) {
+
   /* word and translation stay side by side: translation right, term left */
   .term-head {
     flex-wrap: wrap;
