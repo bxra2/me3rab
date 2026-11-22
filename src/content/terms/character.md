@@ -3,6 +3,9 @@ term: Character
 translation: مِحرف
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source:
   - name: عربآيز
     link: https://www.arabeyes.org/techdict:Character

@@ -3,6 +3,9 @@ term: Transliteration
 translation: نقحرة
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source:
   - name: ويكيبديا
     link: https://ar.wikipedia.org/wiki/%D9%86%D9%82%D8%AD%D8%B1%D8%A9

@@ -3,6 +3,9 @@ term: Routine
 translation: وِظاب
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: الدأب

@@ -1,8 +1,11 @@
 ---
 term: Trauma
-translation: 'رضة'
+translation: 'رض'
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: ثيرابست
@@ -19,13 +22,13 @@ alternatives:
     note: من قاموس المورد الحديث، معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
   - translation: أذًى
     note: من قاموس المورد الحديث
-  - translation: رَضْخ
-    note: من قاموس المورد الحديث
+  - translation: رَضْح
+    note: من قاموس المورد الحديث، معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
   - translation: تجربة مؤلِمة
     note: من قاموس المورد الحديث
   - translation: جراحيّ
     note: من قاموس المورد الحديث
-  - translation: رَضْحٌ
-    note: من معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
+  - translation: رَضْخ
+    note: من قاموس المورد الحديث
 derivations: []
 ---

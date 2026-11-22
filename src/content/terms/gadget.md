@@ -3,6 +3,9 @@ term: Gadget
 translation: أويلة
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source:
   - name: ويكيبديا
     link: https://ar.wikipedia.org/wiki/أويلة

@@ -3,6 +3,9 @@ term: Commit
 translation: إيداع
 explanation: تثبيت تغييرات في مستودع التحكم بالإصدارات؛ على وزن إيداع الوديعة في الذمة.
 status: coined
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: تسليم

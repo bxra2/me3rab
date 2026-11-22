@@ -3,6 +3,9 @@ term: Jaguar
 translation: 'نَمر'
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: جاغوار

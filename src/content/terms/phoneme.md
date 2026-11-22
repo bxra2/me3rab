@@ -3,6 +3,9 @@ term: Phoneme
 translation: ''
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: وحدة صوتية

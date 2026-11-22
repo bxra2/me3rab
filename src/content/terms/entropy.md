@@ -3,6 +3,9 @@ term: Entropy
 translation: ''
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: إنتروبيا
@@ -15,8 +18,6 @@ alternatives:
     note: من العلوم التطبيقية - الحرب الإلكترونية، الطاقة المتجددة، المعجم الموحد لمصطلحات الحرب الإلكترونية
   - translation: احتمال
     note: من المعلومات و التواصل
-  - translation: اعتلاج
-    note: من الفيزياء
   - translation: الانتروبي
     note: من قاموس المصطلحات العلمية
   - translation: الأنتروبيا
@@ -25,5 +26,7 @@ alternatives:
     note: من قاموس المورد الحديث
   - translation: القُصور الحَراري
     note: من معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
+  - translation: اعتلاج
+    note: من الفيزياء، معجم المصطلحات العلمية والفنية والهندسية الجديد (لبنان ناشرون 2018
 derivations: []
 ---

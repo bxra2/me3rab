@@ -3,6 +3,9 @@ term: Compile
 translation: تصريف
 explanation: تحويل الشيفرة المصدرية إلى وحدة قابلة للتنفيذ؛ على وزن تصريف الأفعال.
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: تجميع

@@ -3,6 +3,7 @@ term: Bug
 translation: علة
 explanation: خلل في الشيفرة يُفسد السلوك المرجو؛ اختيرت «علة» لقربها من معنى العلّة والعطب.
 status: agreed
+termSource: unknown
 termMotivation: multipleEquivalents
 termFormation: semanticTranslation
 source: 

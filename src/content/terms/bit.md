@@ -4,6 +4,8 @@ translation: 'أُحدة'
 explanation: ''
 status: proposed
 termSource: personal
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: بتّ

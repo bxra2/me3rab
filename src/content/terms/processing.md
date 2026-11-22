@@ -3,6 +3,9 @@ term: Processing
 translation: ''
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: جاري التطبيق

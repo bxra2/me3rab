@@ -3,6 +3,9 @@ term: Administrator
 translation: ''
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: مدير

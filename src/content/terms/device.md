@@ -3,6 +3,9 @@ term: Device
 translation: 'جهاز'
 explanation: ''
 status: proposed
+termSource: unknown
+termMotivation: ambiguity
+termFormation: derivation
 source: []
 alternatives:
   - translation: ديفايس
