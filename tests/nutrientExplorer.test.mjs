@@ -78,7 +78,56 @@ const EXPECTED_IDS = [
   'minerals',
   'major-minerals',
   'trace-minerals',
+  'glucose',
+  'fructose',
+  'galactose',
+  'sucrose',
+  'lactose',
+  'maltose',
+  'sorbitol',
+  'mannitol',
+  'xylitol',
+  'amylose',
+  'amylopectin',
+  'lysine',
+  'leucine',
+  'alanine',
+  'aspartic-acid',
+  'thiamine',
+  'riboflavin',
+  'niacin',
+  'folate',
+  'cobalamin',
+  'omega-3',
+  'omega-6',
 ];
+
+const NEW_TERM_IDS = [
+  'glucose',
+  'fructose',
+  'galactose',
+  'sucrose',
+  'lactose',
+  'maltose',
+  'sorbitol',
+  'mannitol',
+  'xylitol',
+  'amylose',
+  'amylopectin',
+  'lysine',
+  'leucine',
+  'alanine',
+  'aspartic-acid',
+  'thiamine',
+  'riboflavin',
+  'niacin',
+  'folate',
+  'cobalamin',
+  'omega-3',
+  'omega-6',
+];
+
+const TYPICAL_LANGUAGES = new Set(['الفرنسية', 'الألمانية', 'الإسبانية']);
 
 const INVISIBLE_BIDI = /[\u200b-\u200f\u061c\u202a-\u202e\u2066-\u2069\ufeff]/;
 
@@ -289,8 +338,8 @@ test('nutrient validator: unsafe href values are reported', () => {
   );
 });
 
-test('nutrient data: exactly the 41 approved term ids', () => {
-  assert.equal(Object.keys(data.terms).length, 41);
+test('nutrient data: exactly the 63 approved term ids', () => {
+  assert.equal(Object.keys(data.terms).length, 63);
   assert.deepEqual(Object.keys(data.terms), EXPECTED_IDS);
   assert.deepEqual(collectTermIds(data), EXPECTED_IDS);
 });
@@ -352,7 +401,7 @@ test('nutrient data: required fields, references, translations and suggestions',
   }
 });
 
-test('nutrient data: every one of the 41 terms has an editorial suggestion', () => {
+test('nutrient data: every one of the 63 terms has an editorial suggestion', () => {
   for (const [id, term] of Object.entries(data.terms)) {
     assert.ok(
       Array.isArray(term.suggestions) && term.suggestions.length > 0,
@@ -367,7 +416,7 @@ test('nutrient data: every one of the 41 terms has an editorial suggestion', () 
     }
   }
 
-  assert.equal(Object.keys(data.terms).length, 41);
+  assert.equal(Object.keys(data.terms).length, 63);
 });
 
 test('nutrient data: mandatory French, German and Spanish languages', () => {
@@ -399,6 +448,26 @@ test('nutrient data: mandatory French, German and Spanish languages', () => {
       );
       languages.add(item.language);
     }
+  }
+});
+
+test('nutrient data: new terms carry at least three non-typical languages', () => {
+  for (const id of NEW_TERM_IDS) {
+    const term = data.terms[id];
+    assert.ok(term, `terms.${id} must exist`);
+
+    assert.ok(
+      Array.isArray(term.languages) && term.languages.length >= 5,
+      `terms.${id}.languages must have at least five entries`
+    );
+
+    const nontypical = term.languages.filter(
+      (item) => !TYPICAL_LANGUAGES.has(item.language)
+    );
+    assert.ok(
+      nontypical.length >= 3,
+      `terms.${id}.languages must have at least three non-typical languages`
+    );
   }
 });
 

@@ -22,17 +22,17 @@
                                 {
                                     "term": "monosaccharides",
                                     "note": "وحدة سكرية واحدة",
-                                    "items": ["غلوكوز", "فركتوز", "غلاكتوز"]
+                                    "terms": ["glucose", "fructose", "galactose"]
                                 },
                                 {
                                     "term": "disaccharides",
                                     "note": "وحدتان سكريتان",
-                                    "items": ["سكروز", "لاكتوز", "مالتوز"]
+                                    "terms": ["sucrose", "lactose", "maltose"]
                                 },
                                 {
                                     "term": "polyols",
                                     "note": "كحوليات سكرية",
-                                    "items": ["سوربيتول", "مانيتول", "زيليتول"]
+                                    "terms": ["sorbitol", "mannitol", "xylitol"]
                                 }
                             ]
                         },
@@ -43,7 +43,7 @@
                                 {
                                     "term": "starch",
                                     "note": "مخزن الطاقة في النبات",
-                                    "items": ["أميلوز", "أميلوبكتين"]
+                                    "terms": ["amylose", "amylopectin"]
                                 },
                                 {
                                     "term": "glycogen",
@@ -79,12 +79,12 @@
                                 {
                                     "term": "essential-amino-acids",
                                     "note": "يجب الحصول عليها من الغذاء",
-                                    "items": ["الليسين", "الليوسين"]
+                                    "terms": ["lysine", "leucine"]
                                 },
                                 {
                                     "term": "non-essential-amino-acids",
                                     "note": "يستطيع الجسم تصنيعها",
-                                    "items": ["الألانين", "حمض الأسبارتيك"]
+                                    "terms": ["alanine", "aspartic-acid"]
                                 }
                             ]
                         },
@@ -141,7 +141,7 @@
                         {
                             "term": "essential-fatty-acids",
                             "note": "لا يصنعها الجسم ويجب الحصول عليها من الغذاء",
-                            "items": ["أوميغا-3 (مثل ALA)", "أوميغا-6 (مثل LA)"]
+                            "terms": ["omega-3", "omega-6"]
                         },
                         {
                             "label": "ليبيدات أخرى",
@@ -213,13 +213,7 @@
                                 {
                                     "term": "b-complex",
                                     "note": "مجموعة مرافقات إنزيمية في الأيض",
-                                    "items": [
-                                        "ثيامين",
-                                        "ريبوفلافين",
-                                        "نياسين",
-                                        "فولات",
-                                        "كوبالامين"
-                                    ]
+                                    "terms": ["thiamine", "riboflavin", "niacin", "folate", "cobalamin"]
                                 },
                                 {
                                     "term": "vitamin-c",
@@ -1415,7 +1409,7 @@
             ]
         },
         "phospholipids": {
-            "ar": "الفوسفوليبيدات",
+            "ar": "الشَّحْم الفُسْفُورِيّ",
             "en": "Phospholipids",
             "origin": "من اليونانية phos (ضوء) وlipos (دهن) + -id؛ لأنها تحوي فوسفاتًا وليبيدًا.",
             "arabicMeaning": "ليبيدات تحوي مجموعة فوسفات، وتشكل أغشية الخلايا.",
@@ -1428,14 +1422,14 @@
             ],
             "translations": [
                 {
-                    "term": "الفوسفوليبيدات",
-                    "source": "استعمال عربي شائع"
+                    "term": "الشَّحْم الفُسْفُورِيّ",
+                    "source": "ترجمة حرفية"
                 }
             ],
             "suggestions": [
                 {
-                    "term": "الدهون الفسفورية",
-                    "note": "تسمية عربية شائعة، لكنها أقل دقة من «الفوسفوليبيدات».",
+                    "term": "الدهن الفسفوري",
+                    "note": "صيغة وصفية أقصر من «الشَّحْم الفُسْفُورِيّ»، تبقى واضحة وتخدم النمط التطهيري.",
                     "source": "اقتراح تحريري (معراب)"
                 }
             ],
@@ -2115,6 +2109,1326 @@
                 {
                     "language": "الإسبانية",
                     "term": "minerales traza"
+                }
+            ]
+        },
+        "glucose": {
+            "ar": "الغلوكوز",
+            "en": "Glucose",
+            "origin": "من اليونانية glykys (حلو) عبر الفرنسية glucose؛ أُطلق لطعمه الحلو. و«الغلوكوز» نقحرة شائعة، والاسم العربي الأصيل «سكر العنب».",
+            "arabicMeaning": "سكر أحادي بسيط، هو الوقود الرئيسي لخلايا الجسم.",
+            "description": "سكر سداسي أحادي يوجد في الفواكه والعسل وينتج عن هضم النشا والسكروز. يدور في الدم مصدرًا للطاقة، والفائض يُخزن غليكوجينًا أو يتحول إلى دهون. تسميه لغاتٌ عدة «سكر العنب» لأنه عُزل أولًا من العنب.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Glucose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/غلوكوز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الغلوكوز",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "الجلوكوز",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "سكر العنب",
+                    "note": "اسم عربي أصيل يطابق النمط التطهيري في الألمانية (Traubenzucker) والصينية (葡萄糖)؛ أدق وأوضح من النقحرة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "glucose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Glukose / Traubenzucker (سكر العنب)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "glucosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "葡萄糖 pútáotáng (سكر العنب)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "ブドウ糖 budōtō (سكر العنب)"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "포도당 pododang (سكر العنب)"
+                },
+                {
+                    "language": "التركية",
+                    "term": "üzüm şekeri (سكر العنب)"
+                },
+                {
+                    "language": "الفنلندية",
+                    "term": "rypälesokeri (سكر العنب)"
+                },
+                {
+                    "language": "السويدية",
+                    "term": "druvsocker (سكر العنب)"
+                }
+            ]
+        },
+        "fructose": {
+            "ar": "الفركتوز",
+            "en": "Fructose",
+            "origin": "من اللاتينية fructus (ثمرة) + -ose (لاحقة السكر)؛ أي سكر الفواكه.",
+            "arabicMeaning": "سكر أحادي حلو يوجد في الفواكه والعسل.",
+            "description": "أحلى السكريات الطبيعية، يوجد في الفواكه والعسل والخضروات. يتحد مع الغلوكوز لتكوين السكروز، ويُستعمل شراب الذرة عالي الفركتوز محليًا صناعيًا. يسميه الألمان «سكر الفواكه» والصينيون «سكر الثمرة».",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Fructose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/فركتوز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الفركتوز",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "سكر الفواكه",
+                    "note": "اسم وصفي أصيل يطابق Fruchtzucker و果糖؛ أوضح من النقحرة في السياق التعليمي.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "fructose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Fructose / Fruchtzucker (سكر الفواكه)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "fructosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "果糖 guǒtáng (سكر الثمرة)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "果糖 katō (سكر الثمرة)"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "과당 gwadang (سكر الثمرة)"
+                },
+                {
+                    "language": "التركية",
+                    "term": "meyve şekeri (سكر الفواكه)"
+                },
+                {
+                    "language": "الفنلندية",
+                    "term": "hedelmäsokeri (سكر الفواكه؛ والرسمية fruktoosi)"
+                },
+                {
+                    "language": "السويدية",
+                    "term": "fruktsocker (سكر الفواكه)"
+                }
+            ]
+        },
+        "galactose": {
+            "ar": "الغلاكتوز",
+            "en": "Galactose",
+            "origin": "من اليونانية gala/galaktos (لبن) + -ose؛ لأنه مكوّن سكر اللبن (اللاكتوز).",
+            "arabicMeaning": "سكر أحادي يدخل في تركيب اللاكتوز (سكر الحليب).",
+            "description": "سكر سداسي أحادي لا يوجد حرًا بكثرة، بل يرتبط بالغلوكوز لتكوين اللاكتوز. يحوله الكبد إلى غلوكوز. أصل تسميته يوناني بمعنى اللبن، ما قد يسبب التباسه باللاكتوز (سكر الحليب) نفسه.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Galactose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/غالاكتوز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الغلاكتوز",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "الغالاكتوز",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الغلاكتوز",
+                    "note": "يُبقى على النقحرة لتفادي الالتباس مع «سكر الحليب» (اللاكتوز)؛ ويُوثَّق أصله اليوناني gala (لبن) لأنه مكوّن اللاكتوز لا اللاكتوز نفسه.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "galactose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Galactose / Schleimzucker (سكر المخاط، تاريخي)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "galactosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "半乳糖 bànrǔtáng (نصف سكر اللبن)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "ガラクトース garakutōsu"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "갈락토스 gallaktoseu"
+                }
+            ]
+        },
+        "sucrose": {
+            "ar": "السكروز",
+            "en": "Sucrose",
+            "origin": "من الفرنسية sucre (سكر) + -ose؛ وهو سكر المائدة، من القصب أو الشوندر.",
+            "arabicMeaning": "سكر ثنائي هو سكر المائدة، من غلوكوز + فركتوز.",
+            "description": "السكر الأبيض الشائع، يتكون من غلوكوز وفركتوز. يُستخرج من قصب السكر أو الشوندر السكري. يسميه الألمان «سكر القصب» (Rohrzucker) والصينيون «سكر القصب» (蔗糖).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Sucrose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/سكروز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "السكروز",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "سكر المائدة",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "سكر القصب",
+                    "note": "اسم أصيل يطابق Rohrzucker و蔗糖؛ مع أن المصدر قد يكون الشوندر أيضًا فيُكتفى بـ«سكر المائدة» عند الحاجة إلى الدقة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "saccharose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Saccharose / Rohrzucker (سكر القصب)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "sacarosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "蔗糖 zhètáng (سكر القصب)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "蔗糖 shotō (سكر القصب)"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "자당 jadang (سكر القصب)"
+                },
+                {
+                    "language": "التركية",
+                    "term": "sakkaroz (نقحرة)"
+                }
+            ]
+        },
+        "lactose": {
+            "ar": "اللاكتوز",
+            "en": "Lactose",
+            "origin": "من اللاتينية lac/lactis (لبن) + -ose؛ أي سكر الحليب.",
+            "arabicMeaning": "سكر ثنائي هو سكر الحليب، من غلوكوز + غلاكتوز.",
+            "description": "سكر الحليب، يتكون من غلوكوز وغلاكتوز. يعجز من تنقصه إنزيم اللاكتاز عن هضمه فيصاب بعدم تحمل اللاكتوز. يسميه الألمان «سكر الحليب» (Milchzucker) والصينيون «سكر اللبن» (乳糖).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Lactose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/لاكتوز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "اللاكتوز",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "سكر الحليب",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "سكر الحليب",
+                    "note": "اسم عربي أصيل واضح يطابق Milchzucker و乳糖، ويصلح للاستعمال التعليمي.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "lactose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Lactose / Milchzucker (سكر الحليب)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "lactosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "乳糖 rǔtáng (سكر اللبن)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "乳糖 nyūtō (سكر اللبن)"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "유당 yudang (سكر اللبن)"
+                },
+                {
+                    "language": "التركية",
+                    "term": "süt şekeri (سكر الحليب)"
+                },
+                {
+                    "language": "الفنلندية",
+                    "term": "maitosokeri (سكر الحليب)"
+                }
+            ]
+        },
+        "maltose": {
+            "ar": "الملتوز",
+            "en": "Maltose",
+            "origin": "من الإنجليزية القديمة malt (شعير منقوع) + -ose؛ أي سكر الشعير/الملت.",
+            "arabicMeaning": "سكر ثنائي من غلوكوزين، ينتج عن تفكيك النشا.",
+            "description": "سكر ثنائي من وحدتي غلوكوز، ينتج عن هضم النشا ويوجد في الشعير المملَّت. يستعمل في التخمير والتصنيع الغذائي. يسميه الألمان «سكر الشعير» (Malzzucker).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Maltose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/مالتوز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الملتوز",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "المالتوز",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "سكر الشعير",
+                    "note": "اسم وصفي أصيل يطابق Malzzucker و麦芽糖؛ مع إمكان استعمال «سكر الملت» في السياق الصناعي.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "maltose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Maltose / Malzzucker (سكر الشعير)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "maltosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "麦芽糖 màiyátáng (سكر الشعير)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "麦芽糖 bakugatō (سكر الشعير)"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "엿당 yeotdang (سكر الشعير)"
+                }
+            ]
+        },
+        "sorbitol": {
+            "ar": "السوربيتول",
+            "en": "Sorbitol",
+            "origin": "من اللاتينية Sorbus (الغبيراء/شجرة الروان) + -itol (لاحقة كحول سكري)؛ لأنه عُزل أولًا من ثمار الغبيراء.",
+            "arabicMeaning": "كحول سكري يُستعمل محليًا منخفض السعرات.",
+            "description": "كحول سكري يوجد في التفاح والإجاص والخوخ، ويُصنع من الغلوكوز. يُستعمل محليًا في العلكة والحلويات الخالية من السكر. قد يسبب اضطرابًا هضميًا عند الإفراط.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Sorbitol"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/سوربيتول"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "السوربيتول",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "السوربيتول",
+                    "note": "يُبقى على النقحرة لشيوعه عالميًا، ويُوثَّق أنه مشتق من ثمار الغبيراء (Sorbus) التي عُزل منها أولًا.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "sorbitol"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Sorbit"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "sorbitol"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "山梨醇 shānlíchún (كحول الغبيراء)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "ソルビトール sorubitōru"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "솔비톨 solbitol"
+                }
+            ]
+        },
+        "mannitol": {
+            "ar": "المانيتول",
+            "en": "Mannitol",
+            "origin": "من اللاتينية manna (المَنّ) + -itol (لاحقة كحول سكري)؛ نسبة إلى المنّ الذي يوجد فيه.",
+            "arabicMeaning": "كحول سكري يوجد في المنّ وبعض الأعشاب، يُستعمل طبيًا.",
+            "description": "كحول سكري يوجد في المنّ (عصارة بعض الأشجار) والفطر والأعشاب البحرية. يُستعمل مدرًا للبول ومحليًا. يسميه الصينيون «كحول الندى الحلو» (甘露醇).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Mannitol"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/مانيتول"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "المانيتول",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "المانيتول",
+                    "note": "يُبقى على النقحرة، ويُوثَّق اشتقاقه من المنّ (manna) المذكور في بعض النصوص العربية.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "mannitol"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Mannit"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "manitol"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "甘露醇 gānlùchún (كحول الندى الحلو)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "マンニトール mannitōru"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "만니톨 mannitol"
+                }
+            ]
+        },
+        "xylitol": {
+            "ar": "الزيليتول",
+            "en": "Xylitol",
+            "origin": "من اليونانية xylon (خشب) + -itol (لاحقة كحول سكري)؛ لأنه يُستخرج من خشب البتولا.",
+            "arabicMeaning": "كحول سكري يُستخرج من خشب البتولا، محلي منخفض السعرات.",
+            "description": "كحول سكري يُصنع من الزيلوز المستخرج من خشب البتولا وغيره. حلاوته كالسكر وسعراته أقل، ولا يسبب تسوس الأسنان. يسميه الألمان والفنلنديون «سكر البتولا» (Birkenzucker / koivusokeri).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Xylitol"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/زيليتول"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الزيليتول",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "سكر البتولا",
+                    "note": "اسم أصيل يطابق Birkenzucker وkoivusokeri، ويوضح مصدره الطبيعي.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "xylitol"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Xylit / Birkenzucker (سكر البتولا)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "xilitol"
+                },
+                {
+                    "language": "الفنلندية",
+                    "term": "koivusokeri (سكر البتولا)"
+                },
+                {
+                    "language": "السويدية",
+                    "term": "björksocker (سكر البتولا)"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "木糖醇 mùtángchún (كحول سكر الخشب)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "キシリトール kishiritōru"
+                }
+            ]
+        },
+        "amylose": {
+            "ar": "الأميلوز",
+            "en": "Amylose",
+            "origin": "من اليونانية amylon (نشا) + -ose؛ وهو المكوّن الخطي للنشا.",
+            "arabicMeaning": "المكوّن الخطي (المستقيم) من النشا.",
+            "description": "عديد سكاريد خطي من وحدات الغلوكوز، يشكّل نحو 20-30% من النشا. أقل قابلية للذوبان من الأميلوبكتين. يسميه الصينيون «نشا السلسلة المستقيمة» (直链淀粉).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Amylose"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/أميلوز"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الأميلوز",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "النشا المستقيم",
+                    "note": "اسم وصفي أصيل يطابق 直链淀粉 ويوضح بنيته الخطية مقابل الأميلوبكتين المتفرع.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "amylose"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Amylose"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "amilosa"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "直链淀粉 zhíliàn diànfěn (نشا السلسلة المستقيمة)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "アミロース amirōsu"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "아밀로스 amilloseu"
+                }
+            ]
+        },
+        "amylopectin": {
+            "ar": "الأميلوبكتين",
+            "en": "Amylopectin",
+            "origin": "من اليونانية amylon (نشا) + pectos (متخثر/هلامي)؛ وهو المكوّن المتفرع من النشا.",
+            "arabicMeaning": "المكوّن المتفرع من النشا.",
+            "description": "عديد سكاريد شديد التفرع من وحدات الغلوكوز، يشكّل نحو 70-80% من النشا. تفرعه يجعله أسرع هضمًا من الأميلوز. يسميه الصينيون «نشا السلسلة المتفرعة» (支链淀粉).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Amylopectin"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/أميلوبكتين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الأميلوبكتين",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "النشا المتفرع",
+                    "note": "اسم وصفي أصيل يطابق 支链淀粉 ويوضح بنيته المتفرعة مقابل الأميلوز الخطي.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "amylopectine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Amylopektin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "amilopectina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "支链淀粉 zhīliàn diànfěn (نشا السلسلة المتفرعة)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "アミロペクチン amiropekuchin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "아밀로펙틴 amillopektin"
+                }
+            ]
+        },
+        "lysine": {
+            "ar": "الليسين",
+            "en": "Lysine",
+            "origin": "من اليونانية lysis (انحلال) + -ine (لاحقة أمين)؛ حمض أميني أساسي.",
+            "arabicMeaning": "حمض أميني أساسي لا يصنعه الجسم.",
+            "description": "حمض أميني أساسي ضروري للنمو وترميم الأنسجة وامتصاص الكالسيوم. يوجد في اللحوم والأسماك والبيض والبقوليات. أسماء الأحماض الأمينية منقحَرة في اللغات كلها تقريبًا، والصينية وحدها تصوغ أسماء وصفية (赖氨酸).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Lysine"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/ليسين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الليسين",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الليسين",
+                    "note": "يُبقى على النقحرة؛ فأسماء الأحماض الأمينية عالمية النقحرة ولا تكاد تُترجم في أي لغة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "lysine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Lysin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "lisina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "赖氨酸 lài'ānsuān"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "リシン rishin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "라이신 raisin"
+                }
+            ]
+        },
+        "leucine": {
+            "ar": "الليوسين",
+            "en": "Leucine",
+            "origin": "من اليونانية leukos (أبيض) + -ine؛ حمض أميني أساسي متفرع السلسلة.",
+            "arabicMeaning": "حمض أميني أساسي متفرع السلسلة، مهم لبناء العضلات.",
+            "description": "حمض أميني أساسي متفرع السلسلة يحفز بناء البروتين العضلي. يوجد في اللحوم والألبان والبيض وفول الصويا. منقحَر في اللغات كلها تقريبًا، والصينية وحدها تصوغ اسمًا وصفيًا (亮氨酸).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Leucine"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/ليوسين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الليوسين",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الليوسين",
+                    "note": "يُبقى على النقحرة؛ فأسماء الأحماض الأمينية عالمية النقحرة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "leucine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Leucin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "leucina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "亮氨酸 liàng'ānsuān"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "ロイシン roishin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "류신 ryusin"
+                }
+            ]
+        },
+        "alanine": {
+            "ar": "الألانين",
+            "en": "Alanine",
+            "origin": "من الألمانية Alanin نسبةً إلى ألدهيد acetaldehyde؛ حمض أميني غير أساسي.",
+            "arabicMeaning": "حمض أميني غير أساسي يصنعه الجسم.",
+            "description": "حمض أميني غير أساسي يدخل في استقلاب الغلوكوز وبناء البروتين. يوجد في اللحوم والأسماك والبقوليات. منقحَر في اللغات كلها تقريبًا، والصينية وحدها تصوغ اسمًا وصفيًا (丙氨酸).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Alanine"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/ألانين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الألانين",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الألانين",
+                    "note": "يُبقى على النقحرة؛ فأسماء الأحماض الأمينية عالمية النقحرة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "alanine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Alanin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "alanina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "丙氨酸 bǐng'ānsuān"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "アラニン aranin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "알라닌 allanin"
+                }
+            ]
+        },
+        "aspartic-acid": {
+            "ar": "حمض الأسبارتيك",
+            "en": "Aspartic acid",
+            "origin": "من اللاتينية asparagus (هليون) + -ic acid؛ لأنه عُزل أولًا من الهليون.",
+            "arabicMeaning": "حمض أميني غير أساسي، عُزل أولًا من الهليون.",
+            "description": "حمض أميني غير أساسي يدخل في دورة اليوريا وتصنيع أحماض أمينية أخرى. عُزل أولًا من الهليون، ومنه أخذ اسمه. تسميه الألمانية «حمض الهليون» (Asparaginsäure) وهو ما يُوحي بنمط تطهيري ممكن في العربية.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Aspartic_acid"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/حمض_الأسبارتيك"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "حمض الأسبارتيك",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "حمض الهليون",
+                    "note": "اسم وصفي أصيل يطابق الألمانية Asparaginsäure ويستند إلى مصدر عزله الأول؛ يُستعمل في السياق التعليمي مع بقاء «حمض الأسبارتيك» في المراجع.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "acide aspartique"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Asparaginsäure (حمض الهليون)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "ácido aspártico"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "天冬氨酸 tiāndōng'ānsuān"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "アスパラギン酸 asuparagin-san"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "아스파르트산 aseupareuteusan"
+                }
+            ]
+        },
+        "thiamine": {
+            "ar": "الثيامين",
+            "en": "Thiamine (Vitamin B1)",
+            "origin": "من اليونانية theion (كبريت) + amine (أمين)؛ فيتامين ب1 المحتوي على الكبريت والأمين.",
+            "arabicMeaning": "فيتامين ب1، ضروري لاستقلاب الطاقة والأعصاب.",
+            "description": "فيتامين ب1 يشارك مرافقًا إنزيميًا في استقلاب الكربوهيدرات والطاقة. نقصه يسبب مرض البري بري. يوجد في الحبوب الكاملة والبقوليات واللحوم. تسميه الصينية «عنصر الكبريت-أمين» (硫胺素).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Thiamine"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/ثيامين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الثيامين",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "فيتامين ب1",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الثيامين",
+                    "note": "يُبقى على النقحرة (أو يُستعمل «فيتامين ب1»)، ويُوثَّق الاسم الوصفي الصيني «الكبريت-أمين».",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "thiamine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Thiamin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "tiamina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "硫胺素 liú'ànsù (الكبريت-أمين)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "チアミン chiamin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "티아민 tiamin"
+                }
+            ]
+        },
+        "riboflavin": {
+            "ar": "الريبوفلافين",
+            "en": "Riboflavin (Vitamin B2)",
+            "origin": "من ribose (سكر الريبوز) + اللاتينية flavus (أصفر)؛ فيتامين ب2 الأصفر.",
+            "arabicMeaning": "فيتامين ب2، ضروري لتفاعلات الأكسدة والاختزال.",
+            "description": "فيتامين ب2 يدخل في مرافقات إنزيمية لتفاعلات الأكسدة والاختزال وإنتاج الطاقة. لونه أصفر. يوجد في الألبان والبيض والخضروات الورقية. تسميه الصينية «عنصر النواة-الأصفر» (核黄素).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Riboflavin"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/ريبوفلافين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الريبوفلافين",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "فيتامين ب2",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الريبوفلافين",
+                    "note": "يُبقى على النقحرة (أو «فيتامين ب2»)، ويُوثَّق الاسم الوصفي الصيني «النواة-الأصفر».",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "riboflavine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Riboflavin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "riboflavina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "核黄素 héhuángsù (النواة-الأصفر)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "リボフラビン ribofurabin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "리보플라빈 ribopeullabin"
+                }
+            ]
+        },
+        "niacin": {
+            "ar": "النياسين",
+            "en": "Niacin (Vitamin B3)",
+            "origin": "من ni(cotinic) ac(id) + vitam(in)؛ فيتامين ب3، حمض النيكوتينيك.",
+            "arabicMeaning": "فيتامين ب3، يدخل في مرافقي NAD وNADP.",
+            "description": "فيتامين ب3 يدخل في مرافقي NAD وNADP لإنتاج الطاقة. نقصه يسبب البلاغرا. يوجد في اللحوم والأسماك والحبوب. تسميه الصينية «حمض التبغ» (烟酸) نسبة إلى حمض النيكوتينيك.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Niacin"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/نياسين"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "النياسين",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "فيتامين ب3",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "النياسين",
+                    "note": "يُبقى على النقحرة (أو «فيتامين ب3»)، مع إيضاح أنه حمض النيكوتينيك تسميةً لا صلة له بالنيكوتين.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "niacine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Niacin / Nikotinsäure"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "niacina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "烟酸 yānsuān (حمض التبغ/النيكوتين)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "ナイアシン naiashin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "니아신 niasin"
+                }
+            ]
+        },
+        "folate": {
+            "ar": "الفولات",
+            "en": "Folate (Vitamin B9)",
+            "origin": "من اللاتينية folium (ورقة) + -ate؛ فيتامين ب9 الموجود في الأوراق الخضراء.",
+            "arabicMeaning": "فيتامين ب9، ضروري لانقسام الخلايا وتكوين الحمض النووي.",
+            "description": "فيتامين ب9 ضروري لانقسام الخلايا وتكوين الحمض النووي، ويُوصى به قبل الحمل وأثناءه. يوجد في الخضروات الورقية والبقوليات. يسميه الألمان والصينيون «حمض الأوراق» (Folsäure / 叶酸).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Folate"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/حمض_الفوليك"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الفولات",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "حمض الفوليك",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "حمض الأوراق",
+                    "note": "اسم وصفي أصيل يطابق Folsäure و叶酸 ويستند إلى folium (الورقة)؛ ويُستعمل «حمض الفوليك» في السياق الدوائي.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "folate"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Folat / Folsäure (حمض الأوراق)"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "folato"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "叶酸 yèsuān (حمض الأوراق)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "葉酸 yōsan (حمض الأوراق)"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "엽산 yeopsan (حمض الأوراق)"
+                }
+            ]
+        },
+        "cobalamin": {
+            "ar": "الكوبالامين",
+            "en": "Cobalamin (Vitamin B12)",
+            "origin": "من cobalt (كوبالت) + amine (أمين)؛ فيتامين ب12 المحتوي على الكوبالت.",
+            "arabicMeaning": "فيتامين ب12، ضروري للأعصاب وتكوين كريات الدم الحمراء.",
+            "description": "فيتامين ب12 يحوي ذرة كوبالت، ضروري لتكوين كريات الدم الحمراء وصحة الأعصاب. يوجد أساسًا في المصادر الحيوانية. تسميه الصينية «عنصر الكوبالت-أمين» (钴胺素).",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Vitamin_B12"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/فيتامين_بي12"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "الكوبالامين",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "فيتامين ب12",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "الكوبالامين",
+                    "note": "يُبقى على النقحرة (أو «فيتامين ب12»)، ويُوثَّق الاسم الوصفي الصيني «الكوبالت-أمين».",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "cobalamine"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Cobalamin"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "cobalamina"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "钴胺素 gǔ'ànsù (الكوبالت-أمين)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "コバラミン kobaramin"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "코발라민 koballamin"
+                }
+            ]
+        },
+        "omega-3": {
+            "ar": "أوميغا-3",
+            "en": "Omega-3",
+            "origin": "من الحرف اليوناني الأخير ω (أوميغا = الكبير/الأخير) + 3؛ إشارة إلى موضع الرابطة المزدوجة من الطرف.",
+            "arabicMeaning": "عائلة أحماض دهنية أساسية غير مشبعة، مثل حمض ألفا-لينولينيك (ALA).",
+            "description": "أحماض دهنية أساسية غير مشبعة لا يصنعها الجسم، مثل حمض ألفا-لينولينيك (ALA) في البذور والزيوت، وEPA وDHA في الأسماك الدهنية. مفيدة للقلب والدماغ. الاسم عالمي (حرف يوناني + رقم) ولا تترجمه أي لغة تقريبًا.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Omega-3_fatty_acid"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/حمض_دهني_أوميغا-3"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "أوميغا-3",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "أوميجا-3",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "أوميغا-3",
+                    "note": "يُبقى على النقحرة؛ فالاسم عالمي (حرف يوناني + رقم) ولا توجد ترجمة تطهيرية له في أي لغة شائعة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "acides gras oméga-3"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Omega-3-Fettsäuren"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "ácidos grasos omega-3"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "ω-3脂肪酸 (欧米伽-3)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "オメガ3 omega-3"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "오메가-3 omega-3"
+                }
+            ]
+        },
+        "omega-6": {
+            "ar": "أوميغا-6",
+            "en": "Omega-6",
+            "origin": "من الحرف اليوناني الأخير ω (أوميغا) + 6؛ إشارة إلى موضع الرابطة المزدوجة من الطرف.",
+            "arabicMeaning": "عائلة أحماض دهنية أساسية غير مشبعة، مثل حمض اللينوليك (LA).",
+            "description": "أحماض دهنية أساسية غير مشبعة، مثل حمض اللينوليك (LA) في الزيوت النباتية والمكسرات. ضرورية لكن الإفراط فيها مع قلة أوميغا-3 قد يخل بالتوازن. الاسم عالمي (حرف يوناني + رقم) ولا تترجمه أي لغة تقريبًا.",
+            "references": [
+                {
+                    "name": "ويكيبيديا الإنجليزية",
+                    "href": "https://en.wikipedia.org/wiki/Omega-6_fatty_acid"
+                },
+                {
+                    "name": "ويكيبيديا العربية",
+                    "href": "https://ar.wikipedia.org/wiki/حمض_دهني_أوميغا-6"
+                }
+            ],
+            "translations": [
+                {
+                    "term": "أوميغا-6",
+                    "source": "استعمال عربي شائع"
+                },
+                {
+                    "term": "أوميجا-6",
+                    "source": "استعمال عربي شائع"
+                }
+            ],
+            "suggestions": [
+                {
+                    "term": "أوميغا-6",
+                    "note": "يُبقى على النقحرة؛ فالاسم عالمي (حرف يوناني + رقم) ولا توجد ترجمة تطهيرية له في أي لغة شائعة.",
+                    "source": "اقتراح تحريري (معراب)"
+                }
+            ],
+            "languages": [
+                {
+                    "language": "الفرنسية",
+                    "term": "acides gras oméga-6"
+                },
+                {
+                    "language": "الألمانية",
+                    "term": "Omega-6-Fettsäuren"
+                },
+                {
+                    "language": "الإسبانية",
+                    "term": "ácidos grasos omega-6"
+                },
+                {
+                    "language": "الصينية",
+                    "term": "ω-6脂肪酸 (欧米伽-6)"
+                },
+                {
+                    "language": "اليابانية",
+                    "term": "オメガ6 omega-6"
+                },
+                {
+                    "language": "الكورية",
+                    "term": "오메가-6 omega-6"
                 }
             ]
         }

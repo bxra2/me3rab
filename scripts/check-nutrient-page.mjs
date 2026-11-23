@@ -49,7 +49,7 @@ expectText('id="nutrient-panel-micro"');
 expectText('aria-controls="nutrient-panel-macro"');
 expectText('aria-controls="nutrient-panel-micro"');
 
-expectCount('class="nutrient-dialog"', 41);
+expectCount('class="nutrient-dialog"', 63);
 
 const termValues = [
   ...new Set(
@@ -72,7 +72,7 @@ for (const [id, occurrences] of seen) {
   }
 }
 
-expectCount('class="nutrient-dialog-content"', 41);
+expectCount('class="nutrient-dialog-content"', 63);
 
 if (markup.includes('لا اقتراحات تحريرية لهذا المصطلح')) {
   errors.push('no nutrient term may render an empty suggestions message');

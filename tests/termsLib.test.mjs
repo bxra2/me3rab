@@ -130,6 +130,9 @@ test('renderTermMarkdown: fixed key order and YAML round-trip', () => {
     translation: 'ودجة',
     explanation: 'قطعة واجهة',
     status: 'coined',
+    termSource: 'personal',
+    termMotivation: 'standardization',
+    termFormation: 'borrowing',
     source: [{ name: 'قاموس', link: 'https://example.com' }],
     alternatives: [{ translation: 'أداة', note: 'بديل' }],
     derivations: [{ form: 'وديجات', gloss: 'جمع' }],
@@ -144,6 +147,9 @@ test('renderTermMarkdown: fixed key order and YAML round-trip', () => {
     'translation:',
     'explanation:',
     'status:',
+    'termSource:',
+    'termMotivation:',
+    'termFormation:',
     'source:',
     'alternatives:',
     'derivations:',
@@ -164,6 +170,9 @@ test('renderTermMarkdown: applies defaults for missing keys', () => {
     extractFrontmatter(renderTermMarkdown({ term: 'Bare' }))
   );
   assert.equal(parsed.status, 'proposed');
+  assert.equal(parsed.termSource, 'unknown');
+  assert.equal(parsed.termMotivation, 'ambiguity');
+  assert.equal(parsed.termFormation, 'derivation');
   assert.equal(parsed.translation, '');
   assert.equal(parsed.explanation, '');
   assert.deepEqual(parsed.source, []);
