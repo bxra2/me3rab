@@ -14,7 +14,10 @@
     "test": "node --test tests/*.test.mjs",
     "test:py": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "sync:relations": "node scripts/sync-relations.mjs",
-    "sync:relations:write": "node scripts/sync-relations.mjs --write"
+    "sync:relations:write": "node scripts/sync-relations.mjs --write",
+    "term:new": "node scripts/new-term.mjs",
+    "term:populate": "python scripts/populate-alternatives.py",
+    "term:populate:write": "python scripts/populate-alternatives.py --write"
   },
   "engines": {
     "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
